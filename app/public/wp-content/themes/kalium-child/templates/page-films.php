@@ -3,7 +3,10 @@
 
 get_header(); ?>
 
-<h1>films page</h1>
+<div class="container">
+
+  <h1>films page</h1>
+</div>
 
 <?php get_footer();
 ?>

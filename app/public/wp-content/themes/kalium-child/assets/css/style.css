@@ -1,10 +1,14 @@
 /* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
+body, html {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+ 
 }
+
+
 
 a {
   text-decoration: none;
@@ -15,83 +19,50 @@ h3 {
   font-size: 1.5em;
 }
 
-/* Hero Section */
-.site-header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  z-index: 10;
-}
-
-.site-header .logo img {
-  max-height: 50px; /* Adjust size as needed */
-}
-
-.site-header .site-nav {
-  display: flex;
-  align-items: center;
-}
-
-.hamburger-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.hamburger-menu span {
-  width: 25px;
-  height: 2px;
-  background: #333;
-}
-
-.hero-section {
-  position: relative;
-  height: 400px; /* Adjust height as needed */
-  background-size: cover;
-  background-position: center;
-}
-
-.hero-image {
+.main-container {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Tagline Section */
-.tagline-section {
-  background-color: #ffd464; /* Light yellow background */
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.tagline-section p {
-  font-size: 1.2em;
-  font-weight: bold;
+  position: relative;
+  background-color: #FFF8EC;
 }
 
 /* Information Boxes */
 .info-boxes {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 90%;
+  margin-inline: auto;
   padding: 40px 20px;
-  background-color: #f8f8f8;
+  background-color: #FFF8EC;
+
 }
 
 .info-box {
+  position: relative;
   background-color: #eaeaea;
   padding: 20px;
-  width: 30%;
-  text-align: center;
+  width: 50%;
+  text-align: left !important;
+
   transition: transform 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Set exact width */
+  height: 350px;
+}
+
+.info-box.dark {
+  background-color: #333;
+  color: #fff;
+  
+}
+
+.info-box.dark .learn-more {
+  color: #fff;
 }
 
 .info-box h3 {
   margin-bottom: 10px;
+  font-size: 35px;
 }
 
 .info-box p {
@@ -107,7 +78,7 @@ h3 {
 }
 
 .info-box a::after {
-  content: '→'; /* Arrow symbol */
+  content: '→';
   margin-left: 5px;
   transition: margin-left 0.3s;
 }
@@ -120,81 +91,249 @@ h3 {
   margin-left: 10px;
 }
 
-/* Footer Section */
-.site-footer {
-  background-color: #ffd464;
-  padding: 40px 20px;
-  text-align: center;
+.icon-arrow {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background-image: url('path-to-your-arrow-icon.png'); /* Use an appropriate image */
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.site-footer .stay-tuned {
-  margin-bottom: 30px;
+.icon-arrow::after {
+  content: '↗'; /* Optional: If you want to use a unicode arrow */
+  font-size: 1.5em;
+  color: #FFC107; /* Adjust color as needed */
 }
 
-.site-footer form {
+/* Header Section */
+.site-header {
+  display: flex;
+  justify-content: space-between; /* This should space out the logo and menu */
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width */
+  overflow: hidden; /* Prevent overflow issues */
+  z-index: 10;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+
+
+/* Specific adjustments for elements */
+.site-header .logo,
+.site-header .hamburger-menu {
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.site-header .site-nav {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
+}
+
+.hamburger-menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+
+.site-header .logo img {
+  max-height: 50px; 
+}
+
+
+.site-header--sticky-absolute, .site-header--sticky-fixed {
+  left: 9rem !important;
+  right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .site-header--sticky-absolute, .site-header--sticky-fixed {
+    left: 0 !important;
+    right: 0;
+  }
+}
+
+
+.site-header--sticky-spacer {
+  height: 0px !important;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 2px;
+  background: #fff; /* White for better visibility */
+}
+
+.hero-container{
+  padding-bottom: 5rem;
+}
+
+/* Sticky Header on Scroll */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #000; /* Solid background color on scroll */
+  padding: 10px 20px;
+  z-index: 1000; /* High z-index to ensure it's on top */
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  padding: 0; /* Ensure no padding */
+  margin: 0;
+  
+
+}
+
+.video-wrapper,
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the full area */
+  border: none; 
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire container */
+  pointer-events: none; /* Prevent interaction with the iframe */
+  border: none; /* Remove iframe border */
+  display: block;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire container */
+  border: none;
+}
+
+/* Content Below Hero Section */
+.tagline-section, .info-boxes, .site-footer {
+  position: relative;
+  z-index: 1; /* Ensure content is above the video */
+ /* Ensure background covers video */
+}
+
+/* Tagline Section */
+.tagline-section {
+  padding: 40px 60px;
+  text-align: center;
+  background-color: #FEC960;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.tagline-section p {
+  font-size: 4rem;
+  font-weight: bold;
+  color: black;
+}
+
+
+/* Footer Section */
+.site-footer {
+  background-color: #FEC960;
+  padding: 40px 20px;
+  color: #000;
+}
+
+.stay-tuned {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  width: 54%;
+    margin-left: auto;
+    margin-right: 7rem;
+    line-height: normal;
+}
+
+.footer-content-container {
+  text-align: left;
+  max-width: 50%;
+  padding-top: 13px;
+}
+
+.stay-tuned h4 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.newsletter {
+  max-width: 50%;
+  text-align: left;
+
+}
+
+.newsletter h3 {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.newsletter form {
+  display: flex;
+  align-items: center;
   gap: 10px;
 }
 
-.site-footer form input[type="email"] {
+.newsletter input[type="email"] {
   padding: 10px;
   width: 250px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-.site-footer form button {
+.newsletter button {
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #000;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.site-footer .social-media ul,
-.site-footer .footer-nav ul {
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.footer-links .social-media ul,
+.footer-links .footer-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.site-footer .social-media ul li,
-.site-footer .footer-nav ul li {
+.footer-links .social-media ul li,
+.footer-links .footer-nav ul li {
   display: inline;
   margin-right: 10px;
 }
 
-.site-footer .footer-credit {
-  margin-top: 20px;
-  font-size: 0.9em;
-  color: #555;
+.footer-links .social-media ul li a,
+.footer-links .footer-nav ul li a {
+  color: inherit;
+  text-decoration: none;
 }
 
-
-.hero-section {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden;
-  z-index: 1;
-}
-
-.video-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
-  transform: translate(-50%, -50%); /* Center the iframe */
-  pointer-events: none; /* Prevent interaction with the iframe */
-}
