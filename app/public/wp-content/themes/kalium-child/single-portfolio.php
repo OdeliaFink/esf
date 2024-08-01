@@ -60,6 +60,21 @@ while ( have_posts() ) {
 		continue;
 	}
 
+	// Display the Awards Carousel here
+	$awards = get_field('awards'); // Assuming 'awards' is the ACF field name
+	if ($awards): ?>
+		<div class="portfolio-awards-carousel">
+			<div class="award-carousel">
+				<?php foreach ($awards as $award): ?>
+					<div class="award-slide">
+						<?php echo get_the_post_thumbnail($award->ID, 'medium'); // Display award thumbnail ?>
+						<p><?php echo get_the_title($award->ID); // Display award title ?></p>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	<?php endif;
+
 	// Portfolio item type layout.
 	switch ( $item_type ) {
 		case 'type-1':
