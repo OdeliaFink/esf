@@ -35,3 +35,17 @@ Stack trace:
 [01-Aug-2024 08:36:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
 [01-Aug-2024 08:36:49 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
 [01-Aug-2024 08:36:49 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[01-Aug-2024 15:53:49 UTC] PHP Parse error:  syntax error, unexpected token "endif" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 99
+[01-Aug-2024 17:40:22 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[01-Aug-2024 17:40:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[01-Aug-2024 17:40:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[01-Aug-2024 20:58:25 UTC] PHP Parse error:  syntax error, unexpected end of file in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 143
+[01-Aug-2024 21:00:05 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 1096
+[01-Aug-2024 21:00:05 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 1096
+[01-Aug-2024 21:00:05 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 1096
+[01-Aug-2024 21:01:58 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 1096
+[01-Aug-2024 21:01:58 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 1096
+[01-Aug-2024 21:01:58 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 1096
+[01-Aug-2024 21:02:17 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 1096
+[01-Aug-2024 21:02:17 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 1096
+[01-Aug-2024 21:02:17 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 1096

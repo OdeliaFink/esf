@@ -230,10 +230,76 @@ h3 {
   height: 2px;
   background: #fff; /* White for better visibility */
 }
-
+/*Hero Section*/
 .hero-container{
   padding-bottom: 5rem;
 }
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Adjust height as needed */
+  overflow: hidden;
+  margin-bottom: 6rem;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay with transparency */
+  display: flex;
+
+}
+
+.hero-text {
+  text-align: left;
+  color: white;
+  padding-top: 12rem;
+  padding-left: 11rem;
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 30px;
+  color: white;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+  font-weight: lighter;
+}
+
+.film-awards {
+  position: absolute;
+  bottom: 20px;
+  left: 75%;
+  transform: translateX(-20%);
+  display: flex;
+  gap: 10px;
+}
+
+.film-awards img {
+  height: 50px; /* Adjust size as needed */
+}
+
 
 /* Sticky Header on Scroll */
 .sticky-header {
@@ -309,6 +375,44 @@ h3 {
   color: black;
 }
 
+/* Carousel Section */
+
+.portfolio-awards-carousel {
+  max-width: 800px; /* Set your desired max-width */
+  margin: 0 auto;   /* Center the carousel */
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+.award-carousel .award-slide {
+  padding: 10px;
+  box-sizing: border-box; /* Ensure padding doesn't affect layout */
+}
+
+.award-carousel .award-slide img {
+  max-width: 100%; /* Ensure images fit within the slide */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center images */
+}
+
+.award-image {
+  max-width: 12rem;
+}
+
+.portfolio-awards {
+  padding-block: 7rem;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  height: 12rem;
+  margin-block: 6rem;
+}
+
+.film-item {
+  padding-block: 5rem;
+}
 
 /* Footer Section */
 .site-footer {
