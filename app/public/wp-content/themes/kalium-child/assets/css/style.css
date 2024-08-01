@@ -414,6 +414,63 @@ h3 {
   padding-block: 5rem;
 }
 
+/*ACCORDION SECTION*/
+
+.accordion-container {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  background-color: #b0b0b0;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: black;
+  font-size: 40px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+  background-color: #999999;
+}
+
+.accordion-icon {
+  transition: transform 0.3s;
+  transform: rotate(-30deg);
+  color: #FEC960;
+  font-size: 4rem;
+}
+
+.accordion-header.active .accordion-icon {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px 20px;
+  background-color: #d0d0d0;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+      max-height: 0;
+  }
+  to {
+      max-height: 200px;
+  }
+}
+
+
 /* Footer Section */
 .site-footer {
   background-color: #FEC960;

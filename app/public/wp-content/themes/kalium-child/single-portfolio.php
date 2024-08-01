@@ -72,7 +72,7 @@ if ( have_posts() ) :
         $release_year = get_field('release_year');
         $award_1 = get_field('award_n1');
         $award_2 = get_field('award_n2');
-        $award_3 = get_field('award_n3');
+        $award_3 = get_field('award_3');
         ?>
 
         <div class="hero-section">
@@ -93,6 +93,45 @@ if ( have_posts() ) :
                 <?php if ($award_2): ?><img src="<?php echo esc_url($award_2['url']); ?>" alt="<?php echo esc_attr($award_2['alt']); ?>"><?php endif; ?>
                 <?php if ($award_3): ?><img src="<?php echo esc_url($award_3['url']); ?>" alt="<?php echo esc_attr($award_3['alt']); ?>"><?php endif; ?>
             </div>
+						
+        </div>
+				<div class="accordion-container">
+            <?php
+            $accordion_fields = array(
+                'awards' => array(
+                    'heading' => get_field('awards_heading'),
+                    'content' => get_field('awards_content')
+                ),
+                'credits' => array(
+                    'heading' => get_field('credits_heading'),
+                    'content' => get_field('credits_content')
+                ),
+                'screenings' => array(
+                    'heading' => get_field('screenings_heading'),
+                    'content' => get_field('screenings_content')
+                ),
+                'press' => array(
+                    'heading' => get_field('press_heading'),
+                    'content' => get_field('press_content')
+                )
+            );
+
+            foreach ($accordion_fields as $field) :
+                if ($field['heading'] && $field['content']) :
+            ?>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span><?php echo esc_html($field['heading']); ?></span>
+                        <span class="accordion-icon">→</span>
+                    </div>
+                    <div class="accordion-content">
+                        <?php echo $field['content']; ?>
+                    </div>
+                </div>
+            <?php
+                endif;
+            endforeach;
+            ?>
         </div>
 
         <?php
