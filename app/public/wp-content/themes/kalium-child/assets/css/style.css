@@ -396,12 +396,12 @@ h3 {
 }
 
 .award-image {
-  max-width: 12rem;
+  max-width: 19rem;
 }
 
 .portfolio-awards {
   padding-block: 7rem;
-  background-color: gray;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;

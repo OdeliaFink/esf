@@ -72,7 +72,7 @@ if ( have_posts() ) :
         $release_year = get_field('release_year');
         $award_1 = get_field('award_n1');
         $award_2 = get_field('award_n2');
-        $award_3 = get_field('award_3');
+        $award_3 = get_field('award_n3');
         ?>
 
         <div class="hero-section">
@@ -143,7 +143,7 @@ if ( have_posts() ) :
 
         // Display Individual Award Images
         echo '<div class="portfolio-awards">';
-        for ($i = 1; $i <= 3; $i++) {
+        for ($i = 1; $i <= 7; $i++) {
             $image = get_field('award_' . $i);
             if ($image) {
                 echo '<div >';
