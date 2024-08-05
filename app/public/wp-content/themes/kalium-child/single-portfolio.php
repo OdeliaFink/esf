@@ -87,7 +87,6 @@ if ( have_posts() ) :
                     </div>
                 </div>
             <?php endif; ?>
-
             <div class="film-awards">
                 <?php if ($award_1): ?><img src="<?php echo esc_url($award_1['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?>
                 <?php if ($award_2): ?><img src="<?php echo esc_url($award_2['url']); ?>" alt="<?php echo esc_attr($award_2['alt']); ?>"><?php endif; ?>
