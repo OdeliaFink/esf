@@ -46,6 +46,8 @@ function kalium_child_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'kalium_child_enqueue_styles');
 
+
+
 function kalium_child_change_portfolio_slug() {
     global $wp_post_types;
 

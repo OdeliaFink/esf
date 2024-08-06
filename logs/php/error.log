@@ -49,3 +49,13 @@ Stack trace:
 [01-Aug-2024 21:02:17 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 1096
 [01-Aug-2024 21:02:17 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 1096
 [01-Aug-2024 21:02:17 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 1096
+[06-Aug-2024 01:27:18 UTC] PHP Parse error:  syntax error, unexpected token ")", expecting variable in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 50
+[06-Aug-2024 01:27:19 UTC] PHP Parse error:  syntax error, unexpected token ")", expecting variable in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 50
+[06-Aug-2024 01:27:29 UTC] PHP Parse error:  syntax error, unexpected token ")", expecting variable in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 50
+[06-Aug-2024 01:27:30 UTC] PHP Parse error:  syntax error, unexpected token ")", expecting variable in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 50
+[06-Aug-2024 11:05:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[06-Aug-2024 11:05:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[06-Aug-2024 11:05:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[06-Aug-2024 18:23:55 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[06-Aug-2024 18:23:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[06-Aug-2024 18:23:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151

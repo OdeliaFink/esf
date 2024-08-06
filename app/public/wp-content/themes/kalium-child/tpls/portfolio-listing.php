@@ -82,7 +82,7 @@ if ( ! $portfolio_args['vc_mode'] ) {
 ?>
 <div id="<?php echo $portfolio_args['id']; ?>-container" <?php kalium_class_attr( $classes ); ?>>
 	
-	<?php include locate_template( 'tpls/portfolio-listing-title.php' ); ?>
+
 
 	<div class="page-container">
 		<div class="row">

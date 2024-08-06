@@ -16,9 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<header class="site-header nav-header" style="position: absolute;">
 
-</header>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -37,8 +35,6 @@ wp_body_open();
  */
 do_action( 'kalium_before_wrapper' );
 ?>
-
-
 
 <div class="wrapper" id="main-wrapper">
 

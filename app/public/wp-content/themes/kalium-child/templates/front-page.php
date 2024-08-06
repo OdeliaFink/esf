@@ -11,7 +11,7 @@ get_header(); ?>
         <section class="hero-section">
     
             <video class="video" autoplay loop muted>
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <source src="http://esf.local/wp-content/uploads/2024/08/esf_webloop_v4-1080p-1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
        
