@@ -18,10 +18,13 @@ get_header(); ?>
         </section>
     </div>
     
-    <!-- Tagline Section -->
-    <section class="tagline-section">
-        <p>Short tagline of ESF Short tagline of ESF Short tagline of ESF Short tagline of ESF Short tagline of ESF Short tagline of ESF</p>
-    </section>
+    <div id="react-root">
+        <div id="tagline-container">
+            <span id="tagline">Short tagline of ESF Short tagline of ESF Short tagline of ESF...</span>
+        </div>
+    </div>
+
+
     
     <!-- Information Boxes -->
     <section class="info-boxes">
