@@ -13,6 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 global $i, $portfolio_args;
+global $director, $year_released;
+
+$director = kalium_get_field('director');
+$year_released = kalium_get_field('year_released');
 
 // Item Class
 $item_class = array( 'portfolio-item' );

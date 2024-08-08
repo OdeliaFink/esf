@@ -229,6 +229,10 @@ switch ( $portfolio_args['likes_icon'] ) {
 	// End: When using Portfolio Masonry Mode
 	?>
 
+	<?php
+	global $director, $year_released;
+	?>
+
     <div class="item-box-container">
         <div class="<?php echo esc_attr( "item-box {$show_effect}" ); ?>"<?php echo $wow_attributes; ?>>
             <div class="thumb">
@@ -248,11 +252,14 @@ switch ( $portfolio_args['likes_icon'] ) {
                             </div>
 						<?php endif; ?>
 
-                        <div class="info">
-                            <h3>
+                        <div class="info" style="text-align: left;" >
+                            <h3 style="font-size: 45px; font-weight: bold;">
                                 <a href="<?php echo esc_url( $portfolio_item_href ); ?>" class="item-link" aria-label="<?php echo esc_html( $portfolio_item_title ); ?>"<?php echo when_match( $portfolio_item_new_window, 'target="_blank" rel="noopener"' ); ?>>
 									<?php echo wp_kses_post( $portfolio_item_title ); ?>
                                 </a>
+															
+															<p style="font-size: 30px; font-weight: 100;"><?php echo ( $year_released ); ?></p>
+
                             </h3>
 							<?php include locate_template( 'tpls/portfolio-loop-item-categories.php' ); ?>
                         </div>
