@@ -62,3 +62,68 @@ Stack trace:
 [07-Aug-2024 17:30:38 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
 [07-Aug-2024 17:30:38 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
 [07-Aug-2024 17:30:39 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[07-Aug-2024 23:17:15 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/archive-portfolio.php on line 22
+[07-Aug-2024 23:51:14 UTC] PHP Fatal error:  Cannot redeclare register_custom_portfolio_taxonomies() (previously declared in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php:50) in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 154
+[07-Aug-2024 23:51:14 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[07-Aug-2024 23:51:14 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 368
+[07-Aug-2024 23:51:14 UTC] PHP Fatal error:  Cannot redeclare register_custom_portfolio_taxonomies() (previously declared in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php:50) in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 154
+[07-Aug-2024 23:51:15 UTC] PHP Fatal error:  Cannot redeclare register_custom_portfolio_taxonomies() (previously declared in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php:50) in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 154
+[07-Aug-2024 23:54:27 UTC] PHP Fatal error:  Cannot redeclare register_custom_portfolio_taxonomies() (previously declared in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php:50) in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 154
+[07-Aug-2024 23:54:27 UTC] PHP Fatal error:  Cannot redeclare register_custom_portfolio_taxonomies() (previously declared in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php:50) in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 154
+[07-Aug-2024 23:54:35 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Error as array in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php:97
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/archive-portfolio.php(24): get_template_part('tpls/portfolio-...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#7 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/portfolio.php(17): get_template_part('archive-portfol...')
+#8 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#9 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#10 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#11 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 97
+[08-Aug-2024 00:38:05 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 94
+[08-Aug-2024 00:38:05 UTC] PHP Warning:  Undefined variable $Array in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 94
+[08-Aug-2024 00:38:57 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 94
+[08-Aug-2024 00:38:57 UTC] PHP Warning:  Undefined variable $Array in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 94
+[08-Aug-2024 00:39:48 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 94
+[08-Aug-2024 00:39:48 UTC] PHP Warning:  Undefined variable $Array in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 94
+[08-Aug-2024 17:10:26 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 94
+[08-Aug-2024 17:10:26 UTC] PHP Warning:  Undefined variable $Array in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 94
+[08-Aug-2024 17:10:28 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[08-Aug-2024 17:10:29 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[08-Aug-2024 17:10:29 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[08-Aug-2024 17:24:29 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Query could not be converted to string in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php:91
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/archive-portfolio.php(22): get_template_part('tpls/portfolio-...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#7 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/portfolio.php(17): get_template_part('archive-portfol...')
+#8 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#9 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#10 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#11 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 91
+[08-Aug-2024 17:24:48 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Query could not be converted to string in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php:96
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/archive-portfolio.php(22): get_template_part('tpls/portfolio-...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#7 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/portfolio.php(17): get_template_part('archive-portfol...')
+#8 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#9 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#10 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#11 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 96
+[08-Aug-2024 17:40:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
