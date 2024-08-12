@@ -4,7 +4,31 @@
  * Template Post Type: page
  */
 get_header(); ?>
+
 <div class="main-container">
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.laurel-carousel');
+    const slides = document.querySelectorAll('.laurel-slide');
+    let slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight, 10);
+    let currentPosition = 0;
+
+    function scrollSlides() {
+        currentPosition -= 1; // Adjust the speed here
+
+        if (currentPosition <= -slideWidth) {
+            carousel.appendChild(carousel.firstElementChild); // Move the first slide to the end
+            currentPosition += slideWidth;
+        }
+
+        carousel.style.transform = `translateX(${currentPosition}px)`;
+        requestAnimationFrame(scrollSlides); // Continuously call scrollSlides
+    }
+
+    scrollSlides();
+});
+</script>
+
     <div class="hero-container">
 
 
@@ -25,7 +49,8 @@ get_header(); ?>
     </div>
 
 
-    
+
+
     <!-- Information Boxes -->
     <section class="info-boxes">
         <div class="info-box">

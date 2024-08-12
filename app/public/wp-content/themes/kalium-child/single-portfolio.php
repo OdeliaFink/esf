@@ -94,6 +94,20 @@ if ( have_posts() ) :
             </div>
 						
         </div>
+<div class="laurel-carousel-wrapper">
+    <div class="laurel-carousel">
+        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_1['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_2['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_3['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_1['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_2['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_3['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_1['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_2['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_3['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
+       
+    </div>
+</div>
 				<div class="accordion-container">
             <?php
             $accordion_fields = array(
@@ -118,6 +132,8 @@ if ( have_posts() ) :
             foreach ($accordion_fields as $field) :
                 if ($field['heading'] && $field['content']) :
             ?>
+
+            
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <span><?php echo esc_html($field['heading']); ?></span>
@@ -133,24 +149,24 @@ if ( have_posts() ) :
             ?>
         </div>
 
+<div class="movie-stills-slider">
+    <?php 
+    $image_number = 1;
+    while( $image = get_field('image_' . $image_number) ) {
+        if( $image ): ?>
+            <div class="slick-slide">
+                <div class="image-container" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div>
+            </div>
+        <?php endif;
+        $image_number++;
+    }
+    ?>
+</div>
+
+
         <?php
 
-        // Display the Award Carousel using Revolution Slider if applicable
-        if ( $slider = get_field('award_carousel') ) {
-            echo do_shortcode($slider); // Assuming $slider contains the Revolution Slider shortcode
-        }
-
-        // Display Individual Award Images
-        echo '<div class="portfolio-awards">';
-        for ($i = 1; $i <= 7; $i++) {
-            $image = get_field('award_' . $i);
-            if ($image) {
-                echo '<div >';
-                echo '<img class="award-image" src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '">';
-                echo '</div>';
-            }
-        }
-        echo '</div>';
+      
 
         // Display Awards from Relationship Field
         $awards = get_field('awards');

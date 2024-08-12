@@ -10,37 +10,16 @@ function kalium_child_enqueue_styles() {
     
     // Enqueue additional scripts and styles
     wp_enqueue_script('accordion-js', get_stylesheet_directory_uri() . '/assets/js/accordion.js', array('jquery'), null, true);
-    wp_enqueue_style('slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
-    wp_enqueue_script('slick-slider-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
-
-    // Inline script for Slick Slider initialization
-    wp_add_inline_script('slick-slider-js', "
-        jQuery(document).ready(function($){
-            $('.award-carousel').slick({
-                autoplay: true,
-                autoplaySpeed: 3000,
-                dots: true,
-                arrows: false,
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                        }
-                    }
-                ]
-            });
-        });
-    ");
+ 
+        // Enqueue Slick Slider CSS
+        wp_enqueue_style( 'slick-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
+        wp_enqueue_style( 'slick-theme-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css' );
+    
+        // Enqueue Slick Slider JS
+        wp_enqueue_script( 'slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '', true );
+    
+        // Enqueue the Slick Slider initialization script
+        wp_enqueue_script( 'slick-init', get_stylesheet_directory_uri() . '/assets/js/slick-init.js', array('slick-js'), '', true );
 }
 add_action('wp_enqueue_scripts', 'kalium_child_enqueue_styles');
 
