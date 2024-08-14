@@ -95,6 +95,25 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('resize', toggleMenuIcon);
 });
 </script>
-
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+<script>
+  /**
+   * set lenis scroll
+   */
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+    direction: "vertical",
+    gestureDirection: "vertical",
+    smooth: true,
+    smoothTouch: false,
+    touchMultiplier: 2,
+  });
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+</script>
 </body>
 </html>

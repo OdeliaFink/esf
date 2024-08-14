@@ -42,11 +42,20 @@ document.addEventListener('DOMContentLoaded', function () {
         </section>
     </div>
     
-    <div id="react-root">
+    <!-- <div id="react-root">
         <div id="tagline-container">
             <span id="tagline">Short tagline of ESF Short tagline of ESF Short tagline of ESF...</span>
         </div>
+    </div> -->
+
+    <div class="app">
+  <section>
+    <div class="container">
+      <p class="reveal">Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...</p>
     </div>
+  </section>
+</div>
+
 
 
 

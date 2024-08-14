@@ -50,6 +50,36 @@ function kalium_child_change_portfolio_slug() {
 }
 add_action('init', 'kalium_child_change_portfolio_slug', 20);
 
+function enqueue_custom_scripts() {
+    // Enqueue LENIS
+    wp_enqueue_script('lenis', 'https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js', array(), null, true);
+
+    // Enqueue SPLITTYPE
+    wp_enqueue_script('splittype', 'https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js', array(), null, true);
+
+    // Custom Script to Initialize
+    wp_enqueue_script('custom-animation-init', get_stylesheet_directory_uri() . '/js/animation-init.js', array('lenis', 'splittype'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+// THIS IS THE SCRIPT FOR GSAP??
+// function enqueue_my_custom_script() {
+//     wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', false );
+// 	wp_enqueue_script( 'gsap-st', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js', false, true );
+// }
+
+function enqueue_my_custom_script() {
+    // Enqueue the latest version of GSAP
+    wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', array(), null, true );
+    // Enqueue the ScrollTrigger plugin, which requires GSAP version 3.11 or higher
+    wp_enqueue_script( 'gsap-st', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js', array('gsap-js'), null, true );
+}
+
+add_action( 'wp_enqueue_scripts', 'enqueue_my_custom_script' );
+
+
+// add_action( 'wp_enqueue_scripts', 'enqueue_my_custom_script' );
+
 // function create_awards_post_type() {
 //     register_post_type('award',
 //         array(
