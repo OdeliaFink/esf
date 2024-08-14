@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="app">
   <section>
     <div class="container">
-      <p class="reveal">Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...</p>
+      <p class="reveal">Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...</p>
     </div>
   </section>
 </div>
