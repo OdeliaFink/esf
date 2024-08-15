@@ -55,46 +55,7 @@ wp_footer();
 
 <!-- Other footer content -->
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    function isDark(color) {
-        // Function to determine if a color is dark based on its luminance
-        const rgb = color.match(/\d+/g);
-        const luminance = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2];
-        return luminance < 128;
-    }
 
-    function getBackgroundColor(element) {
-        // Function to get the background color of an element
-        let color = window.getComputedStyle(element).backgroundColor;
-        while (color === 'rgba(0, 0, 0, 0)' && element) {
-            element = element.parentElement;
-            color = window.getComputedStyle(element).backgroundColor;
-        }
-        return color;
-    }
-
-    function toggleMenuIcon() {
-        const backgroundElement = document.querySelector('.background-row'); // Update the selector
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        const blackIcon = hamburgerMenu.querySelector('.black-icon');
-        const whiteIcon = hamburgerMenu.querySelector('.white-icon');
-
-        const backgroundColor = getBackgroundColor(backgroundElement);
-        if (isDark(backgroundColor)) {
-            blackIcon.style.display = 'none';
-            whiteIcon.style.display = 'block';
-        } else {
-            blackIcon.style.display = 'block';
-            whiteIcon.style.display = 'none';
-        }
-    }
-
-    // Call the function on load and on window resize
-    toggleMenuIcon();
-    window.addEventListener('resize', toggleMenuIcon);
-});
-</script>
 <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
 <script>
   /**
