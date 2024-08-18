@@ -36,6 +36,11 @@ function enqueue_react_framer_motion() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_react_framer_motion');
 
+function enqueue_font_awesome() {
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_font_awesome');
+
 function kalium_child_change_portfolio_slug() {
     global $wp_post_types;
 
@@ -49,6 +54,37 @@ function kalium_child_change_portfolio_slug() {
     }
 }
 add_action('init', 'kalium_child_change_portfolio_slug', 20);
+
+function create_team_member_post_type() {
+    register_post_type('team_member',
+        array(
+            'labels' => array(
+                'name' => __('Team Members'),
+                'singular_name' => __('Team Member'),
+            ),
+            'public' => true,
+            'has_archive' => false, // Set to false to avoid archive conflicts
+            'supports' => array('title', 'editor', 'thumbnail'),
+            'rewrite' => array('slug' => 'about', 'with_front' => false), // Just 'about' in the slug
+            'show_in_rest' => true, // Enable Gutenberg editor
+        )
+    );
+}
+add_action('init', 'create_team_member_post_type');
+
+
+// function use_single_about_template_for_team_members($template) {
+//     global $post;
+
+//     if ($post->post_type == 'team_member' && file_exists(get_template_directory() . '/single-about.php')) {
+//         return get_template_directory() . '/single-about.php';
+//     }
+
+//     return $template;
+// }
+// add_filter('single_template', 'use_single_about_template_for_team_members');
+
+
 
 function enqueue_custom_scripts() {
     // Enqueue LENIS

@@ -73,6 +73,9 @@ if ( have_posts() ) :
         $award_1 = get_field('award_n1');
         $award_2 = get_field('award_n2');
         $award_3 = get_field('award_n3');
+        $trailer_url = get_field('trailer_url');
+        $rent_link = get_field('rent_link');
+        $film_rental_header = get_field('film_rental_header');
         ?>
 
         <div class="hero-section">
@@ -81,16 +84,14 @@ if ( have_posts() ) :
                     <div class="hero-overlay">
                         <div class="hero-text">
                             <h1><?php echo esc_html($film_title); ?></h1>
-                            <p><?php echo esc_html($director_name); ?></p>
-                            <p><?php echo esc_html($release_year); ?></p>
+                            
                         </div>
                     </div>
                 </div>
             <?php endif; ?>
-            <div class="film-awards">
-                <?php if ($award_1): ?><img src="<?php echo esc_url($award_1['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?>
-                <?php if ($award_2): ?><img src="<?php echo esc_url($award_2['url']); ?>" alt="<?php echo esc_attr($award_2['alt']); ?>"><?php endif; ?>
-                <?php if ($award_3): ?><img src="<?php echo esc_url($award_3['url']); ?>" alt="<?php echo esc_attr($award_3['alt']); ?>"><?php endif; ?>
+            <div class="director-year">
+            <p><?php echo esc_html($director_name); ?></p>
+            <p><?php echo esc_html($release_year); ?></p>
             </div>
 						
         </div>
@@ -162,8 +163,65 @@ if ( have_posts() ) :
     }
     ?>
 </div>
+<div class="centered-border-line">
+    <div class="line"></div>
+</div>
 
 
+
+<!-- Embed the Trailer -->
+<?php if ($trailer_url): 
+    // Function to get YouTube video ID from URL
+    function get_youtube_id($url) {
+        // Check for standard YouTube URL format
+        preg_match('/(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([^&]+)/', $url, $matches);
+        if (isset($matches[1])) {
+            return $matches[1];
+        }
+        // Check for shortened YouTube URL format
+        preg_match('/(?:https?:\/\/)?(?:www\.)?youtu\.be\/([^?]+)/', $url, $matches);
+        return isset($matches[1]) ? $matches[1] : '';
+    }
+    
+    // Extract YouTube video ID
+    $youtube_id = get_youtube_id($trailer_url);
+    $is_youtube = !empty($youtube_id);
+    
+    // Construct YouTube embed URL
+    $youtube_embed_url = $is_youtube ? 'https://www.youtube.com/embed/' . esc_attr($youtube_id) : '';
+?>
+
+    <div class="film-trailer">
+        <?php if ($is_youtube || strpos($trailer_url, 'vimeo.com') !== false): ?>
+            <?php if ($is_youtube): ?>
+                <iframe width="560" height="315" src="<?php echo esc_url($youtube_embed_url); ?>" frameborder="0" allowfullscreen></iframe>
+            <?php else: ?>
+                <!-- Handle Vimeo URL here -->
+                <iframe src="<?php echo esc_url($trailer_url); ?>" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <?php endif; ?>
+        <?php else: ?>
+            <p>Trailer URL is not supported for embedding.</p>
+        <?php endif; ?>
+    </div>
+<?php endif; ?>
+
+<!-- Rent Link Button -->
+
+<?php if ($rent_link): ?>
+    <?php 
+    // Define the URL for the Vimeo logo
+    $vimeo_logo = "http://esf.local/wp-content/uploads/2024/08/download-1.png";
+    ?>
+    <div class="film-rental-container">
+        <h1 class="film-rental-h1"><?php echo esc_html($film_rental_header); ?></h1>
+        <a href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer">
+            <img src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 50%; height: auto;" />
+        </a>
+    </div>
+<?php endif; ?>
+<div class="centered-border-line">
+    <div class="line"></div>
+</div>
         <?php
 
       

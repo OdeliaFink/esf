@@ -206,3 +206,166 @@ Stack trace:
 [14-Aug-2024 12:14:35 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
 [15-Aug-2024 17:49:17 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
 [15-Aug-2024 17:49:17 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[16-Aug-2024 13:13:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[17-Aug-2024 00:25:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[17-Aug-2024 00:25:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[17-Aug-2024 01:58:37 UTC] PHP Warning:  Undefined variable $vimeo_logo_url in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 199
+[17-Aug-2024 20:54:55 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[17-Aug-2024 20:54:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[17-Aug-2024 20:54:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Aug-2024 05:40:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Aug-2024 05:40:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Aug-2024 05:40:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Aug-2024 17:14:33 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(25): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:15:05 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(25): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:15:13 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(25): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:15:17 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(25): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:16:39 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(25): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:17:55 UTC] PHP Parse error:  syntax error, unexpected token "<" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php on line 28
+[18-Aug-2024 17:18:05 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(31): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:29:24 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(27): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:30:39 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(27): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:30:46 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(27): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:30:55 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(27): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:30:58 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(27): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:31:13 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(27): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:35:10 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(27): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:36:56 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php on line 23
+[18-Aug-2024 17:36:56 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(28): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:37:49 UTC] PHP Warning:  Array to string conversion in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php on line 30
+[18-Aug-2024 17:37:49 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(35): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[18-Aug-2024 17:40:49 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Aug-2024 17:40:49 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Aug-2024 17:40:49 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Aug-2024 17:49:45 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "show_in_rest", expecting ")" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 64
+[18-Aug-2024 17:49:46 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "show_in_rest", expecting ")" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 64
+[18-Aug-2024 17:49:46 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "show_in_rest", expecting ")" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 64
+[18-Aug-2024 18:10:10 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php:4482
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php(4482): ltrim(Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/page-about.php(28): esc_url(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#5 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482

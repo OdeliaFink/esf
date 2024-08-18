@@ -41,13 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
        
         </section>
     </div>
-    
-    <!-- <div id="react-root">
-        <div id="tagline-container">
-            <span id="tagline">Short tagline of ESF Short tagline of ESF Short tagline of ESF...</span>
-        </div>
-    </div> -->
-
     <div class="app">
   <section>
     <div class="container">
@@ -68,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <a href="/films" class="learn-more">Learn More</a>
             <div class="icon-arrow"></div>
         </div>
-        <div class="info-box dark">
+        <div class="info-box">
             <h3>Distribution</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             <a href="/distribution" class="learn-more">Learn More</a>
