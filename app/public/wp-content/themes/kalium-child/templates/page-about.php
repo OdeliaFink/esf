@@ -3,6 +3,38 @@
 
 get_header(); ?>
 
+<!-- Display Upper Content Description -->
+<div class="upper-content-desc">
+    <?php
+    $upper_content_desc = get_field('upper_content_desc'); // Get the value of the upper content description field
+    if ($upper_content_desc) {
+        echo wp_kses_post($upper_content_desc); // Output the content with safe HTML tags
+    }
+    ?>
+</div>
+
+<!-- Display Lower Content Description -->
+<div class="lower-content-desc">
+    <?php
+    $lower_content_desc = get_field('lower_content_desc'); // Get the value of the lower content description field
+    if ($lower_content_desc) {
+        echo wp_kses_post($lower_content_desc); // Output the content with safe HTML tags
+    }
+    ?>
+</div>
+
+<!-- Display Our Team Heading -->
+<div class="our-team-heading">
+    <?php
+    $our_team_heading = get_field('our_team_heading'); // Get the value of the our team heading field
+    if ($our_team_heading) {
+        echo '<h2>' . esc_html($our_team_heading) . '</h2>'; // Output the heading within an h2 tag
+    }
+    ?>
+</div>
+
+
+
 <!-- Checking About Page Template -->
 
 <div class="team-grid">
@@ -20,7 +52,6 @@ get_header(); ?>
             $job_position = get_field('job_position'); // Retrieves the job position from ACF
             $photo = get_field('photo'); // Retrieves the photo from ACF
             $link = get_permalink(); 
-            
             ?>
             
             <div class="team-member">
@@ -38,5 +69,7 @@ get_header(); ?>
     endif;
     ?>
 </div>
+
+
 
 <?php get_footer(); ?>

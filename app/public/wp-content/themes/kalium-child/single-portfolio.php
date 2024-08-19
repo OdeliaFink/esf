@@ -70,9 +70,13 @@ if ( have_posts() ) :
         $film_title = get_field('film_title');
         $director_name = get_field('director_name');
         $release_year = get_field('release_year');
-        $award_1 = get_field('award_n1');
-        $award_2 = get_field('award_n2');
-        $award_3 = get_field('award_n3');
+        $award_1 = get_field('award_1');
+        $award_2 = get_field('award_2');
+        $award_3 = get_field('award_3');
+        $award_4 = get_field('award_4');
+        $award_5 = get_field('award_5');
+        $award_6 = get_field('award_6');
+        $award_7 = get_field('award_7');
         $trailer_url = get_field('trailer_url');
         $rent_link = get_field('rent_link');
         $film_rental_header = get_field('film_rental_header');
@@ -98,14 +102,13 @@ if ( have_posts() ) :
 <div class="laurel-carousel-wrapper">
     <div class="laurel-carousel">
         <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_1['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
-        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_2['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
-        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_3['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
-        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_1['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
-        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_2['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
-        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_3['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
-        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_1['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
-        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_2['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
-        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_3['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_2['url']); ?>" alt="<?php echo esc_attr($award_2['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_3['url']); ?>" alt="<?php echo esc_attr($award_3['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_4): ?><img src="<?php echo esc_url($award_4['url']); ?>" alt="<?php echo esc_attr($award_4['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_5): ?><img src="<?php echo esc_url($award_5['url']); ?>" alt="<?php echo esc_attr($award_5['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_6): ?><img src="<?php echo esc_url($award_6['url']); ?>" alt="<?php echo esc_attr($award_6['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_7): ?><img src="<?php echo esc_url($award_7['url']); ?>" alt="<?php echo esc_attr($award_7['alt']); ?>"><?php endif; ?></div>
+
        
     </div>
 </div>
@@ -210,7 +213,7 @@ if ( have_posts() ) :
 <?php if ($rent_link): ?>
     <?php 
     // Define the URL for the Vimeo logo
-    $vimeo_logo = "http://esf.local/wp-content/uploads/2024/08/download-1.png";
+    $vimeo_logo = "http://esf.local/wp-content/uploads/2024/08/Vimeo_logo.png";
     ?>
     <div class="film-rental-container">
         <h1 class="film-rental-h1"><?php echo esc_html($film_rental_header); ?></h1>
