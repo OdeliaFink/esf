@@ -381,7 +381,7 @@
   color: #fff !important;
 }
 .acf-field-object.open > .handle a:hover {
-  text-decoration: underline !important;
+  text-decoration: none !important;
 }
 .acf-field-object:hover > .handle .row-options, .acf-field-object.-hover > .handle .row-options, .acf-field-object:focus-within > .handle .row-options {
   opacity: 1;

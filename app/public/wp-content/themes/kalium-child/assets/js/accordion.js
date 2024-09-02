@@ -46,7 +46,23 @@ jQuery(document).ready(function($) {
 
   
   
-  
+  (function($) {
+    $(document).ready(function() {
+        // Regular expression to match words in all caps
+        var capsRegex = /\b[A-Z]{2,}\b/g;
+
+        // Iterate over each film item in the accordion
+        $('.accordion-item').each(function() {
+            var content = $(this).html();
+            // Replace all caps words with wrapped span including custom class
+            var updatedContent = content.replace(capsRegex, function(match) {
+                return '<span class="all-caps">' + match + '</span>';
+            });
+            // Update the content
+            $(this).html(updatedContent);
+        });
+    });
+})(jQuery)
 
 
 

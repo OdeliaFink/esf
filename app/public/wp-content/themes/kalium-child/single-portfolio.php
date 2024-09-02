@@ -80,6 +80,9 @@ if ( have_posts() ) :
         $trailer_url = get_field('trailer_url');
         $rent_link = get_field('rent_link');
         $film_rental_header = get_field('film_rental_header');
+        $ig_logo = get_field('instagram');
+        $twitter_logo = get_field('twitter');
+        $fb_logo = get_field('facebook');
         ?>
 
         <div class="hero-section">
@@ -112,46 +115,78 @@ if ( have_posts() ) :
        
     </div>
 </div>
-				<div class="accordion-container">
-            <?php
-            $accordion_fields = array(
-                'awards' => array(
-                    'heading' => get_field('awards_heading'),
-                    'content' => get_field('awards_content')
-                ),
-                'credits' => array(
-                    'heading' => get_field('credits_heading'),
-                    'content' => get_field('credits_content')
-                ),
-                'screenings' => array(
-                    'heading' => get_field('screenings_heading'),
-                    'content' => get_field('screenings_content')
-                ),
-                'press' => array(
-                    'heading' => get_field('press_heading'),
-                    'content' => get_field('press_content')
-                )
-            );
+<div class="accordion-container">
+    <?php
+    $accordion_fields = array(
+        'credits' => array(
+            'heading' => __('CREDITS', 'your-text-domain'),  // Translatable label
+            'content' => get_field('credits_content')
+        ),
+        'awards' => array(
+            'heading' => __('AWARDS', 'your-text-domain'),  // Translatable label
+            'content' => get_field('awards_content')
+        ),
+        'screenings' => array(
+            'heading' => __('SCREENINGS', 'your-text-domain'),  // Translatable label
+            'content' => get_field('screenings_content')
+        ),
+        'press' => array(
+            'heading' => __('PRESS', 'your-text-domain'),  // Translatable label
+            'content' => get_field('press_content')
+        )
+    );
 
-            foreach ($accordion_fields as $field) :
-                if ($field['heading'] && $field['content']) :
-            ?>
-
-            
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span><?php echo esc_html($field['heading']); ?></span>
-                        <span class="accordion-icon">→</span>
-                    </div>
-                    <div class="accordion-content">
-                        <?php echo $field['content']; ?>
-                    </div>
-                </div>
-            <?php
-                endif;
-            endforeach;
-            ?>
+    foreach ($accordion_fields as $key => $field) :
+        if ($field['content']) :
+            $content_class = ($key === 'awards') ? 'accordion-content awards-content' : 'accordion-content';
+    ?>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <span><?php echo esc_html($field['heading']); ?></span>
+                <span class="accordion-icon">→</span>
+            </div>
+            <div class="<?php echo $content_class; ?>">
+                <?php
+                if ($key === 'awards') {
+                    // Process the awards content into rows
+                    $awards_rows = explode('-', $field['content']); // Split awards into an array by hyphens
+                    echo '<div class="awards-grid">';
+                    foreach ($awards_rows as $row) {
+                        if (!empty(trim($row))) {
+                            echo '<div class="awards-row"><strong>' . esc_html(trim($row)) . '</strong></div>';
+                        }
+                    }
+                    echo '</div>';
+                    if ($key === 'credits') {
+                        // Bold and uppercase the word before "clan" and "clan" itself
+                        $processed_content = preg_replace_callback('/(\b\w+\s+clan\b)/i', function($matches) {
+                            echo '<div class="credits-content-heading">';
+                            return '<strong>' . strtoupper($matches[1]) . '</strong>';
+                            echo '</div>';
+                        }, $field['content']);
+                        
+                        $processed_content = preg_replace_callback('/\b[A-Z]+(?:’[A-Z]+)?\b/', function($matches) {
+                            return '<strong>' . $matches[0] . '</strong>';
+                        }, $processed_content);
+                        
+    
+                        echo nl2br($processed_content); // Convert newlines to <br> for better control
+                    }   
+                } else {
+                    echo nl2br($field['content']); // For other content, just handle new lines
+                }
+                ?>
+            </div>
         </div>
+    <?php
+        endif;
+    endforeach;
+    ?>
+</div>
+
+
+
+
 
 <div class="movie-stills-slider">
     <?php 
@@ -208,6 +243,7 @@ if ( have_posts() ) :
     </div>
 <?php endif; ?>
 
+
 <!-- Rent Link Button -->
 
 <?php if ($rent_link): ?>
@@ -225,6 +261,38 @@ if ( have_posts() ) :
 <div class="centered-border-line">
     <div class="line"></div>
 </div>
+<?php if ($ig_logo || $twitter_logo || $fb_logo): ?>
+    <div class="social-media-icons">
+        <ul>
+            <?php if ($ig_logo): ?>
+                <li>
+                    <a href="<?php echo esc_url($ig_logo); ?>" target="_blank" rel="noopener noreferrer">
+                        <img src="http://yourdomain.com/path-to-instagram-icon.png" alt="Instagram" />
+                    </a>
+                </li>
+            <?php endif; ?>
+
+            <?php if ($fb_logo): ?>
+                <li>
+                    <a href="<?php echo esc_url($fb_logo); ?>" target="_blank" rel="noopener noreferrer">
+                        <img src="http://yourdomain.com/path-to-facebook-icon.png" alt="Facebook" />
+                    </a>
+                </li>
+            <?php endif; ?>
+
+            <?php if ($twitter_logo): ?>
+                <li>
+                    <a href="<?php echo esc_url($twitter_logo); ?>" target="_blank" rel="noopener noreferrer">
+                        <img src="http://yourdomain.com/path-to-twitter-icon.png" alt="Twitter" />
+                    </a>
+                </li>
+            <?php endif; ?>
+        </ul>
+    </div>
+<?php endif; ?>
+
+
+
         <?php
 
       

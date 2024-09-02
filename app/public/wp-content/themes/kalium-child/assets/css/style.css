@@ -16,6 +16,37 @@ html.lenis {
   pointer-events: none;
 }
 
+
+.social-media-icons {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.social-media-icons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-media-icons ul li {
+  display: inline-block;
+}
+
+.social-media-icons ul li a img {
+  width: 40px; /* Adjust the size of the icons */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-media-icons ul li a:hover img {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+
 section {
   display: flex;
   align-items: center;
@@ -172,6 +203,10 @@ h3 {
   }
   .info-boxes {
     flex-direction: column;
+  }
+
+  .hero-text {
+    padding-left: 3rem !important;
   }
 }
 @media screen and (max-width: 377px) {
@@ -676,6 +711,10 @@ h3 {
   text-decoration: none;
 }
 
+.link-hover {
+  text-decoration: none !important;
+}
+
 /*TRAILER */
 
 .film-trailer {
@@ -687,9 +726,10 @@ h3 {
 }
 
 .film-rental-h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: black;
-  font-weight: 400;
+  font-weight: bold;
+  text-transform:none;
 }
 
 .film-trailer iframe {
@@ -704,6 +744,7 @@ h3 {
   width: 80%;
   margin-inline: auto;
   align-items: center;
+  text-align: right;
 }
 
 .rent-button {
@@ -869,4 +910,65 @@ h3 {
   text-align: center;
   font-size: 3rem;
   padding-block: 4rem;
+}
+
+
+
+
+/* HERE */
+.accordion-container .accordion-content {
+  background-color: #f8f8f8;
+  border-left: 5px solid #fec960;
+}
+
+/* Styling for the awards grid */
+.accordion-container .awards-content {
+  background-color: #f8f8f8; /* Light background for contrast */
+  padding: 20px; /* Add some padding for spacing */
+   /* Add a left border for emphasis */
+  color: #333;
+  line-height: 1; /* Improve readability */
+}
+
+/* Grid layout for the awards */
+.accordion-container .awards-content .awards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns layout */
+   /* Space between rows */
+}
+
+.accordion-container .awards-content .awards-row {
+  margin-bottom: 10px; /* Space between each award row */
+  font-size: 1.2rem;
+}
+
+.accordion-container .awards-content .awards-row strong {
+  font-weight: 200;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+}
+
+.credits-content-heading strong {
+  font-size: 2.5rem;
+  color: black;
+}
+
+.credits-content {
+    font-size: 1rem; /* Default font size for non-uppercase words */
+    line-height: 1.5;
+    height: auto;
+}
+
+.credits-content .uppercase-bold {
+    font-weight: bold;
+    font-size: 2rem; /* Make uppercase words twice the size */
+    display: inline-block;
+    margin-bottom: 0.5rem; /* Add space below each uppercase word */
+}
+
+
+.all-caps {
+  font-weight: bold;
+  font-size: 2em;
 }

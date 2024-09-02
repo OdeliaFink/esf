@@ -55,6 +55,29 @@ function kalium_child_change_portfolio_slug() {
 }
 add_action('init', 'kalium_child_change_portfolio_slug', 20);
 
+function my_acf_location_rules_types($choices) {
+    $choices['Custom']['page_template_and_post_type'] = 'Page Template and Post Type';
+    return $choices;
+}
+add_filter('acf/location/rule_types', 'my_acf_location_rules_types');
+
+function my_acf_location_rules_values($choices) {
+    $choices['about_page_template'] = 'About Page Template';
+    return $choices;
+}
+add_filter('acf/location/rule_values/page_template_and_post_type', 'my_acf_location_rules_values');
+
+function my_acf_location_rules_match($match, $rule, $options) {
+    if ($rule['param'] == 'page_template_and_post_type') {
+        $post_type_match = ($options['post_type'] == 'page');
+        $page_template_match = (isset($options['page_template']) && $options['page_template'] == 'about.php');
+        $match = ($post_type_match && $page_template_match);
+    }
+    return $match;
+}
+add_filter('acf/location/rule_match/page_template_and_post_type', 'my_acf_location_rules_match', 10, 3);
+
+
 function create_team_member_post_type() {
     register_post_type('team_member',
         array(
