@@ -78,6 +78,7 @@ function my_acf_location_rules_match($match, $rule, $options) {
 add_filter('acf/location/rule_match/page_template_and_post_type', 'my_acf_location_rules_match', 10, 3);
 
 
+
 function create_team_member_post_type() {
     register_post_type('team_member',
         array(

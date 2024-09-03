@@ -459,3 +459,106 @@ Stack trace:
 [02-Sep-2024 14:51:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
 [02-Sep-2024 14:51:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
 [02-Sep-2024 14:51:17 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[02-Sep-2024 17:39:54 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[02-Sep-2024 17:39:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[02-Sep-2024 17:56:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method WPForms\Frontend\Frontend::enqueue_assets() in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php:82
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/class-wp-hook.php(324): enqueue_wpforms_scripts('')
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/script-loader.php(2263): do_action('wp_enqueue_scri...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/class-wp-hook.php(324): wp_enqueue_scripts('')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(3065): do_action('wp_head')
+#8 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/header.php(20): wp_head()
+#9 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(810): require_once('/Users/odeliafi...')
+#10 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', true, Array)
+#11 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#12 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/front-page.php(6): get_header()
+#13 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#14 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#15 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#16 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 82
+[02-Sep-2024 18:11:43 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[02-Sep-2024 18:33:16 UTC] PHP Warning:  DOMXPath::query(): Invalid expression in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/plugins/fluent-crm/app/Services/Libs/Emogrifier/Emogrifier.php on line 371
+[02-Sep-2024 18:33:16 UTC] PHP Warning:  foreach() argument must be of type array|object, bool given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/plugins/fluent-crm/app/Services/Libs/Emogrifier/Emogrifier.php on line 380
+[02-Sep-2024 19:57:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function kalium_social_networks_icons() in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/footer.php:53
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(810): require_once()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', true, Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/front-page.php(82): get_footer()
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#7 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/footer.php on line 53
+[02-Sep-2024 19:57:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function kalium_social_networks_icons() in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/footer.php:53
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(810): require_once()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', true, Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/404.php(41): get_footer()
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#7 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/footer.php on line 53
+[02-Sep-2024 19:59:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function kalium_social_networks_icons() in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/footer.php:41
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(810): require_once()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', true, Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/front-page.php(82): get_footer()
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#7 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/footer.php on line 41
+[02-Sep-2024 19:59:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function kalium_social_networks_icons() in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/footer.php:41
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(810): require_once()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', true, Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/404.php(41): get_footer()
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#7 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/footer.php on line 41
+[02-Sep-2024 20:18:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function kalium_social_networks_icons() in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/footer.php:41
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(810): require_once()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', true, Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/templates/front-page.php(82): get_footer()
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#7 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/footer.php on line 41
+[02-Sep-2024 20:18:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function kalium_social_networks_icons() in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/footer.php:41
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(810): require_once()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', true, Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/404.php(41): get_footer()
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#7 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/footer.php on line 41
+[03-Sep-2024 05:59:37 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[03-Sep-2024 05:59:37 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[03-Sep-2024 05:59:38 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[03-Sep-2024 05:59:40 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[03-Sep-2024 17:39:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[03-Sep-2024 17:39:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[03-Sep-2024 17:39:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[03-Sep-2024 17:39:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[03-Sep-2024 18:11:27 UTC] PHP Warning:  Undefined variable $instagram_url in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 267
+[03-Sep-2024 18:11:58 UTC] PHP Parse error:  syntax error, unexpected token ":" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 264
+[03-Sep-2024 18:12:05 UTC] PHP Parse error:  syntax error, unexpected token "endif" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 280
+[03-Sep-2024 18:12:19 UTC] PHP Warning:  Undefined variable $instagram_url in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 264

@@ -94,7 +94,7 @@ p {
   border-color: #ffffff;
 }
 .blog-posts .box-holder .post-format .quote-holder {
-  background: #fec960;
+  background: #666666;
 }
 .blog-posts .box-holder .post-format .quote-holder blockquote {
   color: #777777;
@@ -119,10 +119,10 @@ p {
 }
 .widget.widget_tag_cloud a {
   color: #636444;
-  background: #fec960;
+  background: #666666;
 }
 .widget.widget_tag_cloud a:hover {
-  background: #fec047;
+  background: #595959;
 }
 .wpb_wrapper .wpb_text_column blockquote {
   border-left-color: #000000;
@@ -138,10 +138,10 @@ p {
   color: #777777;
 }
 .post-formatting .wp-caption .wp-caption-text {
-  background: #fec960;
+  background: #666666;
 }
 .labeled-textarea-row textarea {
-  background-image: linear-gradient(#fec960 1px,transparent 1px);
+  background-image: linear-gradient(#666666 1px,transparent 1px);
 }
 .labeled-textarea-row textarea:focus {
   color: #333;
@@ -155,10 +155,10 @@ p {
   background-color: #000000;
 }
 .single-blog-holder .blog-head-holder {
-  background: #fec960;
+  background: #666666;
 }
 .single-blog-holder .blog-head-holder .quote-holder {
-  background: #fec960;
+  background: #666666;
 }
 .single-blog-holder .blog-head-holder .quote-holder:before {
   color: #777777;
@@ -168,13 +168,13 @@ p {
 }
 .single-blog-holder .tags-holder a {
   color: #636444;
-  background: #fec960;
+  background: #666666;
 }
 .single-blog-holder .tags-holder a:hover {
-  background: #fec047;
+  background: #595959;
 }
 .single-blog-holder pre {
-  background: #fec960;
+  background: #666666;
   border-color: #ffffff;
   color: #636444;
 }
@@ -194,7 +194,7 @@ p {
   color: #777777;
 }
 .single-blog-holder .comments-holder {
-  background: #fec960;
+  background: #666666;
 }
 .single-blog-holder .comments-holder:before {
   border-top-color: #fff8ec;
@@ -257,7 +257,7 @@ hr {
   border-color: #ffffff;
 }
 footer.site-footer {
-  background-color: #fec960;
+  background-color: #666666;
 }
 footer.site-footer .footer-widgets .section h1,
 footer.site-footer .footer-widgets .section h2,
@@ -275,11 +275,11 @@ footer.site-footer .footer-widgets .section h3 {
   border-bottom-color: #000000;
 }
 .wpb_wrapper .wpb_tabs.tabs-style-default .ui-tabs .wpb_tab {
-  background: #fec960;
+  background: #666666;
 }
 .wpb_wrapper .wpb_tabs.tabs-style-default .ui-tabs .wpb_tabs_nav li {
   border-bottom-color: #fff8ec !important;
-  background: #fec960;
+  background: #666666;
 }
 .wpb_wrapper .wpb_tabs.tabs-style-default .ui-tabs .wpb_tabs_nav li a {
   color: #777777;
@@ -291,7 +291,7 @@ footer.site-footer .footer-widgets .section h3 {
   color: #636444;
 }
 .wpb_wrapper .wpb_accordion .wpb_accordion_section {
-  background: #fec960;
+  background: #666666;
 }
 .wpb_wrapper .wpb_accordion .wpb_accordion_section .wpb_accordion_header a {
   color: #636444;
@@ -330,7 +330,7 @@ footer.site-footer .footer-widgets .section h3 {
   color: #777777;
 }
 .single-portfolio-holder .social .likes {
-  background: #fec960;
+  background: #666666;
 }
 .single-portfolio-holder .social .likes .fa-heart {
   color: #000000;
@@ -349,7 +349,7 @@ footer.site-footer .footer-widgets .section h3 {
   color: #000000;
 }
 .dash {
-  background: #fec960;
+  background: #666666;
 }
 .alert.alert-default {
   background-color: #000000;
@@ -410,7 +410,7 @@ footer.site-footer .footer-widgets .section h3 {
   border-top-color: #ffffff;
 }
 .team-holder .new-member-join {
-  background: #fec960;
+  background: #666666;
 }
 .team-holder .new-member-join .join-us .your-image {
   color: #777777;
@@ -464,10 +464,10 @@ footer.site-footer .footer-widgets .section h3 {
   color: #777777;
 }
 .blog-sidebar .widget.widget_recent_comments li + li {
-  border-top-color: #fec960;
+  border-top-color: #666666;
 }
 .blog-sidebar .widget.widget_search .search-bar .form-control {
-  background: #fec960 !important;
+  background: #666666 !important;
   color: #777777 !important;
 }
 .blog-sidebar .widget.widget_search .search-bar .form-control::-webkit-input-placeholder {
@@ -486,10 +486,10 @@ footer.site-footer .footer-widgets .section h3 {
   color: #636444;
 }
 .image-placeholder {
-  background: #fec960;
+  background: #666666;
 }
 .show-more .reveal-button {
-  border-color: #fec960;
+  border-color: #666666;
 }
 .show-more .reveal-button a {
   color: #000000;
@@ -522,7 +522,7 @@ footer.site-footer .footer-widgets .section h3 {
   background-color: #000000 !important;
 }
 .about-me-box {
-  background: #fec960 !important;
+  background: #666666 !important;
 }
 .sidebar-menu-wrapper {
   background: #fff8ec;
@@ -1105,7 +1105,7 @@ body .lg-outer.lg-skin-kalium-default .lg-progress-bar .lg-progress {
   background: #000000;
 }
 .button-secondary {
-  background-color: #fec960;
+  background-color: #666666;
   color: #636444;
 }
 .button-secondary:hover,
@@ -1117,13 +1117,13 @@ a.button-secondary:active {
   color: #636444;
 }
 .button-secondary:hover {
-  background: #fec451;
+  background: #5e5e5e;
 }
 .wrapper .button-secondary:hover {
   color: #636444;
 }
 .button-secondary:active {
-  background: #fec047;
+  background: #595959;
 }
 .labeled-input-row label,
 .labeled-textarea-row label {

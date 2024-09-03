@@ -80,9 +80,11 @@ if ( have_posts() ) :
         $trailer_url = get_field('trailer_url');
         $rent_link = get_field('rent_link');
         $film_rental_header = get_field('film_rental_header');
-        $ig_logo = get_field('instagram');
-        $twitter_logo = get_field('twitter');
-        $fb_logo = get_field('facebook');
+        $instagram_url = get_field('instagram_url');
+        $youtube_url = get_field('youtube_url');
+        $vimeo_url = get_field('vimeo_url');
+       
+   
         ?>
 
         <div class="hero-section">
@@ -244,59 +246,66 @@ if ( have_posts() ) :
 <?php endif; ?>
 
 
-<!-- Rent Link Button -->
 
-<?php if ($rent_link): ?>
-    <?php 
-    // Define the URL for the Vimeo logo
-    $vimeo_logo = "http://esf.local/wp-content/uploads/2024/08/Vimeo_logo.png";
-    ?>
-    <div class="film-rental-container">
-        <h1 class="film-rental-h1"><?php echo esc_html($film_rental_header); ?></h1>
-        <a href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer">
-            <img src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 50%; height: auto;" />
-        </a>
+
+    <!-- Rent Link Button -->
+    
+    <?php if ($rent_link): ?>
+        <?php 
+        // Define the URL for the Vimeo logo
+        $vimeo_logo = "http://esf.local/wp-content/uploads/2024/08/Vimeo_logo.png";
+        ?>
+        <div class="film-rental-container">
+            <h1 class="film-rental-h1"><?php echo esc_html($film_rental_header); ?></h1>
+            <a href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer">
+                <img src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 30%; height: auto;" />
+            </a>
+        </div>
+    <?php endif; ?>
+    <div class="centered-border-line">
+        <div class="line"></div>
     </div>
-<?php endif; ?>
-<div class="centered-border-line">
-    <div class="line"></div>
-</div>
-<?php if ($ig_logo || $twitter_logo || $fb_logo): ?>
-    <div class="social-media-icons">
-        <ul>
-            <?php if ($ig_logo): ?>
-                <li>
-                    <a href="<?php echo esc_url($ig_logo); ?>" target="_blank" rel="noopener noreferrer">
-                        <img src="http://yourdomain.com/path-to-instagram-icon.png" alt="Instagram" />
-                    </a>
-                </li>
-            <?php endif; ?>
 
-            <?php if ($fb_logo): ?>
-                <li>
-                    <a href="<?php echo esc_url($fb_logo); ?>" target="_blank" rel="noopener noreferrer">
-                        <img src="http://yourdomain.com/path-to-facebook-icon.png" alt="Facebook" />
-                    </a>
-                </li>
-            <?php endif; ?>
-
-            <?php if ($twitter_logo): ?>
-                <li>
-                    <a href="<?php echo esc_url($twitter_logo); ?>" target="_blank" rel="noopener noreferrer">
-                        <img src="http://yourdomain.com/path-to-twitter-icon.png" alt="Twitter" />
-                    </a>
-                </li>
-            <?php endif; ?>
-        </ul>
-    </div>
-<?php endif; ?>
+    <section style="padding-left: 12rem; padding-top: 0;">
+    <?php if ($instagram_url || $youtube_url || $vimeo_url): ?>
+        <div class="social-media-icons">
+            <ul style="">
+                <?php if ($instagram_url): ?>
+                    <li>
+                        <a href="<?php echo esc_url($instagram_url); ?>" target="_blank" rel="noopener noreferrer">
+                            <img src="http://esf.local/wp-content/uploads/2024/07/iglogo.png" alt="Instagram" />
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <?php if ($youtube_url): ?>
+                    <li>
+                        <a href="<?php echo esc_url($youtube_url); ?>" target="_blank" rel="noopener noreferrer">
+                            <img src="http://esf.local/wp-content/uploads/2024/09/youtube-icon.webp" alt="Instagram" />
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <?php if ($vimeo_url): ?>
+                    <li>
+                        <a href="<?php echo esc_url($vimeo_url); ?>" target="_blank" rel="noopener noreferrer">
+                            <img src="http://esf.local/wp-content/uploads/2024/09/vimeo_logo2.png" alt="Instagram" />
+                        </a>
+                    </li>
+                <?php endif; ?> 
+            </ul>
+        </div>
+    <?php endif; ?>
+    <?php if( $presskit = get_field('presskit') ): ?>
+        <div class="download-presskit">
+            <a href="<?php echo esc_url($presskit); ?>" download>
+                Download Presskit
+            </a>
+        </div>
+    <?php endif; ?>
+</section>
 
 
 
         <?php
-
-      
-
         // Display Awards from Relationship Field
         $awards = get_field('awards');
         if ($awards) {

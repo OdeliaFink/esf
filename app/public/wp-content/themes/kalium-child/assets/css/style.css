@@ -16,8 +16,13 @@ html.lenis {
   pointer-events: none;
 }
 
+.social-netowrk-links {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem !important;
+}
 
-.social-media-icons {
+ .social-media-icons {
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: center;
@@ -26,9 +31,10 @@ html.lenis {
 .social-media-icons ul {
   list-style: none;
   padding: 0;
+ text-decoration: none;
   margin: 0;
   display: flex;
-  justify-content: center;
+ /* padding-left: 14.3rem; */
   gap: 20px;
 }
 
@@ -627,12 +633,38 @@ h3 {
 
 /* Footer Section */
 .site-footer {
-  background-color: #fec960;
+  background-color: #cacaca;
   padding: 40px 20px;
-  color: #000;
+
+}
+
+.wrapper a:after, footer.site-footer a:after {
+  background-color: transparent !important;
+}
+
+/* footer.site-footer {
+  background-color: #ececec !important;
+} */
+
+.fluent_form_3 .top_merged.ff_submit_btn_wrapper {
+  position: unset !important;
+  
+  
+}
+
+form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
+  background-color: black !important;
+  color: #ffffff;
+}
+
+.newsletter input[type='email'] {
+  
+  border: 2px solid white !important;
+
 }
 
 .stay-tuned {
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -715,6 +747,79 @@ h3 {
   text-decoration: none !important;
 }
 
+.custom-footer {
+  background-color: #E0E0E0; /* Light grey background */
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.footer-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.nav-footer-link:hover{
+  transform: scale(1.1);
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+
+
+}
+
+.footer-links a:hover {
+
+  text-decoration: underline;
+}
+
+.footer-social ul,
+.footer-nav ul {
+  text-align: left;
+}
+
+.footer-nav ul {
+  text-align: right;
+}
+
+.footer-nav li {
+  text-align: right;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: #000;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+
 /*TRAILER */
 
 .film-trailer {
@@ -726,10 +831,10 @@ h3 {
 }
 
 .film-rental-h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: black;
-  font-weight: bold;
-  text-transform:none;
+  font-weight: 300;
+  text-transform:uppercase;
 }
 
 .film-trailer iframe {
