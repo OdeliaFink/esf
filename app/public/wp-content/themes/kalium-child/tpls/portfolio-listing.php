@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Direct access not allowed.
 }
 
+
 global $portfolio_args, $wp_query;
 
 // Make the portfolio query
@@ -90,11 +91,41 @@ if ( ! $portfolio_args['vc_mode'] ) {
 			<?php do_action( 'kalium_portfolio_items_before', $portfolio_query ); ?>
 			
 			<div id="<?php echo $portfolio_args['id']; ?>" class="<?php echo implode( ' ', apply_filters( 'kalium_portfolio_container_classes', $portfolio_container_classes ) ); ?>">
+			
 				<?php kalium_portfolio_loop_items_show( $portfolio_args ); ?>
 			</div>
 			
 			<?php do_action( 'kalium_portfolio_items_after' ); ?>
+			<?php
+if ( is_page('distribution') ) :  ?>
+    <style>
+        /* Disable pointer events on the distribution page for portfolio items */
+        .portfolio-item a.item-link, .portfolio-item a.thumb-placeholder {
+            pointer-events: none !important;
+        }
 
+        /* You can keep hover effects with this: */
+        .portfolio-item:hover .item-link, .portfolio-item:hover .thumb-placeholder {
+            pointer-events: auto;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all <a> elements within portfolio items
+            var portfolioLinks = document.querySelectorAll('.portfolio-item a.item-link, .portfolio-item a.thumb-placeholder');
+
+            // Loop through each <a> element and prevent the default behavior, as a backup to pointer-events
+            portfolioLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+								 // Prevent the default click action
+                    console.log('Link click prevented'); // Log to ensure it's working
+                });
+								link.setAttribute('href', '#');
+            });
+        });
+    </script>
+<?php endif; ?>
 			<?php
 			// Generate Portfolio Instance Object
 			kalium_portfolio_generate_portfolio_instance_object( $portfolio_args );

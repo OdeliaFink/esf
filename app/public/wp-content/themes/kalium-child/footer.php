@@ -39,13 +39,19 @@ do_action( 'kalium_wrapper_end' );
     <div class="footer-container">
       
         <div class="footer-links">
-            <div class="footer-social">
-            <?php
-                // Fetch and display the social media icons from Kalium theme
-                if ( function_exists( 'kalium_social_networks' ) ) {
-                    kalium_social_networks();
-                }
-                ?>
+        <div class="footer-social">
+                <a href="https://www.youtube.com/channel/eyetsteelfilm" target="_blank" title="YouTube">
+                    <img src="http://esf.local/wp-content/uploads/2024/09/youtube-icon.webp" alt="YouTube">
+                </a>
+                <a href="https://vimeo.com/YOUR_PROFILE" target="_blank" title="Vimeo">
+                    <img src="http://esf.local/wp-content/uploads/2024/09/vimeo_logo2.png" alt="Vimeo">
+                </a>
+                <a class="twitter" href="https://twitter.com/YOUR_USERNAME" target="_blank" title="Twitter">
+                    <img src="http://esf.local/wp-content/uploads/2024/09/X_logo_2023.svg.png" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank" title="Instagram">
+                    <img src="http://esf.local/wp-content/uploads/2024/09/free-instagram-logo-icon-3497-thumb.png" alt="Instagram">
+                </a>
             </div>
             <div class="footer-nav">
                 <ul style="display: flex; flex-direction: column;">

@@ -16,6 +16,15 @@ html.lenis {
   pointer-events: none;
 }
 
+.no-click-portfolio .portfolio-item a {
+  pointer-events: none; /* Disable clicks */
+}
+
+.no-click-portfolio .portfolio-item a:hover {
+  pointer-events: auto; /* Allow hover effects */
+}
+
+
 .social-netowrk-links {
   display: flex;
   flex-direction: column;
@@ -50,6 +59,17 @@ html.lenis {
 
 .social-media-icons ul li a:hover img {
   transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.synopsis-text {
+  color: black;
+  font-size: 1.7rem;
+  font-weight: 200;
+}
+
+.synopsis-container {
+ 
+ 
 }
 
 
@@ -306,6 +326,26 @@ h3 {
 
 .info-box:hover a::after {
   margin-left: auto;
+}
+
+.presskit-content {
+  font-size: 1.7rem;
+  position: relative;
+  display: inline-block; /* Ensures the underline scales with the text */
+  transition: transform 0.3s ease-out; /* Smooth scaling transition */
+  color: #000; /* Default text color */
+  cursor: pointer; /* Indicates the element is interactive */
+}
+
+
+
+.presskit-content:hover {
+  transform: scale(1.1);
+
+}
+
+.presskit-content:hover::after {
+  width: 100%; /* Full width on hover */
 }
 
 .icon-arrow {
@@ -756,8 +796,8 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: 90%;
+  margin-inline: auto;
   padding: 20px 0;
 }
 
@@ -783,6 +823,11 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   transform: scale(1.1);
 }
 
+.nav-footer-link {
+  color: black;
+
+}
+
 .footer-links li {
   margin-bottom: 10px;
 }
@@ -802,6 +847,18 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 .footer-nav ul {
   text-align: left;
 }
+
+.footer-nav {
+  gap: 1rem;
+}
+
+.footer-social img {
+  width: 30px;  /* Set the width of the icons */
+  height: 30px; /* Set the height of the icons */
+  object-fit: contain;
+  gap: 3rem; /* Ensure the image is scaled correctly */
+}
+/*  */
 
 .footer-nav ul {
   text-align: right;
@@ -855,7 +912,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 .rent-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #ff0000; /* Customize your button color */
+  background-color: #00eeff; /* Customize your button color */
   color: #ffffff;
   text-decoration: none;
   border-radius: 5px;

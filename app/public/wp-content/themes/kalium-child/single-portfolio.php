@@ -83,10 +83,10 @@ if ( have_posts() ) :
         $instagram_url = get_field('instagram_url');
         $youtube_url = get_field('youtube_url');
         $vimeo_url = get_field('vimeo_url');
+        $synopsis_text = get_field('synopsis_text');
        
    
         ?>
-
         <div class="hero-section">
             <?php if ($hero_image): ?>
                 <div class="hero-image" style="background-image: url('<?php echo esc_url($hero_image['url']); ?>');">
@@ -101,14 +101,29 @@ if ( have_posts() ) :
             <div class="director-year">
             <p><?php echo esc_html($director_name); ?></p>
             <p><?php echo esc_html($release_year); ?></p>
-            </div>
-						
+            </div>				
         </div>
+
+    <div style="display: flex; align-items: center; padding-bottom: 5rem; width: 80%; margin-inline: auto; justify-content: space-between; gap: 3rem;">
+        <div>
+            <p style="color: black; font-weight: 400; font-size: 3rem;">SYNOPSIS</p>
+        </div>
+        <?php if($synopsis_text) :  ?>
+        <div class="synopsis-container">
+        <p class="synopsis-text">
+        <?php echo esc_html($synopsis_text); ?>
+        </p>
+        </div>
+        <?php endif; ?>
+     
+    </div>
+
+
 <div class="laurel-carousel-wrapper">
     <div class="laurel-carousel">
         <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_1['url']); ?>" alt="<?php echo esc_attr($award_1['alt']); ?>"><?php endif; ?></div>
-        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_2['url']); ?>" alt="<?php echo esc_attr($award_2['alt']); ?>"><?php endif; ?></div>
-        <div class="laurel-slide">      <?php if ($award_1): ?><img src="<?php echo esc_url($award_3['url']); ?>" alt="<?php echo esc_attr($award_3['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_2): ?><img src="<?php echo esc_url($award_2['url']); ?>" alt="<?php echo esc_attr($award_2['alt']); ?>"><?php endif; ?></div>
+        <div class="laurel-slide">      <?php if ($award_3): ?><img src="<?php echo esc_url($award_3['url']); ?>" alt="<?php echo esc_attr($award_3['alt']); ?>"><?php endif; ?></div>
         <div class="laurel-slide">      <?php if ($award_4): ?><img src="<?php echo esc_url($award_4['url']); ?>" alt="<?php echo esc_attr($award_4['alt']); ?>"><?php endif; ?></div>
         <div class="laurel-slide">      <?php if ($award_5): ?><img src="<?php echo esc_url($award_5['url']); ?>" alt="<?php echo esc_attr($award_5['alt']); ?>"><?php endif; ?></div>
         <div class="laurel-slide">      <?php if ($award_6): ?><img src="<?php echo esc_url($award_6['url']); ?>" alt="<?php echo esc_attr($award_6['alt']); ?>"><?php endif; ?></div>
@@ -266,7 +281,7 @@ if ( have_posts() ) :
         <div class="line"></div>
     </div>
 
-    <section style="padding-left: 12rem; padding-top: 0;">
+    <section style="padding-left: 14rem; padding-top: 0;">
     <?php if ($instagram_url || $youtube_url || $vimeo_url): ?>
         <div class="social-media-icons">
             <ul style="">
@@ -295,11 +310,13 @@ if ( have_posts() ) :
         </div>
     <?php endif; ?>
     <?php if( $presskit = get_field('presskit') ): ?>
+        
         <div class="download-presskit">
-            <a href="<?php echo esc_url($presskit); ?>" download>
-                Download Presskit
+            <a class="presskit-content" href="<?php echo esc_url($presskit); ?>" download>
+            Download Presskit
             </a>
         </div>
+        
     <?php endif; ?>
 </section>
 
