@@ -26,18 +26,20 @@ jQuery(document).ready(function($) {
   
     // Animation
     const section = text.closest('section');
+    console.log('SECTION', section)
     gsap.from(splitText.words, {
       opacity: 0,
+      // x: -100,
       ease: 'none',
       stagger: 1,
       duration: 5,
       scrollTrigger: {
         trigger: section,
-        start: 'top top', 
-    
-        // end: () => `+=${window.innerHeight * 5}px`,
+        start: 'top-=22 top',
+        end: 'center top',
+        // pinSpacing: false, 
         scrub: true,
-        // markers: true,
+        markers: true,
         pin: true,
       }
     })

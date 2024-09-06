@@ -120,7 +120,7 @@ if ( $post_featured_video_element ) {
 					<?php echo wp_kses_post( $portfolio_item_title ); ?>
                 </a>
             </h3>
-
+				
 			<?php include locate_template( 'tpls/portfolio-loop-item-categories.php' ); ?>
         </div>
     </div>

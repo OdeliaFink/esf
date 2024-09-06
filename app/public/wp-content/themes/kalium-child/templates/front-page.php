@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="hero-container">
 
 
-        <section class="hero-section">
+        <section class="hero-section-front">
     
             <video class="video" autoplay loop muted>
                 <source src="http://esf.local/wp-content/uploads/2024/08/esf_webloop_v4-1080p-1.mp4" type="video/mp4">
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
     <div class="app">
   <section>
-    <div class="container">
+    <div class="container-tagline">
       <p class="reveal">Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...Short tagline of ESF Short tagline of ESF Short tagline of ESF...</p>
     </div>
   </section>

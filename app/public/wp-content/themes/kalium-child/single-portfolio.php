@@ -288,7 +288,7 @@ if ( have_posts() ) :
                 <?php if ($instagram_url): ?>
                     <li>
                         <a href="<?php echo esc_url($instagram_url); ?>" target="_blank" rel="noopener noreferrer">
-                            <img src="http://esf.local/wp-content/uploads/2024/07/iglogo.png" alt="Instagram" />
+                            <img src="http://esf.local/wp-content/uploads/2024/09/free-instagram-logo-icon-3497-thumb.png" alt="Instagram" />
                         </a>
                     </li>
                 <?php endif; ?>

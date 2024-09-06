@@ -57,7 +57,6 @@ do_action( 'kalium_wrapper_end' );
                 <ul style="display: flex; flex-direction: column;">
                     <li><a class="nav-footer-link" href="/films">FILMS</a></li>
                     <li><a class="nav-footer-link" href="/about">ABOUT</a></li>
-                    <li><a class="nav-footer-link" href="/services">SERVICES</a></li>
                     <li><a class="nav-footer-link" href="/distribution">DISTRIBUTION</a></li>
                 </ul>
             </div>
