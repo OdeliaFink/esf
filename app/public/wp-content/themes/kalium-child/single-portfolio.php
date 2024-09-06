@@ -104,7 +104,7 @@ if ( have_posts() ) :
             </div>				
         </div>
 
-    <div style="display: flex; align-items: center; padding-bottom: 5rem; width: 80%; margin-inline: auto; justify-content: space-between; gap: 3rem;">
+    <div style="display: flex; align-items: center; margin-block: 6rem; width: 80%; margin-inline: auto; justify-content: space-between; gap: 3rem;">
         <div>
             <p style="color: black; font-weight: 400; font-size: 3rem;">SYNOPSIS</p>
         </div>
@@ -170,6 +170,7 @@ if ( have_posts() ) :
                     echo '<div class="awards-grid">';
                     foreach ($awards_rows as $row) {
                         if (!empty(trim($row))) {
+                        
                             echo '<div class="awards-row"><strong>' . esc_html(trim($row)) . '</strong></div>';
                         }
                     }

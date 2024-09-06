@@ -73,11 +73,10 @@ section {
 .container-tagline {
   width: 100%;
   margin: 0 auto;
-  background-color: rgb(178, 147, 34);
+  background-color: #fec960;
   /* padding-block: 3rem; */
   padding: 5rem;
-  margin-bottom: 3rem;
-  min-height: 70vh;
+  min-height: 40vh;
   margin: 5rem 0;
 }
 .container-tagline * {
@@ -262,10 +261,10 @@ h3 {
   justify-content: space-between;
   width: 80%;
   margin-inline: auto;
-  padding: 40px 20px;
+  padding: 80px 20px;
   background-color: #fff8ec;
   gap: 5;
-  margin-top: 5rem;
+  margin-block: 8rem;
 }
 
 .info-box {
@@ -350,7 +349,7 @@ h3 {
   right: 35px;
   width: 20px;
   height: 20px;
-  background-image: url('path-to-your-arrow-icon.png'); /* Use an appropriate image */
+
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -524,12 +523,12 @@ h3 {
   width: 100%;
   /* galit */
   /* min-height: calc(100vh + 58px); */
-  height: 100vh;;
+  height: 100vh;
   overflow: hidden;
   padding: 0; /* Ensure no padding */
   margin: 0;
   /* galit */
-  /* margin-top: -58px; */
+  margin-top: -58px;
   /* bottom: 8rem; */
 
 }
@@ -631,7 +630,8 @@ h3 {
 /*ACCORDION SECTION*/
 
 .accordion-container {
-  padding: 20px;
+  width: 70%;
+  margin-inline: auto;
   padding-top: 75px;
 }
 
@@ -641,12 +641,12 @@ h3 {
 
 .accordion-header {
   background-color: #b0b0b0;
-  padding: 10px 20px;
+  padding: 5px 20px;
   cursor: pointer;
   color: black;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 0.1rem;
-  font-weight: bold;
+  font-weight: 400;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1116,6 +1116,16 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
    /* Space between rows */
 }
 
+
+.awards-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: black;
+  text-transform: uppercase;
+  line-height: 3rem;
+}
+
 .accordion-container .awards-content .awards-row {
   margin-bottom: 10px; /* Space between each award row */
   font-size: 1.2rem;
@@ -1150,4 +1160,23 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 .all-caps {
   font-weight: bold;
   font-size: 2em;
+}
+
+/*SCROLL CONTENT ACCORDION*/
+
+.scrollable-content {
+  max-height: 700px; /* Adjust based on your design needs */
+  overflow: hidden;
+  position: relative;
+}
+
+.auto-scroll {
+  position: absolute;
+  width: 100%;
+  animation: scrollContent 20s linear infinite; /* Adjust time based on preference */
+}
+
+@keyframes scrollContent {
+  from { top: 100%; }
+  to { top: 0%; } /* You might need to adjust this value based on total content height */
 }

@@ -26,10 +26,10 @@ jQuery(document).ready(function($) {
   
     // Animation
     const section = text.closest('section');
-    console.log('SECTION', section)
+    // console.log('SECTION', section)
     gsap.from(splitText.words, {
       opacity: 0,
-      // x: -100,
+      x: -100,
       ease: 'none',
       stagger: 1,
       duration: 5,
@@ -44,27 +44,43 @@ jQuery(document).ready(function($) {
       }
     })
   })
-  
 
-  
-  
-  (function($) {
-    $(document).ready(function() {
-        // Regular expression to match words in all caps
-        var capsRegex = /\b[A-Z]{2,}\b/g;
-
-        // Iterate over each film item in the accordion
-        $('.accordion-item').each(function() {
-            var content = $(this).html();
-            // Replace all caps words with wrapped span including custom class
-            var updatedContent = content.replace(capsRegex, function(match) {
-                return '<span class="all-caps">' + match + '</span>';
-            });
-            // Update the content
-            $(this).html(updatedContent);
+  document.addEventListener('DOMContentLoaded', function() {
+    var scrollSections = document.querySelectorAll('.scrollable-content');
+    
+    scrollSections.forEach(section => {
+        section.addEventListener('click', function() {
+            // Toggle scrolling animation
+            var scrollElement = section.querySelector('.auto-scroll');
+            if (scrollElement.style.animationPlayState === 'running') {
+                scrollElement.style.animationPlayState = 'paused';
+            } else {
+                scrollElement.style.animationPlayState = 'running';
+            }
         });
     });
-})(jQuery)
+});
+  
+
+  
+  
+//   (function($) {
+//     $(document).ready(function() {
+//         // Regular expression to match words in all caps
+//         var capsRegex = /\b[A-Z]{2,}\b/g;
+
+//         // Iterate over each film item in the accordion
+//         $('.accordion-item').each(function() {
+//             var content = $(this).html();
+//             // Replace all caps words with wrapped span including custom class
+//             var updatedContent = content.replace(capsRegex, function(match) {
+//                 return '<span class="all-caps">' + match + '</span>';
+//             });
+//             // Update the content
+//             $(this).html(updatedContent);
+//         });
+//     });
+// })(jQuery)
 
 
 

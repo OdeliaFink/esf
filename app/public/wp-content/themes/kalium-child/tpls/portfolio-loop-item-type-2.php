@@ -253,7 +253,7 @@ switch ( $portfolio_args['likes_icon'] ) {
 						<?php endif; ?>
 
                         <div class="info" style="text-align: left;" >
-                            <h3 style="font-size: 4vw; font-weight: bold;">
+                            <h3 style="font-size: 3vw; font-weight: bold;">
                                 <a href="<?php echo esc_url( $portfolio_item_href ); ?>" class="item-link" aria-label="<?php echo esc_html( $portfolio_item_title ); ?>"<?php echo when_match( $portfolio_item_new_window, 'target="_blank" rel="noopener"' ); ?>>
 									<?php echo wp_kses_post( $portfolio_item_title ); ?>
                                 </a>
