@@ -70,7 +70,7 @@ add_filter('acf/location/rule_match/page_template_and_post_type', 'my_acf_locati
 
 
 function create_team_member_post_type() {
-    if ( is_page('about') ) {
+ 
 
         register_post_type('team_member',
             array(
@@ -85,7 +85,7 @@ function create_team_member_post_type() {
                 'show_in_rest' => true, // Enable Gutenberg editor
             )
         );
-    }
+  
 }
 add_action('init', 'create_team_member_post_type');
 

@@ -211,8 +211,12 @@ if ( have_posts() ) :
     $image_number = 1;
     while( $image = get_field('image_' . $image_number) ) {
         if( $image ): ?>
-            <div class="slick-slide">
-                <div class="image-container" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div>
+            <div class="slick-slide" style="width: auto !important; ">
+                <div class="image-container">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="Movie Still <?php echo $image_number; ?>" />
+                </div>
+
+                <!-- <div class="image-container" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div> -->
             </div>
         <?php endif;
         $image_number++;

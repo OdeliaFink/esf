@@ -45,6 +45,23 @@ jQuery(document).ready(function($) {
     })
   })
 
+  // $('.movie-stills-slider').slick({
+  //   autoplay: false,
+  //   autoplaySpeed: 4000,
+  //   arrows: false, 
+  //   prevArrow: true,
+  //   nextArrow: true,
+  //   // 3 seconds between slides
+  //   // other Slick settings
+  // });
+  
+  // // Pausing on hover
+  // $('.movie-stills-slider').on('mouseenter', function() {
+  //   $(this).slick('slickPause');
+  // }).on('mouseleave', function() {
+  //   $(this).slick('slickPlay');
+  // });
+
   document.addEventListener('DOMContentLoaded', function() {
     var scrollSections = document.querySelectorAll('.scrollable-content');
     
