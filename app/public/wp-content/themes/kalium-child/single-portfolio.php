@@ -132,7 +132,87 @@ if ( have_posts() ) :
        
     </div>
 </div>
-<div class="accordion-container">
+
+<div class="movie-stills-slider">
+    <?php 
+    $image_number = 1;
+    while( $image = get_field('image_' . $image_number) ) {
+        if( $image ): ?>
+            <div class="slick-slide" style="width: auto !important; ">
+                <div class="image-container">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="Movie Still <?php echo $image_number; ?>" />
+                </div>
+
+                <!-- <div class="image-container" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div> -->
+            </div>
+        <?php endif;
+        $image_number++;
+    }
+    ?>
+</div>
+
+<div class="centered-border-line">
+    <div class="line"></div>
+</div>
+
+<!-- Embed the Trailer -->
+<?php if ($trailer_url): 
+    // Function to get YouTube video ID from URL
+    function get_youtube_id($url) {
+        // Check for standard YouTube URL format
+        preg_match('/(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([^&]+)/', $url, $matches);
+        if (isset($matches[1])) {
+            return $matches[1];
+        }
+        // Check for shortened YouTube URL format
+        preg_match('/(?:https?:\/\/)?(?:www\.)?youtu\.be\/([^?]+)/', $url, $matches);
+        return isset($matches[1]) ? $matches[1] : '';
+    }
+    
+    // Extract YouTube video ID
+    $youtube_id = get_youtube_id($trailer_url);
+    $is_youtube = !empty($youtube_id);
+    
+    // Construct YouTube embed URL
+    $youtube_embed_url = $is_youtube ? 'https://www.youtube.com/embed/' . esc_attr($youtube_id) : '';
+?>
+
+    <div class="film-trailer">
+        <?php if ($is_youtube || strpos($trailer_url, 'vimeo.com') !== false): ?>
+            <?php if ($is_youtube): ?>
+                <iframe width="560" height="315" src="<?php echo esc_url($youtube_embed_url); ?>" frameborder="0" allowfullscreen></iframe>
+            <?php else: ?>
+                <!-- Handle Vimeo URL here -->
+                <iframe src="<?php echo esc_url($trailer_url); ?>" width="500" height="225" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <?php endif; ?>
+        <?php else: ?>
+            <p>Trailer URL is not supported for embedding.</p>
+        <?php endif; ?>
+    </div>
+<?php endif; ?>
+
+
+
+
+    <!-- Rent Link Button -->
+    
+    <?php if ($rent_link): ?>
+        <?php 
+        // Define the URL for the Vimeo logo
+        $vimeo_logo = "http://esf.local/wp-content/uploads/2024/08/Vimeo_logo.png";
+        ?>
+        <div class="film-rental-container">
+            <h1 class="film-rental-h1"><?php echo esc_html($film_rental_header); ?></h1>
+            <a href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer">
+                <img src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 30%; height: auto;" />
+            </a>
+        </div>
+    <?php endif; ?>
+    <!-- <div class="centered-border-line">
+        <div class="line"></div>
+    </div> -->
+
+    <div class="accordion-container">
     <?php
     $accordion_fields = array(
         'credits' => array(
@@ -203,90 +283,16 @@ if ( have_posts() ) :
 </div>
 
 
-
-
-
-<div class="movie-stills-slider">
-    <?php 
-    $image_number = 1;
-    while( $image = get_field('image_' . $image_number) ) {
-        if( $image ): ?>
-            <div class="slick-slide" style="width: auto !important; ">
-                <div class="image-container">
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="Movie Still <?php echo $image_number; ?>" />
-                </div>
-
-                <!-- <div class="image-container" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div> -->
-            </div>
-        <?php endif;
-        $image_number++;
-    }
-    ?>
-</div>
-<div class="centered-border-line">
-    <div class="line"></div>
-</div>
-
-
-
-<!-- Embed the Trailer -->
-<?php if ($trailer_url): 
-    // Function to get YouTube video ID from URL
-    function get_youtube_id($url) {
-        // Check for standard YouTube URL format
-        preg_match('/(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([^&]+)/', $url, $matches);
-        if (isset($matches[1])) {
-            return $matches[1];
-        }
-        // Check for shortened YouTube URL format
-        preg_match('/(?:https?:\/\/)?(?:www\.)?youtu\.be\/([^?]+)/', $url, $matches);
-        return isset($matches[1]) ? $matches[1] : '';
-    }
-    
-    // Extract YouTube video ID
-    $youtube_id = get_youtube_id($trailer_url);
-    $is_youtube = !empty($youtube_id);
-    
-    // Construct YouTube embed URL
-    $youtube_embed_url = $is_youtube ? 'https://www.youtube.com/embed/' . esc_attr($youtube_id) : '';
-?>
-
-    <div class="film-trailer">
-        <?php if ($is_youtube || strpos($trailer_url, 'vimeo.com') !== false): ?>
-            <?php if ($is_youtube): ?>
-                <iframe width="560" height="315" src="<?php echo esc_url($youtube_embed_url); ?>" frameborder="0" allowfullscreen></iframe>
-            <?php else: ?>
-                <!-- Handle Vimeo URL here -->
-                <iframe src="<?php echo esc_url($trailer_url); ?>" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            <?php endif; ?>
-        <?php else: ?>
-            <p>Trailer URL is not supported for embedding.</p>
-        <?php endif; ?>
-    </div>
-<?php endif; ?>
-
-
-
-
-    <!-- Rent Link Button -->
-    
-    <?php if ($rent_link): ?>
-        <?php 
-        // Define the URL for the Vimeo logo
-        $vimeo_logo = "http://esf.local/wp-content/uploads/2024/08/Vimeo_logo.png";
-        ?>
-        <div class="film-rental-container">
-            <h1 class="film-rental-h1"><?php echo esc_html($film_rental_header); ?></h1>
-            <a href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 30%; height: auto;" />
+    <section style="padding-left: 14rem; padding-top: 0;">
+    <?php if( $presskit = get_field('presskit') ): ?>
+        
+        <div class="download-presskit">
+            <a class="presskit-content" href="<?php echo esc_url($presskit); ?>" download>
+            Download Presskit
             </a>
         </div>
+        
     <?php endif; ?>
-    <div class="centered-border-line">
-        <div class="line"></div>
-    </div>
-
-    <section style="padding-left: 14rem; padding-top: 0;">
     <?php if ($instagram_url || $youtube_url || $vimeo_url): ?>
         <div class="social-media-icons">
             <ul style="">
@@ -314,15 +320,7 @@ if ( have_posts() ) :
             </ul>
         </div>
     <?php endif; ?>
-    <?php if( $presskit = get_field('presskit') ): ?>
-        
-        <div class="download-presskit">
-            <a class="presskit-content" href="<?php echo esc_url($presskit); ?>" download>
-            Download Presskit
-            </a>
-        </div>
-        
-    <?php endif; ?>
+   
 </section>
 
 

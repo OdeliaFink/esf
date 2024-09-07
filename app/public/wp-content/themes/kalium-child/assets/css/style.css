@@ -72,12 +72,10 @@ section {
 
 .container-tagline {
   width: 100%;
-  margin: 0 auto;
   background-color: #fec960;
-  /* padding-block: 3rem; */
   padding: 5rem;
-  min-height: 40vh;
-  margin: 5rem 0;
+  min-height: 20vh;
+  margin: 7rem 0;
 }
 .container-tagline * {
   font-size: 25px;
@@ -94,6 +92,7 @@ section {
 .pin-spacer {
   width: auto;
   height: auto;
+  /* height: 712px; */
 }
 
 /* General Styles */
@@ -120,12 +119,13 @@ h3 {
   width: 100%;
   position: relative;
   background-color: black;
-  padding-block: 3rem;
+  padding-block: 2rem;
 }
 
 .laurel-carousel {
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
   width: 100%; /* Allow enough width for smooth scrolling */
   animation: scroll 20s linear infinite;
 }
@@ -143,25 +143,32 @@ h3 {
   object-fit: contain;
 }
 
+.single-portfolio .page-container {
+  margin-top: 0px;
+}
+
 .movie-stills-slider {
+  position: relative;
   width: 100%;
   overflow: hidden;
-  display: flex;
+  /* display: flex; */
   /* margin-block: 4rem; */
 }
 
 .movie-stills-slider .slick-slide {
-  flex: 0 0 85%; /* Each slide takes 85% of the width, adjust to show more/less of the next slide */
-  /* margin-right: 15px; */
-  margin: 7rem 6rem 0 15px;
+  flex: 0 0 53.33%; /* Each slide takes 85% of the width, adjust to show more/less of the next slide */
   position: relative;
+  /* margin-right: 15px; */
+  /* margin: 3rem 0 10px; */
   width: auto !important;  /* Override inline width */
   max-width: 85% !important;
 }
 
 .image-container {
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 550px; /* Set the desired height */
+  height: 650px; /* Set the desired height */
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -169,11 +176,14 @@ h3 {
 }
 
 .slick-slide {
-  object-fit: contain;
+ /* Each slide takes up one-third of the container width */
+  position: relative;
+  display: inline-block;
+  text-align: center;
 }
 
 .movie-stills-slider .slick-slide img {
-  max-height: 100%; /* Make sure the image fits within the slider height */
+  max-height: 80%; /* Make sure the image fits within the slider height */
   width: auto; /* Maintain aspect ratio */
   object-fit: contain !important; /* Ensure the entire image is visible */
   background-size: contain; /* Scale the image while maintaining aspect ratio */
@@ -264,10 +274,9 @@ h3 {
   justify-content: space-between;
   width: 80%;
   margin-inline: auto;
-  padding: 80px 20px;
   background-color: #fff8ec;
   gap: 5;
-  margin-block: 8rem;
+  margin-block: 9rem;
 }
 
 .info-box {
@@ -318,6 +327,11 @@ h3 {
  
 }
 
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
 .info-box:hover {
   transform: scale(1.1);
 }
@@ -334,12 +348,14 @@ h3 {
   transition: transform 0.3s ease-out; /* Smooth scaling transition */
   color: #000; /* Default text color */
   cursor: pointer; /* Indicates the element is interactive */
+  
 }
 
 
 
 .presskit-content:hover {
   transform: scale(1.1);
+
 
 }
 
@@ -451,12 +467,12 @@ h3 {
   text-align: left;
   color: white;
   padding-top: 12rem;
-  padding-left: 11rem;
+  padding-left: 10rem;
   max-width: 50%;
 }
 
 .hero-text h1 {
-  font-size: 60px;
+  font-size: 80px;
   margin: 0;
   text-transform: uppercase;
   font-weight: bold;
@@ -582,7 +598,7 @@ h3 {
   padding: 40px 60px;
   text-align: center;
   background-color: #fec960;
-  height: 400px;
+  /* height: 400px; */
   display: flex;
   align-items: center;
 }
@@ -634,9 +650,10 @@ h3 {
 /*ACCORDION SECTION*/
 
 .accordion-container {
-  width: 70%;
+  width: 80%;
   margin-inline: auto;
-  padding-top: 75px;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 .accordion-item {
@@ -649,16 +666,18 @@ h3 {
   cursor: pointer;
   color: black;
   font-size: 25px;
-  letter-spacing: 0.1rem;
-  font-weight: 400;
+  letter-spacing: 0.125rem;
+  font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .accordion-header:hover {
   background-color: #999999;
+  transform: scale(1,1);
 }
 
 .accordion-icon {
@@ -897,7 +916,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 /*TRAILER */
 
 .film-trailer {
-  margin: 30px 20px 0;
+  margin: 0px 20px 0;
   width: 80%;
   margin-inline: auto;
   height: 60rem;
@@ -950,8 +969,9 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   width: 80%; /* Full width of the container */
   border-top: 1px solid rgb(233, 232, 232); /* Customize the border line */
   position: relative;
-  top: 50%; /* Adjusts vertical position */
+  top: 100%; /* Adjusts vertical position */
   transform: translateY(-50%); /* Centers the line vertically */
+  bottom: 4rem;
 }
 
 /*About page*/
