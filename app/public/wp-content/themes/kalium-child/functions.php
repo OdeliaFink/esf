@@ -30,6 +30,39 @@ if(is_front_page()){
 add_action('wp_enqueue_scripts', 'enqueue_react_framer_motion');
 
 
+// Modify the permalink for portfolio items
+add_filter('post_type_link', 'custom_portfolio_permalink', 10, 2);
+function custom_portfolio_permalink($post_link, $post) {
+    if ($post->post_type == 'portfolio') {
+        // Get the terms (categories) associated with this portfolio item
+        $terms = wp_get_post_terms($post->ID, 'portfolio_category');
+
+        // Check if the post has terms
+        if (!is_wp_error($terms) && !empty($terms)) {
+            // Loop through the terms and check for specific categories
+            foreach ($terms as $term) {
+                if ($term->slug == 'films') {
+                    return home_url('/films/' . $post->post_name);
+                } elseif ($term->slug == 'distribution') {
+                    return home_url('/distribution/' . $post->post_name);
+                }
+            }
+        }
+    }
+    return $post_link;
+}
+
+// Add custom rewrite rules for films and distribution
+add_action('init', 'custom_portfolio_rewrite_rules');
+function custom_portfolio_rewrite_rules() {
+    add_rewrite_rule('^films/([^/]+)/?$', 'index.php?post_type=portfolio&name=$matches[1]', 'top');
+    add_rewrite_rule('^distribution/([^/]+)/?$', 'index.php?post_type=portfolio&name=$matches[1]', 'top');
+}
+
+// Flush rewrite rules on theme activation
+add_action('after_switch_theme', 'flush_rewrite_rules');
+
+
 
 function kalium_child_change_portfolio_slug() {
     global $wp_post_types;
@@ -43,7 +76,7 @@ function kalium_child_change_portfolio_slug() {
         $post_type->has_archive = 'films';
     }
 }
-add_action('init', 'kalium_child_change_portfolio_slug', 20);
+add_action('init', 'kalium_child_change_portfolio_slug', 40);
 
 function my_acf_location_rules_types($choices) {
     $choices['Custom']['page_template_and_post_type'] = 'Page Template and Post Type';

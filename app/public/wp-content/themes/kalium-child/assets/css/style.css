@@ -927,7 +927,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   font-size: 2rem;
   color: black;
   font-weight: 300;
-  text-transform:uppercase;
+  /* text-transform:uppercase; */
 }
 
 .film-trailer iframe {
@@ -937,6 +937,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 .film-rental-container {
   display: flex;
+  margin-top: 3rem;
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
