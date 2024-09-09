@@ -55,12 +55,14 @@ get_header(); ?>
             ?>
             
             <div class="team-member">
-                <a href="<?php echo esc_url($link); ?>">
-                    <img src="<?php echo esc_url($photo); ?>" alt="<?php echo esc_attr($full_name); ?>">
-                    <h3><?php echo esc_html($full_name); ?></h3>
-                    <p><?php echo esc_html($job_position); ?></p>
-                </a>
-            </div>
+    <a href="<?php echo esc_url($link); ?>" class="image-single-member">
+        <img src="<?php echo esc_url($photo); ?>" alt="<?php echo esc_attr($full_name); ?>">
+        <span class="arrow-icon">&#xf061;</span> <!-- Arrow icon inside the link -->
+    </a>
+    <h3><?php echo esc_html($full_name); ?></h3>
+    <p><?php echo esc_html($job_position); ?></p>
+</div>
+
             
         <?php endwhile;
         wp_reset_postdata();

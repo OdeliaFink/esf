@@ -47,6 +47,14 @@ html.lenis {
   gap: 20px;
 }
 
+.image-single-member:hover {
+transform: scale(.93);
+}
+
+.image-single-member {
+  transition: transform 0.3s ease;
+}
+
 .social-media-icons ul li {
   display: inline-block;
 }
@@ -955,21 +963,11 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   justify-content: center;
 }
 
-.team-member {
-  position: relative;
-  text-align: center;
-  max-width: 70%;
-  margin: 0 auto; /* Center each grid item */
-}
 
-.team-member img {
-  max-width: 100%;
-  height: auto;
-  height: auto;
- 
-}
 
-.team-member::after {
+/*  */
+
+.team-member .arrow-icon {
   content: '\f061'; /* Font Awesome Unicode for the arrow-right icon */
   font-family: 'Font Awesome 6 Free'; /* Adjust based on the version you're using */
   font-weight: 900; /* Required for Font Awesome solid icons */
@@ -979,6 +977,12 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   right: 10px;
   font-size: 24px;
   transform: rotate(-45deg); /* Rotate the arrow to point diagonally */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.team-member:hover:after {
+  transition: scale(0.7);
 }
 
 .team-member h3 {
@@ -996,7 +1000,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    margin: 20px auto;
+    /* margin: 20px auto; */
    height: auto;
 }
 
@@ -1008,7 +1012,8 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 .team-member-info {
     flex: 1;
-    padding-left: 100px;
+    padding-left: 52px;
+    margin-right: 7rem;
     padding-bottom: 7rem; /* Add some padding for spacing */
     display: flex;
     flex-direction: column;
@@ -1050,7 +1055,8 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Ensures the image fills the container */
-    background-color: #fff8ec; /* Background color for the image area */
+    background-color: #fff8ec;
+     margin-top: 3rem;
 }
 
 .team-member-photo img {
@@ -1067,6 +1073,29 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   max-width: 70%;
   margin-inline: auto;
 }
+
+.team-member {
+  position: relative;
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto; /* Center each grid item */
+}
+
+.team-member img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.team-member a {
+  display: block;
+  position: relative;
+}
+
+.team-member .image-single-member:hover .arrow-icon {
+  transform: scale(1.1); /* Slightly enlarge the arrow on hover */
+}
+
 
 .lower-content-desc {
   font-size: 2rem;
