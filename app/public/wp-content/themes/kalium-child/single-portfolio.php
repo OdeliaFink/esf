@@ -69,7 +69,7 @@ if ( have_posts() ) :
         $hero_image = get_field('hero_image');
         $film_title = get_field('film_title');
         $director_name = get_field('director_name');
-        $release_year = get_field('release_year');
+        $release_year = get_field('year_released');
         $award_1 = get_field('award_1');
         $award_2 = get_field('award_2');
         $award_3 = get_field('award_3');
