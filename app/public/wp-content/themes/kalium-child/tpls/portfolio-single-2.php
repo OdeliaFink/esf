@@ -118,7 +118,7 @@ do_action( 'kalium_portfolio_item_before', 'type-2' );
                 <div class="<?php echo $has_services_section && $is_centered == false ? 'col-sm-8' : 'col-sm-12'; ?>">
                     <div class="project-description">
                         <div class="post-formatting">
-							<?php the_content(); ?>
+				 -->
                         </div>
                     </div>
                 </div>

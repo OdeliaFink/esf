@@ -53,14 +53,14 @@ function custom_portfolio_permalink($post_link, $post) {
 }
 
 // Add custom rewrite rules for films and distribution
-add_action('init', 'custom_portfolio_rewrite_rules');
-function custom_portfolio_rewrite_rules() {
-    add_rewrite_rule('^films/([^/]+)/?$', 'index.php?post_type=portfolio&name=$matches[1]', 'top');
-    add_rewrite_rule('^distribution/([^/]+)/?$', 'index.php?post_type=portfolio&name=$matches[1]', 'top');
-}
+// add_action('init', 'custom_portfolio_rewrite_rules');
+// function custom_portfolio_rewrite_rules() {
+//     add_rewrite_rule('^films/([^/]+)/?$', 'index.php?post_type=portfolio&name=$matches[1]', 'top');
+//     add_rewrite_rule('^distribution/([^/]+)/?$', 'index.php?post_type=portfolio&name=$matches[1]', 'top');
+// }
 
-// Flush rewrite rules on theme activation
-add_action('after_switch_theme', 'flush_rewrite_rules');
+// // Flush rewrite rules on theme activation
+// add_action('after_switch_theme', 'flush_rewrite_rules');
 
 
 

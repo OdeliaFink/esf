@@ -16,6 +16,16 @@ html.lenis {
   pointer-events: none;
 }
 
+.synopsis {
+  display: flex; 
+  align-items: center; 
+  margin-block: 6rem; 
+  width: 80%; 
+  margin-inline: auto; 
+  justify-content: space-between; 
+  gap: 3rem;
+}
+
 .social-netowrk-links {
   display: flex;
   flex-direction: column;
@@ -1221,8 +1231,14 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
     flex-direction: column;
   }
 
+ 
+
   .hero-text {
-    padding-left: 3rem !important;
+    padding-left: 4rem !important;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
   }
 
   .team-member-description {
@@ -1242,6 +1258,8 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   .content-area {
     width: 320px !important;
   }
+
+  
 }
 
 @media screen and (max-width: 1024px) {

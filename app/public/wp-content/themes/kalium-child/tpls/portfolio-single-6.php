@@ -24,7 +24,7 @@ do_action( 'kalium_portfolio_item_before', 'type-6' );
 			
 			<div class="title section-title">
 				<h1><?php the_title(); ?></h1>
-
+ddd
 				<?php if ( $sub_title ) : ?>
 				<p><?php echo wp_kses_post( $sub_title ); ?></p>
 				<?php endif; ?>
