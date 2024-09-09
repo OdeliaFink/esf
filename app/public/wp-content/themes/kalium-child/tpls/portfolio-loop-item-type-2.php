@@ -87,7 +87,7 @@ if ( $box_size ) {
 	$item_class[] = 'w' . $bs_width;
 
 	// Mobile Image
-	$mobile_image_size = apply_filters( 'kalium_portfolio_masonry_mobile_image', [ 768, 500 ], $portfolio_image_size );
+	$mobile_image_size = apply_filters( 'kalium_portfolio_masonry_mobile_image', [ 768, 1200 ], $portfolio_image_size );
 	$mobile_image      = kalium_get_attachment_image( $post_thumbnail_id, $mobile_image_size );
 
 	// Support for Masonry with proportional thumbs

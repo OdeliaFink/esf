@@ -40,9 +40,9 @@ do_action( 'kalium_wrapper_end' );
       
         <div class="footer-links">
         <div class="footer-social">
-                <a href="https://www.youtube.com/channel/eyetsteelfilm" target="_blank" title="YouTube">
+                <!-- <a href="https://www.youtube.com/channel/eyetsteelfilm" target="_blank" title="YouTube">
                     <img src="http://esf.local/wp-content/uploads/2024/09/youtube-icon.webp" alt="YouTube">
-                </a>
+                </a> -->
                 <a href="https://vimeo.com/YOUR_PROFILE" target="_blank" title="Vimeo">
                     <img src="http://esf.local/wp-content/uploads/2024/09/vimeo_logo2.png" alt="Vimeo">
                 </a>
