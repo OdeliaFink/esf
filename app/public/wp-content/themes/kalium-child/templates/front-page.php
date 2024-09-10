@@ -71,7 +71,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 catalyst for social and political change. It was created to develop cinema that empowers people who
                 are ignored by mainstream media, a mandate that has taken the company to explore projects, people
                 and ideas around the world.</p> -->
-                <p class="reveal">In the vastness of space, celestial bodies dance in harmony. Stars twinkle, planets orbit, and nebulas paint vibrant hues. Black holes exert their gravitational might, while comets streak by, leaving stardust in their wake.</p>
+                <p class="reveal">EyeSteelFilm is a film and interactive media company dedicated to using cinematic expression as a
+                catalyst for social and political change. It was created to develop cinema that empowers people who
+                are ignored by mainstream media, people
+                and ideas around the world.</p>
             </div>
         </section>
     </div>

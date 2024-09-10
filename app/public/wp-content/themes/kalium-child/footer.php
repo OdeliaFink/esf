@@ -19,7 +19,7 @@ do_action( 'kalium_wrapper_end' );
 ?>
 
 <!-- Subscription Section -->
-<div style="background-color: #FEC960; height: 20vh; display: flex; align-items: center;">
+<div style="background-color: #FEC960; height: 30vh; display: flex; align-items: center;">
 
 
   <section class="stay-tuned" >
@@ -40,16 +40,13 @@ do_action( 'kalium_wrapper_end' );
       
         <div class="footer-links">
         <div class="footer-social">
-                <!-- <a href="https://www.youtube.com/channel/eyetsteelfilm" target="_blank" title="YouTube">
-                    <img src="http://esf.local/wp-content/uploads/2024/09/youtube-icon.webp" alt="YouTube">
-                </a> -->
-                <a href="https://vimeo.com/YOUR_PROFILE" target="_blank" title="Vimeo">
+                <a class="nav-footer-link" href="https://vimeo.com/YOUR_PROFILE" target="_blank" title="Vimeo">
                     <img src="http://esf.local/wp-content/uploads/2024/09/vimeo_logo2.png" alt="Vimeo">
                 </a>
-                <a class="twitter" href="https://twitter.com/YOUR_USERNAME" target="_blank" title="Twitter">
+                <a class="nav-footer-link" class="twitter" href="https://twitter.com/YOUR_USERNAME" target="_blank" title="Twitter">
                     <img src="http://esf.local/wp-content/uploads/2024/09/X_logo_2023.svg.png" alt="Twitter">
                 </a>
-                <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank" title="Instagram">
+                <a class="nav-footer-link" href="https://www.instagram.com/YOUR_USERNAME" target="_blank" title="Instagram">
                     <img src="http://esf.local/wp-content/uploads/2024/09/free-instagram-logo-icon-3497-thumb.png" alt="Instagram">
                 </a>
             </div>
