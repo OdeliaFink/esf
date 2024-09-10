@@ -8,42 +8,82 @@ jQuery(document).ready(function($) {
   let revealAnimations = [];
   
   // Scroll
-  const lenis = new Lenis({
-    lerp: 0.07
-  });
+  // const lenis = new Lenis({
+  //   lerp: 0.07
+  // });
   
-  lenis.on('scroll', ScrollTrigger.update)
-  gsap.ticker.add((time)=>{
-    lenis.raf(time * 3000)
-  })
+  // lenis.on('scroll', ScrollTrigger.update)
+  // gsap.ticker.add((time)=>{
+  //   lenis.raf(time * 3000)
+  // })
   
   // Reveal
-  document.querySelectorAll('.reveal').forEach(text => {
-    // Split text
-    let splitText = new SplitType(text, {
-      type: 'words'
-    })
+  // document.querySelectorAll('.reveal').forEach(text => {
+  //   // Split text
+  //   let splitText = new SplitType(text, {
+  //     type: 'words'
+  //   })
   
-    // Animation
-    const section = text.closest('section');
-    // console.log('SECTION', section)
-    gsap.from(splitText.words, {
-      opacity: 0,
-      x: -100,
-      ease: 'none',
-      stagger: 1,
-      duration: 5,
-      scrollTrigger: {
-        trigger: section,
-        start: 'top-=22 top',
-        end: 'center top',
-        // pinSpacing: false, 
-        scrub: true,
-        markers: true,
-        pin: true,
-      }
-    })
+  //   // Animation
+  //   const section = text.closest('section');
+  //   // console.log('SECTION', section)
+  //   gsap.from(splitText.words, {
+  //     opacity: 0,
+  //     x: -100,
+  //     ease: 'none',
+  //     stagger: 1,
+  //     duration: 5,
+  //     scrollTrigger: {
+  //       trigger: section,
+  //       start: 'top-=22 top',
+  //       // end: 'center top',
+  //       // pinSpacing: false, 
+  //       scrub: true,
+  //       markers: true,
+  //       pin: true,
+  //     }
+  //   })
+  // })
+
+  // Scroll
+const lenis = new Lenis({
+  lerp: 0.07
+});
+
+lenis.on('scroll', ScrollTrigger.update)
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
+
+// Reveal
+document.querySelectorAll('.reveal').forEach(text => {
+  // Split text
+  let splitText = new SplitType(text, {
+    type: 'words'
   })
+
+  // Animation
+  const section = text.closest('section');
+  gsap.from(splitText.words, {
+    opacity: 0.1,
+    ease: 'none',
+    stagger: 1,
+    duration: 5,
+    scrollTrigger: {
+      trigger: section,
+      start: 'top-=280 top', 
+      end: () => `+=${window.innerHeight / 3}px`,
+      scrub: true,
+      markers: true,
+      pin: true,
+    }
+  })
+})
+
+
+
+
+
 
   // $('.movie-stills-slider').slick({
   //   autoplay: false,

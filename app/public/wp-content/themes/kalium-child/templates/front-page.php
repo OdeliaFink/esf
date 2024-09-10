@@ -56,27 +56,25 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
     <div class="hero-container">
-
-
         <section class="hero-section-front">
     
             <video class="video" autoplay loop muted poster>
                 <source data-src="http://esf.local/wp-content/uploads/2024/08/esf_webloop_v4-1080p-1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-       
         </section>
     </div>
     <div class="app">
-  <section>
-    <div class="container-tagline">
-      <p class="reveal">EyeSteelFilm is a film and interactive media company dedicated to using cinematic expression as a
-        catalyst for social and political change. It was created to develop cinema that empowers people who
-        are ignored by mainstream media, a mandate that has taken the company to explore projects, people
-        and ideas around the world.</p>
+        <section>
+            <div class="container-tagline container">
+            <!-- <p class="reveal">EyeSteelFilm is a film and interactive media company dedicated to using cinematic expression as a
+                catalyst for social and political change. It was created to develop cinema that empowers people who
+                are ignored by mainstream media, a mandate that has taken the company to explore projects, people
+                and ideas around the world.</p> -->
+                <p class="reveal">In the vastness of space, celestial bodies dance in harmony. Stars twinkle, planets orbit, and nebulas paint vibrant hues. Black holes exert their gravitational might, while comets streak by, leaving stardust in their wake.</p>
+            </div>
+        </section>
     </div>
-  </section>
-</div>
 
 
 
