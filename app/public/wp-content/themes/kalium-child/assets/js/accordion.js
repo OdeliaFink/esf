@@ -71,7 +71,8 @@ document.querySelectorAll('.reveal').forEach(text => {
     duration: 5,
     scrollTrigger: {
       trigger: section,
-      start: 'top-=280 top', 
+      start: 'top-=180 top', 
+      // start: 'top-=280 top', 
       end: () => `+=${window.innerHeight / 3}px`,
       scrub: true,
       markers: true,
