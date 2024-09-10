@@ -329,12 +329,13 @@ header {
 }
 
 .presskit-content {
-  font-size: 1.7rem;
+  font-weight: 500;
+  font-size: 2rem;
   position: relative;
   display: inline-block; /* Ensures the underline scales with the text */
-  transition: transform 0.3s ease-out; /* Smooth scaling transition */
-  color: #000; /* Default text color */
+  color: #ffc107; /* Default text color */
   cursor: pointer; /* Indicates the element is interactive */
+  transition: transform 0.3s ease-out; /* Smooth scaling transition */
   
 }
 

@@ -283,7 +283,7 @@ if ( have_posts() ) :
 </div>
 
 
-    <section style="padding-left: 14rem; padding-top: 0;">
+<section style="padding-left: 15rem; padding-top: 0;">
     <?php if( $presskit = get_field('presskit') ): ?>
         
         <div class="download-presskit">
