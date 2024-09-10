@@ -151,9 +151,9 @@ if ( have_posts() ) :
     ?>
 </div>
 
-<div class="centered-border-line">
+<!-- <div class="centered-border-line">
     <div class="line"></div>
-</div>
+</div> -->
 
 <!-- Embed the Trailer -->
 <?php if ($trailer_url): 
@@ -283,7 +283,7 @@ if ( have_posts() ) :
 </div>
 
 
-<section style="padding-left: 15rem; padding-top: 0;">
+<section style="padding-left: 15rem; padding-top: 0; margin-bottom: -30rem;">
     <?php if( $presskit = get_field('presskit') ): ?>
         
         <div class="download-presskit">

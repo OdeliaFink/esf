@@ -197,6 +197,10 @@ h3 {
   max-width: 85% !important;
 }
 
+.slick-dotted.slick-slider {
+  margin-bottom: 0px !important;
+}
+
 .image-container {
   display: flex;
   align-items: center;
@@ -885,7 +889,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 .film-rental-container {
   display: flex;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
@@ -903,21 +907,21 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   border-radius: 5px;
 }
 
-.centered-border-line {
+/* .centered-border-line {
   position: relative;
-  text-align: center; /* Centers the pseudo-element within the container */
+  text-align: center;
 }
 
 .centered-border-line::before {
   content: '';
   display: inline-block;
-  width: 80%; /* Full width of the container */
-  border-top: 1px solid rgb(233, 232, 232); /* Customize the border line */
+  width: 80%; 
+  border-top: 1px solid rgb(233, 232, 232); 
   position: relative;
-  top: 100%; /* Adjusts vertical position */
-  transform: translateY(-50%); /* Centers the line vertically */
+  top: 100%;
+  transform: translateY(-50%); 
   bottom: 4rem;
-}
+} */
 
 /*About page*/
 
@@ -1040,11 +1044,13 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 
 .upper-content-desc {
+  color: black;
   padding-block: 3rem;
   font-size: 5rem;
   font-weight: 100;
   max-width: 70%;
   margin-inline: auto;
+  font-family: 'Roboto';
 }
 
 .team-member {
@@ -1071,14 +1077,18 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 
 .lower-content-desc {
+  color: black;
+  font-family: 'Roboto';
   font-size: 2rem;
   font-weight: 300;
-  max-width: 40%;
+  max-width: 70%;
   margin-inline: auto;
 
 }
 .our-team-heading {
+  color: black;
   text-align: center;
+  /* text-decoration: underline; */
   font-size: 3rem;
   padding-block: 4rem;
 }
