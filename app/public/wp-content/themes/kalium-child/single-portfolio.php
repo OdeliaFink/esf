@@ -223,19 +223,19 @@ if ( have_posts() ) :
     <?php
     $accordion_fields = array(
         'credits' => array(
-            'heading' => __('CREDITS', 'your-text-domain'),  // Translatable label
+            'heading' => __($translations['credits']),  // Translatable label
             'content' => get_field('credits_content')
         ),
         'awards' => array(
-            'heading' => __('AWARDS', 'your-text-domain'),  // Translatable label
+            'heading' => __($translations['awards']),  // Translatable label
             'content' => get_field('awards_content')
         ),
         'screenings' => array(
-            'heading' => __('SCREENINGS', 'your-text-domain'),  // Translatable label
+            'heading' => __($translations['screenings']),  // Translatable label
             'content' => get_field('screenings_content')
         ),
         'press' => array(
-            'heading' => __('PRESS', 'your-text-domain'),  // Translatable label
+            'heading' => __($translations['press']),  // Translatable label
             'content' => get_field('press_content')
         )
     );

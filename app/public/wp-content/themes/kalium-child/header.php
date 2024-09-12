@@ -20,7 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<a href="?lang=en">English</a> | <a href="?lang=fr">Français</a>
 <?php
 // WP body open
 wp_body_open();

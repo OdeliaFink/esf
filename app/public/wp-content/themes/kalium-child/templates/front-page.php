@@ -5,6 +5,10 @@
  */
 get_header(); ?>
 
+<?php
+$translations = load_translation_file();
+?>
+
 <div class="main-container">
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -86,21 +90,21 @@ document.addEventListener('DOMContentLoaded', function () {
     <!-- Information Boxes -->
     <section class="info-boxes">
         <div class="info-box">
-            <h3>Films</h3>
+            <h3><?php echo $translations['films']; ?></h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="/films" class="learn-more">Learn More</a>
+            <a href="/films" class="learn-more"><?php echo $translations['learn_more']; ?></a>
             <div class="icon-arrow"></div>
         </div>
         <div class="info-box">
-            <h3>Distribution</h3>
+            <h3><?php echo $translations['distribution']; ?></h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="/distribution" class="learn-more">Learn More</a>
+            <a href="/distribution" class="learn-more"><?php echo $translations['learn_more']; ?></a>
             <div class="icon-arrow"></div>
         </div>
         <div class="info-box">
-            <h3>Team</h3>
+            <h3><?php echo $translations['about']; ?></h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="/about" class="learn-more">Learn More</a>
+            <a href="/about" class="learn-more"><?php echo $translations['learn_more']; ?></a>
             <div class="icon-arrow"></div>
         </div>
     </section>

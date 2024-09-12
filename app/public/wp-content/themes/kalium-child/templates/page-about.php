@@ -10,9 +10,9 @@ $translations = load_translation_file();
 <!-- Display Upper Content Description -->
 <div class="upper-content-desc">
     <?php
-    $upper_content_desc = get_field('upper_content_desc'); // Get the value of the upper content description field
+    $upper_content_desc = get_field('upper_content_desc'); 
     if ($upper_content_desc) {
-        echo wp_kses_post($upper_content_desc); // Output the content with safe HTML tags
+        echo wp_kses_post($upper_content_desc); 
     }
     ?>
 </div>
@@ -20,9 +20,9 @@ $translations = load_translation_file();
 <!-- Display Lower Content Description -->
 <div class="lower-content-desc">
     <?php
-    $lower_content_desc = get_field('lower_content_desc'); // Get the value of the lower content description field
+    $lower_content_desc = get_field('lower_content_desc'); 
     if ($lower_content_desc) {
-        echo wp_kses_post($lower_content_desc); // Output the content with safe HTML tags
+        echo wp_kses_post($lower_content_desc); 
     }
     ?>
 </div>
@@ -30,9 +30,9 @@ $translations = load_translation_file();
 <!-- Display Our Team Heading -->
 <div class="our-team-heading">
     <?php
-    $our_team_heading = get_field('our_team_heading'); // Get the value of the our team heading field
+    $our_team_heading = get_field('our_team_heading'); 
     if ($our_team_heading) {
-        echo '<h2>' . esc_html($our_team_heading) . '</h2>'; // Output the heading within an h2 tag
+        echo '<h2>' . esc_html($translations['team']) . '</h2>'; 
     }
     ?>
 </div>

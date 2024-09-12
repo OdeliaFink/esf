@@ -104,7 +104,7 @@ if ( $header_bottom_border ) {
 }
 ?>
     <header <?php kalium_class_attr( $header_classes ); ?>>
-
+		
 		<?php
 		/**
 		 * Hook: kalium_header_content.
@@ -113,7 +113,9 @@ if ( $header_bottom_border ) {
 		 * @hooked kalium_header_content_display - 20
 		 */
 		do_action( 'kalium_header_content' );
+		
 		?>
+		<!-- <a href="?lang=en">English</a> | <a href="?lang=fr">Français</a> -->
 
     </header>
 
