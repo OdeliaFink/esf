@@ -204,7 +204,7 @@ if ( have_posts() ) :
         <div class="film-rental-container">
             <h1 class="film-rental-h1"><?php echo esc_html($film_rental_header); ?></h1>
             <a href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 30%; height: auto;" />
+                <img class="nav-footer-link" src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 30%; height: auto;" />
             </a>
         </div>
     <?php endif; ?>
@@ -288,7 +288,7 @@ if ( have_posts() ) :
         
         <div class="download-presskit">
             <a class="presskit-content" href="<?php echo esc_url($presskit); ?>" download>
-            Download Presskit
+            <p class="nav-footer-link">Download Presskit</p>
             </a>
         </div>
         
@@ -299,7 +299,7 @@ if ( have_posts() ) :
                 <?php if ($instagram_url): ?>
                     <li>
                         <a href="<?php echo esc_url($instagram_url); ?>" target="_blank" rel="noopener noreferrer">
-                            <img src="http://esf.local/wp-content/uploads/2024/09/free-instagram-logo-icon-3497-thumb.png" alt="Instagram" />
+                            <img class="" src="http://esf.local/wp-content/uploads/2024/09/free-instagram-logo-icon-3497-thumb.png" alt="Instagram" />
                         </a>
                     </li>
                 <?php endif; ?>

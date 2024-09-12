@@ -75,7 +75,7 @@ document.querySelectorAll('.reveal').forEach(text => {
       // start: 'top-=280 top', 
       end: () => `+=${window.innerHeight / 3}px`,
       scrub: true,
-      markers: true,
+      markers: false,
       pin: true,
     }
   })

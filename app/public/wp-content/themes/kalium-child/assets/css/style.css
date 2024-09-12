@@ -66,7 +66,7 @@ transform: scale(.93);
 }
 
 .social-media-icons ul li a:hover img {
-  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  transform: scale(1.1) !important; /* Slightly enlarge the icon on hover */
 }
 
 .synopsis-text {
@@ -263,7 +263,7 @@ header {
 .info-boxes {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 88%;
   margin-inline: auto;
   background-color: #fff8ec;
   gap: 5;
@@ -332,24 +332,34 @@ header {
   margin-left: auto;
 }
 
+.download-presskit{
+  cursor: pointer; /* Indicates the element is interactive */
+  transition: transform 0.3s ease-out;
+}
+
 .presskit-content {
   font-weight: 500;
   font-size: 2rem;
   position: relative;
   display: inline-block; /* Ensures the underline scales with the text */
   color: #ffc107; /* Default text color */
+  /* Smooth scaling transition */
   cursor: pointer; /* Indicates the element is interactive */
-  transition: transform 0.3s ease-out; /* Smooth scaling transition */
+  transition: transform 0.3s ease-out;
   
 }
 
-.presskit-content:hover {
+.downlaod-presskit:hover {
+  transform: scale(1,1);
+}
+
+/* .presskit-content:hover {
   transform: scale(1.1);
 }
 
 .presskit-content:hover::after {
-  width: 100%; /* Full width on hover */
-}
+  width: 100%;
+} */
 
 .icon-arrow {
   position: absolute;
@@ -399,22 +409,17 @@ header {
 
 /*SIDE MENU*/
 
-.sidebar-menu-wrapper.menu-skin-light {
-  background: #fec960f0 !important;
-}
-
 .menu-main-menu {
   padding-top: 4rem !important;
 }
 
 
 .sidebar-menu-wrapper.menu-type-sidebar-menu .sidebar-menu-container .sidebar-main-menu ul.menu > li > a {
+  margin-top: 1rem;
   color: black !important;
   font-size: 3.5rem;
   line-height: 5rem;
   font-weight: 500;
-
-
 }
 
 .hero-image {
@@ -441,7 +446,7 @@ header {
   text-align: left;
   color: white;
   padding-top: 12rem;
-  padding-left: 10rem;
+  padding-left: 9rem;
   max-width: 50%;
 }
 
@@ -606,7 +611,7 @@ header {
 .accordion-container {
   width: 80%;
   margin-inline: auto;
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-bottom: 4rem;
 }
 
@@ -689,6 +694,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 .stay-tuned {
     padding-top: 10rem;
+    color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -706,6 +712,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 }
 
 .stay-tuned h4 {
+  color: black;
   font-size: 4rem;
   font-weight: bold;
 }
