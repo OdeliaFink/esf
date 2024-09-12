@@ -62,21 +62,56 @@ function custom_portfolio_permalink($post_link, $post) {
 // // Flush rewrite rules on theme activation
 // add_action('after_switch_theme', 'flush_rewrite_rules');
 
+function redirect_if_no_lang_param() {
+    // Check if the language is in the URL query string
+    if (isset($_GET['lang'])) {
+        // Set a cookie for the selected language (30 days)
+        setcookie('lang', $_GET['lang'], time() + (86400 * 30), "/");
+        $_COOKIE['lang'] = $_GET['lang']; // To handle the current request
+    } elseif (!isset($_COOKIE['lang'])) {
+        // If no language query and no cookie, default to English
+        $default_lang = 'en';
+
+        // Get the current URL
+        $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        
+        // Append ?lang=en if there are no existing query parameters, or &lang=en if there are
+        $redirect_url = strpos($current_url, '?') === false ? $current_url . '?lang=' . $default_lang : $current_url . '&lang=' . $default_lang;
+        
+        // Perform the redirect
+        wp_redirect($redirect_url);
+        exit();
+    } else {
+        // If cookie is set, keep the same language on all pages
+        $current_lang = $_COOKIE['lang'];
+        if (!isset($_GET['lang'])) {
+            // Get the current URL without the query parameters
+            $current_url = strtok((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", '?');
+
+            // Redirect to the same page but append the cookie language as the query parameter
+            $redirect_url = $current_url . '?lang=' . $current_lang;
+            wp_redirect($redirect_url);
+            exit();
+        }
+    }
+}
+add_action('template_redirect', 'redirect_if_no_lang_param');
+
 
 function load_translation_file() {
-    // Determine language (from query string, cookie, or default)
-    $language = isset($_GET['lang']) ? $_GET['lang'] : 'en';
+    // Determine language: prioritize query string, then cookie, default to 'en'
+    $language = isset($_GET['lang']) ? $_GET['lang'] : (isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en');
 
-    // Set default translation file path
+    // Set the translation file path based on the selected language
     $file_path = get_stylesheet_directory() . '/languages/translations_' . $language . '.json';
 
-    // Load the JSON translation file
+    // Load the appropriate JSON translation file
     if (file_exists($file_path)) {
         $translations = json_decode(file_get_contents($file_path), true);
         return $translations;
     }
-    
-    // Default to English if the file doesn't exist
+
+    // Fallback to English if the file doesn't exist
     $file_path = get_stylesheet_directory() . '/languages/translations_en.json';
     $translations = json_decode(file_get_contents($file_path), true);
     return $translations;

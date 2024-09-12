@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="info-box">
             <h3>Team</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="/team" class="learn-more">Learn More</a>
+            <a href="/about" class="learn-more">Learn More</a>
             <div class="icon-arrow"></div>
         </div>
     </section>

@@ -81,6 +81,22 @@ document.querySelectorAll('.reveal').forEach(text => {
   })
 })
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the current lang parameter from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const lang = urlParams.get('lang');
+
+  // If a lang parameter exists, append it to all internal links
+  if (lang) {
+      const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"], a[href^="../"]');
+      internalLinks.forEach(function(link) {
+          const url = new URL(link.href, window.location.origin);
+          url.searchParams.set('lang', lang);
+          link.href = url.href;
+      });
+  }
+});
+
 
 
 
