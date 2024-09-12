@@ -63,6 +63,26 @@ function custom_portfolio_permalink($post_link, $post) {
 // add_action('after_switch_theme', 'flush_rewrite_rules');
 
 
+function load_translation_file() {
+    // Determine language (from query string, cookie, or default)
+    $language = isset($_GET['lang']) ? $_GET['lang'] : 'en';
+
+    // Set default translation file path
+    $file_path = get_stylesheet_directory() . '/languages/translations_' . $language . '.json';
+
+    // Load the JSON translation file
+    if (file_exists($file_path)) {
+        $translations = json_decode(file_get_contents($file_path), true);
+        return $translations;
+    }
+    
+    // Default to English if the file doesn't exist
+    $file_path = get_stylesheet_directory() . '/languages/translations_en.json';
+    $translations = json_decode(file_get_contents($file_path), true);
+    return $translations;
+}
+
+
 
 function kalium_child_change_portfolio_slug() {
     global $wp_post_types;

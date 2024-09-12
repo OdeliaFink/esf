@@ -3,6 +3,10 @@
 
 get_header(); ?>
 
+<?php
+$translations = load_translation_file();
+?>
+
 <!-- Display Upper Content Description -->
 <div class="upper-content-desc">
     <?php

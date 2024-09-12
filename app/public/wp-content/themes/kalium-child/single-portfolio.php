@@ -11,6 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $item_type = kalium_get_field( 'item_type' );
 
+
+
 // Custom Item Link Redirect
 if ( kalium_get_field( 'item_linking' ) == 'external' ) {
     $launch_link_href = kalium_get_field( 'launch_link_href' );
@@ -43,6 +45,11 @@ if ( kalium_get_theme_option( 'portfolio_disable_lightbox' ) ) {
 
 // Theme header
 get_header();
+?>
+
+
+<?php
+$translations = load_translation_file();
 ?>
 
 <div class="film-item"> <!-- Start of container -->
@@ -288,7 +295,7 @@ if ( have_posts() ) :
         
         <div class="download-presskit">
             <a class="presskit-content" href="<?php echo esc_url($presskit); ?>" download>
-            <p class="nav-footer-link">Download Presskit</p>
+            <a href="#" download><?php echo $translations['download_presskit']; ?></a>
             </a>
         </div>
         
