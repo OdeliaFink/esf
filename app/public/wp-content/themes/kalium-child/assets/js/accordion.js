@@ -61,6 +61,7 @@ document.querySelectorAll('.reveal').forEach(text => {
   let splitText = new SplitType(text, {
     type: 'words'
   })
+  console.log("SLUT");
 
   // Animation
   const section = text.closest('section');
@@ -82,10 +83,11 @@ document.querySelectorAll('.reveal').forEach(text => {
 })
 
 document.addEventListener("DOMContentLoaded", function() {
+  
   // Get the current lang parameter from the URL
   const urlParams = new URLSearchParams(window.location.search);
   const lang = urlParams.get('lang');
-
+  console.log("SLUT");
   // If a lang parameter exists, append it to all internal links
   if (lang) {
       const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"], a[href^="../"]');
@@ -96,6 +98,8 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   }
 });
+
+
 
 
 

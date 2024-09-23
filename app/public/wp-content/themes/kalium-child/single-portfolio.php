@@ -202,30 +202,79 @@ if ( have_posts() ) :
 
 
     <!-- Rent Link Button -->
-    
     <?php if ($rent_link): ?>
-        <?php 
-        // Define the URL for the Vimeo logo
-        $vimeo_logo = "http://esf.local/wp-content/uploads/2024/08/Vimeo_logo.png";
-        ?>
-        <div class="film-rental-container">
-            <h1 class="film-rental-h1"><?php echo esc_html($film_rental_header); ?></h1>
-            <a href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer">
-                <img class="nav-footer-link" src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 30%; height: auto;" />
+    <?php 
+    // Define the URL for the Vimeo logo
+    $vimeo_logo = "http://esf.local/wp-content/uploads/2024/08/Vimeo_logo.png"; 
+    ?>
+    <div class="film-rental-container">
+        <h1 class="film-rental-h1">
+            <a href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer" style="margin-left: 10px;">
+                <?php echo esc_html($film_rental_header); ?>
+                <!-- Inline SVG for the new tab icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
             </a>
-        </div>
-    <?php endif; ?>
-    <!-- <div class="centered-border-line">
-        <div class="line"></div>
-    </div> -->
+        </h1>
+        <a href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer">
+            <img class="nav-footer-link" src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 30%; height: auto;" />
+        </a>
+    </div>
+<?php endif; ?>
 
-    <div class="accordion-container">
+<div class="credits-section">
+  <div class="credits-container">
+    <h2>Credits</h2>
+    <div class="credits">
+      <div class="credits-row">
+        <div class="role">Director</div>
+        <div class="name">Jennifer Wickham, Brenda Michell, Michael Toledano</div>
+      </div>
+      <div class="credits-row">
+        <div class="role">Producers</div>
+        <div class="name">Vanessa Hope, Ted Hope, Cassandra Jabola, Ivan Orlic, Sylvia Feng</div>
+      </div>
+      <div class="credits-row">
+        <div class="role">Executive Producers</div>
+        <div class="name">Geralyn Dreyfous, Ming Chiang, Patrick Huang, Patrick Pfupajena, Danielle Turkov-Wilson, Mike Veldstra, Doug Blush, Lauren Mekhael</div>
+      </div>
+      <div class="credits-row">
+        <div class="role">Production Company</div>
+        <div class="name">Double Hope Films</div>
+      </div>
+      <div class="credits-row">
+        <div class="role">Co-Production Companies</div>
+        <div class="name">Seine Pictures, 100 Chapters Productions</div>
+      </div>
+      <div class="credits-row">
+        <div class="role">Cinematography</div>
+        <div class="name">Laura Hudock</div>
+      </div>
+      <div class="credits-row">
+        <div class="role">Editors</div>
+        <div class="name">Ku A-Ming, Dave Henry, Siuloku O, Justice Yong</div>
+      </div>
+      <div class="credits-row">
+        <div class="role">Music</div>
+        <div class="name">Wei-San Hsu</div>
+      </div>
+      <div class="credits-row">
+        <div class="role">Sound</div>
+        <div class="name">Yu-Ting Su</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <div class="accordion-container">
     <?php
     $accordion_fields = array(
-        'credits' => array(
-            'heading' => __($translations['credits']),  // Translatable label
-            'content' => get_field('credits_content')
-        ),
+     
         'awards' => array(
             'heading' => __($translations['awards']),  // Translatable label
             'content' => get_field('awards_content')
@@ -262,21 +311,7 @@ if ( have_posts() ) :
                         }
                     }
                     echo '</div>';
-                    if ($key === 'credits') {
-                        // Bold and uppercase the word before "clan" and "clan" itself
-                        $processed_content = preg_replace_callback('/(\b\w+\s+clan\b)/i', function($matches) {
-                            echo '<div class="credits-content-heading">';
-                            return '<strong>' . strtoupper($matches[1]) . '</strong>';
-                            echo '</div>';
-                        }, $field['content']);
-                        
-                        $processed_content = preg_replace_callback('/\b[A-Z]+(?:’[A-Z]+)?\b/', function($matches) {
-                            return '<strong>' . $matches[0] . '</strong>';
-                        }, $processed_content);
-                        
-    
-                        echo nl2br($processed_content); // Convert newlines to <br> for better control
-                    }   
+                  
                 } else {
                     echo nl2br($field['content']); // For other content, just handle new lines
                 }
