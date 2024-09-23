@@ -640,27 +640,28 @@ pointer-events: none;
 }
 
 .accordion-header {
-  background-color: #b0b0b0;
-  padding: 5px 20px;
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 0px 20px;
   cursor: pointer;
   color: black;
-  font-size: 25px;
-  letter-spacing: 0.125rem;
+  font-size: 18px;
+  letter-spacing: 0.09rem;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background-color 0.3s;
-  transition: transform 0.3s ease;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 3px;
 }
 
 .accordion-header:hover {
-  background-color: #999999;
-  transform: scale(1,1);
+  background-color: #ffd88b;
 }
 
 .accordion-icon {
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, color 0.6s ease; /* Transition for rotation and color */
   transform: rotate(-30deg);
   color: #fec960;
   font-size: 4rem;
@@ -669,6 +670,7 @@ pointer-events: none;
 .accordion-header.active .accordion-icon {
   transform: rotate(90deg);
 }
+
 
 .accordion-content {
   display: none;
@@ -1137,13 +1139,13 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 /* HERE */
 .accordion-container .accordion-content {
-  background-color: #fec960;
-  border-left: 5px solid white;
+  background-color: #fec96000;
+  border-left: 5px solid hsl(39, 87%, 85%);
 }
 
 /* Styling for the awards grid */
 .accordion-container .awards-content {
-  background-color: #fec960; /* Light background for contrast */
+  background-color: #ffedcf; /* Light background for contrast */
   padding: 20px; /* Add some padding for spacing */
    /* Add a left border for emphasis */
   color: #333;
@@ -1153,34 +1155,36 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 /* Grid layout for the awards */
 .accordion-container .awards-content .awards-grid {
   display: grid;
+  flex-wrap: wrap;
+ 
   grid-template-columns: 1fr 1fr; /* Two columns layout */
    /* Space between rows */
 }
+.awards-column {
+  flex: 1;
+  min-width: 80%; /* Adjust the width of each column */
+}
+
 
 .slick-slide .slick-current .slick-active {
   width: auto !important;
 }
 
-.awards-row {
+.awards-row p {
   display: flex;
   align-items: center;
   gap: 1rem;
   color: black;
   /* text-transform: uppercase; */
-  line-height: 3rem;
+
 }
 
 .accordion-container .awards-content .awards-row {
-  margin-bottom: 10px; /* Space between each award row */
-  font-size: 1.2rem;
+ /* Space between each award row */
+  font-size: 17px;
 }
 
-.accordion-container .awards-content .awards-row strong {
-  font-weight: 400;
-  color: #000;
-  /* text-transform: uppercase; */
-  font-size: 2.3rem;
-}
+
 
 .credits-content-heading strong {
   font-size: 2.5rem;
@@ -1328,7 +1332,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 .credits-section h2 {
     letter-spacing: 0.125rem;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
   flex-basis: 20%; /* Adjust this width as needed */
   margin: 0;
@@ -1351,6 +1355,9 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 .credits-row:last-child {
   border-bottom: 1px solid #444;
+}
+.credits-row:first-child {
+  border-top: none;
 }
 
 .role {

@@ -225,59 +225,36 @@ if ( have_posts() ) :
     </div>
 <?php endif; ?>
 
-<div class="credits-section">
-  <div class="credits-container">
-    <h2>Credits</h2>
-    <div class="credits">
-      <div class="credits-row">
-        <div class="role">Director</div>
-        <div class="name">Jennifer Wickham, Brenda Michell, Michael Toledano</div>
-      </div>
-      <div class="credits-row">
-        <div class="role">Producers</div>
-        <div class="name">Vanessa Hope, Ted Hope, Cassandra Jabola, Ivan Orlic, Sylvia Feng</div>
-      </div>
-      <div class="credits-row">
-        <div class="role">Executive Producers</div>
-        <div class="name">Geralyn Dreyfous, Ming Chiang, Patrick Huang, Patrick Pfupajena, Danielle Turkov-Wilson, Mike Veldstra, Doug Blush, Lauren Mekhael</div>
-      </div>
-      <div class="credits-row">
-        <div class="role">Production Company</div>
-        <div class="name">Double Hope Films</div>
-      </div>
-      <div class="credits-row">
-        <div class="role">Co-Production Companies</div>
-        <div class="name">Seine Pictures, 100 Chapters Productions</div>
-      </div>
-      <div class="credits-row">
-        <div class="role">Cinematography</div>
-        <div class="name">Laura Hudock</div>
-      </div>
-      <div class="credits-row">
-        <div class="role">Editors</div>
-        <div class="name">Ku A-Ming, Dave Henry, Siuloku O, Justice Yong</div>
-      </div>
-      <div class="credits-row">
-        <div class="role">Music</div>
-        <div class="name">Wei-San Hsu</div>
-      </div>
-      <div class="credits-row">
-        <div class="role">Sound</div>
-        <div class="name">Yu-Ting Su</div>
+<?php if( have_rows('credits') ): ?>
+  <div class="credits-section">
+    <div class="credits-container">
+      <h2>Credits</h2>
+      <div class="credits">
+        <?php while( have_rows('credits') ): the_row(); 
+          // Get the role name and member names
+          $role_name = get_sub_field('role_name');
+          $member_name = get_sub_field('member_name');
+        ?>
+        <div class="credits-row">
+          <div class="role"><?php echo esc_html($role_name); ?></div>
+          <div class="name"><?php echo esc_html($member_name); ?></div>
+        </div>
+        <?php endwhile; ?>
       </div>
     </div>
   </div>
-</div>
+<?php endif; ?>
 
 
 
- <div class="accordion-container">
+
+<div class="accordion-container">
     <?php
+    // Accordion fields setup
     $accordion_fields = array(
-     
         'awards' => array(
             'heading' => __($translations['awards']),  // Translatable label
-            'content' => get_field('awards_content')
+            'content' => get_field('awards_name')      // Fetch the ACF repeater field 'awards_name'
         ),
         'screenings' => array(
             'heading' => __($translations['screenings']),  // Translatable label
@@ -289,40 +266,48 @@ if ( have_posts() ) :
         )
     );
 
+    // Loop through accordion fields
     foreach ($accordion_fields as $key => $field) :
-        if ($field['content']) :
-            $content_class = ($key === 'awards') ? 'accordion-content awards-content' : 'accordion-content';
-    ?>
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span><?php echo esc_html($field['heading']); ?></span>
-                <span class="accordion-icon">→</span>
+        // Set the content class for the accordion
+        $content_class = ($key === 'awards') ? 'accordion-content awards-content' : 'accordion-content';
+        
+        // Display only if content exists
+        if ($key === 'awards' && have_rows('awards_name')) : ?>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span><?php echo esc_html($field['heading']); ?></span>
+                    <span class="accordion-icon">→</span>
+                </div>
+                <div class="<?php echo esc_attr($content_class); ?>">
+                    <div class="awards-grid">
+                        <?php
+                        // Loop through the ACF repeater field 'awards_name'
+                        while (have_rows('awards_name')) : the_row();
+                            $award_name = get_sub_field('award_name');  // Get the award name from the repeater
+                            
+                            if (!empty($award_name)) :
+                                echo '<div class="awards-row"><p><i class="fa-regular fa-star"></i>' . esc_html($award_name) . '</p></div>';
+                            endif;
+                        endwhile;
+                        ?>
+                    </div> <!-- End of awards-grid -->
+                </div> <!-- End of accordion-content -->
+            </div> <!-- End of accordion-item -->
+        <?php elseif (!empty($field['content'])) : ?>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span><?php echo esc_html($field['heading']); ?></span>
+                    <span class="accordion-icon">→</span>
+                </div>
+                <div class="<?php echo esc_attr($content_class); ?>">
+                    <?php echo nl2br(esc_html($field['content'])); // Display other content ?>
+                </div>
             </div>
-            <div class="<?php echo $content_class; ?>">
-                <?php
-                if ($key === 'awards') {
-                    // Process the awards content into rows
-                    $awards_rows = explode('-', $field['content']); // Split awards into an array by hyphens
-                    echo '<div class="awards-grid">';
-                    foreach ($awards_rows as $row) {
-                        if (!empty(trim($row))) {
-                        
-                            echo '<div class="awards-row"><strong>' . esc_html(trim($row)) . '</strong></div>';
-                        }
-                    }
-                    echo '</div>';
-                  
-                } else {
-                    echo nl2br($field['content']); // For other content, just handle new lines
-                }
-                ?>
-            </div>
-        </div>
-    <?php
-        endif;
+        <?php endif;
     endforeach;
     ?>
 </div>
+
 
 
 <div style="padding-left: 15rem; padding-top: 0;">

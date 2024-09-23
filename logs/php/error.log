@@ -738,3 +738,21 @@ Stack trace:
 [23-Sep-2024 13:59:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
 [23-Sep-2024 13:59:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
 [23-Sep-2024 13:59:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[23-Sep-2024 17:39:52 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[23-Sep-2024 17:39:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[23-Sep-2024 17:39:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[23-Sep-2024 17:39:54 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[23-Sep-2024 21:42:27 UTC] PHP Warning:  Undefined variable $key in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 254
+[23-Sep-2024 21:42:27 UTC] PHP Warning:  Undefined variable $field in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 265
+[23-Sep-2024 21:42:27 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 265
+[23-Sep-2024 21:43:49 UTC] PHP Warning:  Undefined variable $key in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 254
+[23-Sep-2024 21:43:49 UTC] PHP Warning:  Undefined variable $field in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 265
+[23-Sep-2024 21:43:49 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 265
+[23-Sep-2024 21:46:44 UTC] PHP Fatal error:  Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php:284
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php(284): explode('-', Array)
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#4 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 284
