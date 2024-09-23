@@ -371,9 +371,13 @@ header:has(.main-container .hero-container) {
 }
 
 .icon-arrow::after {
-  content: '↗'; /* Optional: If you want to use a unicode arrow */
+  content: "\2794"; /* Optional: Unicode arrow character */
   font-size: 3em;
   color: #ffc107; /* Adjust color as needed */
+  display: inline-block;
+  transform: rotate(316deg); /* Rotate the arrow by 45 degrees */
+   /* Add spacing if needed */
+  vertical-align: middle;
 }
 
 /* Header Section */
@@ -507,8 +511,10 @@ left: 0;
 content: "";
 /* background: rgb(88,88,88);
 background: linear-gradient(180deg, rgb(66, 66, 66) 0%, rgba(255,255,255,0) 63%); */
-background-color: rgba(185, 185, 185, 0.15);
-background-image: linear-gradient(2deg, rgba(153, 153, 153, 0) 35%, #424242 100%);
+/* background-color: rgba(185, 185, 185, 0.15);
+background-image: linear-gradient(2deg, rgba(153, 153, 153, 0) 35%, #424242 100%); */
+background-color: rgb(0 0 0 / 5%);
+    background-image: linear-gradient(2deg, rgb(0 0 0 / 0%) 35%, #282828 100%);
 z-index: 3;
 pointer-events: none;
 }
