@@ -335,33 +335,29 @@ header:has(.main-container .hero-container) {
 }
 
 .download-presskit{
-  cursor: pointer; /* Indicates the element is interactive */
-  transition: transform 0.3s ease-out;
-}
-
-.presskit-content {
-  font-weight: 500;
-  font-size: 2rem;
-  position: relative;
-  display: inline-block; /* Ensures the underline scales with the text */
-  color: #ffc107; /* Default text color */
-  /* Smooth scaling transition */
-  cursor: pointer; /* Indicates the element is interactive */
   transition: transform 0.3s ease-out;
   
 }
 
-.downlaod-presskit:hover {
-  transform: scale(1,1);
+.presskit-content {
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+  display: inline; /* Changed to inline for text behavior */
+  color: #ffc107; /* Default text color */
+  text-decoration: none; /* Remove underline by default */
+  transition: transform 0.3s ease-out;
 }
 
-/* .presskit-content:hover {
+.presskit-content:hover{
   transform: scale(1.1);
 }
 
-.presskit-content:hover::after {
-  width: 100%;
-} */
+
+
+
+
+
 
 .icon-arrow {
   position: absolute;
@@ -918,9 +914,6 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   text-transform: none;
 }
 
-.film-rental-h1:hover{
-  color: red;
-}
 
 .film-trailer iframe {
   width: 100%;
@@ -1323,6 +1316,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 .credits-container {
   display: flex;
+  gap: 2rem;
 }
 
 .credits-section h2 {
@@ -1330,16 +1324,16 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   font-weight: 600;
   font-size: 25px;
   font-weight: bold;
-  flex-basis: 10%; /* Adjust this width as needed */
+  flex-basis: 20%; /* Adjust this width as needed */
   margin: 0;
   padding-right: 13px;
   text-align: left;
 }
 
 .credits {
-  flex-basis: 90%; /* Adjust this width as needed */
-  border-top: 1px solid #444;
-  border-bottom: 1px solid #444;
+  flex-basis: 80%; /* Adjust this width as needed */
+  /* border-top: 1px solid #444;
+  border-bottom: 1px solid #444; */
 }
 
 .credits-row {

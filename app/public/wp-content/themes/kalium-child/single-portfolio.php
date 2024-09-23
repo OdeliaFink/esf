@@ -209,7 +209,7 @@ if ( have_posts() ) :
     ?>
     <div class="film-rental-container">
         <h1 class="film-rental-h1">
-            <a href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer" style="margin-left: 10px;">
+            <a class="nav-footer-link" href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer" style="margin-left: 10px;">
                 <?php echo esc_html($film_rental_header); ?>
                 <!-- Inline SVG for the new tab icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
@@ -325,12 +325,12 @@ if ( have_posts() ) :
 </div>
 
 
-<section style="padding-left: 15rem; padding-top: 0; margin-bottom: -30rem;">
+<div style="padding-left: 15rem; padding-top: 0;">
     <?php if( $presskit = get_field('presskit') ): ?>
-        
+    
         <div class="download-presskit">
             <a class="presskit-content" href="<?php echo esc_url($presskit); ?>" download>
-            <a href="#" download><?php echo $translations['download_presskit']; ?></a>
+            <?php echo $translations['download_presskit']; ?>
             </a>
         </div>
         
@@ -363,7 +363,7 @@ if ( have_posts() ) :
         </div>
     <?php endif; ?>
    
-</section>
+</div>
 
 
 
