@@ -16,6 +16,83 @@ html.lenis {
   pointer-events: none;
 }
 
+/* Preloader styles */
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999; /* Keep preloader on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1; /* Start fully visible */
+  transition: opacity 1s ease-out; /* Smooth fade-out */
+}
+
+/* Spinner for loading animation */
+.spinner {
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Content styles: initially hidden by opacity */
+#content {
+  opacity: 0;
+  background-color: #000; /* Optional: Starting background color (can change to transparent if you wish) */
+  transition: opacity 1s ease-in-out, background-color 2s ease-in-out; /* Smooth fade-in for content and background */
+}
+
+/* Fade-in animation for the background */
+@keyframes fadeInBackground {
+  0% {
+      background-color: transparent;
+  }
+  100% {
+      background-color: #f4f4f4; /* Final background color or image */
+  }
+}
+
+/* Keyframes for scaling and fading out the preloader */
+@keyframes scaleOut {
+  0% {
+      transform: scale(1); /* Normal size */
+      opacity: 1; /* Fully visible */
+  }
+  100% {
+      transform: scale(1); /* No scaling, just fading out */
+      opacity: 0; /* Fully transparent */
+  }
+}
+
+/* Class to hide the preloader */
+.hidden {
+  opacity: 0;
+  pointer-events: none; /* Disable interactions with preloader */
+}
+
+/* Apply the fade-in animation to the background */
+.fade-in-bg {
+  animation: fadeInBackground 2s ease-in-out forwards;
+}
+
+
+
 .synopsis {
   display: flex; 
   align-items: center; 
@@ -140,7 +217,7 @@ html {
 }
 
 a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: inherit;
 }
 
@@ -240,9 +317,7 @@ background-image: linear-gradient(1deg, rgba(162, 162, 162, 0) 35%, #121212 100%
   
 }
 
-header:has(.main-container .hero-container) {
-  background-color: blue;
-}
+
 
 .site-header--sticky-active-style {
   background-color: transparent;
@@ -340,24 +415,29 @@ header:has(.main-container .hero-container) {
 }
 
 .presskit-content {
-  font-weight: 500;
   font-size: 18px;
+  letter-spacing: 0.09rem;
+  font-weight: 600;
+  text-transform: uppercase;
   position: relative;
   display: inline; /* Changed to inline for text behavior */
-  color: #ffc107; /* Default text color */
+  color: black; /* Default text color */
   text-decoration: none; /* Remove underline by default */
   transition: transform 0.3s ease-out;
 }
 
-.presskit-content:hover{
-  transform: scale(1.1);
-}
+ .presskit-button {
+  background-color: transparent; 
+  border: 1px solid black; 
+  border-radius: 3px;
+   padding: 1.3rem;
+   transition: background-color 0.4s ease, transform 0.3s ease;
+ }
 
-
-
-
-
-
+ .presskit-button:hover {
+  background-color: #ffd88b;
+ 
+ }
 
 .icon-arrow {
   position: absolute;
@@ -365,7 +445,6 @@ header:has(.main-container .hero-container) {
   right: 35px;
   width: 20px;
   height: 20px;
-
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -375,8 +454,7 @@ header:has(.main-container .hero-container) {
   font-size: 3em;
   color: #ffc107; /* Adjust color as needed */
   display: inline-block;
-  transform: rotate(316deg); /* Rotate the arrow by 45 degrees */
-   /* Add spacing if needed */
+  transform: rotate(316deg);
   vertical-align: middle;
 }
 
@@ -631,8 +709,9 @@ pointer-events: none;
 .accordion-container {
   width: 80%;
   margin-inline: auto;
-  margin-top: 1rem;
-  margin-bottom: 4rem;
+  margin-block: 1rem;
+
+
 }
 
 .accordion-item {
@@ -676,7 +755,11 @@ pointer-events: none;
   display: none;
   padding: 10px 20px;
   background-color: #d0d0d0;
-  animation: slideDown 0.3s ease;
+  animation: slideDown .4s ease;
+}
+
+.screenings-row p {
+color: black;
 }
 
 @keyframes slideDown {
@@ -801,7 +884,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 }
 
 .link-hover {
-  text-decoration: none !important;
+  /* text-decoration: none !important; */
 }
 
 .custom-footer {
@@ -915,11 +998,12 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 }
 
 .film-rental-h1 {
-  font-size: 18px;
+  text-transform: uppercase;
+  font-size: 17px;
   font-family: 'Roboto';
   color: black;
-  font-weight: 400;
-  text-transform: none;
+  font-weight: 600;
+  letter-spacing: 0.125rem;
 }
 
 
@@ -928,7 +1012,32 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   height: 100%;
 }
 
+.film-rental-link a {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  text-decoration: none;
+}
+.film-rental-container .film-rental-link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  border-radius: 5px;
+  height: 0.05em;
+  bottom: 0;
+  left: 0;
+  background-color: #000 !important;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.film-rental-link a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .film-rental-container {
+  margin-bottom: -30px;
   display: flex;
   /* margin-top: 1rem; */
   flex-direction: row;
@@ -939,14 +1048,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   text-align: right;
 }
 
-.rent-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #00eeff; /* Customize your button color */
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
-}
+
 
 /* .centered-border-line {
   position: relative;
@@ -1086,9 +1188,11 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 .upper-content-desc {
   color: black;
+  text-transform: uppercase;
   padding-block: 3rem;
-  font-size: 5rem;
-  font-weight: 100;
+  padding-top: 5rem;
+  font-size: 2rem;
+  font-weight: 500;
   max-width: 70%;
   margin-inline: auto;
   font-family: 'Roboto';
@@ -1120,17 +1224,18 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 .lower-content-desc {
   color: black;
   font-family: 'Roboto';
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 300;
   max-width: 70%;
   margin-inline: auto;
 
 }
-.our-team-heading {
+.our-team-heading h2 {
   color: black;
   text-align: center;
+  font-weight: 500;
   /* text-decoration: underline; */
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding-block: 4rem;
 }
 
@@ -1145,7 +1250,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 /* Styling for the awards grid */
 .accordion-container .awards-content {
-  background-color: #ffedcf; /* Light background for contrast */
+   /* Light background for contrast */
   padding: 20px; /* Add some padding for spacing */
    /* Add a left border for emphasis */
   color: #333;
@@ -1165,6 +1270,21 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   min-width: 80%; /* Adjust the width of each column */
 }
 
+.awards-grid, .screenings-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between columns */
+}
+
+.awards-column, .screenings-column {
+  flex: 1;
+  min-width: 200px; /* Adjust the width of each column */
+}
+
+.awards-row, .screenings-row {
+  margin-bottom: 10px; /* Space between rows */
+}
+
 
 .slick-slide .slick-current .slick-active {
   width: auto !important;
@@ -1172,9 +1292,11 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 .awards-row p {
   display: flex;
+  font-size: 15px;
   align-items: center;
   gap: 1rem;
   color: black;
+  
   /* text-transform: uppercase; */
 
 }
@@ -1210,6 +1332,46 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   font-size: 2em;
 }
 
+
+.press-quotes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between each quote */
+  padding: 20px;
+}
+
+.press-quote-item {
+  position: relative;
+  padding: 5px;
+
+
+  font-size: 1.2rem;
+}
+
+.quote-content {
+  text-transform: none;
+  font-size: 15px;
+  color: black;
+  line-height: 1.6;
+  position: relative;
+  padding: 0 40px; /* Space for quotation marks */
+  display: block;
+}
+
+.quote-marks {
+  font-size: 2rem;
+  color: black;
+  vertical-align: bottom;
+}
+
+.quote-source {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  font-size: 12px;
+  font-style: italic;
+  color: #555;
+}
 /*SCROLL CONTENT ACCORDION*/
 
 .scrollable-content {
@@ -1247,13 +1409,8 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
     width: 620px !important;
   }
 
-  .upper-content-desc {
-    font-size: 2.5rem;
-  }
-
-  .lower-content-desc {
-    max-width: 70%;
-  }
+ 
+ 
 
   .team-member-info {
     padding-left: 12px;

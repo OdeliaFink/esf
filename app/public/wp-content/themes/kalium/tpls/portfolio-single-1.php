@@ -62,13 +62,7 @@ do_action( 'kalium_portfolio_item_before', 'type-1' );
 				do_action( 'kalium_portfolio_type_side_portfolio_before_title' );
 				?>
 
-				<div class="title section-title">
-					<h1><?php the_title(); ?></h1>
-
-					<?php if ( $sub_title ) : ?>
-					<p><?php echo wp_kses_post( $sub_title ); ?></p>
-					<?php endif; ?>
-				</div>
+		
 
 				<div class="project-description">
 					<div class="post-formatting">

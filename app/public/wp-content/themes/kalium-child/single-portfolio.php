@@ -200,7 +200,7 @@ if ( have_posts() ) :
 
 
 
-
+<div>
     <!-- Rent Link Button -->
     <?php if ($rent_link): ?>
     <?php 
@@ -209,7 +209,7 @@ if ( have_posts() ) :
     ?>
     <div class="film-rental-container">
         <h1 class="film-rental-h1">
-            <a class="nav-footer-link" href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer" style="margin-left: 10px;">
+            <a class=" film-rental-link" href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer" style="margin-left: 10px;">
                 <?php echo esc_html($film_rental_header); ?>
                 <!-- Inline SVG for the new tab icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
@@ -219,12 +219,41 @@ if ( have_posts() ) :
                 </svg>
             </a>
         </h1>
-        <a href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer">
-            <img class="nav-footer-link" src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 30%; height: auto;" />
-        </a>
+       
+            <img  class="" src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 15%; height: auto;" />
+   
+    </div>
+ <div style="width: 79%; margin-inline: auto;">
+    <?php if ($instagram_url || $youtube_url || $vimeo_url): ?>
+        <div class="social-media-icons">
+            <ul style="">
+                <?php if ($instagram_url): ?>
+                    <li>
+                        <a href="<?php echo esc_url($instagram_url); ?>" target="_blank" rel="noopener noreferrer">
+                            <img class="" src="http://esf.local/wp-content/uploads/2024/09/free-instagram-logo-icon-3497-thumb.png" alt="Instagram" />
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <?php if ($youtube_url): ?>
+                    <li>
+                        <a href="<?php echo esc_url($youtube_url); ?>" target="_blank" rel="noopener noreferrer">
+                            <img src="http://esf.local/wp-content/uploads/2024/09/youtube-icon.webp" alt="Instagram" />
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <?php if ($vimeo_url): ?>
+                    <li>
+                        <a href="<?php echo esc_url($vimeo_url); ?>" target="_blank" rel="noopener noreferrer">
+                            <img src="http://esf.local/wp-content/uploads/2024/09/vimeo_logo2.png" alt="Instagram" />
+                        </a>
+                    </li>
+                <?php endif; ?> 
+            </ul>
+        </div>
+    <?php endif; ?>
     </div>
 <?php endif; ?>
-
+</div>
 <?php if( have_rows('credits') ): ?>
   <div class="credits-section">
     <div class="credits-container">
@@ -253,25 +282,21 @@ if ( have_posts() ) :
     // Accordion fields setup
     $accordion_fields = array(
         'awards' => array(
-            'heading' => __($translations['awards']),  // Translatable label
-            'content' => get_field('awards_name')      // Fetch the ACF repeater field 'awards_name'
+            'heading' => __($translations['awards']),
         ),
         'screenings' => array(
-            'heading' => __($translations['screenings']),  // Translatable label
-            'content' => get_field('screenings_content')
+            'heading' => __($translations['screenings']),
         ),
         'press' => array(
-            'heading' => __($translations['press']),  // Translatable label
-            'content' => get_field('press_content')
+            'heading' => __($translations['press']),
         )
     );
 
     // Loop through accordion fields
     foreach ($accordion_fields as $key => $field) :
-        // Set the content class for the accordion
-        $content_class = ($key === 'awards') ? 'accordion-content awards-content' : 'accordion-content';
-        
-        // Display only if content exists
+        $content_class = ($key === 'awards' || $key === 'screenings' || $key === 'press') ? 'accordion-content ' . $key . '-content' : 'accordion-content';
+
+        // Awards Section
         if ($key === 'awards' && have_rows('awards_name')) : ?>
             <div class="accordion-item">
                 <div class="accordion-header">
@@ -281,28 +306,110 @@ if ( have_posts() ) :
                 <div class="<?php echo esc_attr($content_class); ?>">
                     <div class="awards-grid">
                         <?php
+                        // Initialize counter and column
+                        $row_counter = 0;
+                        echo '<div class="awards-column">';
+
                         // Loop through the ACF repeater field 'awards_name'
                         while (have_rows('awards_name')) : the_row();
-                            $award_name = get_sub_field('award_name');  // Get the award name from the repeater
+                            $award_name = get_sub_field('award_name');
                             
                             if (!empty($award_name)) :
-                                echo '<div class="awards-row"><p><i class="fa-regular fa-star"></i>' . esc_html($award_name) . '</p></div>';
+                                // Display the award
+                                echo '<div class="awards-row"><p><i class="fa-regular fa-star"></i> ' . esc_html($award_name) . '</p></div>';
+
+                                // Increment row counter
+                                $row_counter++;
+
+                                // Start new column after 5 rows
+                                if ($row_counter % 5 == 0) {
+                                    echo '</div><div class="awards-column">';
+                                }
                             endif;
                         endwhile;
+
+                        // Close last column
+                        echo '</div>';
                         ?>
                     </div> <!-- End of awards-grid -->
                 </div> <!-- End of accordion-content -->
             </div> <!-- End of accordion-item -->
-        <?php elseif (!empty($field['content'])) : ?>
+
+        <!-- Screenings Section -->
+        <?php elseif ($key === 'screenings' && have_rows('screenings')) : ?>
             <div class="accordion-item">
                 <div class="accordion-header">
                     <span><?php echo esc_html($field['heading']); ?></span>
                     <span class="accordion-icon">→</span>
                 </div>
                 <div class="<?php echo esc_attr($content_class); ?>">
-                    <?php echo nl2br(esc_html($field['content'])); // Display other content ?>
+                    <div class="screenings-grid">
+                        <?php
+                        // Initialize counter and column
+                        $row_counter = 0;
+                        echo '<div class="screenings-column">';
+
+                        // Loop through the ACF repeater field 'screenings'
+                        while (have_rows('screenings')) : the_row();
+                            $screening_name = get_sub_field('screening_name');
+                            
+                            if (!empty($screening_name)) :
+                                // Display the screening
+                                echo '<div class="screenings-row"><p> ' . esc_html($screening_name) . '</p></div>';
+
+                                // Increment row counter
+                                $row_counter++;
+
+                                // Start new column after 5 rows
+                                if ($row_counter % 5 == 0) {
+                                    echo '</div><div class="screenings-column">';
+                                }
+                            endif;
+                        endwhile;
+
+                        // Close last column
+                        echo '</div>';
+                        ?>
+                    </div> <!-- End of screenings-grid -->
+                </div> <!-- End of accordion-content -->
+            </div> <!-- End of accordion-item -->
+
+        <!-- Press Section -->
+        <?php elseif ($key === 'press' && have_rows('press_quote')) : ?>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span><?php echo esc_html($field['heading']); ?></span>
+                    <span class="accordion-icon">→</span>
                 </div>
+                <div class="<?php echo esc_attr($content_class); ?>">
+                <div class="press-quotes-grid">
+    <?php
+    // Loop through the ACF repeater field 'press_quote'
+    while (have_rows('press_quote')) : the_row();
+        $quote_content = get_sub_field('quote_content');  // Get the quote content
+        $quote_source = get_sub_field('quote_source');    // Get the quote source
+        
+        if (!empty($quote_content)) : ?>
+            <div class="press-quote-item">
+                <!-- Wrap the quote content in a <p> tag -->
+                <p class="quote-content">
+                    <span class="quote-marks">❛</span>
+                    <?php echo esc_html($quote_content); ?>
+                    <span class="quote-marks">❜</span>
+                </p>
+                <!-- Quote source -->
+                <?php if (!empty($quote_source)) : ?>
+                    <p class="quote-source">— <?php echo esc_html($quote_source); ?></p>
+                <?php endif; ?>
             </div>
+        <?php endif;
+    endwhile;
+    ?>
+</div>
+
+                </div> <!-- End of accordion-content -->
+            </div> <!-- End of accordion-item -->
+
         <?php endif;
     endforeach;
     ?>
@@ -310,43 +417,24 @@ if ( have_posts() ) :
 
 
 
-<div style="padding-left: 15rem; padding-top: 0;">
+
+
+
+
+<div style="padding-left: 14.5rem; padding-top: 0;">
     <?php if( $presskit = get_field('presskit') ): ?>
     
         <div class="download-presskit">
-            <a class="presskit-content" href="<?php echo esc_url($presskit); ?>" download>
-            <?php echo $translations['download_presskit']; ?>
-            </a>
+            <button class="presskit-button" style="">
+
+                <a class="presskit-content" href="<?php echo esc_url($presskit); ?>" download>
+                <?php echo $translations['download_presskit']; ?>
+                </a>
+            </button>
         </div>
         
     <?php endif; ?>
-    <?php if ($instagram_url || $youtube_url || $vimeo_url): ?>
-        <div class="social-media-icons">
-            <ul style="">
-                <?php if ($instagram_url): ?>
-                    <li>
-                        <a href="<?php echo esc_url($instagram_url); ?>" target="_blank" rel="noopener noreferrer">
-                            <img class="" src="http://esf.local/wp-content/uploads/2024/09/free-instagram-logo-icon-3497-thumb.png" alt="Instagram" />
-                        </a>
-                    </li>
-                <?php endif; ?>
-                <?php if ($youtube_url): ?>
-                    <li>
-                        <a href="<?php echo esc_url($youtube_url); ?>" target="_blank" rel="noopener noreferrer">
-                            <img src="http://esf.local/wp-content/uploads/2024/09/youtube-icon.webp" alt="Instagram" />
-                        </a>
-                    </li>
-                <?php endif; ?>
-                <?php if ($vimeo_url): ?>
-                    <li>
-                        <a href="<?php echo esc_url($vimeo_url); ?>" target="_blank" rel="noopener noreferrer">
-                            <img src="http://esf.local/wp-content/uploads/2024/09/vimeo_logo2.png" alt="Instagram" />
-                        </a>
-                    </li>
-                <?php endif; ?> 
-            </ul>
-        </div>
-    <?php endif; ?>
+  
    
 </div>
 

@@ -33,7 +33,10 @@ add_filter('fluentform/get_global_settings_values', function ($values, $key) {
         if (in_array('_fluentform_global_default_message_setting_fields', $key)) {
             $values['_fluentform_global_default_message_setting_fields'] = \FluentForm\App\Helpers\Helper::globalDefaultMessageSettingFields();
         }
-        if (in_array('_fluentform_global_form_settings', $key) && !isset($values['_fluentform_global_form_settings']['default_messages'])) {
+
+        if (in_array('_fluentform_global_form_settings', $key) &&
+            !\FluentForm\Framework\Helpers\ArrayHelper::isTrue($values, '_fluentform_global_form_settings.default_messages')
+        ) {
             $values['_fluentform_global_form_settings']['default_messages'] = \FluentForm\App\Helpers\Helper::getAllGlobalDefaultMessages();
         }
     }

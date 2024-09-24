@@ -4,6 +4,31 @@
  * Template Post Type: page
  */
 get_header(); ?>
+<!-- Preloader -->
+
+<!-- Your Front Page Content -->
+<script>
+window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    const content = document.getElementById('content');
+
+    // Fade out the preloader once the page has fully loaded
+    preloader.classList.add('hidden');
+
+    // Wait for the preloader fade-out to complete before showing the content
+    preloader.addEventListener('transitionend', function () {
+        setTimeout(function () {
+            content.style.opacity = '1'; // Fade in the content with a delay
+        }, 300); // 300ms delay for a polished transition
+    });
+});
+
+
+</script>
+<div id="preloader">
+    <div class="spinner"></div>
+</div>
+
 
 <?php
 $translations = load_translation_file();

@@ -700,6 +700,12 @@ class Component
             'enabled' => false,
         ];
 
+        if (!empty($formBuilder->validationRules)) {
+            $formBuilder->validationRules = fluentform_backend_sanitizer($formBuilder->validationRules, [
+                'message' => 'fluentform_sanitize_html'
+            ]);
+        }
+
         $form_vars = [
             'id'               => $form->id,
             'settings'         => $formSettings,
