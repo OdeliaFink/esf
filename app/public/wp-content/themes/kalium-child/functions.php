@@ -119,6 +119,7 @@ function load_translation_file() {
 
 
 
+
 function kalium_child_change_portfolio_slug() {
     global $wp_post_types;
 

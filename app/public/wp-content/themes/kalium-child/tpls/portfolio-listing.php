@@ -25,6 +25,27 @@ if ( ! empty( $wp_query->query['pagename'] ) ) {
 	$portfolio_query_args['post_id'] = get_queried_object_id();
 }
 
+// Get the 'Released' and 'Unreleased' terms
+$released_term = get_term_by( 'slug', 'released', 'portfolio_category' );
+$unreleased_term = get_term_by( 'slug', 'unreleased', 'portfolio_category' );
+
+// Check if the terms exist and get their URLs
+if ( $released_term && ! is_wp_error( $released_term ) ) {
+    $released_link = get_term_link( $released_term );
+}
+
+if ( $unreleased_term && ! is_wp_error( $unreleased_term ) ) {
+    $unreleased_link = get_term_link( $unreleased_term );
+}
+
+// Output the filter bar with the links
+?>
+<div class="filter-bar">
+    <a class="fil" href="<?php echo esc_url( $released_link ); ?>" class="filter-button">Released</a>
+    <a href="<?php echo esc_url( $unreleased_link ); ?>" class="filter-button">Unreleased</a>
+</div>
+<?php
+
 // Get Query and Args
 $portfolio_args 	= kalium_get_portfolio_query( $portfolio_query_args );
 $portfolio_query    = $portfolio_args['portfolio_query'];

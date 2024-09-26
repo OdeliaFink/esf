@@ -52,11 +52,7 @@ html.lenis {
 }
 
 /* Content styles: initially hidden by opacity */
-#content {
-  opacity: 0;
-  background-color: #000; /* Optional: Starting background color (can change to transparent if you wish) */
-  transition: opacity 1s ease-in-out, background-color 2s ease-in-out; /* Smooth fade-in for content and background */
-}
+
 
 /* Fade-in animation for the background */
 @keyframes fadeInBackground {
@@ -79,18 +75,6 @@ html.lenis {
       opacity: 0; /* Fully transparent */
   }
 }
-
-/* Class to hide the preloader */
-.hidden {
-  opacity: 0;
-  pointer-events: none; /* Disable interactions with preloader */
-}
-
-/* Apply the fade-in animation to the background */
-.fade-in-bg {
-  animation: fadeInBackground 2s ease-in-out forwards;
-}
-
 
 
 .synopsis {
@@ -470,9 +454,12 @@ background-image: linear-gradient(1deg, rgba(162, 162, 162, 0) 35%, #121212 100%
   visibility: hidden;
 }
 
-.header-search-input .search-field span {
+.header-search-input .search-field {
   text-transform: uppercase;
-  font-weight: bold;
+  background-color: #ffe6b5 !important;
+  border: 1px solid #ffe6b5 ;
+  font-weight: 400;
+
 }
 
 .hamburger-menu {
@@ -1541,3 +1528,4 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
     padding-top: 5px;
   }
 }
+

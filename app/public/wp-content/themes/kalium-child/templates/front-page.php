@@ -12,18 +12,12 @@ window.addEventListener('load', function () {
     const preloader = document.getElementById('preloader');
     const content = document.getElementById('content');
 
-    // Fade out the preloader once the page has fully loaded
-    preloader.classList.add('hidden');
-
-    // Wait for the preloader fade-out to complete before showing the content
-    preloader.addEventListener('transitionend', function () {
-        setTimeout(function () {
-            content.style.opacity = '1'; // Fade in the content with a delay
-        }, 300); // 300ms delay for a polished transition
-    });
+    // Wait for the animation to finish before hiding the preloader
+    setTimeout(function () {
+        preloader.style.display = 'none';
+        content.style.display = 'block';
+    }, 300); // Match the duration of the animation (0.8s)
 });
-
-
 </script>
 <div id="preloader">
     <div class="spinner"></div>
