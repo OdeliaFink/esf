@@ -111,9 +111,9 @@ if ( have_posts() ) :
             </div>				
         </div>
 
-    <div style="display: flex; align-items: center; margin-block: 6rem; width: 80%; margin-inline: auto; justify-content: space-between; gap: 3rem;">
+    <div class="synopsis-container">
         <div>
-            <p style="color: black; font-weight: 400; font-size: 3rem;">SYNOPSIS</p>
+            <p class="synopsis-heading">SYNOPSIS</p>
         </div>
         <?php if($synopsis_text) :  ?>
         <div class="synopsis-container">
@@ -209,7 +209,7 @@ if ( have_posts() ) :
     ?>
     <div class="film-rental-container">
         <h1 class="film-rental-h1">
-            <a class=" film-rental-link" href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer" style="margin-left: 10px;">
+            <a class=" film-rental-link" href=<?php echo esc_html($rent_link); ?> target="_blank" rel="noopener noreferrer">
                 <?php echo esc_html($film_rental_header); ?>
                 <!-- Inline SVG for the new tab icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
@@ -223,7 +223,7 @@ if ( have_posts() ) :
             <img  class="" src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 15%; height: auto;" />
    
     </div>
- <div style="width: 79%; margin-inline: auto;">
+ <div style="width: 79.5%; margin-inline: auto;">
     <?php if ($instagram_url || $youtube_url || $vimeo_url): ?>
         <div class="social-media-icons">
             <ul style="">
@@ -257,7 +257,7 @@ if ( have_posts() ) :
 <?php if( have_rows('credits') ): ?>
   <div class="credits-section">
     <div class="credits-container">
-      <h2>Credits</h2>
+      <h2 style="margin-top: 1.3rem;">Credits</h2>
       <div class="credits">
         <?php while( have_rows('credits') ): the_row(); 
           // Get the role name and member names

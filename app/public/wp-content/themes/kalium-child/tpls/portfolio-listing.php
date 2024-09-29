@@ -29,6 +29,7 @@ if ( ! empty( $wp_query->query['pagename'] ) ) {
 $released_term = get_term_by( 'slug', 'released', 'portfolio_category' );
 $unreleased_term = get_term_by( 'slug', 'unreleased', 'portfolio_category' );
 
+
 // Check if the terms exist and get their URLs
 if ( $released_term && ! is_wp_error( $released_term ) ) {
     $released_link = get_term_link( $released_term );
@@ -39,12 +40,7 @@ if ( $unreleased_term && ! is_wp_error( $unreleased_term ) ) {
 }
 
 // Output the filter bar with the links
-?>
-<div class="filter-bar">
-    <a class="fil" href="<?php echo esc_url( $released_link ); ?>" class="filter-button">Released</a>
-    <a href="<?php echo esc_url( $unreleased_link ); ?>" class="filter-button">Unreleased</a>
-</div>
-<?php
+
 
 // Get Query and Args
 $portfolio_args 	= kalium_get_portfolio_query( $portfolio_query_args );
@@ -108,7 +104,12 @@ if ( ! $portfolio_args['vc_mode'] ) {
 
 	<div class="page-container">
 		<div class="row">
-			
+		<?php if ( !is_page('films') )  :  ?>
+<div class="filter-bar">
+    <a class="filter-button" href="<?php echo esc_url( $released_link ); ?>" >RELEASED</a>
+    <a class="filter-button" href="<?php echo esc_url( $unreleased_link ); ?>">UNRELEASED</a>
+</div>
+<?php endif; ?>
 			<?php do_action( 'kalium_portfolio_items_before', $portfolio_query ); ?>
 			
 			<div id="<?php echo $portfolio_args['id']; ?>" class="<?php echo implode( ' ', apply_filters( 'kalium_portfolio_container_classes', $portfolio_container_classes ) ); ?>">
