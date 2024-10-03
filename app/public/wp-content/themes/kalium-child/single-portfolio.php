@@ -116,7 +116,7 @@ if ( have_posts() ) :
             <p class="synopsis-heading">SYNOPSIS</p>
         </div>
         <?php if($synopsis_text) :  ?>
-        <div class="synopsis-container">
+        <div class="">
         <p class="synopsis-text">
         <?php echo esc_html($synopsis_text); ?>
         </p>
@@ -234,17 +234,11 @@ if ( have_posts() ) :
                         </a>
                     </li>
                 <?php endif; ?>
-                <?php if ($youtube_url): ?>
-                    <li>
-                        <a href="<?php echo esc_url($youtube_url); ?>" target="_blank" rel="noopener noreferrer">
-                            <img src="http://esf.local/wp-content/uploads/2024/09/youtube-icon.webp" alt="Instagram" />
-                        </a>
-                    </li>
-                <?php endif; ?>
+             
                 <?php if ($vimeo_url): ?>
                     <li>
                         <a href="<?php echo esc_url($vimeo_url); ?>" target="_blank" rel="noopener noreferrer">
-                            <img src="http://esf.local/wp-content/uploads/2024/09/vimeo_logo2.png" alt="Instagram" />
+                            <img src="http://esf.local/wp-content/uploads/2024/10/icons8-web-64.png" alt="Instagram" />
                         </a>
                     </li>
                 <?php endif; ?> 
@@ -301,7 +295,7 @@ if ( have_posts() ) :
             <div class="accordion-item">
                 <div class="accordion-header">
                     <span><?php echo esc_html($field['heading']); ?></span>
-                    <span class="accordion-icon">→</span>
+                    <i class="accordion-icon fa fa-long-arrow-right" aria-hidden="true"></i>
                 </div>
                 <div class="<?php echo esc_attr($content_class); ?>">
                     <div class="awards-grid">
@@ -340,7 +334,7 @@ if ( have_posts() ) :
             <div class="accordion-item">
                 <div class="accordion-header">
                     <span><?php echo esc_html($field['heading']); ?></span>
-                    <span class="accordion-icon">→</span>
+                    <i class="accordion-icon fa fa-long-arrow-right" aria-hidden="true"></i>
                 </div>
                 <div class="<?php echo esc_attr($content_class); ?>">
                     <div class="screenings-grid">
@@ -379,7 +373,7 @@ if ( have_posts() ) :
             <div class="accordion-item">
                 <div class="accordion-header">
                     <span><?php echo esc_html($field['heading']); ?></span>
-                    <span class="accordion-icon">→</span>
+                    <i class="accordion-icon fa fa-long-arrow-right" aria-hidden="true"></i>
                 </div>
                 <div class="<?php echo esc_attr($content_class); ?>">
                 <div class="press-quotes-grid">

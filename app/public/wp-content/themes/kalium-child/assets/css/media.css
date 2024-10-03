@@ -1,0 +1,53 @@
+@media (max-width: 1200px) {
+body {
+  background-color: red;
+}
+}
+
+
+@media screen and (max-width: 770px) {
+  .container,
+  .content-area {
+    width: 620px !important;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container,
+  .content-area {
+    width: 370px !important;
+  }
+  .info-boxes {
+    flex-direction: column;
+  }
+
+ 
+
+  .hero-text {
+    padding-left: 4rem !important;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .team-member-description {
+    max-width: 40rem;
+  }
+
+  .team-member-content {
+    flex-direction: column;
+  }
+
+  .team-member-info {
+    padding-bottom: 0rem;
+  }
+}
+@media screen and (max-width: 377px) {
+  .container,
+  .content-area {
+    width: 320px !important;
+  }
+
+  
+}

@@ -20,7 +20,7 @@ window.addEventListener('load', function () {
 });
 </script>
 <div id="preloader">
-    <div class="spinner"></div>
+<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
 </div>
 
 
@@ -108,25 +108,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <!-- Information Boxes -->
     <section class="info-boxes">
-        <div class="info-box">
-            <h3><?php echo $translations['films']; ?></h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <div class="info-box">
+        <h3><?php echo $translations['films']; ?></h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="learn-more-container">
             <a href="/films" class="learn-more"><?php echo $translations['learn_more']; ?></a>
-            <div class="icon-arrow"></div>
+       
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+</div>
         </div>
-        <div class="info-box">
-            <h3><?php echo $translations['distribution']; ?></h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="/distribution" class="learn-more"><?php echo $translations['learn_more']; ?></a>
-            <div class="icon-arrow"></div>
+    <div class="info-box">
+        <h3><?php echo $translations['distribution']; ?></h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="learn-more-container">
+            <a href="/distribution" class="learn-more"><?php echo $translations['learn_more']; ?></a>    
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
         </div>
-        <div class="info-box">
-            <h3><?php echo $translations['about']; ?></h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+    <div class="info-box">
+        <h3><?php echo $translations['about']; ?></h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="learn-more-container">
             <a href="/about" class="learn-more"><?php echo $translations['learn_more']; ?></a>
-            <div class="icon-arrow"></div>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
         </div>
-    </section>
+
+    </div>
+</section>
+
+
 
 </div>
 

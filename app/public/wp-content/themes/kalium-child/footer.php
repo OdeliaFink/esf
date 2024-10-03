@@ -19,7 +19,7 @@ do_action( 'kalium_wrapper_end' );
 ?>
 
 <!-- Subscription Section -->
-<div style="background-color: #FEC960; height: 30vh; display: flex; align-items: center;">
+<div class="subscription-container">
 
 
   <section class="stay-tuned" >

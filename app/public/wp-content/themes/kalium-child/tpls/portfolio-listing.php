@@ -104,12 +104,23 @@ if ( ! $portfolio_args['vc_mode'] ) {
 
 	<div class="page-container">
 		<div class="row">
-		<?php if ( !is_page('films') )  :  ?>
+	<?php 
+	if ( !is_page('films') )  :  ?>
+	<div>
+<p style="font-size: 2rem; font-weight: 300; max-width: 70%; margin-inline: auto; color: black; margin-block: 3rem; ">
+        EYESTEELFILM DISTRIBUTION distributes not only films in its wheelhouse but also partners with productions that align with the company's varied interests and values. With a high value on cinematic excellence, the company intentionally distributes films using an impact distribution model. The company’s success in distribution comes from years of experience in both the film industry and in community and relationship building. Eyesteelfilm Distribution has an impressive track record of admittance into numerous notable film festivals and has accumulated many prestigious awards. The company has secured many acquisitions with prominent broadcasters and streamers. The company executes nationwide theatrical runs and manages impact and educational campaigns. 
+    </p>
+</div>
 <div class="filter-bar">
     <a class="filter-button" href="<?php echo esc_url( $released_link ); ?>" >RELEASED</a>
     <a class="filter-button" href="<?php echo esc_url( $unreleased_link ); ?>">UNRELEASED</a>
 </div>
+
+
 <?php endif; ?>
+
+
+
 			<?php do_action( 'kalium_portfolio_items_before', $portfolio_query ); ?>
 			
 			<div id="<?php echo $portfolio_args['id']; ?>" class="<?php echo implode( ' ', apply_filters( 'kalium_portfolio_container_classes', $portfolio_container_classes ) ); ?>">

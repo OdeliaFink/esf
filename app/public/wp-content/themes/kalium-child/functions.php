@@ -2,6 +2,7 @@
 // Enqueue parent and child theme styles
 function kalium_child_enqueue_styles() {
     wp_enqueue_style('kalium-parent-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('kalium-parent-style', get_template_directory_uri() . '/media.css');
     wp_enqueue_style('kalium-child-style', get_stylesheet_directory_uri() . '/assets/css/style.css', array('kalium-parent-style'), wp_get_theme()->get('Version'));
     wp_enqueue_script('jquery');
     wp_enqueue_script('accordion-js', get_stylesheet_directory_uri() . '/assets/js/accordion.js', array('jquery'), null, true);
