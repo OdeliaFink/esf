@@ -112,9 +112,9 @@ if ( have_posts() ) :
         </div>
 
     <div class="synopsis-container">
-        <div>
+        <!-- <div>
             <p class="synopsis-heading">SYNOPSIS</p>
-        </div>
+        </div> -->
         <?php if($synopsis_text) :  ?>
         <div class="">
         <p class="synopsis-text">
@@ -223,29 +223,30 @@ if ( have_posts() ) :
             <img  class="" src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 15%; height: auto;" />
    
     </div>
- <div style="width: 79.5%; margin-inline: auto;">
-    <?php if ($instagram_url || $youtube_url || $vimeo_url): ?>
+    <div style="width: 79.5%; margin-inline: auto;">
+    <?php if (!empty($instagram_url) || !empty($youtube_url) || !empty($vimeo_url)) { ?>
         <div class="social-media-icons">
             <ul style="">
-                <?php if ($instagram_url): ?>
+                <?php if (!empty($instagram_url)) { ?>
                     <li>
                         <a href="<?php echo esc_url($instagram_url); ?>" target="_blank" rel="noopener noreferrer">
                             <img class="" src="http://esf.local/wp-content/uploads/2024/09/free-instagram-logo-icon-3497-thumb.png" alt="Instagram" />
                         </a>
                     </li>
-                <?php endif; ?>
-             
-                <?php if ($vimeo_url): ?>
+                <?php } ?>
+
+                <?php if (!empty($vimeo_url)) { ?>
                     <li>
                         <a href="<?php echo esc_url($vimeo_url); ?>" target="_blank" rel="noopener noreferrer">
-                            <img src="http://esf.local/wp-content/uploads/2024/10/icons8-web-64.png" alt="Instagram" />
+                            <img src="http://esf.local/wp-content/uploads/2024/10/icons8-web-64.png" alt="Vimeo" />
                         </a>
                     </li>
-                <?php endif; ?> 
+                <?php } ?>
             </ul>
         </div>
-    <?php endif; ?>
-    </div>
+    <?php } ?>
+</div>
+
 <?php endif; ?>
 </div>
 <?php if( have_rows('credits') ): ?>
@@ -415,22 +416,18 @@ if ( have_posts() ) :
 
 
 
-<div style="padding-left: 14.5rem; padding-top: 0;">
-    <?php if( $presskit = get_field('presskit') ): ?>
-    
+<?php if (!empty($presskit = get_field('presskit'))) { ?>
+    <div style="padding-left: 14.5rem; padding-top: 0;">
         <div class="download-presskit">
             <button class="presskit-button" style="">
-
                 <a class="presskit-content" href="<?php echo esc_url($presskit); ?>" download>
-                <?php echo $translations['download_presskit']; ?>
+                    <?php echo $translations['download_presskit']; ?>
                 </a>
             </button>
         </div>
-        
-    <?php endif; ?>
-  
-   
-</div>
+    </div>
+<?php } ?>
+
 
 
 

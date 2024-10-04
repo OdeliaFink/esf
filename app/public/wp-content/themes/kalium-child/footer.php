@@ -29,7 +29,7 @@ do_action( 'kalium_wrapper_end' );
       </div>
       <div class="newsletter">
           <h3>EMAIL*</h3>
-          <?php echo do_shortcode('[fluentform id="3"]'); // Replace 123 with your actual form ID ?>
+          <?php echo do_shortcode('[mc4wp_form id=4183]'); // Replace 123 with your actual form ID ?>
       </div>
   </section>
 </div>
