@@ -119,13 +119,44 @@ if ( ! $portfolio_args['vc_mode'] ) {
 
 <?php endif; ?>
 
+<div class="custom-search-bar">
+    <input type="text" id="search-input" placeholder="Search films...">
+</div>
+
+<?php do_action( 'kalium_portfolio_items_before', $portfolio_query ); ?>
+
+<div id="<?php echo $portfolio_args['id']; ?>" class="<?php echo implode( ' ', apply_filters( 'kalium_portfolio_container_classes', $portfolio_container_classes ) ); ?>">
+    <?php kalium_portfolio_loop_items_show( $portfolio_args ); ?>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const searchInput = document.getElementById('search-input');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        if (searchInput && portfolioItems.length > 0) {
+            searchInput.addEventListener('keyup', function () {
+                const filterText = searchInput.value.toLowerCase();
+
+                portfolioItems.forEach(item => {
+                    const itemText = item.textContent.toLowerCase();
+                    if (itemText.includes(filterText)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        }
+    });
+</script>
 
 
 			<?php do_action( 'kalium_portfolio_items_before', $portfolio_query ); ?>
 			
 			<div id="<?php echo $portfolio_args['id']; ?>" class="<?php echo implode( ' ', apply_filters( 'kalium_portfolio_container_classes', $portfolio_container_classes ) ); ?>">
 			
-				<?php kalium_portfolio_loop_items_show( $portfolio_args ); ?>
+			
 			</div>
 			
 			<?php do_action( 'kalium_portfolio_items_after' ); ?>
@@ -157,6 +188,7 @@ if ( is_page('distribution') ) :  ?>
 								link.setAttribute('href', '#');
             });
         });
+				
     </script>
 <?php endif; ?>
 			<?php
