@@ -132,24 +132,50 @@ if ( ! $portfolio_args['vc_mode'] ) {
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const searchInput = document.getElementById('search-input');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const portfolioItemsContainer = document.getElementById('<?php echo $portfolio_args['id']; ?>');
+        const portfolioItems = Array.from(portfolioItemsContainer.querySelectorAll('.portfolio-item'));
 
         if (searchInput && portfolioItems.length > 0) {
+            // Store the original HTML content of the portfolio container
+            const originalContent = portfolioItemsContainer.innerHTML;
+
             searchInput.addEventListener('keyup', function () {
                 const filterText = searchInput.value.toLowerCase();
 
-                portfolioItems.forEach(item => {
-                    const itemText = item.textContent.toLowerCase();
-                    if (itemText.includes(filterText)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
+                if (filterText === '') {
+                    // Restore the original content of the portfolio container
+                    portfolioItemsContainer.innerHTML = originalContent;
+
+                    // Reset layout using Isotope or similar if applicable
+                    if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
+                        jQuery(portfolioItemsContainer).isotope('reloadItems').isotope({ sortBy: 'original-order' });
                     }
-                });
+                } else {
+                    // Clear all items from the container
+                    portfolioItemsContainer.innerHTML = '';
+
+                    // Filter items based on the search text
+                    let filteredItems = portfolioItems.filter(item => {
+                        const itemText = item.textContent.toLowerCase();
+                        return itemText.includes(filterText);
+                    });
+
+                    // Append the filtered items to the container, ensuring they start from the first position
+                    filteredItems.forEach(filteredItem => {
+                        portfolioItemsContainer.appendChild(filteredItem);
+                    });
+
+                    // Reflow the layout to reorder items properly (for Isotope or Masonry)
+                    if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
+                        jQuery(portfolioItemsContainer).isotope('reloadItems').isotope({ sortBy: 'original-order' });
+                    }
+                }
             });
         }
     });
 </script>
+
+
 
 
 			<?php do_action( 'kalium_portfolio_items_before', $portfolio_query ); ?>
