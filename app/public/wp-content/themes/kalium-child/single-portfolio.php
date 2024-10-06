@@ -429,6 +429,39 @@ if ( have_posts() ) :
 <?php } ?>
 
 
+<?php 
+// Retrieve the contact heading field
+$contact_heading = get_field('contact_heading');
+if ( $contact_heading ) : ?>
+    <div class="contact-column">
+        <h2 class="contact-heading"><?php echo esc_html($contact_heading); ?></h2>
+        
+        <?php if ( have_rows('email') ) : ?>
+            <ul class="email-list">
+                <?php while ( have_rows('email') ) : the_row(); ?>
+                    <?php 
+                    // Get the email address from the repeater subfield
+                    $email = get_sub_field('emails'); 
+                    if ( $email ) : ?>
+                        <li class="email-item">
+                            <span class="arrow">➔</span>
+                            <a href="mailto:<?php echo esc_attr($email); ?>"><?php echo esc_html($email); ?></a>
+                        </li>
+                    <?php else : ?>
+                        <p>No email found in this row.</p>
+                    <?php endif; ?>
+                <?php endwhile; ?>
+            </ul>
+        <?php else : ?>
+            <p>No email rows found.</p>
+        <?php endif; ?>
+    </div>
+<?php else : ?>
+    <p>No contact heading found.</p>
+<?php endif; ?>
+
+
+
 
 
         <?php
