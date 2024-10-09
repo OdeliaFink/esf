@@ -142,6 +142,7 @@ if ( ! $portfolio_args['vc_mode'] ) {
             searchInput.addEventListener('keyup', function () {
                 const filterText = searchInput.value.toLowerCase();
 
+								
                 if (filterText === '') {
                     // Restore the original content of the portfolio container
                     portfolioItemsContainer.innerHTML = originalContent;

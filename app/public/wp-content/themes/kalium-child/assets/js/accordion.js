@@ -60,6 +60,50 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+jQuery(document).ready(function($) {
+  // Force reset the slider if it was already initialized
+  if ($('.movie-stills-slider').hasClass('slick-initialized')) {
+      $('.movie-stills-slider').slick('unslick'); // Reset existing slider
+  }
+
+  // Reinitialize the slider with autoplay disabled forcefully
+  $('.movie-stills-slider').slick({
+      autoplay: false,  // Disable autoplay globally
+      autoplaySpeed: 99999, // Ensure it won't autoplay if somehow triggered
+      slidesToShow: 3,  // Default number of slides to show
+      slidesToScroll: 1,
+      infinite: true,
+      prevArrow: '<button type="button" class="slick-prev"></button>', // Remove text
+      nextArrow: '<button type="button" class="slick-next"></button>',
+      dots: true,       // Enable dots for navigation
+      arrows: true,     // Enable navigation arrows
+      speed: 500,       // Adjust speed for smoother experience
+      pauseOnHover: false, // Make sure hover does not re-enable autoplay
+      responsive: [
+          {
+              breakpoint: 1024, // Settings for tablets
+              settings: {
+                  autoplay: false, // Force autoplay off for tablet view
+                  slidesToShow: 2, // Show 2 slides on tablets
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true
+              }
+          },
+          {
+              breakpoint: 768, // Settings for mobile devices
+              settings: {
+                  autoplay: false, // Force autoplay off for mobile view
+                  slidesToShow: 1, // Show 1 slide on mobile
+                  slidesToScroll: 1,
+                  arrows: false, // Disable arrows on mobile to save space
+                  dots: true      // Keep dots for navigation
+              }
+          }
+      ]
+  });
+});
+
 
 
 

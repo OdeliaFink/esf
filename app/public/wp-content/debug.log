@@ -8,3 +8,535 @@
 [09-Sep-2024 19:30:32 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
 [09-Sep-2024 19:30:58 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
 [09-Sep-2024 19:31:13 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:48:43 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:48:43 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:49:16 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:49:16 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:49:16 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:49:16 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:49:16 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:49:16 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:49:16 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:49:16 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:49:19 UTC] Portfolio Query has posts: 1
+[07-Oct-2024 20:49:19 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:49:19 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:49:21 UTC] Portfolio Query has posts: 1
+[07-Oct-2024 20:49:21 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:49:21 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:49:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:49:26 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:49:26 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:49:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:49:26 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:49:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:49:26 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:49:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:49:29 UTC] Portfolio Query has posts: 1
+[07-Oct-2024 20:49:29 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:49:29 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:50:01 UTC] Portfolio Query has posts: 1
+[07-Oct-2024 20:50:16 UTC] Portfolio Query has posts: 1
+[07-Oct-2024 20:50:16 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:50:16 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:50:42 UTC] Portfolio Query has posts: 1
+[07-Oct-2024 20:50:42 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:50:42 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:50:45 UTC] Portfolio Query has posts: 1
+[07-Oct-2024 20:50:45 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:50:45 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:50:48 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:50:48 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:50:48 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:50:48 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:50:48 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:50:48 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:50:48 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:50:48 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:50:50 UTC] Portfolio Query has posts: 1
+[07-Oct-2024 20:50:50 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:50:50 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:51:17 UTC] Portfolio Query has posts: 1
+[07-Oct-2024 20:51:17 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:51:17 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:51:23 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:51:23 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:51:23 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:51:23 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:51:23 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:51:23 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:51:23 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:51:23 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:51:54 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:51:54 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:51:54 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:51:54 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:51:54 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:51:54 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:51:54 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:51:54 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:52:20 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:52:20 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:52:20 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:52:20 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:52:20 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:52:20 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:52:20 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:52:20 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:53:33 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:53:33 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:53:33 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:53:33 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:53:33 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:53:33 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:53:33 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:53:33 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:53:36 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:53:36 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:53:36 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:53:36 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:53:36 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:53:36 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:53:36 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:53:36 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:53:38 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:53:38 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:53:38 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:53:38 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:53:38 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:53:38 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:53:38 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:53:38 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:54:00 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:54:01 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:55:09 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:57:12 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:57:12 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:57:12 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:57:12 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:57:12 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:57:12 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:57:12 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[07-Oct-2024 20:57:12 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:57:55 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:57:55 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:58:49 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:58:55 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:58:55 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:58:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function the_description() in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php:160
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/archive-portfolio.php(22): get_template_part('tpls/portfolio-...')
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#7 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/portfolio.php(17): get_template_part('archive-portfol...')
+#8 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#9 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#10 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#11 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 160
+[07-Oct-2024 20:59:10 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:59:10 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 20:59:40 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:59:40 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 181
+[07-Oct-2024 20:59:44 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 20:59:44 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 181
+[07-Oct-2024 21:00:05 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:00:06 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 21:00:13 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:00:13 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 21:00:57 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:00:57 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 21:00:57 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function kalium_portfolio_loop_items_show(), 0 passed in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 160 and at least 1 expected in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/laborator_portfolio.php:695
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php(160): kalium_portfolio_loop_items_show()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/archive-portfolio.php(22): get_template_part('tpls/portfolio-...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#7 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#8 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/portfolio.php(17): get_template_part('archive-portfol...')
+#9 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#10 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#11 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#12 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/laborator_portfolio.php on line 695
+[07-Oct-2024 21:01:39 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:01:39 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 21:01:39 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function kalium_portfolio_loop_items_show(), 0 passed in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 162 and at least 1 expected in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/laborator_portfolio.php:695
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php(162): kalium_portfolio_loop_items_show()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/archive-portfolio.php(22): get_template_part('tpls/portfolio-...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#7 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#8 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/portfolio.php(17): get_template_part('archive-portfol...')
+#9 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#10 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#11 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#12 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/laborator_portfolio.php on line 695
+[07-Oct-2024 21:01:52 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:01:52 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 21:01:56 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:01:56 UTC] Portfolio Query has posts: 3
+[07-Oct-2024 21:02:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:03:07 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:04:00 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:06:55 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:06:55 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function kalium_portfolio_loop_items_show(), 0 passed in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 159 and at least 1 expected in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/laborator_portfolio.php:695
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php(159): kalium_portfolio_loop_items_show()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/archive-portfolio.php(22): get_template_part('tpls/portfolio-...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#7 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#8 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/portfolio.php(17): get_template_part('archive-portfol...')
+#9 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#10 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#11 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#12 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/laborator_portfolio.php on line 695
+[07-Oct-2024 21:07:11 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:07:11 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function kalium_portfolio_loop_items_show(), 0 passed in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 159 and at least 1 expected in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/laborator_portfolio.php:695
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php(159): kalium_portfolio_loop_items_show()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/archive-portfolio.php(22): get_template_part('tpls/portfolio-...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#7 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#8 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/portfolio.php(17): get_template_part('archive-portfol...')
+#9 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#10 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#11 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#12 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/laborator_portfolio.php on line 695
+[07-Oct-2024 21:07:13 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:07:13 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function kalium_portfolio_loop_items_show(), 0 passed in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 159 and at least 1 expected in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/laborator_portfolio.php:695
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php(159): kalium_portfolio_loop_items_show()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/archive-portfolio.php(22): get_template_part('tpls/portfolio-...')
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#7 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#8 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/portfolio.php(17): get_template_part('archive-portfol...')
+#9 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#10 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#11 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#12 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/laborator_portfolio.php on line 695
+[07-Oct-2024 21:08:17 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:09:13 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:10:12 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:10:18 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:10:33 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:12:56 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:15:06 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:15:11 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:15:43 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:15:52 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:15:56 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:16:52 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:16:57 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:19:11 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:21:21 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:21:49 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:22:53 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:23:37 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:24:52 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:27:37 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:27:54 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:28:48 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:29:49 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:30:17 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:31:09 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:33:06 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:33:54 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:33:58 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:34:21 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:36:33 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:36:45 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:50:25 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:50:57 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:51:01 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:51:33 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:51:37 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:54:05 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:54:09 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:54:09 UTC] PHP Warning:  Undefined variable $released_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 118
+[07-Oct-2024 21:54:09 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[07-Oct-2024 21:54:09 UTC] PHP Warning:  Undefined variable $unreleased_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 119
+[07-Oct-2024 21:54:09 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[07-Oct-2024 21:54:12 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:54:12 UTC] PHP Warning:  Undefined variable $released_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 118
+[07-Oct-2024 21:54:12 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[07-Oct-2024 21:54:12 UTC] PHP Warning:  Undefined variable $unreleased_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 119
+[07-Oct-2024 21:54:12 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[07-Oct-2024 21:54:14 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:54:14 UTC] PHP Warning:  Undefined variable $released_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 118
+[07-Oct-2024 21:54:14 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[07-Oct-2024 21:54:14 UTC] PHP Warning:  Undefined variable $unreleased_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 119
+[07-Oct-2024 21:54:14 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[07-Oct-2024 21:54:18 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[07-Oct-2024 21:54:19 UTC] PHP Warning:  Undefined variable $released_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 118
+[07-Oct-2024 21:54:19 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[07-Oct-2024 21:54:19 UTC] PHP Warning:  Undefined variable $unreleased_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 119
+[07-Oct-2024 21:54:19 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:29:02 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:29:02 UTC] PHP Parse error:  syntax error, unexpected token "endif" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 125
+[08-Oct-2024 04:29:06 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:29:10 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:29:10 UTC] PHP Parse error:  syntax error, unexpected token "endif" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 125
+[08-Oct-2024 04:29:18 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:29:22 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:29:33 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:29:33 UTC] PHP Parse error:  Unclosed '{' on line 132 in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 269
+[08-Oct-2024 04:30:55 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:30:55 UTC] PHP Warning:  Undefined variable $released_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 118
+[08-Oct-2024 04:30:55 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:30:55 UTC] PHP Warning:  Undefined variable $unreleased_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 119
+[08-Oct-2024 04:30:55 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:31:04 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:31:04 UTC] PHP Warning:  Undefined variable $released_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 118
+[08-Oct-2024 04:31:04 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:31:04 UTC] PHP Warning:  Undefined variable $unreleased_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 119
+[08-Oct-2024 04:31:04 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:31:07 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:31:07 UTC] PHP Warning:  Undefined variable $released_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 118
+[08-Oct-2024 04:31:07 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:31:07 UTC] PHP Warning:  Undefined variable $unreleased_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 119
+[08-Oct-2024 04:31:07 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:31:13 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:31:13 UTC] PHP Warning:  Undefined variable $released_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 118
+[08-Oct-2024 04:31:13 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:31:13 UTC] PHP Warning:  Undefined variable $unreleased_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 119
+[08-Oct-2024 04:31:13 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:31:17 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:31:17 UTC] PHP Warning:  Undefined variable $released_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 118
+[08-Oct-2024 04:31:17 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:31:17 UTC] PHP Warning:  Undefined variable $unreleased_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 119
+[08-Oct-2024 04:31:17 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:31:19 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:31:19 UTC] PHP Warning:  Undefined variable $released_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 118
+[08-Oct-2024 04:31:19 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:31:19 UTC] PHP Warning:  Undefined variable $unreleased_link in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 119
+[08-Oct-2024 04:31:19 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 4482
+[08-Oct-2024 04:31:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:31:50 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:32:05 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:32:29 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:34:15 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:34:15 UTC] PHP Warning:  Undefined variable $released_term in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 37
+[08-Oct-2024 04:34:15 UTC] PHP Warning:  Undefined variable $unreleased_term in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 41
+[08-Oct-2024 04:38:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:39:47 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:41:29 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:41:47 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:43:24 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:45:03 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:45:47 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:46:02 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:47:41 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:52:05 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:52:32 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:52:57 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:54:41 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:54:41 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php on line 133
+[08-Oct-2024 04:54:50 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:55:03 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:57:32 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 04:58:38 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:00:32 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:01:24 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:03:32 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:06:10 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:06:27 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:06:38 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:06:53 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:07:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:08:02 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:08:33 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:08:53 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:08:58 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:09:06 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:09:10 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:09:10 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[08-Oct-2024 05:09:10 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:10:10 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 05:10:11 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[08-Oct-2024 05:10:11 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[08-Oct-2024 13:22:23 UTC] Automatic updates starting...
+[08-Oct-2024 13:22:24 UTC]   Automatic plugin updates starting...
+[08-Oct-2024 13:22:24 UTC]   Automatic plugin updates complete.
+[08-Oct-2024 13:22:24 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[08-Oct-2024 13:22:25 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[08-Oct-2024 13:22:25 UTC]   Automatic theme updates starting...
+[08-Oct-2024 13:22:25 UTC]   Automatic theme updates complete.
+[08-Oct-2024 13:22:25 UTC] Automatic updates complete.
+[08-Oct-2024 13:22:26 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[08-Oct-2024 13:22:29 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[09-Oct-2024 13:47:43 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/class-wpdb.php on line 1982
+[09-Oct-2024 13:47:52 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[09-Oct-2024 13:47:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[09-Oct-2024 13:48:24 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 13:48:38 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 13:48:44 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 13:49:06 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 13:49:09 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 13:50:45 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 14:25:49 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 14:32:09 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 14:45:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 14:45:31 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 14:45:32 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 14:45:32 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 14:52:07 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 14:52:08 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 14:52:08 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:40:08 UTC] Automatic updates starting...
+[09-Oct-2024 17:40:09 UTC]   Automatic plugin updates starting...
+[09-Oct-2024 17:40:09 UTC]   Automatic plugin updates complete.
+[09-Oct-2024 17:40:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[09-Oct-2024 17:40:10 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[09-Oct-2024 17:40:10 UTC]   Automatic theme updates starting...
+[09-Oct-2024 17:40:10 UTC]   Automatic theme updates complete.
+[09-Oct-2024 17:40:10 UTC] Automatic updates complete.
+[09-Oct-2024 17:40:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[09-Oct-2024 17:40:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[09-Oct-2024 17:48:15 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:48:15 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:48:15 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:49:34 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:49:35 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:49:35 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:50:12 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:50:12 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:50:12 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:50:22 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:50:23 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:50:23 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:50:53 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:50:53 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:50:53 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:51:39 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:51:39 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:51:39 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:51:49 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:51:49 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:51:49 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:51:56 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:51:56 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:51:56 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:52:03 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:52:03 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:52:03 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:52:11 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:52:12 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:52:12 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:52:23 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:52:23 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:52:23 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:52:41 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:52:41 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:52:41 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:52:49 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:52:49 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:52:49 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:53:01 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:53:01 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:53:01 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:53:07 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:53:07 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:53:07 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:53:17 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:53:17 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:53:17 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:53:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:53:26 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:53:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:55:35 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:55:36 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:55:36 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:55:45 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:55:46 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:55:46 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:55:54 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:55:54 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:55:54 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:59:42 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 17:59:42 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 17:59:42 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:01:39 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:01:39 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:01:39 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:03:17 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:03:17 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:03:17 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:07:54 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:07:54 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:07:54 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:08:12 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:08:12 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:08:12 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:09:57 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:09:57 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:09:57 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:10:39 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:10:39 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:10:39 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:11:09 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:11:09 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:11:09 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:11:57 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:11:58 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:11:58 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:13:24 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:13:24 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:13:24 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:13:41 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:13:41 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:13:41 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:15:52 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:15:53 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:15:53 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:17:28 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:17:29 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:17:29 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:23:32 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:23:32 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:23:32 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:27:16 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:27:16 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:27:16 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:27:50 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:27:50 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:27:50 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:29:07 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:29:08 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:29:08 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:30:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:30:26 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:30:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:30:58 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:30:59 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:30:59 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:31:44 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[09-Oct-2024 18:31:45 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
+[09-Oct-2024 18:31:45 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494

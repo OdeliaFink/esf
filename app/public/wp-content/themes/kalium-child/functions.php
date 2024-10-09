@@ -30,6 +30,22 @@ if(is_front_page()){
 }
 add_action('wp_enqueue_scripts', 'enqueue_react_framer_motion');
 
+add_filter('kalium_portfolio_item_classes', 'add_release_status_class', 10, 2);
+function add_release_status_class( $classes, $post_id ) {
+    // Get the ACF 'release_status' field value
+    $release_status = get_field('release_status', $post_id);
+
+    // Check if the portfolio item belongs to the 'Distribution' taxonomy and has a release status
+    if ( has_term( 'distribution', 'portfolio_category', $post_id ) && $release_status ) {
+        // Add class based on the release status
+        $classes[] = 'release-status-' . sanitize_title( strtolower( $release_status ) );
+    }
+
+    return $classes;
+}
+
+
+
 
 // Modify the permalink for portfolio items
 add_filter('post_type_link', 'custom_portfolio_permalink', 10, 2);

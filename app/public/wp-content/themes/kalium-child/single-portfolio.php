@@ -430,35 +430,35 @@ if ( have_posts() ) :
 
 
 <?php 
-// Retrieve the contact heading field
-$contact_heading = get_field('contact_heading');
-if ( $contact_heading ) : ?>
-    <div class="contact-column">
-        <h2 class="contact-heading"><?php echo esc_html($contact_heading); ?></h2>
-        
-        <?php if ( have_rows('email') ) : ?>
-            <ul class="email-list">
-                <?php while ( have_rows('email') ) : the_row(); ?>
-                    <?php 
-                    // Get the email address from the repeater subfield
-                    $email = get_sub_field('emails'); 
-                    if ( $email ) : ?>
+// Check if the 'email' repeater field has rows of data
+if ( have_rows('email') ) : ?>
+    <div class="contact-columns-wrapper">
+        <?php 
+        // Loop through the rows of the repeater field
+        while ( have_rows('email') ) : the_row(); 
+            // Get the subfields: Email Heading and Email Address
+            $email_heading = get_sub_field('email_heading');
+            $email_address = get_sub_field('email_address');
+            
+            if ( $email_heading && $email_address ) : ?>
+                <div class="contact-column">
+                    <h3 class="email-heading"><?php echo esc_html($email_heading); ?></h3>
+                    <ul class="email-list">
                         <li class="email-item">
                             <span class="arrow">➔</span>
-                            <a href="mailto:<?php echo esc_attr($email); ?>"><?php echo esc_html($email); ?></a>
+                            <a href="mailto:<?php echo esc_attr($email_address); ?>"><?php echo esc_html($email_address); ?></a>
                         </li>
-                    <?php else : ?>
-                        <p>No email found in this row.</p>
-                    <?php endif; ?>
-                <?php endwhile; ?>
-            </ul>
-        <?php else : ?>
-            <p>No email rows found.</p>
-        <?php endif; ?>
+                    </ul>
+                </div>
+            <?php else : ?>
+                <p>Missing email heading or email address in this row.</p>
+            <?php endif; ?>
+        <?php endwhile; ?>
     </div>
 <?php else : ?>
-    <p>No contact heading found.</p>
+    <p>No email rows found.</p>
 <?php endif; ?>
+
 
 
 

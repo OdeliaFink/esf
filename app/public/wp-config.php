@@ -89,11 +89,13 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-if ( ! defined( 'WP_DEBUG' ) ) {
-	define( 'WP_DEBUG', false );
-}
 
 define( 'WP_ENVIRONMENT_TYPE', 'local' );
+define('WP_DEBUG', true); // Enable debugging mode
+define('WP_DEBUG_LOG', true); // Enable logging to debug.log
+define('WP_DEBUG_DISPLAY', false); // Disable display of errors and warnings
+@ini_set('display_errors', 0);
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
