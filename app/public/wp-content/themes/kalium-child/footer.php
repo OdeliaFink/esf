@@ -19,7 +19,7 @@ do_action( 'kalium_wrapper_end' );
 ?>
 
 <!-- Subscription Section -->
-<div class="subscription-container">
+<!-- <div class="subscription-container">
 
 
   <section class="stay-tuned" >
@@ -29,10 +29,10 @@ do_action( 'kalium_wrapper_end' );
       </div>
       <div class="newsletter">
           <h3>EMAIL*</h3>
-          <?php echo do_shortcode('[mc4wp_form id=4183]'); // Replace 123 with your actual form ID ?>
+        
       </div>
   </section>
-</div>
+</div> -->
 
 <!-- Footer -->
 <footer id="site-footer" class="custom-footer" role="contentinfo">

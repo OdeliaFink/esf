@@ -927,8 +927,7 @@ pointer-events: none;
 .accordion-content {
   display: none;
   padding: 10px 20px;
-  background-color: #d0d0d0;
-  animation: slideDown .4s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease; 
 }
 
 .screenings-row p {
@@ -1434,10 +1433,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
 
 /* HERE */
-.accordion-container .accordion-content {
-  background-color: #fec96000;
-  border-left: 2px solid hsl(39, 87%, 85%);
-}
+
 
 /* Styling for the awards grid */
 .accordion-container .awards-content {
@@ -1527,8 +1523,9 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 .press-quotes-grid {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* Space between each quote */
+  gap: 10px; /* Space between each quote */
   margin-block: 10px;
+  width: 60%;
 }
 
 .press-quote-item {
@@ -1555,9 +1552,6 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 }
 
 .quote-source {
-  position: absolute;
-  bottom: -20px;
-  right: 20px;
   font-size: 12px;
   font-style: italic;
   color: #555;

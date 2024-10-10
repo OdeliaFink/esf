@@ -35,7 +35,7 @@ document.querySelectorAll('.reveal').forEach(text => {
       trigger: section,
       start: 'top-=180 top', 
       // start: 'top-=280 top', 
-      end: () => `+=${window.innerHeight / 3}px`,
+      end: () => `+=${window.innerHeight / 1.5}px`,
       scrub: true,
       markers: false,
       pin: true,
