@@ -38,7 +38,7 @@ do_action( 'kalium_wrapper_end' );
 <footer id="site-footer" class="custom-footer" role="contentinfo">
     <div class="footer-container">
       
-        <div class="footer-links">
+     <div class="footer-links">
         <div class="footer-social">
                 <a class="nav-footer-link" href="https://vimeo.com/YOUR_PROFILE" target="_blank" title="Vimeo">
                     <img src="http://esf.local/wp-content/uploads/2024/09/vimeo_logo2.png" alt="Vimeo">
@@ -53,8 +53,8 @@ do_action( 'kalium_wrapper_end' );
             <div class="footer-nav">
                 <ul style="display: flex; flex-direction: column;">
                     <li><a class="nav-footer-link" href="/films">FILMS</a></li>
-                    <li><a class="nav-footer-link" href="/about">ABOUT</a></li>
                     <li><a class="nav-footer-link" href="/distribution">DISTRIBUTION</a></li>
+                    <li><a class="nav-footer-link" href="/about">ABOUT</a></li>
                 </ul>
             </div>
         </div>

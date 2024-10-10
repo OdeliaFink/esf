@@ -140,23 +140,6 @@ if ( have_posts() ) :
     </div>
 </div>
 
-<div class="movie-stills-slider">
-    <?php 
-    $image_number = 1;
-    while( $image = get_field('image_' . $image_number) ) {
-        if( $image ): ?>
-            <div class="slick-slide" style="width: auto !important; ">
-                <div class="image-container">
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="Movie Still <?php echo $image_number; ?>" />
-                </div>
-
-                <!-- <div class="image-container" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div> -->
-            </div>
-        <?php endif;
-        $image_number++;
-    }
-    ?>
-</div>
 
 <!-- <div class="centered-border-line">
     <div class="line"></div>
@@ -220,11 +203,11 @@ if ( have_posts() ) :
             </a>
         </h1>
        
-            <img  class="" src="<?php echo esc_url($vimeo_logo); ?>" alt="Vimeo" style="max-width: 15%; height: auto;" />
+         
    
     </div>
     <div style="width: 79.5%; margin-inline: auto;">
-    <?php if (!empty($instagram_url) || !empty($youtube_url) || !empty($vimeo_url)) { ?>
+    <?php if (!empty($instagram_url) || !empty($vimeo_url)) { ?>
         <div class="social-media-icons">
             <ul style="">
                 <?php if (!empty($instagram_url)) { ?>
@@ -249,6 +232,25 @@ if ( have_posts() ) :
 
 <?php endif; ?>
 </div>
+
+<div class="movie-stills-slider">
+    <?php 
+    $image_number = 1;
+    while( $image = get_field('image_' . $image_number) ) {
+        if( $image ): ?>
+            <div class="slick-slide" style="width: auto !important; ">
+                <div class="image-container">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="Movie Still <?php echo $image_number; ?>" />
+                </div>
+
+                <!-- <div class="image-container" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div> -->
+            </div>
+        <?php endif;
+        $image_number++;
+    }
+    ?>
+</div>
+
 <?php if( have_rows('credits') ): ?>
   <div class="credits-section">
     <div class="credits-container">

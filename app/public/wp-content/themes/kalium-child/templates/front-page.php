@@ -108,33 +108,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <!-- Information Boxes -->
     <section class="info-boxes">
-    <div class="info-box">
-        <h3><?php echo $translations['films']; ?></h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <div class="learn-more-container">
-            <a href="/films" class="learn-more"><?php echo $translations['learn_more']; ?></a>
-       
-            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-</div>
+    <a href="/films" class="info-box-link">
+        <div class="info-box">
+            <div class="image-container" style="background-image: url('https://via.placeholder.com/500x350?text=Film+Image');">
+                <div class="content-overlay">
+                    <h3><?php echo $translations['films']; ?></h3>
+                </div>
+            </div>
         </div>
-    <div class="info-box">
-        <h3><?php echo $translations['distribution']; ?></h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <div class="learn-more-container">
-            <a href="/distribution" class="learn-more"><?php echo $translations['learn_more']; ?></a>    
-            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-        </div>
-    </div>
-    <div class="info-box">
-        <h3><?php echo $translations['about']; ?></h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <div class="learn-more-container">
-            <a href="/about" class="learn-more"><?php echo $translations['learn_more']; ?></a>
-            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-        </div>
+    </a>
 
-    </div>
+    <a href="/distribution" class="info-box-link">
+        <div class="info-box">
+            <div class="image-container" style="background-image: url('https://via.placeholder.com/500x350?text=Distribution+Image');">
+                <div class="content-overlay">
+                    <h3><?php echo $translations['distribution']; ?></h3>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="/about" class="info-box-link">
+        <div class="info-box">
+            <div class="image-container" style="background-image: url('https://via.placeholder.com/500x350?text=About+Image');">
+                <div class="content-overlay">
+                    <h3><?php echo $translations['about']; ?></h3>
+                </div>
+            </div>
+        </div>
+    </a>
 </section>
+
+
 
 
 
