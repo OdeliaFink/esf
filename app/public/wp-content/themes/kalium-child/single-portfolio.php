@@ -419,7 +419,7 @@ if ( have_posts() ) :
 
 
 <?php if (!empty($presskit = get_field('presskit'))) { ?>
-    <div style="padding-left: 14.5rem; padding-top: 0;">
+    <div class="presskit-wrapper">
         <div class="download-presskit">
             <button class="presskit-button" style="">
                 <a class="presskit-content" href="<?php echo esc_url($presskit); ?>" download>

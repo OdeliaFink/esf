@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <section class="info-boxes">
     <a href="/films" class="info-box-link">
         <div class="info-box">
-            <div class="image-container" style="background-image: url('https://via.placeholder.com/500x350?text=Film+Image');">
+            <div class="image-container" style="background-image: url('http://esf.local/wp-content/uploads/2024/08/Yintah-Still-3-Micheal-Toledano-scaled.jpeg');">
                 <div class="content-overlay">
                     <h3><?php echo $translations['films']; ?></h3>
                 </div>
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <a href="/distribution" class="info-box-link">
         <div class="info-box">
-            <div class="image-container" style="background-image: url('https://via.placeholder.com/500x350?text=Distribution+Image');">
+            <div class="image-container" style="background-image: url('http://esf.local/wp-content/uploads/2024/08/Yintah-Still-3-Micheal-Toledano-scaled.jpeg');">
                 <div class="content-overlay">
                     <h3><?php echo $translations['distribution']; ?></h3>
                 </div>
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <a href="/about" class="info-box-link">
         <div class="info-box">
-            <div class="image-container" style="background-image: url('https://via.placeholder.com/500x350?text=About+Image');">
+            <div class="image-container" style="background-image: url('http://esf.local/wp-content/uploads/2024/08/Yintah-Still-3-Micheal-Toledano-scaled.jpeg');">
                 <div class="content-overlay">
                     <h3><?php echo $translations['about']; ?></h3>
                 </div>

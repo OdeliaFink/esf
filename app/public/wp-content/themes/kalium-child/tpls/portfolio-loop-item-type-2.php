@@ -258,7 +258,7 @@ switch ( $portfolio_args['likes_icon'] ) {
 									<?php echo wp_kses_post( $portfolio_item_title ); ?>
                                 </a>
 															
-															<p style="font-size: 2.8vw; font-weight: 100;"><?php echo ( $year_released ); ?></p>
+															<p style="font-size: 3vw; font-weight: 100;"><?php echo ( $year_released ); ?></p>
 
                             </h3>
 							<?php include locate_template( 'tpls/portfolio-loop-item-categories.php' ); ?>

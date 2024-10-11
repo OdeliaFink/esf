@@ -362,7 +362,7 @@ background-image: linear-gradient(1deg, rgba(162, 162, 162, 0) 35%, #121212 100%
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.6); /* Slight white overlay */
+  background-color: rgba(255, 255, 255, 0.422); /* Slight white overlay */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -370,7 +370,8 @@ background-image: linear-gradient(1deg, rgba(162, 162, 162, 0) 35%, #121212 100%
 }
 
 .content-overlay h3 {
-  font-size: 24px;
+  font-size: 50px;
+  letter-spacing: 0.09rem;
   font-weight: bold;
   color: black;
 }
@@ -395,7 +396,7 @@ background-image: linear-gradient(1deg, rgba(162, 162, 162, 0) 35%, #121212 100%
 
 .fa-long-arrow-right {
   font-size: 3rem; /* Adjust size as needed */
-  color: #ffc107; /* Arrow color */
+  color: #9e5d72; /* Arrow color */
   transition: transform 0.3s ease, color 0.3s ease;
 
 }
@@ -407,7 +408,7 @@ background-image: linear-gradient(1deg, rgba(162, 162, 162, 0) 35%, #121212 100%
 
 .learn-more-container:hover .fa-long-arrow-right {
   transform: translateX(40px); /* Moves arrow further right than the text */
-  color: #ffc107; /* Change color on hover if desired */
+  color: #5d649e; /* Change color on hover if desired */
 }
 
 .learn-more-container {
@@ -431,7 +432,7 @@ background-image: linear-gradient(1deg, rgba(162, 162, 162, 0) 35%, #121212 100%
 
 .arrow-icon {
   font-size: 1.5rem; /* Adjust size as needed */
-  color: #ffc107; /* Arrow color */
+  color: #5d649e; /* Arrow color */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -442,9 +443,8 @@ background-image: linear-gradient(1deg, rgba(162, 162, 162, 0) 35%, #121212 100%
 
 .learn-more-container:hover .arrow-icon {
   transform: translateX(20px); /* Moves arrow to the right for the spreading effect */
-  color: #ffc107 /* Change color on hover if desired */
+  color: #5d649e /* Change color on hover if desired */
 }
-
 
 .info-box:hover {
   transform: scale(1.1);
@@ -475,6 +475,11 @@ background-image: linear-gradient(1deg, rgba(162, 162, 162, 0) 35%, #121212 100%
   transition: transform 0.3s ease-out;
 }
 
+.presskit-wrapper {
+  padding-left: 14.5rem;
+   padding-top: 0;
+}
+
  .presskit-button {
   background-color: transparent; 
   border: 1px solid black; 
@@ -484,7 +489,7 @@ background-image: linear-gradient(1deg, rgba(162, 162, 162, 0) 35%, #121212 100%
  }
 
  .presskit-button:hover {
-  background-color: #ffd88b;
+  background-color: #939be6;
  
  }
 
@@ -503,7 +508,7 @@ background-image: linear-gradient(1deg, rgba(162, 162, 162, 0) 35%, #121212 100%
 .icon-arrow::after {
   content: "\2794"; /* Optional: Unicode arrow character */
   font-size: 3em;
-  color: #ffc107; /* Adjust color as needed */
+  color: #5d649e; /* Adjust color as needed */
   display: inline-block;
   transform: rotate(316deg);
   vertical-align: middle;
@@ -580,7 +585,7 @@ margin-top: 5rem;
 }
 
 .arrow {
-  color: #fec960;
+  color: #5d649e;
   font-size: 1.2rem;
   margin-right: 0.5rem;
 }
@@ -909,13 +914,13 @@ pointer-events: none;
 }
 
 .accordion-header:hover {
-  background-color: #ffd88b;
+  background-color: #939be6;
 }
 
 .accordion-icon {
   transition: transform 0.3s ease, color 0.6s ease; /* Transition for rotation and color */
   transform: rotate(-30deg);
-  color: #fec960;
+  color: #5d649e;
   font-size: 4rem;
 }
 
@@ -925,6 +930,7 @@ pointer-events: none;
 
 
 .accordion-content {
+  border-left: 3px solid #5d649e;
   display: none;
   padding: 10px 20px;
   transition: transform 0.4s ease, opacity 0.4s ease; 
@@ -944,11 +950,7 @@ color: black;
 }
 
 /* Footer Section */
-.site-footer {
-  background-color: #cacaca;
-  padding: 40px 20px;
 
-}
 
 .wrapper a:after, footer.site-footer a:after {
   background-color: transparent !important;
@@ -1067,7 +1069,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 }
 
 .custom-footer {
-  background-color: #E0E0E0; /* Light grey background */
+  background-color: #e9c075; /* Light grey background */
   padding: 20px;
 }
 
@@ -1280,7 +1282,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   content: '\f061'; /* Font Awesome Unicode for the arrow-right icon */
   font-family: 'Font Awesome 6 Free'; /* Adjust based on the version you're using */
   font-weight: 900; /* Required for Font Awesome solid icons */
-  color: #fec960;
+  color: #5d649e;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -1335,7 +1337,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 .team-member-info h1 {
     margin-bottom: 10px;
     text-transform: capitalize;
-    color: #FEC960;
+    color: #e9c075;
     font-size: 32px; 
     font-weight: bold;
 }
@@ -1639,6 +1641,66 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
     text-align: left;
     padding-top: 5px;
   }
+
+  .laurel-carousel img {
+    height: 7rem;
+  }
+
+  .film-trailer {
+    height: 40rem;
+  }
+
+  .hero-text h1 {
+    font-size: 70px;
+  }
+
+  .director-year p {
+    font-size: 20px;
+    right: 2rem;
+  }
+
+  .credits-container {
+    flex-direction: column;
+  }
+
+  .accordion-container .awards-content .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .press-quotes-grid {
+    width: 100%;
+    gap: 0px;
+  }
+
+  .presskit-wrapper {
+    padding-left: 3rem;
+  }
+
+  .contact-column {
+    margin-left: 4rem;
+    margin-top: 2rem;
+  }
+
+  .contact-columns-wrapper {
+    flex-direction: column;
+}
+.single-portfolio .page-container {
+  margin-top: 0px !important;
+}
+
+.team-member-info {
+  padding-left: 10rem;
+  margin-right: 0rem;
+}
+
+.team-member-content {
+  gap: 9rem;
+  max-height: 110vh;
+}
+
+.team-member-photo {
+  margin-top: -7rem;
+}
 }
 
 @media (min-width: 1200px) {
@@ -1708,14 +1770,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
 
   .info h3 {
     font-size: 30vw;
-  }
-
-  .director-year p {
-    font-size: 26px;
-    bottom: 20rem;
-    right: 2rem;
-  }
- 
+  } 
 
   .accordion-container .awards-content .awards-grid .screenings-grid {
     grid-template-columns: 1fr; /* Two columns layout */
@@ -1726,12 +1781,6 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   .team-grid {
     grid-template-columns: auto;
   }
-
-  .quote-content {
-    margin-bottom: 2rem;
-
-  }
-
 
   .hero-text {
     padding-left: 4rem !important;

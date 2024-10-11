@@ -35,7 +35,7 @@ do_action( 'kalium_wrapper_end' );
 </div> -->
 
 <!-- Footer -->
-<footer id="site-footer" class="custom-footer" role="contentinfo">
+<footer class="custom-footer" role="contentinfo">
     <div class="footer-container">
       
      <div class="footer-links">

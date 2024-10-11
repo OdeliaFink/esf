@@ -96,7 +96,7 @@ jQuery(document).ready(function($) {
                   autoplay: false, // Force autoplay off for mobile view
                   slidesToShow: 1, // Show 1 slide on mobile
                   slidesToScroll: 1,
-                  arrows: false, // Disable arrows on mobile to save space
+                  arrows: true, // Disable arrows on mobile to save space
                   dots: true      // Keep dots for navigation
               }
           }
