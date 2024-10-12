@@ -286,6 +286,8 @@ h3 {
   }
 }
 
+
+
 header {
   height: 58px; 
   /* background-color: rgba(85, 85, 85, 0.15);
@@ -668,7 +670,7 @@ input[type="text"]::placeholder {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Overlay with transparency */
+  background: rgb(68 68 68 / 50%);
   display: flex;
 }
 
@@ -1651,7 +1653,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   }
 
   .hero-text h1 {
-    font-size: 70px;
+    font-size: 46px;
   }
 
   .director-year p {
@@ -1673,7 +1675,7 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
   }
 
   .presskit-wrapper {
-    padding-left: 3rem;
+    padding-left: 4rem;
   }
 
   .contact-column {
@@ -1766,6 +1768,9 @@ form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
     margin-right: 0px;
   }
 
+  .header-logo.logo-image img {
+    width: 85% !important;
+  }
   
 
   .info h3 {

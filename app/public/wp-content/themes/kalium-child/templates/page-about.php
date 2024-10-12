@@ -1,16 +1,20 @@
 <?php
 /* Template Name: About Page */
 
-get_header(); ?>
+get_header(); 
 
-<?php
+// Detect the current language (use query string or cookie)
+$language = isset($_GET['lang']) ? $_GET['lang'] : (isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en');
+
+// Load the JSON translation file (for static content)
 $translations = load_translation_file();
 ?>
 
 <!-- Display Upper Content Description -->
 <div class="upper-content-desc">
     <?php
-    $upper_content_desc = get_field('upper_content_desc'); 
+    // Display upper content description based on the selected language
+    $upper_content_desc = get_field('upper_content_desc_' . $language); 
     if ($upper_content_desc) {
         echo wp_kses_post($upper_content_desc); 
     }
@@ -20,7 +24,8 @@ $translations = load_translation_file();
 <!-- Display Lower Content Description -->
 <div class="lower-content-desc">
     <?php
-    $lower_content_desc = get_field('lower_content_desc'); 
+    // Display lower content description based on the selected language
+    $lower_content_desc = get_field('lower_content_desc_' . $language); 
     if ($lower_content_desc) {
         echo wp_kses_post($lower_content_desc); 
     }
@@ -30,43 +35,37 @@ $translations = load_translation_file();
 <!-- Display Our Team Heading -->
 <div class="our-team-heading">
     <?php
-    $our_team_heading = get_field('our_team_heading'); 
-    if ($our_team_heading) {
-        echo '<h2>' . esc_html($translations['team']) . '</h2>'; 
-    }
+    // Display the team heading based on the language
+    echo '<h2>' . esc_html($translations['team']) . '</h2>';
     ?>
 </div>
 
-
-
-<!-- Checking About Page Template -->
-
+<!-- Team Member Grid -->
 <div class="team-grid">
     <?php
-    // Corrected the post type from 'team_members' to 'team_member'
     $args = array(
-        'post_type' => 'team_member', // Ensure the post type matches your registered custom post type
+        'post_type' => 'team_member', 
         'posts_per_page' => -1
     );
     $team = new WP_Query($args);
 
     if ($team->have_posts()) :
-        while ($team->have_posts()) : $team->the_post(); // Corrected variable name
-            $full_name = get_field('full_name'); // Retrieves the full name from ACF
-            $job_position = get_field('job_position'); // Retrieves the job position from ACF
-            $photo = get_field('photo'); // Retrieves the photo from ACF
+        while ($team->have_posts()) : $team->the_post(); 
+            // Get team member fields based on the selected language
+            $full_name = get_field('full_name_' . $language); 
+            $job_position = get_field('job_position_' . $language); 
+            $photo = get_field('photo'); // Assuming the photo doesn't need translation
             $link = get_permalink(); 
             ?>
             
             <div class="team-member">
-    <a href="<?php echo esc_url($link); ?>" class="image-single-member">
-        <img src="<?php echo esc_url($photo); ?>" alt="<?php echo esc_attr($full_name); ?>">
-        <span class="arrow-icon">&#xf061;</span> <!-- Arrow icon inside the link -->
-    </a>
-    <h3><?php echo esc_html($full_name); ?></h3>
-    <p><?php echo esc_html($job_position); ?></p>
-</div>
-
+                <a href="<?php echo esc_url($link); ?>" class="image-single-member">
+                    <img src="<?php echo esc_url($photo); ?>" alt="<?php echo esc_attr($full_name); ?>">
+                    <span class="arrow-icon">&#xf061;</span>
+                </a>
+                <h3><?php echo esc_html($full_name); ?></h3>
+                <p><?php echo esc_html($job_position); ?></p>
+            </div>
             
         <?php endwhile;
         wp_reset_postdata();
@@ -75,7 +74,5 @@ $translations = load_translation_file();
     endif;
     ?>
 </div>
-
-
 
 <?php get_footer(); ?>

@@ -436,9 +436,7 @@ if ( have_posts() ) :
 if ( have_rows('email') ) : ?>
     <div class="contact-columns-wrapper">
         <?php 
-        // Loop through the rows of the repeater field
         while ( have_rows('email') ) : the_row(); 
-            // Get the subfields: Email Heading and Email Address
             $email_heading = get_sub_field('email_heading');
             $email_address = get_sub_field('email_address');
             
@@ -452,14 +450,11 @@ if ( have_rows('email') ) : ?>
                         </li>
                     </ul>
                 </div>
-            <?php else : ?>
-                <p>Missing email heading or email address in this row.</p>
             <?php endif; ?>
         <?php endwhile; ?>
     </div>
-<?php else : ?>
-    <p>No email rows found.</p>
 <?php endif; ?>
+
 
 
 
