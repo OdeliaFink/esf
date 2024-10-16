@@ -35,7 +35,7 @@ $translations = load_translation_file();
 <!-- Display Our Team Heading -->
 <div class="our-team-heading">
     <?php
-    // Display the team heading based on the language
+    // Display the team heading from the JSON file for static translations
     echo '<h2>' . esc_html($translations['team']) . '</h2>';
     ?>
 </div>
@@ -51,20 +51,26 @@ $translations = load_translation_file();
 
     if ($team->have_posts()) :
         while ($team->have_posts()) : $team->the_post(); 
-            // Get team member fields based on the selected language
-            $full_name = get_field('full_name_' . $language); 
+            // Get the full name (same for both languages)
+            $full_name = get_field('full_name'); 
+            
+            // Get job position based on the selected language
             $job_position = get_field('job_position_' . $language); 
-            $photo = get_field('photo'); // Assuming the photo doesn't need translation
+
+            // Get the photo (same for both languages)
+            $photo = get_field('photo'); 
             $link = get_permalink(); 
             ?>
             
             <div class="team-member">
                 <a href="<?php echo esc_url($link); ?>" class="image-single-member">
                     <img src="<?php echo esc_url($photo); ?>" alt="<?php echo esc_attr($full_name); ?>">
-                    <span class="arrow-icon">&#xf061;</span>
+                    <span class="arrow-icon">&#xf061;</span> <!-- Arrow icon inside the link -->
                 </a>
-                <h3><?php echo esc_html($full_name); ?></h3>
-                <p><?php echo esc_html($job_position); ?></p>
+                <div class="team-member-wrapper">
+                    <h3><?php echo esc_html($full_name); ?></h3> <!-- Full Name displayed here -->
+                    <p><?php echo esc_html($job_position); ?></p> <!-- Job Position displayed here -->
+                </div>
             </div>
             
         <?php endwhile;

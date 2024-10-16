@@ -39,8 +39,10 @@ $nav = kalium_nav_menu( $menu_id );
 		<div class="sidebar-main-menu">
 			<?php echo $nav; ?>
 		</div>
-		<div style="margin-top: 2rem;">
-		<a style="font-weight: 400; font-size: 2rem;" href="?lang=en">EN</a> | <a style="font-weight: 400; font-size: 2rem;" href="?lang=fr">FR</a>
+		<div style="margin-top: 2rem; display: flex; align-items: center;">
+		<a style="font-weight: 400; font-size: 2rem;" href="?lang=en">EN</a>
+		<span style="display: inline-block; width: 1px; height: 2rem; background-color: black; margin: 0 10px;"></span>
+		 <a style="font-weight: 400; font-size: 2rem;" href="?lang=fr">FR</a>
 		</div>
 		<?php endif; ?>
 		
