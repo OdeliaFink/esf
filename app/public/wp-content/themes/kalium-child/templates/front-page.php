@@ -90,14 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="app">
         <section>
             <div class="container-tagline container">
-            <!-- <p class="reveal">EyeSteelFilm is a film and interactive media company dedicated to using cinematic expression as a
-                catalyst for social and political change. It was created to develop cinema that empowers people who
-                are ignored by mainstream media, a mandate that has taken the company to explore projects, people
-                and ideas around the world.</p> -->
-                <p class="reveal">EyeSteelFilm is a film and interactive media company dedicated to using cinematic expression as a
-                catalyst for social and political change. It was created to develop cinema that empowers people who
-                are ignored by mainstream media, people
-                and ideas around the world.</p>
+                <p class="reveal"><?php echo $translations['tagline']; ?></p>
             </div>
         </section>
     </div>
