@@ -105,8 +105,6 @@ jQuery(document).ready(function($) {
 });
 
 
-
-
   document.addEventListener('DOMContentLoaded', function() {
     var scrollSections = document.querySelectorAll('.scrollable-content');
     
