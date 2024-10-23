@@ -113,6 +113,7 @@ if (!$portfolio_args['vc_mode']) {
         <div class="film-filters">
       <button id="filter-film-btn" data-filter="released">Released</button>
       <button id="filter-film-btn" data-filter="coming-soon">Coming Soon</button>
+      <button id="filter-film-btn" data-filter="all">All</button>
     </div>
 
     <div id="released-items"></div>
@@ -124,7 +125,7 @@ if (!$portfolio_args['vc_mode']) {
 
 
 <div class="custom-search-bar">
-    <input type="text" id="search-input" placeholder="Search films...">
+    <input type="text" id="search-input" placeholder="...">
 </div>
 
 <?php do_action('kalium_portfolio_items_before', $portfolio_query); ?>
@@ -144,6 +145,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const originalContent = portfolioItemsContainer.innerHTML;
 
     console.log("originalContent", originalContent);
+
+    // Fallback message element for no items found
+    const noItemsMessage = document.createElement('div');
+    noItemsMessage.textContent = 'No items found.';
+    noItemsMessage.style.display = 'none'; // Initially hidden
+    noItemsMessage.style.color = 'black'; // Add some styling if needed
+    noItemsMessage.style.textAlign = 'left'; // Center the message
+    portfolioItemsContainer.parentElement.appendChild(noItemsMessage); // Append outside of the portfolio items container
 
     if (portfolioPage.length > 0) {
         var filterButtons = document.querySelectorAll('.film-filters button');
@@ -184,10 +193,16 @@ document.addEventListener('DOMContentLoaded', function () {
                             currentFilteredItems = portfolioItems; // Show all items if no filter is applied
                         }
 
-                        // Append the filtered items to the portfolio container
-                        currentFilteredItems.forEach(item => {
-                            portfolioItemsContainer.appendChild(item);
-                        });
+                        // Check if there are any items to display
+                        if (currentFilteredItems.length === 0) {
+                            noItemsMessage.style.display = 'block'; // Show fallback message
+                        } else {
+                            noItemsMessage.style.display = 'none'; // Hide fallback message
+                            // Append the filtered items to the portfolio container
+                            currentFilteredItems.forEach(item => {
+                                portfolioItemsContainer.appendChild(item);
+                            });
+                        }
 
                         // Reflow layout using Isotope or Masonry if applicable
                         if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
@@ -222,10 +237,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     return itemText.includes(filterText);
                 });
 
-                // Append the filtered items to the portfolio container
-                filteredItems.forEach(filteredItem => {
-                    portfolioItemsContainer.appendChild(filteredItem);
-                });
+                // Check if there are any items to display
+                if (filteredItems.length === 0) {
+                    noItemsMessage.style.display = 'block'; // Show fallback message
+                } else {
+                    noItemsMessage.style.display = 'none'; // Hide fallback message
+                    // Append the filtered items to the portfolio container
+                    filteredItems.forEach(filteredItem => {
+                        portfolioItemsContainer.appendChild(filteredItem);
+                    });
+                }
 
                 // Reflow the layout using Isotope or Masonry for the filtered items
                 if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
@@ -235,7 +256,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
 
 </script>
 

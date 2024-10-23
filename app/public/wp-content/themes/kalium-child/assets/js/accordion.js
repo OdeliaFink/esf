@@ -105,6 +105,68 @@ jQuery(document).ready(function($) {
 });
 
 
+// const portfolioPage = document.querySelectorAll(".portfolio-container-and-title");
+
+// const portfolioItemsContainer = document.getElementById('portfolio_args['id']');
+// const portfolioItems = Array.from(portfolioItemsContainer.querySelectorAll('.portfolio-item'));
+
+// if(portfolioPage.length > 0) {
+  
+//   var filterButtons = document.querySelectorAll('.film-filters button');
+//   console.log(filterButtons, 'filter buttons')
+//     // Log the buttons found
+//     console.log('Filter Buttons:', filterButtons);
+  
+//     // Add event listeners to the filter buttons
+//     filterButtons.forEach(function (button) {
+//       button.addEventListener('click', function () {
+//         var filter = this.getAttribute('data-filter');
+//         console.log('Filter button clicked: ' + filter);
+  
+//         // Fetch the portfolio data via the REST API
+//         fetch('http://esf.local/wp-json/wp/v2/portfolio?per_page=100')
+//           .then(response => response.json())
+//           .then(data => {
+//             console.log('Portfolio Data:', data);
+  
+//             // Filter items based on the release_status
+//             const releasedItems = data.filter(item => item.acf.release_status === 'released');
+//             const comingSoonItems = data.filter(item => item.acf.release_status === 'coming-soon');
+  
+//             console.log(releasedItems, "releasedItems")
+//             console.log(comingSoonItems, "coming soon items")
+  
+//             // DOM Elements where the items will be appended
+//             const releasedSection = document.querySelector('#released-items');
+//             const comingSoonSection = document.querySelector('#coming-soon-items');
+  
+//             // Clear previous content
+//             releasedSection.innerHTML = '';
+//             comingSoonSection.innerHTML = '';
+  
+//             // Show filtered items based on the button clicked
+//             if (filter === 'released') {
+//               releasedItems.forEach(item => {
+//                 const newItem = document.createElement('div');
+//                 newItem.textContent = item.title.rendered;
+//                 releasedSection.appendChild(newItem);
+//               });
+//             } else if (filter === 'coming-soon') {
+//               comingSoonItems.forEach(item => {
+//                 const newItem = document.createElement('div');
+//                 newItem.textContent = item.title.rendered;
+//                 comingSoonSection.appendChild(newItem);
+//               });
+//             }
+//           })
+//           .catch(error => console.error('Error fetching portfolio data:', error));
+//       });
+//     });
+// }
+
+
+
+
   document.addEventListener('DOMContentLoaded', function() {
     var scrollSections = document.querySelectorAll('.scrollable-content');
     

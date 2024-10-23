@@ -517,6 +517,29 @@ header {
   color: #000;
 }
 
+.film-filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 1.8rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#filter-film-btn {
+  color: black;
+  padding: 4px 10px;
+  background-color: transparent; 
+  border: 1px solid black; 
+  border-radius: 3px;
+   transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+#filter-film-btn:hover {
+  background-color: #939be6;
+ 
+ }
+
 
 .custom-search-bar {
   margin-right: 1.8rem;
@@ -529,8 +552,8 @@ header {
   border: 1px solid black;
   border-radius: 3px;
   width: 22%;
-  padding: 10px;
-  font-size: 16px;
+  padding: 4px 10px;
+  font-size: 13px;
 }
 
 input[type="text"]::placeholder {
