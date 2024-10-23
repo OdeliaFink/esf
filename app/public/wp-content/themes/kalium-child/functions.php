@@ -115,6 +115,7 @@ function redirect_if_no_lang_param() {
 add_action('template_redirect', 'redirect_if_no_lang_param');
 
 
+
 function load_translation_file() {
     // Determine language: prioritize query string, then cookie, default to 'en'
     $language = isset($_GET['lang']) ? $_GET['lang'] : (isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en');
@@ -134,7 +135,15 @@ function load_translation_file() {
     return $translations;
 }
 
-
+// Add ACF fields to the REST API response for 'portfolio' post type
+function add_acf_to_rest_api($data, $post, $request) {
+    $acf_fields = get_fields($post->ID);
+    if ($acf_fields) {
+        $data->data['acf'] = $acf_fields;
+    }
+    return $data;
+}
+add_filter('rest_prepare_portfolio', 'add_acf_to_rest_api', 10, 3);
 
 
 function kalium_child_change_portfolio_slug() {

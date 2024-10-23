@@ -133,233 +133,110 @@ if (!$portfolio_args['vc_mode']) {
     <?php kalium_portfolio_loop_items_show($portfolio_args); ?>
 </div>
 
-<!-- <script>
-
-const portfolioPage = document.querySelectorAll(".portfolio-container-and-title");
-
-const filmFilter = document.getElementById('filter-film-btn');
-const portfolioItemsContainer = document.getElementById('<?php echo $portfolio_args['id']; ?>');
-const portfolioItems = Array.from(portfolioItemsContainer.querySelectorAll('.portfolio-item'));
-
-// console.log("PORTFOLIO ITEMS", portfolioItems)
-if (filmFilter && portfolioItems.length > 0) {
-            // Store the original HTML content of the portfolio container
-            const originalContent = portfolioItemsContainer.innerHTML;
-            console.log(originalContent, "filter button content");
-
-            filmFilter.addEventListener('keyup', function () {
-                const filterText = filmFilter.value.toLowerCase();
-
-                                
-                if (filterText === '') {
-                    // Restore the original content of the portfolio container
-                    portfolioItemsContainer.innerHTML = originalContent;
-
-                    // Reset layout using Isotope or similar if applicable
-                    if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
-                        jQuery(portfolioItemsContainer).isotope('reloadItems').isotope({ sortBy: 'original-order' });
-                    }
-                } else {
-                    // Clear all items from the container
-                    portfolioItemsContainer.innerHTML = '';
-
-                    // Filter items based on the search text
-                    let filteredItems = portfolioItems.filter(item => {
-                        const itemText = item.textContent.toLowerCase();
-                        return itemText.includes(filterText);
-                    });
-
-                    // Append the filtered items to the container, ensuring they start from the first position
-                    filteredItems.forEach(filteredItem => {
-                        portfolioItemsContainer.appendChild(filteredItem);
-                    });
-
-                    // Reflow the layout to reorder items properly (for Isotope or Masonry)
-                    if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
-                        jQuery(portfolioItemsContainer).isotope('reloadItems').isotope({ sortBy: 'original-order' });
-                    }
-                }
-            });
-        }
-
-if(portfolioPage.length > 0) {
-  
-  var filterButtons = document.querySelectorAll('.film-filters button');
-  console.log(filterButtons, 'filter buttons')
-    // Log the buttons found
-    console.log('Filter Buttons:', filterButtons);
-  
-    // Add event listeners to the filter buttons
-    filterButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        var filter = this.getAttribute('data-filter');
-        console.log('Filter button clicked: ' + filter);
-  
-        // Fetch the portfolio data via the REST API
-        fetch('http://esf.local/wp-json/wp/v2/portfolio?per_page=100')
-          .then(response => response.json())
-          .then(data => {
-            console.log('Portfolio Data:', data);
-  
-            // Filter items based on the release_status
-            const releasedItems = data.filter(item => item.acf.release_status === 'released');
-            const comingSoonItems = data.filter(item => item.acf.release_status === 'coming-soon');
-  
-            console.log(releasedItems, "releasedItems")
-            console.log(comingSoonItems, "coming soon items")
-  
-            // DOM Elements where the items will be appended
-            const releasedSection = document.querySelector('#released-items');
-            const comingSoonSection = document.querySelector('#coming-soon-items');
-  
-            // Clear previous content
-            releasedSection.innerHTML = '';
-            comingSoonSection.innerHTML = '';
-  
-            // Show filtered items based on the button clicked
-            if (filter === 'released') {
-              releasedItems.forEach(item => {
-                const newItem = document.createElement('div');
-                newItem.textContent = item.title.rendered;
-                releasedSection.appendChild(newItem);
-              });
-            } else if (filter === 'coming-soon') {
-              comingSoonItems.forEach(item => {
-                const newItem = document.createElement('div');
-                newItem.textContent = item.title.rendered;
-                comingSoonSection.appendChild(newItem);
-              });
-            }
-          })
-          .catch(error => console.error('Error fetching portfolio data:', error));
-      });
-    });
-}
-</script> -->
-
 <script>
-   document.addEventListener('DOMContentLoaded', function () {
-        const searchInput = document.getElementById('search-input');
-        const portfolioItemsContainer = document.getElementById('<?php echo $portfolio_args['id']; ?>');
-        const portfolioItems = Array.from(portfolioItemsContainer.querySelectorAll('.portfolio-item'));
-        const portfolioPage = document.querySelectorAll(".portfolio-container-and-title");
+document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('search-input');
+    const portfolioItemsContainer = document.getElementById('<?php echo $portfolio_args['id']; ?>');
+    let portfolioItems = Array.from(portfolioItemsContainer.querySelectorAll('.portfolio-item'));
+    let currentFilteredItems = portfolioItems; // Global filtered items that both buttons and search will interact with
 
-        const filmFilter = document.getElementById('filter-film-btn');
-        // Store the original HTML content of the portfolio container
-        const originalContent = portfolioItemsContainer.innerHTML;
+    const portfolioPage = document.querySelectorAll(".portfolio-container-and-title");
+    const originalContent = portfolioItemsContainer.innerHTML;
 
-        console.log("originalContent", originalContent);
+    console.log("originalContent", originalContent);
 
+    if (portfolioPage.length > 0) {
+        var filterButtons = document.querySelectorAll('.film-filters button');
+        console.log(filterButtons, 'filter buttons');
 
-       if(portfolioPage.length > 0) {
-  
-            var filterButtons = document.querySelectorAll('.film-filters button');
-            console.log(filterButtons, 'filter buttons')
-                // Log the buttons found
-                console.log('Filter Buttons:', filterButtons);
-            
-                // Add event listeners to the filter buttons
-                filterButtons.forEach(function (button) {
-                button.addEventListener('click', function () {
-                    var filter = this.getAttribute('data-filter');
-                    console.log('Filter button clicked: ' + filter);
-            
-                    // Fetch the portfolio data via the REST API
-                    fetch('http://esf.local/wp-json/wp/v2/portfolio?per_page=100')
+        // Add event listeners to the filter buttons
+        filterButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var filter = this.getAttribute('data-filter');
+                console.log('Filter button clicked: ' + filter);
+
+                // Fetch the portfolio data via the REST API
+                fetch('http://esf.local/wp-json/wp/v2/portfolio?per_page=100')
                     .then(response => response.json())
                     .then(data => {
-                        // Filter items based on the release_status
+                        // Filter items based on the release_status using the API data
                         const releasedItemsIds = data.filter(item => item.acf.release_status === 'released').map(item => item.id);
                         const comingSoonItemsIds = data.filter(item => item.acf.release_status === 'coming-soon').map(item => item.id);
-            
-                        console.log(releasedItemsIds, "releasedItems")
-                        console.log(comingSoonItemsIds, "coming soon items")
-            
-                        // DOM Elements where the items will be appended
-                        const releasedSection = document.querySelector('#released-items');
-                        const comingSoonSection = document.querySelector('#coming-soon-items');
-            
-                        // Clear previous content
-                        releasedSection.innerHTML = '';
-                        comingSoonSection.innerHTML = '';
-            
-                        // Show filtered items based on the button clicked
+
+                        console.log(releasedItemsIds, "releasedItems");
+                        console.log(comingSoonItemsIds, "coming soon items");
+
+                        // Clear the portfolio container
+                        portfolioItemsContainer.innerHTML = '';
+
+                        // Apply the filter for released or coming soon
                         if (filter === 'released') {
-                            portfolioItemsContainer.innerHTML = '';
-                            releasedItemsIds.forEach(id => {
-                                const matchedItems = portfolioItems.filter(item => {
-                                    const itemId = parseInt(item.getAttribute('data-portfolio-item-id'), 10);
-                                    return itemId === id; // Match it with the current ID
-                                });
-
-                                matchedItems.forEach(matchedItem => {
-                                    portfolioItemsContainer.appendChild(matchedItem); // Append the matched item to the container
-                                    console.log(matchedItem, "Appending matched item");
+                            currentFilteredItems = portfolioItems.filter(item => {
+                                const itemId = parseInt(item.getAttribute('data-portfolio-item-id'), 10);
+                                return releasedItemsIds.includes(itemId); // Keep only released items
                             });
-                        });
                         } else if (filter === 'coming-soon') {
-                            comingSoonItemsIds.forEach(id => {
-                                // Clear all items from the container
-                                portfolioItemsContainer.innerHTML = '';
-    
-                                const matchedItems = portfolioItems.filter(item => {
-                                    const itemId = parseInt(item.getAttribute('data-portfolio-item-id'), 10);
-                                    // const itemId = parseInt(item.getAttribute('data-portfolio-item-id'), 10); // Get the ID as an integer
-                                    return itemId === id; // Match it with the current ID
-                                });
-
-                                matchedItems.forEach(matchedItem => {
-                                    portfolioItemsContainer.appendChild(matchedItem); // Append the matched item to the container
-                                    console.log(matchedItem, "Appending matched item");
-                                });
+                            currentFilteredItems = portfolioItems.filter(item => {
+                                const itemId = parseInt(item.getAttribute('data-portfolio-item-id'), 10);
+                                return comingSoonItemsIds.includes(itemId); // Keep only coming soon items
                             });
+                        } else {
+                            currentFilteredItems = portfolioItems; // Show all items if no filter is applied
+                        }
+
+                        // Append the filtered items to the portfolio container
+                        currentFilteredItems.forEach(item => {
+                            portfolioItemsContainer.appendChild(item);
+                        });
+
+                        // Reflow layout using Isotope or Masonry if applicable
+                        if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
+                            jQuery(portfolioItemsContainer).isotope('reloadItems').isotope('layout'); // Ensure layout is recalculated
                         }
                     })
                     .catch(error => console.error('Error fetching portfolio data:', error));
-                });
-                });
-            }
-
-        // SEARCH
-        if (searchInput && portfolioItems.length > 0) {
-
-            searchInput.addEventListener('keyup', function () {
-                const filterText = searchInput.value.toLowerCase();
-
-                                
-                if (filterText === '') {
-                    // Restore the original content of the portfolio container
-                    portfolioItemsContainer.innerHTML = originalContent;
-
-                    // Reset layout using Isotope or similar if applicable
-                    if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
-                        jQuery(portfolioItemsContainer).isotope('reloadItems').isotope({ sortBy: 'original-order' });
-                    }
-                } else {
-                    // Clear all items from the container
-                    portfolioItemsContainer.innerHTML = '';
-
-                    // Filter items based on the search text
-                    let filteredItems = portfolioItems.filter(item => {
-                        const itemText = item.textContent.toLowerCase();
-                        return itemText.includes(filterText);
-                    });
-
-                    console.log("filteredtItems", filteredItems)
-
-                    // Append the filtered items to the container, ensuring they start from the first position
-                    filteredItems.forEach(filteredItem => {
-                        portfolioItemsContainer.appendChild(filteredItem);
-                    });
-
-                    // Reflow the layout to reorder items properly (for Isotope or Masonry)
-                    if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
-                        jQuery(portfolioItemsContainer).isotope('reloadItems').isotope({ sortBy: 'original-order' });
-                    }
-                }
             });
-        }
-    });
+        });
+    }
+
+    // SEARCH FUNCTIONALITY
+    if (searchInput && portfolioItems.length > 0) {
+        searchInput.addEventListener('keyup', function () {
+            const filterText = searchInput.value.toLowerCase();
+
+            // Clear the portfolio container
+            portfolioItemsContainer.innerHTML = '';
+
+            if (filterText === '') {
+                // If the search is cleared, restore the current filtered items
+                currentFilteredItems.forEach(item => portfolioItemsContainer.appendChild(item));
+
+                // Reflow the layout using Isotope or Masonry when the search is cleared
+                if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
+                    jQuery(portfolioItemsContainer).isotope('reloadItems').isotope('layout'); // Ensure layout is recalculated
+                }
+            } else {
+                // Filter items based on search text within the currently filtered items
+                let filteredItems = currentFilteredItems.filter(item => {
+                    const itemText = item.textContent.toLowerCase();
+                    return itemText.includes(filterText);
+                });
+
+                // Append the filtered items to the portfolio container
+                filteredItems.forEach(filteredItem => {
+                    portfolioItemsContainer.appendChild(filteredItem);
+                });
+
+                // Reflow the layout using Isotope or Masonry for the filtered items
+                if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
+                    jQuery(portfolioItemsContainer).isotope('reloadItems').isotope('layout'); // Ensure layout is recalculated
+                }
+            }
+        });
+    }
+});
+
+
 </script>
 
 
