@@ -8841,3 +8841,7 @@ Stack trace:
 [23-Oct-2024 23:58:59 UTC] PHP Deprecated:  preg_match_all(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/media.php on line 1850
 [23-Oct-2024 23:58:59 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
 [23-Oct-2024 23:58:59 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[24-Oct-2024 00:00:01 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[24-Oct-2024 00:00:06 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[24-Oct-2024 00:23:42 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494
+[24-Oct-2024 00:24:37 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3494

@@ -14,6 +14,8 @@ if (!defined('ABSPATH')) {
 
 global $portfolio_args, $wp_query;
 
+$translations = load_translation_file();
+
 // Make the portfolio query
 $portfolio_query_args = array();
 
@@ -111,9 +113,9 @@ if (!$portfolio_args['vc_mode']) {
         </div>
 <?php else: ?>
         <div class="film-filters">
-      <button id="filter-film-btn" data-filter="released">Released</button>
-      <button id="filter-film-btn" data-filter="coming-soon">Coming Soon</button>
-      <button id="filter-film-btn" data-filter="all">All</button>
+      <button id="filter-film-btn" data-filter="released"><?php echo $translations['released']; ?></button>
+      <button id="filter-film-btn" data-filter="coming-soon"><?php echo $translations['coming_soon']; ?></button>
+      <button id="filter-film-btn" data-filter="all"><?php echo $translations['all']; ?></button>
     </div>
 
     <div id="released-items"></div>

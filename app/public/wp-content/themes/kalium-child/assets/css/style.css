@@ -550,6 +550,7 @@ header {
 #search-input {
   color: black;
   border: 1px solid black;
+  background-color: transparent;
   border-radius: 3px;
   width: 22%;
   padding: 4px 10px;
