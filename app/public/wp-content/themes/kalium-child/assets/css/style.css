@@ -536,7 +536,7 @@ header {
 }
 
 #filter-film-btn:hover {
-  background-color: #939be6;
+  background-color: #f0a34b;
  
  }
 
@@ -1592,6 +1592,14 @@ color: black;
 
 .custom-search-bar{
   margin-right: 3rem;
+}
+
+.film-filters {
+  margin-right: 3rem;
+}
+
+#filter-film-btn {
+  font-size: 12px;
 }
 
 input[type="text"]::placeholder {

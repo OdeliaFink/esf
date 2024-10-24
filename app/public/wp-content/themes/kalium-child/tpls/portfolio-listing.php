@@ -111,6 +111,14 @@ if (!$portfolio_args['vc_mode']) {
                 EYESTEELFILM DISTRIBUTION distributes not only films in its wheelhouse but also partners with productions that align with the company's varied interests and values. With a high value on cinematic excellence, the company intentionally distributes films using an impact distribution model. The company’s success in distribution comes from years of experience in both the film industry and in community and relationship building. Eyesteelfilm Distribution has an impressive track record of admittance into numerous notable film festivals and has accumulated many prestigious awards. The company has secured many acquisitions with prominent broadcasters and streamers. The company executes nationwide theatrical runs and manages impact and educational campaigns.
             </p>
         </div>
+        <div class="distribution-filters">
+    <button id="filter-distribution-btn" data-filter="active">Active</button>
+    <button id="filter-distribution-btn" data-filter="past">Past</button>
+    <button id="filter-distribution-btn" data-filter="all">All</button>
+    
+</div>
+<div id="active-items"></div> 
+<div id="past-items"></div> 
 <?php else: ?>
         <div class="film-filters">
       <button id="filter-film-btn" data-filter="released"><?php echo $translations['released']; ?></button>
@@ -136,6 +144,123 @@ if (!$portfolio_args['vc_mode']) {
     <?php kalium_portfolio_loop_items_show($portfolio_args); ?>
 </div>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const portfolioItemsContainer = document.getElementById('<?php echo $portfolio_args['id']; ?>');
+    let portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
+    let currentFilteredItems = portfolioItems; // Global filtered items that both buttons and search will interact with
+
+    // Fallback message element for no items found
+    const noItemsMessage = document.createElement('div');
+    noItemsMessage.textContent = 'No items found.';
+    noItemsMessage.style.display = 'none'; // Initially hidden
+    noItemsMessage.style.color = 'black'; // Add some styling if needed
+    noItemsMessage.style.textAlign = 'left'; // Align the message to the left
+    portfolioItemsContainer.parentElement.appendChild(noItemsMessage); // Append outside of the portfolio items container
+
+    const filterButtons = document.querySelectorAll('.distribution-filters button');
+    
+    // Add event listeners to the filter buttons
+    filterButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const filter = this.getAttribute('data-filter');
+            console.log('Filter button clicked: ' + filter);
+
+            // Fetch the portfolio data via the REST API
+            fetch('http://esf.local/wp-json/wp/v2/portfolio?per_page=100')
+                .then(response => response.json())
+                .then(data => {
+                    // Filter items based on the ACF field distribution_status
+                    const activeItemsIds = data.filter(item => item.acf.distribution_status === 'active').map(item => item.id);
+                    const pastItemsIds = data.filter(item => item.acf.distribution_status === 'past').map(item => item.id);
+
+                    console.log(activeItemsIds, "Active Items");
+                    console.log(pastItemsIds, "Past Items");
+
+                    // Clear the portfolio container
+                    portfolioItemsContainer.innerHTML = '';
+
+                    // Apply the filter for active or past
+                    if (filter === 'active') {
+                        currentFilteredItems = portfolioItems.filter(item => {
+                            const itemId = parseInt(item.getAttribute('data-portfolio-item-id'), 10);
+                            return activeItemsIds.includes(itemId); // Keep only active items
+                        });
+                    } else if (filter === 'past') {
+                        currentFilteredItems = portfolioItems.filter(item => {
+                            const itemId = parseInt(item.getAttribute('data-portfolio-item-id'), 10);
+                            return pastItemsIds.includes(itemId); // Keep only past items
+                        });
+                    } else {
+                        currentFilteredItems = portfolioItems; // Show all items if no filter is applied
+                    }
+
+                    // Check if there are any items to display
+                    if (currentFilteredItems.length === 0) {
+                        noItemsMessage.style.display = 'block'; // Show fallback message
+                    } else {
+                        noItemsMessage.style.display = 'none'; // Hide fallback message
+                        // Append the filtered items to the portfolio container
+                        currentFilteredItems.forEach(item => {
+                            portfolioItemsContainer.appendChild(item);
+                        });
+                    }
+
+                    // Reflow layout using Isotope or Masonry if applicable
+                    if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
+                        jQuery(portfolioItemsContainer).isotope('reloadItems').isotope('layout'); // Ensure layout is recalculated
+                    }
+                })
+                .catch(error => console.error('Error fetching portfolio data:', error));
+        });
+    });
+
+    // SEARCH FUNCTIONALITY
+    const searchInput = document.getElementById('search-input');
+    if (searchInput && portfolioItems.length > 0) {
+        searchInput.addEventListener('keyup', function () {
+            const filterText = searchInput.value.toLowerCase();
+
+            // Clear the portfolio container
+            portfolioItemsContainer.innerHTML = '';
+
+            if (filterText === '') {
+                // If the search is cleared, restore the current filtered items
+                currentFilteredItems.forEach(item => portfolioItemsContainer.appendChild(item));
+
+                // Reflow the layout using Isotope or Masonry when the search is cleared
+                if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
+                    jQuery(portfolioItemsContainer).isotope('reloadItems').isotope('layout'); // Ensure layout is recalculated
+                }
+            } else {
+                // Filter items based on search text within the currently filtered items
+                let filteredItems = currentFilteredItems.filter(item => {
+                    const itemText = item.textContent.toLowerCase();
+                    return itemText.includes(filterText);
+                });
+
+                // Check if there are any items to display
+                if (filteredItems.length === 0) {
+                    noItemsMessage.style.display = 'block'; // Show fallback message
+                } else {
+                    noItemsMessage.style.display = 'none'; // Hide fallback message
+                    // Append the filtered items to the portfolio container
+                    filteredItems.forEach(filteredItem => {
+                        portfolioItemsContainer.appendChild(filteredItem);
+                    });
+                }
+
+                // Reflow the layout using Isotope or Masonry for the filtered items
+                if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
+                    jQuery(portfolioItemsContainer).isotope('reloadItems').isotope('layout'); // Ensure layout is recalculated
+                }
+            }
+        });
+    }
+});
+
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('search-input');
@@ -272,37 +397,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             
             <?php do_action('kalium_portfolio_items_after'); ?>
-            <?php
-            if (is_page('distribution')): ?>
-        <style>
-            /* Disable pointer events on the distribution page for portfolio items */
-            .portfolio-item a.item-link, .portfolio-item a.thumb-placeholder {
-                pointer-events: none !important;
-            }
-
-            /* You can keep hover effects with this: */
-            .portfolio-item:hover .item-link, .portfolio-item:hover .thumb-placeholder {
-                pointer-events: auto;
-            }
-        </style>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Select all <a> elements within portfolio items
-                var portfolioLinks = document.querySelectorAll('.portfolio-item a.item-link, .portfolio-item a.thumb-placeholder');
-
-                // Loop through each <a> element and prevent the default behavior, as a backup to pointer-events
-                portfolioLinks.forEach(function(link) {
-                    link.addEventListener('click', function(event) {
-                        event.preventDefault();
-                                     // Prevent the default click action
-                        console.log('Link click prevented'); // Log to ensure it's working
-                    });
-                                    link.setAttribute('href', '#');
-                });
-            });
-                
-        </script>
-<?php endif; ?>
+          
             <?php
             // Generate Portfolio Instance Object
             kalium_portfolio_generate_portfolio_instance_object($portfolio_args);
