@@ -112,9 +112,9 @@ if (!$portfolio_args['vc_mode']) {
             </p>
         </div>
         <div class="distribution-filters">
-    <button id="filter-distribution-btn" data-filter="active">Active</button>
-    <button id="filter-distribution-btn" data-filter="past">Past</button>
-    <button id="filter-distribution-btn" data-filter="all">All</button>
+    <button id="filter-distribution-btn" data-filter="active"><?php echo $translations['active']; ?></button>
+    <button id="filter-distribution-btn" data-filter="past"><?php echo $translations['past']; ?></button>
+    <button id="filter-distribution-btn" data-filter="all"><?php echo $translations['all']; ?></button>
     
 </div>
 <div id="active-items"></div> 
@@ -135,7 +135,7 @@ if (!$portfolio_args['vc_mode']) {
 
 
 <div class="custom-search-bar">
-    <input type="text" id="search-input" placeholder="...">
+    <input type="text" id="search-input" placeholder="">
 </div>
 
 <?php do_action('kalium_portfolio_items_before', $portfolio_query); ?>
