@@ -159,60 +159,83 @@ document.addEventListener('DOMContentLoaded', function () {
     noItemsMessage.style.textAlign = 'left'; // Align the message to the left
     portfolioItemsContainer.parentElement.appendChild(noItemsMessage); // Append outside of the portfolio items container
 
-    const filterButtons = document.querySelectorAll('.distribution-filters button');
-    
+    // Function to apply conditional styling based on distribution status
+    function applyStyling(items, activeItemsIds, pastItemsIds) {
+        items.forEach(item => {
+            const itemId = parseInt(item.getAttribute('data-portfolio-item-id'), 10);
+            if (activeItemsIds.includes(itemId)) {
+                item.classList.add('active-item'); // Add class for active items
+                item.classList.remove('past-item'); // Ensure past class is removed
+            } else if (pastItemsIds.includes(itemId)) {
+                item.classList.add('past-item'); // Add class for past items
+                item.classList.remove('active-item'); // Ensure active class is removed
+            } else {
+                // Clear any styling if the item doesn't match any filter
+                item.classList.remove('active-item', 'past-item');
+            }
+        });
+    }
+
+    // Function to fetch data and apply the filter
+    function fetchAndApplyFilter(filter) {
+        // Fetch the portfolio data via the REST API
+        fetch('http://esf.local/wp-json/wp/v2/portfolio?per_page=100')
+            .then(response => response.json())
+            .then(data => {
+                // Filter items based on the ACF field distribution_status
+                const activeItemsIds = data.filter(item => item.acf.distribution_status === 'active').map(item => item.id);
+                const pastItemsIds = data.filter(item => item.acf.distribution_status === 'past').map(item => item.id);
+
+                // Apply the filter for active, past, or all items
+                if (filter === 'active') {
+                    currentFilteredItems = portfolioItems.filter(item => {
+                        const itemId = parseInt(item.getAttribute('data-portfolio-item-id'), 10);
+                        return activeItemsIds.includes(itemId); // Keep only active items
+                    });
+                } else if (filter === 'past') {
+                    currentFilteredItems = portfolioItems.filter(item => {
+                        const itemId = parseInt(item.getAttribute('data-portfolio-item-id'), 10);
+                        return pastItemsIds.includes(itemId); // Keep only past items
+                    });
+                } else {
+                    // Show all items if no filter is applied
+                    currentFilteredItems = portfolioItems;
+                }
+
+                // Apply styling to the items (active or past)
+                applyStyling(currentFilteredItems, activeItemsIds, pastItemsIds);
+
+                // Clear the portfolio container
+                portfolioItemsContainer.innerHTML = '';
+
+                // Check if there are any items to display
+                if (currentFilteredItems.length === 0) {
+                    noItemsMessage.style.display = 'block'; // Show fallback message
+                } else {
+                    noItemsMessage.style.display = 'none'; // Hide fallback message
+                    // Append the filtered items to the portfolio container
+                    currentFilteredItems.forEach(item => {
+                        portfolioItemsContainer.appendChild(item);
+                    });
+                }
+
+                // Reflow layout using Isotope or Masonry if applicable
+                if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
+                    jQuery(portfolioItemsContainer).isotope('reloadItems').isotope('layout'); // Ensure layout is recalculated
+                }
+            })
+            .catch(error => console.error('Error fetching portfolio data:', error));
+    }
+
+    // Initial load: Apply the "all" filter and apply conditional styling
+    fetchAndApplyFilter('all');
+
     // Add event listeners to the filter buttons
+    const filterButtons = document.querySelectorAll('.distribution-filters button');
     filterButtons.forEach(function (button) {
         button.addEventListener('click', function () {
             const filter = this.getAttribute('data-filter');
-            console.log('Filter button clicked: ' + filter);
-
-            // Fetch the portfolio data via the REST API
-            fetch('http://esf.local/wp-json/wp/v2/portfolio?per_page=100')
-                .then(response => response.json())
-                .then(data => {
-                    // Filter items based on the ACF field distribution_status
-                    const activeItemsIds = data.filter(item => item.acf.distribution_status === 'active').map(item => item.id);
-                    const pastItemsIds = data.filter(item => item.acf.distribution_status === 'past').map(item => item.id);
-
-                    console.log(activeItemsIds, "Active Items");
-                    console.log(pastItemsIds, "Past Items");
-
-                    // Clear the portfolio container
-                    portfolioItemsContainer.innerHTML = '';
-
-                    // Apply the filter for active or past
-                    if (filter === 'active') {
-                        currentFilteredItems = portfolioItems.filter(item => {
-                            const itemId = parseInt(item.getAttribute('data-portfolio-item-id'), 10);
-                            return activeItemsIds.includes(itemId); // Keep only active items
-                        });
-                    } else if (filter === 'past') {
-                        currentFilteredItems = portfolioItems.filter(item => {
-                            const itemId = parseInt(item.getAttribute('data-portfolio-item-id'), 10);
-                            return pastItemsIds.includes(itemId); // Keep only past items
-                        });
-                    } else {
-                        currentFilteredItems = portfolioItems; // Show all items if no filter is applied
-                    }
-
-                    // Check if there are any items to display
-                    if (currentFilteredItems.length === 0) {
-                        noItemsMessage.style.display = 'block'; // Show fallback message
-                    } else {
-                        noItemsMessage.style.display = 'none'; // Hide fallback message
-                        // Append the filtered items to the portfolio container
-                        currentFilteredItems.forEach(item => {
-                            portfolioItemsContainer.appendChild(item);
-                        });
-                    }
-
-                    // Reflow layout using Isotope or Masonry if applicable
-                    if (typeof jQuery !== 'undefined' && typeof jQuery.fn.isotope !== 'undefined') {
-                        jQuery(portfolioItemsContainer).isotope('reloadItems').isotope('layout'); // Ensure layout is recalculated
-                    }
-                })
-                .catch(error => console.error('Error fetching portfolio data:', error));
+            fetchAndApplyFilter(filter); // Apply filter based on the clicked button
         });
     });
 
@@ -259,6 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
 
 </script>
 <script>
