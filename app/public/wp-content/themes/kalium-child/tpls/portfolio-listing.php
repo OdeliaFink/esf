@@ -151,14 +151,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
     let currentFilteredItems = portfolioItems; // Global filtered items that both buttons and search will interact with
 
-    // Fallback message element for no items found
-    const noItemsMessage = document.createElement('div');
-    noItemsMessage.textContent = 'No items found.';
-    noItemsMessage.style.display = 'none'; // Initially hidden
-    noItemsMessage.style.color = 'black'; // Add some styling if needed
-    noItemsMessage.style.textAlign = 'left'; // Align the message to the left
-    portfolioItemsContainer.parentElement.appendChild(noItemsMessage); // Append outside of the portfolio items container
-
     // Function to apply conditional styling based on distribution status
     function applyStyling(items, activeItemsIds, pastItemsIds) {
         items.forEach(item => {
@@ -176,7 +168,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Function to fetch data and apply the filter
     function fetchAndApplyFilter(filter) {
         // Fetch the portfolio data via the REST API
         fetch('http://esf.local/wp-json/wp/v2/portfolio?per_page=100')
@@ -210,9 +201,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Check if there are any items to display
                 if (currentFilteredItems.length === 0) {
-                    noItemsMessage.style.display = 'block'; // Show fallback message
+                    portfolioItemsContainer.innerHTML = '<p>No items found.</p>'; // Show fallback message directly
                 } else {
-                    noItemsMessage.style.display = 'none'; // Hide fallback message
                     // Append the filtered items to the portfolio container
                     currentFilteredItems.forEach(item => {
                         portfolioItemsContainer.appendChild(item);
@@ -265,9 +255,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Check if there are any items to display
                 if (filteredItems.length === 0) {
-                    noItemsMessage.style.display = 'block'; // Show fallback message
+                    portfolioItemsContainer.innerHTML = '<p>No items found.</p>'; // Show fallback message directly
                 } else {
-                    noItemsMessage.style.display = 'none'; // Hide fallback message
                     // Append the filtered items to the portfolio container
                     filteredItems.forEach(filteredItem => {
                         portfolioItemsContainer.appendChild(filteredItem);
@@ -282,7 +271,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
 
 </script>
 <script>

@@ -243,22 +243,22 @@ $translations = load_translation_file();
             </div>
 
             <div class="movie-stills-slider">
-                <?php
-                $image_number = 1;
-                while ($image = get_field('image_' . $image_number)) {
-                    if ($image): ?>
-                        <div class="slick-slide" style="width: auto !important; ">
-                            <div class="image-container">
-                                <img src="<?php echo esc_url($image['url']); ?>" alt="Movie Still <?php echo $image_number; ?>" />
-                            </div>
+    <?php if (have_rows('movie_stills')): ?>
+        <?php while (have_rows('movie_stills')): the_row(); ?>
+            <?php 
+            $image = get_sub_field('movie_still'); // Get the image subfield
+            if ($image): ?>
+                <div class="slick-slide" style="width: auto !important;">
+                    <div class="image-container">
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="Movie Still" />
+                    </div>
+                    <!-- <div class="image-container" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div> -->
+                </div>
+            <?php endif; ?>
+        <?php endwhile; ?>
+    <?php endif; ?>
+</div>
 
-                            <!-- <div class="image-container" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div> -->
-                        </div>
-                    <?php endif;
-                    $image_number++;
-                }
-                ?>
-            </div>
 
             <?php if (have_rows('credits')): ?>
     <div class="credits-section">

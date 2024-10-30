@@ -516,7 +516,55 @@ header {
 .email-item a:hover {
   color: #000;
 }
+#filter-distribution-btn{
 
+  color: black;
+  padding: 4px 10px;
+  background-color: transparent; 
+  border: 1px solid black; 
+  border-radius: 3px;
+   transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.disabled-link {
+  pointer-events: none;
+  cursor: not-allowed; /* Change cursor to indicate non-clickable items */
+  opacity: 0.7; /* Reduce opacity to visually indicate disabled state */
+}
+
+.portfolio-item:hover .disabled-link {
+  opacity: 1; /* Restore opacity on hover to indicate visual feedback */
+}
+
+/* Styling for active items */
+.active-item {
+ /* Example background color */
+   /* Example border for active items */
+}
+
+/* Styling for past items */
+.past-item {
+  cursor: none !important;
+  pointer-events: none !important;
+ /* Example background color for past items */
+ /* Example border for past items */
+  opacity: 0.7; /* Example opacity to indicate past status */
+}
+
+
+.distribution-filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 1.8rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#filter-distribution-btn:hover {
+  background-color: #f0a34b;
+ 
+ }
 .film-filters {
   display: flex;
   flex-direction: row;
