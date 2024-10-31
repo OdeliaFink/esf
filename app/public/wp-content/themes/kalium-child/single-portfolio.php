@@ -119,24 +119,24 @@ $translations = load_translation_file();
             </div>
 
 
-            <div class="laurel-carousel-wrapper">
-                <div class="laurel-carousel">
-                    <?php if (have_rows('awards')): ?>
-                        <?php while (have_rows('awards')):
-                            the_row(); ?>
-                            <?php
-                            // Get the sub field (award image) inside the repeater
-                            $award_image = get_sub_field('awards_image');
-                            if ($award_image): ?>
-                                <div class="laurel-slide">
-                                    <img src="<?php echo esc_url($award_image['url']); ?>"
-                                        alt="<?php echo esc_attr($award_image['alt']); ?>">
-                                </div>
-                            <?php endif; ?>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                </div>
-            </div>
+            <?php if (have_rows('awards')): ?>
+    <div class="laurel-carousel-wrapper">
+        <div class="laurel-carousel">
+            <?php while (have_rows('awards')): the_row(); ?>
+                <?php
+                // Get the sub field (award image) inside the repeater
+                $award_image = get_sub_field('awards_image');
+                if ($award_image): ?>
+                    <div class="laurel-slide">
+                        <img src="<?php echo esc_url($award_image['url']); ?>"
+                            alt="<?php echo esc_attr($award_image['alt']); ?>">
+                    </div>
+                <?php endif; ?>
+            <?php endwhile; ?>
+        </div>
+    </div>
+<?php endif; ?>
+
 
 
             <!-- Embed the Trailer -->

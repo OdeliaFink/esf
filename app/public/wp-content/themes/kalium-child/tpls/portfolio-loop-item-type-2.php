@@ -214,7 +214,7 @@ switch ( $portfolio_args['likes_icon'] ) {
 			else:
 				?>
                 <a href="<?php echo esc_url( $portfolio_item_href ); ?>" class="item-link masonry-thumb" aria-label="<?php echo esc_html( $portfolio_item_title ); ?>">
-					<?php echo $image; ?>
+					<?php echo $mobile_image; ?>
                 </a>
 			<?php endif; ?>
         </div>

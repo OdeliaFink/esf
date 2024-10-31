@@ -352,18 +352,26 @@ header {
   right: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.422); /* Slight white overlay */
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: transform 0.3s;
 }
 
 .content-overlay h3 {
-  font-size: 40px;
+  font-size: 80px; /* Adjust as needed */
   letter-spacing: 0.09rem;
   font-weight: 600;
   color: black;
+  text-align: right;
+  word-wrap: break-word;
+  white-space: normal;
+  margin-right: 2rem;
 }
+
+.content-overlay h3::after {
+  content: '';
+  display: inline-block;
+  width: 100%; /* Forces the last line to justify fully */
+}
+
 
 .info-box a {
   font-weight: bold;
@@ -548,7 +556,7 @@ header {
   pointer-events: none !important;
  /* Example background color for past items */
  /* Example border for past items */
-  opacity: 0.7; /* Example opacity to indicate past status */
+  /* Example opacity to indicate past status */
 }
 
 
@@ -1142,7 +1150,7 @@ color: black;
 }
 
 .film-rental-container {
-  margin-bottom: -30px;
+  
   display: flex;
   /* margin-top: 1rem; */
   flex-direction: row;
@@ -1393,6 +1401,9 @@ color: black;
   margin-bottom: 10px; /* Space between rows */
 }
 
+.slick-dotted.slick-slider {
+  margin-block: 30px;
+}
 
 .slick-slide .slick-current .slick-active {
   width: auto !important;
@@ -1753,6 +1764,10 @@ input[type="text"]::placeholder {
 
   .team-member-info {
     padding-bottom: 0rem;
+  }
+
+  .content-overlay h3 {
+    font-size: 60px;
   }
 }
 @media screen and (max-width: 377px) {
