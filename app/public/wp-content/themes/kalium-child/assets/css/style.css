@@ -308,7 +308,7 @@ header {
   gap: 30px; /* Adjust gap between boxes */
   margin-block: 3rem;
   margin-bottom: 8rem;
-  width: 90%;
+  width: 87%;
   margin-inline: auto;
 }
 
@@ -355,15 +355,27 @@ header {
   transition: transform 0.3s;
 }
 
+.no-results {
+  min-height: 50vh;
+}
+
+.portfolio-holder {
+  min-height: 110px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .content-overlay h3 {
-  font-size: 80px; /* Adjust as needed */
   letter-spacing: 0.09rem;
   font-weight: 600;
   color: black;
-  text-align: right;
+  text-align: center;
   word-wrap: break-word;
   white-space: normal;
-  margin-right: 2rem;
+
+  margin-top: 30%;
 }
 
 .content-overlay h3::after {
@@ -722,6 +734,10 @@ input[type="text"]::placeholder {
 
 .site-header--sticky-active-padding {
   backdrop-filter: blur(3px) !important;
+}
+
+.header-block__column {
+  padding-left: 0px;
 }
 
 /* Hero Section */

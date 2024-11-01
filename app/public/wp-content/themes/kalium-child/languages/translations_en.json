@@ -18,6 +18,10 @@
   "all" : "ALL",
   "past" : "PAST",
   "active" : "ACTIVE",
-  "tagline" : "EyeSteelFilm is a film and interactive media company dedicated to using cinematic expression as a catalyst for social and political change. It was created to develop cinema that empowers people who are ignored by mainstream media, people and ideas around the world."
+  "tagline" : "EyeSteelFilm is a film and interactive media company dedicated to using cinematic expression as a catalyst for social and political change. It was created to develop cinema that empowers people who are ignored by mainstream media, people and ideas around the world.",
   
+    "search_placeholder": "SEARCH", 
+    "items" : "No items found."
+
+
 }
