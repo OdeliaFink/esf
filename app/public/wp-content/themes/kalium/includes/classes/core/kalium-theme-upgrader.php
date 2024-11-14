@@ -167,7 +167,7 @@ class Kalium_Theme_Upgrader {
 		$license = kalium()->theme_license->get_license();
 
 		// Check if its Theme_Upgrader object
-		if ( ! $updater instanceof Theme_Upgrader || ! isset( $updater->skin->theme_info ) || 'kalium' !== $updater->skin->theme_info->get( 'TextDomain' ) ) {
+		if ( ! $updater instanceof Theme_Upgrader || empty( $updater->skin->theme_info ) || 'kalium' !== $updater->skin->theme_info->get( 'TextDomain' ) ) {
 			return $reply;
 		}
 

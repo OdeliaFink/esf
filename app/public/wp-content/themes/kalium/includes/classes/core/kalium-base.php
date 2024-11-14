@@ -21,7 +21,12 @@ abstract class Kalium_Base {
 	 *
 	 * @var string
 	 */
-	const VERSION = '3.16';
+	const VERSION = '3.18.3';
+
+	/**
+	 * Build number.
+	 */
+	const BUILD_NUM = 1730973710;
 
 	/**
 	 * Get current theme version.

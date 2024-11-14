@@ -610,7 +610,8 @@ function _kalium_go_to_top_link() {
 	}
 
 	?>
-    <a href="#top" <?php kalium_class_attr( $classes ); ?> data-type="<?php echo esc_attr( $type ); ?>" data-val="<?php echo esc_attr( $value ); ?>">
+    <a href="#top" <?php kalium_class_attr( $classes ); ?> data-type="<?php echo esc_attr( $type ); ?>"
+       data-val="<?php echo esc_attr( $value ); ?>">
         <i class="flaticon-bottom4"></i>
     </a>
 	<?php

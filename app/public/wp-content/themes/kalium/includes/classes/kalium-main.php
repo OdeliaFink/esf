@@ -249,7 +249,7 @@ final class Kalium extends Kalium_Base {
 		$notices = get_site_transient( 'kalium_notices' );
 
 		if ( false === $notices ) {
-			$req = wp_remote_get( 'https://api.laborator.co/notices.json?time=' . wp_date( 'c' ) );
+			$req = wp_remote_get( 'https://api.laborator.co/notices.json?theme=kalium&version=' . kalium()->get_version() . '&time=' . wp_date( 'c' ) );
 
 			$notices = 200 === wp_remote_retrieve_response_code( $req ) ? json_decode( wp_remote_retrieve_body( $req ), true, 512, JSON_OBJECT_AS_ARRAY | JSON_NUMERIC_CHECK ) : null;
 

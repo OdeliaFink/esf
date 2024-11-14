@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'kalium_before_logo' );
 
 ?>
-    <a href="<?php echo esc_url( $link ); ?>" <?php kalium_class_attr( $classes ) ?>>
+    <a href="<?php echo esc_url( $link ); ?>" <?php kalium_class_attr( $classes ) ?> aria-label="<?php echo esc_attr_x( 'Go to homepage', 'aria-label', 'kalium' ); ?>">
 		<?php if ( ! empty( $logo_image ) ) : ?>
             <img src="<?php echo esc_url( $logo_image['src'] ); ?>" class="main-logo" width="<?php echo esc_attr( $logo_image['width'] ); ?>" height="<?php echo esc_attr( $logo_image['height'] ); ?>" alt="<?php echo esc_attr( $logo_name ); ?>"/>
 		<?php else: ?>

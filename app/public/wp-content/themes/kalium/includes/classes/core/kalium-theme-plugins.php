@@ -69,6 +69,11 @@ class Kalium_Theme_Plugins {
 		// Register TGMPA Plugins
 		add_action( 'tgmpa_register', [ $this, '_register_tgmpa_plugins' ] );
 
+        // Refresh plugins list on update page
+		add_action( 'load-update-core.php', function () {
+			$this->init_theme_plugins_data();
+		} );
+
 		// Install, update or activate plugins with TGMPA via AJAX
 		add_action( 'wp_ajax_kalium-plugins-tgmpa-install', [ $this, '_plugins_install_ajax' ] );
 
@@ -106,7 +111,7 @@ class Kalium_Theme_Plugins {
 		tgmpa( $plugins, $config );
 
 		// Set plugin source for bundled plugins only
-		add_filter( 'upgrader_pre_download', [ $this, '_set_source_for_bundled_plugins' ], 1000, 3 );
+		add_filter( 'pre_set_site_transient_update_plugins', [ $this, 'set_source_for_bundled_plugins' ], 100 );
 	}
 
 	/**
@@ -285,82 +290,43 @@ class Kalium_Theme_Plugins {
 	}
 
 	/**
-	 * Set source for bundled plugins when installing or updating them.
+	 * Set sources for premium bundled plugin updates.
 	 *
-	 * @param bool        $return
-	 * @param string      $package
-	 * @param WP_Upgrader $upgrader
+	 * @param object $update_plugins
 	 *
-	 * @return string|WP_Error
+	 * @return object
 	 */
-	public function _set_source_for_bundled_plugins( $return, $package, $upgrader ) {
-		global $pagenow;
-
-		$skin        = $upgrader->skin;
-		$type        = isset( $skin->type ) ? $skin->type : '';
-		$plugin_slug = isset( $skin, $skin->options, $skin->options['extra'], $skin->options['extra']['slug'] ) ? $skin->options['extra']['slug'] : '';
-
-		$theme_register_message = sprintf( 'Download failed. Theme must be registered in order to install or update premium bundled plugins. <p>Go to <a href="%1$s" class="kalium-theme-registration-link">Laborator &raquo; Registration</a> to register your theme.</p>', esc_url( Kalium_About::get_tab_link( 'theme-registration' ) ) );
-
-		// Make sure it is a plugin
-		if ( $skin instanceof Plugin_Upgrader_Skin ) {
-			$plugin_slug = dirname( $skin->plugin );
-
-			if ( isset( $this->theme_plugins[ $plugin_slug ] ) ) {
-				$plugin = $this->theme_plugins[ $plugin_slug ];
-
-				if ( ! empty( $plugin['source'] ) ) {
-					$source = $plugin['source'];
-					$skin->feedback( 'downloading_package', $source );
-					$download_file = download_url( $source );
-
-					if ( is_wp_error( $download_file ) ) {
-
-						// Check if theme is not activated
-						if ( false === kalium()->theme_license->is_theme_registered() ) {
-							return new WP_Error( 'download_failed_theme_not_registered', $theme_register_message );
-						}
-
-						return new WP_Error( 'download_failed', $skin->upgrader->strings['download_failed'], $download_file->get_error_message() );
-					}
-
-					return $download_file;
-				}
-			}
-		} // Installing plugin
-		else if ( 'web' === $type && ( $skin instanceof Plugin_Installer_Skin || $skin instanceof TGMPA_Bulk_Installer_Skin ) && $this->is_premium_plugin( $plugin_slug ) && false === kalium()->theme_license->is_theme_registered() ) {
-			return new WP_Error( 'download_failed_theme_not_registered', $theme_register_message );
-		} // Update page
-		else if ( 'update.php' === $pagenow ) {
-
-			if ( $skin instanceof Bulk_Plugin_Upgrader_Skin && ! empty( $skin->plugin_info ) ) {
-				$plugin_info = $skin->plugin_info;
-
-				// Current updating plugin meta
-				$name = $plugin_info['Name'];
-
-				// Check for matching bundled plugin
-				foreach ( $this->get_plugins_list() as $plugin ) {
-
-					// Matched bundled plugin
-					if ( ! empty( $plugin['source'] ) && $name == $plugin['native_name'] ) {
-						$version = $this->get_latest_plugin_version( $plugin['slug'] );
-
-						// Only if its the same version or older
-						if ( version_compare( $version, $plugin['version'], '<=' ) ) {
-							$source = $plugin['source'];
-							$skin->feedback( 'downloading_package', $source );
-
-							$download_file = download_url( $source );
-
-							return $download_file;
-						}
-					}
-				}
-			}
+	public function set_source_for_bundled_plugins( $update_plugins ) {
+		if ( ! kalium()->theme_license->is_theme_registered() ) {
+			return $update_plugins;
 		}
 
-		return $return;
+		$plugin_sources = array_combine( wp_list_pluck( $this->theme_plugins, 'slug' ), $this->theme_plugins );
+
+		$set_sources = static function ( $plugins ) use ( $plugin_sources ) {
+			foreach ( $plugins as $plugin_basename => $plugin ) {
+				$plugin_slug = dirname( $plugin_basename );
+
+				if ( empty( $plugin->package ) && ! empty( $plugin_sources[ $plugin_slug ] ) ) {
+					$new_version     = $plugin->new_version ?? null;
+					$bundled_version = $plugin_sources[ $plugin_slug ]['version'] ?? null;
+
+					if ( version_compare( $new_version, $bundled_version, '<=' ) ) {
+						$plugin->package = $plugin_sources[ $plugin_slug ]['source'];
+					}
+				}
+			}
+		};
+
+		if ( ! empty( $update_plugins->response ) ) {
+			$set_sources( $update_plugins->response );
+		}
+
+		if ( ! empty( $update_plugins->no_update ) ) {
+			$set_sources( $update_plugins->no_update );
+		}
+
+		return $update_plugins;
 	}
 
 	/**
@@ -610,7 +576,8 @@ class Kalium_Theme_Plugins {
 				}
 
 				?>
-                <li <?php kalium_class_attr( $classes ); ?> data-filter="<?php echo esc_attr( wp_json_encode( $filter_data ) ); ?>">
+                <li <?php kalium_class_attr( $classes ); ?>
+                        data-filter="<?php echo esc_attr( wp_json_encode( $filter_data ) ); ?>">
 
                     <div class="about-kalium__plugin-item">
 
@@ -634,7 +601,8 @@ class Kalium_Theme_Plugins {
 								<?php endif; ?>
 
 								<?php if ( $is_required ) : ?>
-                                    <span class="about-kalium__plugin-item-badge-required-plugin" title="Required Plugin">Required</span>
+                                    <span class="about-kalium__plugin-item-badge-required-plugin"
+                                          title="Required Plugin">Required</span>
 								<?php endif; ?>
 
                             </div>
@@ -686,7 +654,7 @@ class Kalium_Theme_Plugins {
 	 * Plugin install link.
 	 *
 	 * @param string $plugin_slug
-	 * @param bool   $echo
+	 * @param bool $echo
 	 *
 	 * @return void|string
 	 */
@@ -784,32 +752,15 @@ class Kalium_Theme_Plugins {
 	 * @return void
 	 */
 	private function init_theme_plugins_data() {
-
-		// Load plugins from transient
 		$plugins_data = get_site_transient( 'kalium_theme_plugins_data' );
 
-		// Only for allowed users
-		if ( current_user_can( 'update_plugins' ) ) {
-
-			// Force fetch plugins from Laborator API
-			if ( kalium()->request->has( 'force-check' ) ) {
-				delete_site_transient( 'kalium_theme_plugins_data' );
-			}
-
-			// Fetch plugin data when user is on Laborator > Plugins page
-			if ( 'plugins' === kalium()->request->query( 'tab' ) && 'kalium' === kalium()->request->query( 'page' ) && false === get_site_transient( 'kalium_theme_plugins_refreshed' ) ) {
-				$plugins_data = false;
-				set_site_transient( 'kalium_theme_plugins_refreshed', true, HOUR_IN_SECONDS * 3 );
-			} // Bundled plugins page
-            elseif ( 'kalium-install-plugins' === kalium()->request->query( 'page' ) ) {
-				$plugins_data = false;
-			}
+		// Refresh plugins data
+		if ( current_user_can( 'update_plugins' ) && kalium()->request->has( 'force-check' ) ) {
+			$plugins_data = false;
 		}
 
 		// Fetch plugin data
 		if ( false === $plugins_data ) {
-
-			// Get latest theme version
 			$response = wp_remote_post( kalium()->theme_license->get_api_server_url(), [
 				'body' => [
 					'plugin_data'     => 'kalium',
@@ -819,7 +770,7 @@ class Kalium_Theme_Plugins {
 			] );
 
 			// Plugins data
-			$plugins_data = json_decode( wp_remote_retrieve_body( $response ) );
+			$plugins_data = json_decode( wp_remote_retrieve_body( $response ), true );
 
 			// Check for plugin updates every day
 			set_site_transient( 'kalium_theme_plugins_data', $plugins_data, DAY_IN_SECONDS );
@@ -828,7 +779,11 @@ class Kalium_Theme_Plugins {
 		// Initialize loaded plugins in plugins var
 		if ( is_array( $plugins_data ) ) {
 			foreach ( $plugins_data as $plugin ) {
-				$this->theme_plugins[ $plugin->slug ] = (array) $plugin;
+				if ( is_object( $plugin ) ) {
+					$plugin = (array) $plugin;
+				}
+
+				$this->theme_plugins[ $plugin['slug'] ] = $plugin;
 			}
 		}
 	}
@@ -889,8 +844,8 @@ class Kalium_Theme_Plugins {
 	 * @type string $slug
 	 * @type string $native_name
 	 * @type string $name
-	 * @type bool   $required
-	 * @type array  $data
+	 * @type bool $required
+	 * @type array $data
 	 * }
 	 *
 	 * @return array

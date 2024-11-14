@@ -38,7 +38,7 @@ class Kalium_ACF {
 		// Import ACF related config and libs
 		if ( $this->acf_active ) {
 
-			if ( ! defined( 'KALIUM_ACF_DEV' ) ) {
+			if ( ! defined( 'KALIUM_ACF_DEV' ) || false === KALIUM_ACF_DEV ) {
 
 				// Custom Fields import
 				kalium()->require_file( 'includes/acfpro-fields.php' );

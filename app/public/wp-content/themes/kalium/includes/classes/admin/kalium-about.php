@@ -69,6 +69,11 @@ class Kalium_About {
 			case 'faq':
 				$url .= '&tab=faq';
 				break;
+
+			// Kalium Upgrade
+			case 'kalium-upgrade':
+				$url .= '&tab=kalium-upgrade';
+				break;
 		}
 
 		return $url;
@@ -83,6 +88,7 @@ class Kalium_About {
 		add_action( 'admin_menu', [ $this, '_admin_menu' ] );
 		add_action( 'admin_menu', [ $this, '_admin_menu_sort' ], 100 );
 		add_action( 'admin_menu', [ $this, '_admin_menu_current_item' ], 100 );
+		add_action( 'admin_menu', [ $this, '_highlight_upgrade_menu_item' ], 200 );
 		add_action( 'admin_enqueue_scripts', [ $this, '_register_scripts_and_styles' ] );
 	}
 
@@ -129,6 +135,32 @@ class Kalium_About {
 
 		// Help
 		add_submenu_page( 'laborator_options', 'Help', 'Help', 'edit_theme_options', 'admin.php?page=kalium&tab=help' );
+
+		// Upgrade Kalium
+		add_submenu_page( 'laborator_options', 'Kalium 4', 'Kalium 4 ✨', 'edit_theme_options', 'admin.php?page=kalium&tab=kalium-upgrade' );
+	}
+
+	/**
+	 * Highlight Upgrade menu item.
+	 */
+	public function _highlight_upgrade_menu_item() {
+		global $submenu;
+
+		if ( isset( $submenu['laborator_options'] ) ) {
+			$laborator_options = &$submenu['laborator_options'];
+
+			foreach ( $laborator_options as & $menu_item ) {
+				if ( 'admin.php?page=kalium&tab=kalium-upgrade' === $menu_item[2] ) {
+					$upgrade_class = 'kalium-upgrade-menu-item';
+
+					if ( isset( $menu_item[4] ) && is_string( $menu_item[4] ) ) {
+						$menu_item[4] .= ' ' . $upgrade_class;
+					} else {
+						$menu_item[4] = $upgrade_class;
+					}
+				}
+			}
+		}
 	}
 
 	/**
@@ -252,7 +284,7 @@ class Kalium_About {
 		}
 
 		// About text
-		$about_text  = 'Kalium theme is installed and activated on your WordPress site.';
+		$about_text = 'Kalium theme is installed and activated on your WordPress site.';
 		$about_text .= "\n";
 
 		// License status text
@@ -276,16 +308,16 @@ class Kalium_About {
 		}
 
 		?>
-		<div class="wrap about-wrap about-kalium">
-			<h1><?php echo esc_html( $page_title ); ?></h1>
+        <div class="wrap about-wrap about-kalium">
+            <h1><?php echo esc_html( $page_title ); ?></h1>
 
-			<p class="about-text">
+            <p class="about-text">
 				<?php echo esc_html( $about_text ); ?>
-			</p>
+            </p>
 
-			<p class="wp-badge wp-kalium-badge">
-				Version: <?php echo kalium()->get_version(); ?>
-			</p>
+            <p class="wp-badge wp-kalium-badge">
+                Version: <?php echo kalium()->get_version(); ?>
+            </p>
 
 			<?php
 			// About tabs
@@ -305,7 +337,7 @@ class Kalium_About {
 			$this->footer();
 			?>
 
-		</div>
+        </div>
 		<?php
 	}
 
@@ -324,6 +356,7 @@ class Kalium_About {
 			'system-status'      => 'System Status',
 			'help'               => 'Help',
 			'faq'                => 'F.A.Q',
+			'kalium-upgrade'     => 'Kalium 4',
 		];
 	}
 
@@ -336,267 +369,369 @@ class Kalium_About {
 		return [
 
 			// Changelog entry
-            [
-                'expand'  => true,
-                'version' => '3.16',
-                'date'    => '2024-07-17',
-                'changes' => [
+			[
+				'expand'  => true,
+				'version' => '3.18.3',
+				'date'    => '2024-11-07',
+				'changes' => [
 
-	                // New
-	                'New' => [
-		                'WordPress 6.6.x compatibility added',
-		                'WooCommerce 9.1.x compatibility added',
-	                ],
-
-	                // Update
-	                'Update' => [
-		                'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.3.3',
-		                'Slider Revolution plugin updated to the latest version in theme package – 6.7.15',
-		                'Google Fonts list updated to the latest version',
-                    ],
-
-	                // Fix
-	                'Fix' => [
-		                'Minor bug fixes and improvements',
-	                ],
-
-	                // Note
-	                'Note'   => [
-		                'If you want to contribute in our language translations here is our GIT repository: https://github.com/arl1nd/Kalium-Translations',
-	                ],
-                ],
-            ],
+					// Fix
+					'Fix'    => [
+						'Skin colors disappear in specific cases',
+					],
+				],
+			],
 
 			// Changelog entry
-            [
-                'expand'  => false,
-                'version' => '3.15',
-                'date'    => '2024-06-24',
-                'changes' => [
+			[
+				'expand'  => true,
+				'version' => '3.18.2',
+				'date'    => '2024-11-05',
+				'changes' => [
 
-	                // New
-	                'New' => [
-		                'WooCommerce 9.0.x compatibility added',
-	                ],
-
-	                // Update
-	                'Update' => [
-		                'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.3.1.2',
-		                'WPBakery Page Builder plugin updated to the latest version in theme package – 7.7.2',
-		                'Slider Revolution plugin updated to the latest version in theme package – 6.7.13',
-		                'Layer Slider plugin updated to the latest version in theme package – 7.11.1',
-		                'Google Fonts list updated to the latest version',
-                    ],
-                ],
-            ],
+					// Fix
+					'Fix'    => [
+						'An issue that prevented users to access admin dashboard after updating to 3.18.1',
+					],
+				],
+			],
 
 			// Changelog entry
-            [
-                'expand'  => false,
-                'version' => '3.14.1',
-                'date'    => '2024-04-19',
-                'changes' => [
+			[
+				'expand'  => true,
+				'version' => '3.18.1',
+				'date'    => '2024-11-04',
+				'changes' => [
 
-	                // New
-	                'New' => [
-		                'WooCommerce 8.8.x compatibility added',
-	                ],
+					// Update
+					'Update' => [
+						'Advanced Custom Fields Pro updated to the latest version in theme package – 6.3.10',
+						'LayerSlider updated to the latest version in theme package – 7.13.0',
+						'WooCommerce Product Size Guide updated to the latest version in theme package – 4.4',
+						'Slider Revolution updated to the latest version in theme package – 6.7.20',
+						'Google Fonts list updated to the latest version',
+					],
 
-	                // Update
-	                'Update' => [
-		                'Google Fonts list updated to the latest version',
-		                'Slider Revolution plugin updated to the latest version in theme package – 6.7.4',
-                    ],
-                ],
-            ],
-
-			// Changelog entry
-            [
-                'expand'  => false,
-                'version' => '3.14',
-                'date'    => '2024-04-16',
-                'changes' => [
-
-	                // Fix
-	                'Fix' => [
-		                'Further compatibility improvements on PHP 8.2 and PHP 8.3',
-		                'Slider Revolution 6.7 causing issues on demo content (starter sites) importer'
-	                ],
-
-	                // Update
-	                'Update' => [
-		                'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.2.9',
-		                'WPBakery Page Builder plugin updated to the latest version in theme package – 7.6',
-		                'Slider Revolution plugin updated to the latest version in theme package – 6.7.3',
-		                'Layer Slider plugin updated to the latest version in theme package – 7.10.1',
-		                'VideoJS library updated to latest version – 8.10.0',
-		                'Vimeo JS library updated to latest version – 2.22.0',
-	                ],
-                ],
-            ],
+					// Fix
+					'Fix'    => [
+						'Minor bug fixes and improvements',
+					],
+				],
+			],
 
 			// Changelog entry
-            [
-                'expand'  => false,
-                'version' => '3.13',
-                'date'    => '2024-03-22',
-                'changes' => [
+			[
+				'expand'  => false,
+				'version' => '3.18',
+				'date'    => '2024-09-18',
+				'changes' => [
 
-	                // New
-	                'New' => [
-		                'WordPress 6.5.x compatibility added',
-		                'WooCommerce 8.7.x compatibility added',
-	                ],
+					// New
+					'New'    => [
+						'WooCommerce 9.3.x compatibility added',
+                        'Option to Transfer the License and upgrade to Kalium 4 directly through WordPress dashboard',
+					],
 
-	                // Update
-	                'Update' => [
-		                'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.2.7',
-		                'WPBakery Page Builder plugin updated to the latest version in theme package – 7.5',
-		                'Layer Slider plugin updated to the latest version in theme package – 7.10',
-	                ],
-                ],
-            ],
+					// Update
+					'Update' => [
+						'Advanced Custom Fields Pro updated to the latest version in theme package – 6.3.6',
+						'LayerSlider updated to the latest version in theme package – 7.12.3',
+						'WPBakery Page Builder updated to the latest version in theme package – 7.9',
+						'WooCommerce Product Size Guide updated to the latest version in theme package – 4.3',
+						'Slider Revolution updated to the latest version in theme package – 6.7.18',
+					],
 
-			// Changelog entry
-            [
-                'expand'  => false,
-                'version' => '3.12.1',
-                'date'    => '2024-03-01',
-                'changes' => [
-
-                    // Fix
-                    'Fix' => [
-	                    'Header layout not showing correctly if SVG logo is used',
-                    ],
-                ],
-            ],
+					// Fix
+					'Fix'    => [
+						'Minor bug fixes and improvements',
+					],
+				],
+			],
 
 			// Changelog entry
-            [
-                'expand'  => false,
-                'version' => '3.12',
-                'date'    => '2024-02-22',
-                'changes' => [
+			[
+				'expand'  => false,
+				'version' => '3.17',
+				'date'    => '2024-08-22',
+				'changes' => [
 
-                    // New
-                    'New' => [
-	                    'WooCommerce 8.6.x compatibility added',
-                    ],
+					// New
+					'New'    => [
+						'WooCommerce 9.2.x compatibility added',
+					],
 
-                    // Update
-                    'Update' => [
-	                    'Google Fonts list updated to the latest version',
-	                    'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.2.6.1',
-	                    'WPBakery Page Builder plugin updated to the latest version in theme package – 7.4',
-	                    'Layer Slider plugin updated to the latest version in theme package – 7.9.10',
-	                    'Slider Revolution plugin updated to the latest version in theme package – 6.6.20',
-	                    'VideoJS library updated to latest version – 8.9.0',
-	                    'Vimeo JS library updated to latest version – 2.21.0',
-	                    'ImagesLoaded library updated to latest version - 5.0.0',
-                    ],
-                ],
-            ],
+					// Update
+					'Update' => [
+						'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.3.5',
+						'WPBakery Page Builder plugin updated to the latest version in theme package – 7.8',
+						'Slider Revolution plugin updated to the latest version in theme package – 6.7.18',
+						'Google Fonts list updated to the latest version',
+					],
 
-			// Changelog entry
-            [
-                'expand'  => false,
-                'version' => '3.11.2',
-                'date'    => '2023-12-07',
-                'changes' => [
-
-                    // Fix
-                    'Fix'    => [
-                        'PHP warnings on admin dashboard',
-                    ],
-
-                    // Update
-                    'Update' => [
-	                    'WPBakery Page Builder plugin updated to the latest version in theme package – 7.3',
-	                    'Layer Slider plugin updated to the latest version in theme package – 7.9.6',
-                    ],
-                ],
-            ],
+					// Fix
+					'Fix'    => [
+						'Minor bug fixes and improvements',
+					],
+				],
+			],
 
 			// Changelog entry
-            [
-                'expand'  => false,
-                'version' => '3.11.1',
-                'date'    => '2023-11-30',
-                'changes' => [
+			[
+				'expand'  => false,
+				'version' => '3.16',
+				'date'    => '2024-07-17',
+				'changes' => [
 
-                    // Fix
-                    'Fix'    => [
-                        'Product images not updating when product variation is selected',
-                        'CLS (Cumulative Layout Shift) issue on product page',
-                        'Fixed some accessibility issues with Menu toggle button'
-                    ],
+					// New
+					'New'    => [
+						'WordPress 6.6.x compatibility added',
+						'WooCommerce 9.1.x compatibility added',
+					],
 
-                    // Update
-                    'Update' => [
-                        'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.2.4',
-                    ],
-                ],
-            ],
+					// Update
+					'Update' => [
+						'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.3.3',
+						'Slider Revolution plugin updated to the latest version in theme package – 6.7.15',
+						'Google Fonts list updated to the latest version',
+					],
+
+					// Fix
+					'Fix'    => [
+						'Minor bug fixes and improvements',
+					],
+				],
+			],
 
 			// Changelog entry
-            [
-                'expand'  => false,
-                'version' => '3.11',
-                'date'    => '2023-11-21',
-                'changes' => [
+			[
+				'expand'  => false,
+				'version' => '3.15',
+				'date'    => '2024-06-24',
+				'changes' => [
 
-                    // New
-                    'New'    => [
+					// New
+					'New'    => [
+						'WooCommerce 9.0.x compatibility added',
+					],
+
+					// Update
+					'Update' => [
+						'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.3.1.2',
+						'WPBakery Page Builder plugin updated to the latest version in theme package – 7.7.2',
+						'Slider Revolution plugin updated to the latest version in theme package – 6.7.13',
+						'Layer Slider plugin updated to the latest version in theme package – 7.11.1',
+						'Google Fonts list updated to the latest version',
+					],
+				],
+			],
+
+			// Changelog entry
+			[
+				'expand'  => false,
+				'version' => '3.14.1',
+				'date'    => '2024-04-19',
+				'changes' => [
+
+					// New
+					'New'    => [
+						'WooCommerce 8.8.x compatibility added',
+					],
+
+					// Update
+					'Update' => [
+						'Google Fonts list updated to the latest version',
+						'Slider Revolution plugin updated to the latest version in theme package – 6.7.4',
+					],
+				],
+			],
+
+			// Changelog entry
+			[
+				'expand'  => false,
+				'version' => '3.14',
+				'date'    => '2024-04-16',
+				'changes' => [
+
+					// Fix
+					'Fix'    => [
+						'Further compatibility improvements on PHP 8.2 and PHP 8.3',
+						'Slider Revolution 6.7 causing issues on demo content (starter sites) importer'
+					],
+
+					// Update
+					'Update' => [
+						'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.2.9',
+						'WPBakery Page Builder plugin updated to the latest version in theme package – 7.6',
+						'Slider Revolution plugin updated to the latest version in theme package – 6.7.3',
+						'Layer Slider plugin updated to the latest version in theme package – 7.10.1',
+						'VideoJS library updated to latest version – 8.10.0',
+						'Vimeo JS library updated to latest version – 2.22.0',
+					],
+				],
+			],
+
+			// Changelog entry
+			[
+				'expand'  => false,
+				'version' => '3.13',
+				'date'    => '2024-03-22',
+				'changes' => [
+
+					// New
+					'New'    => [
+						'WordPress 6.5.x compatibility added',
+						'WooCommerce 8.7.x compatibility added',
+					],
+
+					// Update
+					'Update' => [
+						'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.2.7',
+						'WPBakery Page Builder plugin updated to the latest version in theme package – 7.5',
+						'Layer Slider plugin updated to the latest version in theme package – 7.10',
+					],
+				],
+			],
+
+			// Changelog entry
+			[
+				'expand'  => false,
+				'version' => '3.12.1',
+				'date'    => '2024-03-01',
+				'changes' => [
+
+					// Fix
+					'Fix' => [
+						'Header layout not showing correctly if SVG logo is used',
+					],
+				],
+			],
+
+			// Changelog entry
+			[
+				'expand'  => false,
+				'version' => '3.12',
+				'date'    => '2024-02-22',
+				'changes' => [
+
+					// New
+					'New'    => [
+						'WooCommerce 8.6.x compatibility added',
+					],
+
+					// Update
+					'Update' => [
+						'Google Fonts list updated to the latest version',
+						'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.2.6.1',
+						'WPBakery Page Builder plugin updated to the latest version in theme package – 7.4',
+						'Layer Slider plugin updated to the latest version in theme package – 7.9.10',
+						'Slider Revolution plugin updated to the latest version in theme package – 6.6.20',
+						'VideoJS library updated to latest version – 8.9.0',
+						'Vimeo JS library updated to latest version – 2.21.0',
+						'ImagesLoaded library updated to latest version - 5.0.0',
+					],
+				],
+			],
+
+			// Changelog entry
+			[
+				'expand'  => false,
+				'version' => '3.11.2',
+				'date'    => '2023-12-07',
+				'changes' => [
+
+					// Fix
+					'Fix'    => [
+						'PHP warnings on admin dashboard',
+					],
+
+					// Update
+					'Update' => [
+						'WPBakery Page Builder plugin updated to the latest version in theme package – 7.3',
+						'Layer Slider plugin updated to the latest version in theme package – 7.9.6',
+					],
+				],
+			],
+
+			// Changelog entry
+			[
+				'expand'  => false,
+				'version' => '3.11.1',
+				'date'    => '2023-11-30',
+				'changes' => [
+
+					// Fix
+					'Fix'    => [
+						'Product images not updating when product variation is selected',
+						'CLS (Cumulative Layout Shift) issue on product page',
+						'Fixed some accessibility issues with Menu toggle button'
+					],
+
+					// Update
+					'Update' => [
+						'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.2.4',
+					],
+				],
+			],
+
+			// Changelog entry
+			[
+				'expand'  => false,
+				'version' => '3.11',
+				'date'    => '2023-11-21',
+				'changes' => [
+
+					// New
+					'New'    => [
 						'WordPress 6.4.x compatibility added',
-                        'WooCommerce 8.3.x compatibility added',
-                    ],
+						'WooCommerce 8.3.x compatibility added',
+					],
 
-                    // Fix
-                    'Fix'    => [
-                        'Product image gallery disappearing in WooCommerce 8.3.0',
-                        'TypoLab producing invalid value font sizes',
-                        'Default unit reverting back to pixels in TypoLab when saved',
-                        'WPBakery Portfolio widget not showing in custom post type',
-                        'Videos that autoplay in portfolio items will have "playsinline" attribute',
-                        'Other bug fixes and improvements',
-                    ],
+					// Fix
+					'Fix'    => [
+						'Product image gallery disappearing in WooCommerce 8.3.0',
+						'TypoLab producing invalid value font sizes',
+						'Default unit reverting back to pixels in TypoLab when saved',
+						'WPBakery Portfolio widget not showing in custom post type',
+						'Videos that autoplay in portfolio items will have "playsinline" attribute',
+						'Other bug fixes and improvements',
+					],
 
-                    // Update
-                    'Update' => [
-                        'Rebranded Twitter to X in social icons',
-                        'Google Fonts list updated to the latest version',
-                        'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.2.3',
-                        'WPBakery Page Builder plugin updated to the latest version in theme package – 7.2',
-                        'Slider Revolution plugin updated to the latest version in theme package – 6.6.18',
-                        'Layer Slider plugin updated to the latest version in theme package – 7.9.5',
-                        'VideoJS library updated to latest version – 8.6.1',
-                        'Font Awesome library updated to latest version - 6.4.2',
-                    ],
-                ],
-            ],
+					// Update
+					'Update' => [
+						'Rebranded Twitter to X in social icons',
+						'Google Fonts list updated to the latest version',
+						'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.2.3',
+						'WPBakery Page Builder plugin updated to the latest version in theme package – 7.2',
+						'Slider Revolution plugin updated to the latest version in theme package – 6.6.18',
+						'Layer Slider plugin updated to the latest version in theme package – 7.9.5',
+						'VideoJS library updated to latest version – 8.6.1',
+						'Font Awesome library updated to latest version - 6.4.2',
+					],
+				],
+			],
 
 			// Changelog entry
-            [
-                'expand'  => false,
-                'version' => '3.10',
-                'date'    => '2023-08-10',
-                'changes' => [
+			[
+				'expand'  => false,
+				'version' => '3.10',
+				'date'    => '2023-08-10',
+				'changes' => [
 
-                    // New
-                    'New'    => [
+					// New
+					'New'    => [
 						'WordPress 6.3 compatibility added',
-                        'WooCommerce 8.x compatibility added',
-                    ],
+						'WooCommerce 8.x compatibility added',
+					],
 
-                    // Update
-                    'Update' => [
-                        'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.1.8',
-                        'WPBakery Page Builder plugin updated to the latest version in theme package – 7.0',
-                        'Slider Revolution plugin updated to the latest version in theme package – 6.6.15',
-                        'Layer Slider plugin updated to the latest version in theme package – 7.7.11',
-                    ],
-                ],
-            ],
+					// Update
+					'Update' => [
+						'Advanced Custom Fields PRO plugin updated to the latest version in theme package – 6.1.8',
+						'WPBakery Page Builder plugin updated to the latest version in theme package – 7.0',
+						'Slider Revolution plugin updated to the latest version in theme package – 6.6.15',
+						'Layer Slider plugin updated to the latest version in theme package – 7.7.11',
+					],
+				],
+			],
 
 			// Changelog entry
 			[
@@ -613,8 +748,8 @@ class Kalium_About {
 					// Fix
 					'Fix'    => [
 						'Mini-cart functionality broken in WooCommerce 7.8',
-                        'Squashed product and category images in Safari',
-                        'Slider Revolution refuses to import slides that have .ogv videos',
+						'Squashed product and category images in Safari',
+						'Slider Revolution refuses to import slides that have .ogv videos',
 						'Other bug fixes and improvements',
 					],
 
@@ -624,7 +759,7 @@ class Kalium_About {
 						'WPBakery Page Builder plugin updated to the latest version in theme package – 6.13.0',
 						'Slider Revolution plugin updated to the latest version in theme package – 6.6.14',
 						'Layer Slider plugin updated to the latest version in theme package – 7.7.7',
-                        'Widget Importer/Exporter library updated to the latest version – 1.6.1',
+						'Widget Importer/Exporter library updated to the latest version – 1.6.1',
 						'VideoJS library updated to latest version - 8.3.0',
 						'Vimeo JS library updated to latest version – 2.20.1',
 					],
@@ -646,8 +781,8 @@ class Kalium_About {
 
 					// Fix
 					'Fix'    => [
-                        'Parameters and Options style is broken in ACF PRO 6.1.1',
-                        'Resolved some Typography warnings',
+						'Parameters and Options style is broken in ACF PRO 6.1.1',
+						'Resolved some Typography warnings',
 						'Other bug fixes and improvements',
 					],
 
@@ -676,7 +811,7 @@ class Kalium_About {
 					// Fix
 					'Fix'    => [
 						'Performance: Slider Revolution and Layer Slider will not load on all pages (unless set by the user)',
-                        'Performance: Google Fonts that are called inside Slider Revolution are now loaded as local fonts by default',
+						'Performance: Google Fonts that are called inside Slider Revolution are now loaded as local fonts by default',
 						'Videos always playing muted',
 						'Other bug fixes and improvements',
 					],
@@ -1910,7 +2045,7 @@ Another reason why Custom CSS might not be applied is because it is disabled on 
 			$support_status_class = 'expiring';
 			$support_badge_class  = 'warning';
 		} // Expired support
-		elseif ( 0 === $support_remaining ) {
+        elseif ( 0 === $support_remaining ) {
 			$support_left         = 'Support subscription for the Kalium theme has expired!' . $buy_support_button;
 			$support_status       = 'Expired';
 			$support_status_class = 'expired';
@@ -2064,6 +2199,11 @@ Another reason why Custom CSS might not be applied is because it is disabled on 
 					]
 				);
 				break;
+
+			// Kalium upgrade
+			case 'kalium-upgrade':
+				kalium()->require_file( 'includes/admin-templates/about/kalium-upgrade.php' );
+				break;
 		}
 
 		// Wrapper end
@@ -2077,26 +2217,29 @@ Another reason why Custom CSS might not be applied is because it is disabled on 
 	 */
 	private function footer() {
 		?>
-		<div class="about-kalium__footer wp-clearfix">
-			<div class="about-kalium__footer-column">
-				Copyright &copy; <?php echo date_i18n( 'Y' ); ?> &ndash; Kalium theme by
-				<a href="https://laborator.co" target="_blank" rel="noreferrer noopener">Laborator</a>
-			</div>
+        <div class="about-kalium__footer wp-clearfix">
+            <div class="about-kalium__footer-column">
+                Copyright &copy; <?php echo date_i18n( 'Y' ); ?> &ndash; Kalium theme by
+                <a href="https://laborator.co" target="_blank" rel="noreferrer noopener">Laborator</a>
+            </div>
 
-			<div class="about-kalium__footer-column about-kalium__footer-column--right">
-				<ul class="about-kalium__footer-links">
-					<li>
-						<a href="https://documentation.laborator.co/" target="_blank" rel="noreferrer noopener"><i class="kalium-admin-icon-documentation"></i>Documentation</a>
-					</li>
-					<li>
-						<a href="https://www.facebook.com/laboratorcreative" target="_blank" rel="noreferrer noopener"><i class="kalium-admin-icon-social-facebook"></i>Facebook</a>
-					</li>
-					<li>
-						<a href="https://twitter.com/thelaborator" target="_blank" rel="noreferrer noopener"><i class="kalium-admin-icon-social-twitter"></i>Twitter X</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+            <div class="about-kalium__footer-column about-kalium__footer-column--right">
+                <ul class="about-kalium__footer-links">
+                    <li>
+                        <a href="https://documentation.laborator.co/" target="_blank" rel="noreferrer noopener"><i
+                                    class="kalium-admin-icon-documentation"></i>Documentation</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/laboratorcreative" target="_blank"
+                           rel="noreferrer noopener"><i class="kalium-admin-icon-social-facebook"></i>Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/thelaborator" target="_blank" rel="noreferrer noopener"><i
+                                    class="kalium-admin-icon-social-twitter"></i>Twitter X</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 		<?php
 	}
 

@@ -51,8 +51,6 @@ class Kalium_Theme_License {
 		// Admin init
 		add_action( 'admin_init', [ $this, '_admin_init' ] );
 		add_action( 'admin_print_scripts', [ $this, 'admin_print_scripts' ] );
-		add_action( 'wp_ajax_kalium-dismiss-support-subscription', [ $this, 'dismiss_support_subscription_notice' ] );
-		add_action( 'wp_ajax_kalium-recheck-support-subscription', [ $this, 'recheck_support_subscription_notice' ] );
 
 		// Initialize License
 		$this->init_license_var();
@@ -110,7 +108,7 @@ class Kalium_Theme_License {
 					// Expired link
 					wp_nonce_ays( '' );
 				} // Check if current registration is valid
-				elseif ( $this->is_theme_registered() && $license_key === kalium()->theme_license->get_license_key() ) {
+                elseif ( $this->is_theme_registered() && $license_key === kalium()->theme_license->get_license_key() ) {
 					add_filter( 'admin_title', kalium_hook_return_value( sprintf( 'Theme registration complete &lsaquo; %s', get_bloginfo( 'name' ) ) ) );
 					add_filter( 'admin_body_class', kalium_hook_concat_string_value( ' about-kalium--theme-registration-success' ) );
 					add_action( 'kalium_page_about', [ $this, '_product_registration_success_page' ] );
@@ -138,6 +136,12 @@ class Kalium_Theme_License {
 					kalium()->helpers->add_admin_notice( 'Theme registration has been removed!', 'warning' );
 
 					if ( isset( $_GET['_nonce'] ) && wp_verify_nonce( $_GET['_nonce'], 'remove-theme-registration' ) ) {
+						wp_remote_post( $this->get_api_server_url(), [
+							'body' => [
+								'theme'               => 'kalium',
+								'remove_registration' => $this->get_license_key(),
+							],
+						] );
 						delete_option( 'kalium_license' );
 						wp_redirect( remove_query_arg( [ '_nonce' ] ) );
 						die();
@@ -156,11 +160,6 @@ class Kalium_Theme_License {
 					break;
 
 			}
-		}
-
-		// Nearly expiring notification
-		if ( $this->is_theme_registered() && ( ! $this->has_valid_support() || $this->nearly_expiring() ) ) {
-			$this->display_subscription_notice();
 		}
 
 		// Theme registration reminder
@@ -212,31 +211,6 @@ class Kalium_Theme_License {
 	}
 
 	/**
-	 * Dismiss support subscription notice.
-	 *
-	 * @since 3.7.1
-	 */
-	public function dismiss_support_subscription_notice() {
-		update_user_meta( get_current_user_id(), 'kalium-dismiss-support-subscription', 1 );
-
-		die( '1' );
-	}
-
-	/**
-	 * Soft dismiss support notice.
-	 *
-	 * @since 3.8
-	 */
-	public function recheck_support_subscription_notice() {
-		if ( current_user_can( 'manage_options' ) ) {
-			set_transient( 'kalium_dismiss_expiration', true, HOUR_IN_SECONDS );
-			set_transient( 'kalium_reload_license_check', time() + HOUR_IN_SECONDS, DAY_IN_SECONDS );
-
-			die( '1' );
-		}
-	}
-
-	/**
 	 * Theme registration success page.
 	 *
 	 * @return void
@@ -263,31 +237,31 @@ class Kalium_Theme_License {
 	 */
 	public function theme_registration_vars() {
 		?>
-		<script id="kalium-theme-register-form-data" type="text/template">
-		<?php
-		echo wp_json_encode(
-			[
-				// Request product registration
-				'action'   => 'register-theme',
+        <script id="kalium-theme-register-form-data" type="text/template">
+			<?php
+			echo wp_json_encode(
+				[
+					// Request product registration
+					'action'   => 'register-theme',
 
-				// This theme
-				'theme_id' => 'kalium',
+					// This theme
+					'theme_id' => 'kalium',
 
-				// Laborator API site url to go for activation
-				'api'      => $this->api_server,
+					// Laborator API site url to go for activation
+					'api'      => $this->api_server,
 
-				// Theme version
-				'version'  => kalium()->get_version(),
+					// Theme version
+					'version'  => kalium()->get_version(),
 
-				// URL for the site to create license
-				'url'      => $this->convert_idn_to_ascii( home_url() ),
+					// URL for the site to create license
+					'url'      => $this->convert_idn_to_ascii( home_url() ),
 
-				// Laborator API will send back to this URL to verify license
-				'ref_url'  => admin_url( sprintf( 'admin.php?page=%s&tab=%s', $this->admin_page, kalium()->request->query( 'tab' ) ) ),
-			]
-		);
-		?>
-			</script>
+					// Laborator API will send back to this URL to verify license
+					'ref_url'  => admin_url( sprintf( 'admin.php?page=%s&tab=%s', $this->admin_page, kalium()->request->query( 'tab' ) ) ),
+				]
+			);
+			?>
+        </script>
 		<?php
 	}
 
@@ -390,13 +364,13 @@ class Kalium_Theme_License {
 	 * @since 3.7.1
 	 */
 	public function has_valid_support() {
-        $license = $this->get_license();
+		$license = $this->get_license();
 
-        if ( ! empty( $license->supported_until ) ) {
-            return strtotime( $license->supported_until ) > time();
+		if ( ! empty( $license->supported_until ) ) {
+			return strtotime( $license->supported_until ) > time();
 		}
 
-        return false;
+		return false;
 	}
 
 	/**
@@ -405,7 +379,7 @@ class Kalium_Theme_License {
 	 * @return boolean
 	 */
 	public function nearly_expiring() {
-        $remaining_support = $this->get_remaining_support();
+		$remaining_support = $this->get_remaining_support();
 
 		return $remaining_support <= 28 && $remaining_support > 0;
 	}
@@ -477,72 +451,6 @@ class Kalium_Theme_License {
 		}
 
 		return 'Renew Support';
-	}
-
-	/**
-	 * Get renew support description.
-	 *
-	 * @return string
-	 * @since 3.7.1
-	 */
-	public function get_renew_support_description() {
-		if ( $this->nearly_expiring() ) {
-			return sprintf( 'Support for the Kalium theme is about to expire (%s left). Extend support before it expires and get a 35%% discount.', human_time_diff( strtotime( $this->get_license()->supported_until ?? null ), time() ) );
-		}
-
-		return 'Support subscription for the Kalium theme has expired! Renew now for extra 6 months support.';
-	}
-
-	/**
-	 * Display nearly expiring notices.
-	 *
-	 * @return void
-     * @since 3.7.1
-	 */
-	private function display_subscription_notice() {
-		// Hide on specific pages or dismissed by the user
-		if ( get_user_meta( get_current_user_id(), 'kalium-dismiss-support-subscription', true ) || 'kalium' === kalium()->request->query( 'page' ) && in_array( kalium()->request->query( 'tab' ), [ 'theme-registration', 'help' ] ) ) {
-			return;
-		}
-
-		// Display expiration notice if it's not dismissed
-		if ( ! get_transient( 'kalium_dismiss_expiration' ) ) {
-			$notice = '<div class="kalium-support-notice">
-    <div class="support-info">
-        <h3>%1$s</h3>
-        %2$s
-    </div>
-    <div class="action-buttons">
-        %3$s
-    </div>
-</div>';
-
-			// Display notice
-			kalium()->helpers->add_admin_notice(
-				sprintf(
-					$notice,
-					'Kalium Support Status',
-					$this->get_renew_support_description(),
-					implode(
-						' ',
-						[
-							sprintf( '<a href="%s" class="button-primary" target="_blank" rel="nopener noreferer">%s</a>', esc_attr( $this->get_renew_support_link() ), $this->get_renew_support_title() ),
-							sprintf( '<a href="%s" class="button-link">Remind me later</a>', add_query_arg( [ 'dismiss-support-status' => wp_create_nonce( 'kalium_dismiss_expiration' ) ] ) ),
-						]
-					)
-				),
-				$this->nearly_expiring() ? 'warning' : 'error',
-				true,
-				'support-subscription'
-			);
-
-			// Dismiss the notice
-			if ( kalium()->request->has( 'dismiss-support-status' ) && check_admin_referer( 'kalium_dismiss_expiration', 'dismiss-support-status' ) ) {
-				set_transient( 'kalium_dismiss_expiration', true, 2 * WEEK_IN_SECONDS );
-				wp_redirect( remove_query_arg( 'dismiss-support-status' ) );
-				die();
-			}
-		}
 	}
 
 	/**

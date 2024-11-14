@@ -173,7 +173,7 @@ function kalium_vc_contact_form_request() {
 			$success        = kalium_validate_boolean( $recaptcha_resp['success'] ) && (float) $recaptcha_resp['score'] >= (float) $gglcptch_options['score_v3'];
 		} // Recaptcha v2
 		else {
-			$success = apply_filters( 'gglcptch_verify_recaptcha', true );
+			$success = apply_filters( 'gglcptch_verify_recaptcha', true, 'bool', 'kalium-contact-form' );
 		}
 
 		if ( ! $success ) {
@@ -295,3 +295,16 @@ function _filter_unicode_translate_chars( $string ) {
 function kalium_unicode_translate_chars( $string ) {
 	return preg_replace_callback( '/(&#(?<ord>[0-9]+);)/', '_filter_unicode_translate_chars', $string );
 }
+
+/**
+ * RECaptcha support in Contact Form.
+ */
+function kalium_contact_form_recaptcha_support( $forms ) {
+	$forms['kalium-contact-form'] = [
+		'form_name' => 'Kalium Contact Form',
+	];
+
+	return $forms;
+}
+
+add_action( 'gglcptch_add_custom_form', 'kalium_contact_form_recaptcha_support' );

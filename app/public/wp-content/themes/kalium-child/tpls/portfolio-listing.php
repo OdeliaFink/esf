@@ -135,12 +135,7 @@ if (!$portfolio_args['vc_mode']) {
 
 
 <div class="custom-search-bar">
-    <input type="text" id="search-input" placeholder="<?php echo isset($translations['search_placeholder']) ? $translations['search_placeholder'] : 'SEARCH'; ?>" style="
-        margin-block: 0rem;
-        height: 35px; /* Adjust as needed */
-        line-height: 35px; /* Match the height */
-        font-size: 16px;
-    ">
+    <input type="text" id="search-input" placeholder="<?php echo isset($translations['search_placeholder']) ? $translations['search_placeholder'] : 'SEARCH'; ?>">
 </div>
 
 <?php do_action('kalium_portfolio_items_before', $portfolio_query); ?>

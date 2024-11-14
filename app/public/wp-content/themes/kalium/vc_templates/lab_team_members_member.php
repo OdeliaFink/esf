@@ -116,7 +116,7 @@ $css_class .= " layout-{$layout_type}";
              data-wow-duration="1s"<?php if ( $wow_one_by_one ) : ?> data-wow-delay="<?php echo esc_attr( $wow_delay ); ?>s"<?php endif; ?>>
             <div class="thumb">
 				<?php if ( $hover_style != 'none' && ( $visible_titles && $description || ! $visible_titles ) ) : ?>
-                    <div class="hover-state padding<?php when_match( $hover_style == 'distanced', 'with-spacing' ); ?>"<?php if ( ! empty( $link['url'] ) ) : ?> data-href="<?php echo $link['url']; ?>"<?php endif; ?>>
+                    <div class="hover-state padding<?php when_match( $hover_style == 'distanced', 'with-spacing' ); ?>"<?php if ( ! empty( $link['url'] ) ) : ?> data-href="<?php echo $link['url']; ?>" data-target="<?php echo $link['target']; ?>"<?php endif; ?>>
 						<?php if ( $description ) : ?>
                             <div class="social">
 								<?php echo $description; ?>

@@ -2,7 +2,7 @@
 /**
  * Kalium WordPress Theme – Creative Theme for Professionals
  *
- * @version 3.16
+ * @version 3.18.3
  * @author  Laborator
  * @link    https://kaliumtheme.com
  */

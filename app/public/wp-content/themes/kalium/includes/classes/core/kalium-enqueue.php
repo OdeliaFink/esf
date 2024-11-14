@@ -171,11 +171,6 @@ class Kalium_Enqueue {
 	public $enqueue_list = [];
 
 	/**
-	 * Build id used for cache bust.
-	 */
-	private $build_num = 1;
-
-	/**
 	 * Constructor.
 	 *
 	 * @return void
@@ -438,7 +433,7 @@ class Kalium_Enqueue {
 	 * @return void
 	 */
 	private function wp_register_scripts_and_styles() {
-		$build_num = '.' . str_pad( $this->build_num, 3, '0', STR_PAD_LEFT );
+		$build_num = '.' . Kalium_Base::BUILD_NUM;
 
 		foreach ( $this->registered as $item ) {
 			$args = $item->args;

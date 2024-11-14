@@ -588,7 +588,6 @@ function _kalium_fullscreen_menu_background() {
 	}
 }
 
-
 /**
  * Like feature for post items.
  *
@@ -665,3 +664,87 @@ add_filter( 'rs_get_global_settings', 'kalium_rs_get_global_settings' );
  * @since 3.7.1
  */
 add_filter( 'ls_conditional_script_loading', '__return_true' );
+
+/**
+ * Upgrade validate data.
+ */
+function kalium_upgrade_validate_ajax() {
+	if ( ! current_user_can( 'update_themes' ) ) {
+		return;
+	}
+
+	$email         = trim( kalium()->request->input( 'email' ) );
+	$purchase_code = trim( kalium()->request->input( 'purchaseCode' ) );
+
+	// Transfer license
+	$transfer_request = wp_remote_post( 'https://api.kaliumtheme.com/upgrade-to-v4.json', [
+		'timeout' => 30,
+		'body'    => [
+			'email'         => $email,
+			'purchase_code' => $purchase_code,
+			'license_key'   => kalium()->theme_license->get_license_key(),
+		],
+	] );
+
+	// Errors
+	if ( is_wp_error( $transfer_request ) ) {
+		wp_send_json( [
+			'success' => false,
+			'message' => $transfer_request->get_error_message(),
+		] );
+	}
+
+	$transfer_response = json_decode( wp_remote_retrieve_body( $transfer_request ), true );
+
+	// Store license
+	if ( isset( $transfer_response['success'] ) && $transfer_response['success'] ) {
+		update_option( '_kalium_license_upgrade', $transfer_response, false );
+	}
+
+	wp_send_json( $transfer_response );
+}
+
+add_action( 'wp_ajax_kalium_upgrade_validate', 'kalium_upgrade_validate_ajax' );
+
+/**
+ * Install the new version of the theme.
+ */
+function kalium_upgrade_install_new_version() {
+	if ( ! current_user_can( 'update_themes' ) ) {
+		return;
+	}
+
+	$license_upgrade = get_option( '_kalium_license_upgrade' );
+
+	// Package is required
+	if ( empty( $license_upgrade['package'] ) ) {
+		wp_send_json( [
+			'success' => false,
+			'message' => 'Theme package not available.',
+		] );
+	}
+
+	// Upgrade the theme
+	require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+
+	$upgrader = new Theme_Upgrader( new WP_Ajax_Upgrader_Skin() );
+
+	// Perform the installation or update
+	$result = $upgrader->install( $license_upgrade['package'], [
+		'overwrite_package' => true,
+	] );
+
+	if ( $result ) {
+		wp_send_json( [
+			'success' => true,
+			'message' => 'Theme installed successfully.',
+		] );
+	} else {
+		wp_send_json( [
+			'success' => false,
+			'message' => is_wp_error( $result ) ? $result->get_error_message() : 'Could not install theme.',
+		] );
+	}
+}
+
+add_action( 'wp_ajax_kalium_upgrade_install_new_version', 'kalium_upgrade_install_new_version' );

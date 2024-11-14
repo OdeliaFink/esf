@@ -116,7 +116,6 @@ if ( ! empty( $changelog ) ) :
 			<?php
 			// Change type
 			foreach ( $changelog_entry['changes'] as $type => $changes ) {
-
 				if ( empty( $changes ) ) {
 					continue;
 				}
@@ -137,7 +136,7 @@ if ( ! empty( $changelog ) ) :
 	<?php endforeach; ?>
 
     <div class="about-kalium__changelog-previous-versions">
-        <a href="https://kaliumtheme.com/changelog/" class="button button-secondary" target="_blank" rel="noreferrer noopener">Read all Changelogs</a>
+        <a href="https://kaliumtheme.com/tf/changelog/" class="button button-secondary" target="_blank" rel="noreferrer noopener">Read all Changelogs</a>
     </div>
 
 <?php

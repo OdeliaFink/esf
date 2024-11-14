@@ -1,0 +1,2309 @@
+//
+// Variables
+//
+
+$border-color: #ccd0d4;
+$input-border-color: #8c8f94;
+$active-border-color: #007cba;
+$active-background-color: #e9f3f8;
+$hover-bg: #f7f7f7;
+$success-color: #72BF40;
+$danger-color: #e03434;
+$alt-bg-color: #fafafa;
+
+//
+// Mixins
+//
+
+@mixin box-border() {
+	border: 1px solid $border-color;
+	box-shadow: 0 1px 1px rgba(#000, 0.04);
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+@mixin box-focused() {
+	border-color: $active-border-color;
+	box-shadow: 0 0 0 2px $active-border-color;
+}
+
+@mixin clearfix() {
+	&::after {
+		display: block;
+		clear: both;
+		content: "";
+	}
+}
+
+@mixin spin($duration: 2000ms) {
+	animation-name: typolab-spin-animation;
+	animation-duration: $duration;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+//
+// Keyframes
+//
+
+@keyframes typolab-spin-animation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+//
+// Typolab container
+//
+.typolab {
+	
+	// Wrap
+	&.wrap {
+		margin: 25px 40px 0 20px;
+	}
+	
+	// Buttons
+	.button {
+		
+		// Succeeding buttons
+		+ .button {
+			margin-left: 10px;
+		}
+		
+		// Is loading
+		&.is-loading {
+			opacity: 0.8;
+			transition: opacity 300ms;
+			cursor: wait;
+		}
+		
+		// Fetch butotn
+		&#fetch-font-variants {
+			
+			&.is-loading {
+				
+				i {
+					@include spin(1s);
+				}
+			}
+		}
+	}
+	
+	// Button
+	.typolab-button {
+		
+		i {
+			margin-right: 5px;
+			font-size: 95%;
+		}
+	}
+	
+	// Button group
+	.button-group {
+		position: relative;
+		
+		.button {
+			line-height: 1;
+			
+			@media screen and (max-width: 782px) {
+				min-height: 30px;
+			}
+			
+			&:first-of-type {
+				border-radius: 3px 0 0 3px;
+			}
+			
+			&.button-alt {
+				background-color: #fff;
+				border-color: #32373C;
+				color: #32373C;
+			}
+			
+			+ .button {
+				margin-left: 0;
+				border-left-width: 1px !important;
+			}
+		}
+	}
+	
+	// Main hseading
+	.typolab-heading {
+		position: relative;
+		margin: 0;
+		
+		.add-new-font {
+			position: relative;
+			top: -3px;
+			margin-left: 10px;
+			font-weight: 600;
+			vertical-align: middle;
+			
+			&:active {
+				border-color: #8c8f94;
+			}
+		}
+		
+		.laborator-notice {
+			display: block !important;
+			margin-top: 15px;
+			//margin-right: 160px;
+			
+			.button + .button {
+				margin-left: 0;
+			}
+		}
+		
+		.notice {
+			
+			p,
+			a {
+				font-size: 13px;
+			}
+		}
+	}
+	
+	// Navigation tabs
+	.typolab-tabs {
+		$nav-tab-border: #D0D0D0;
+		$nav-tab-border-active: #32373C;
+		
+		border-bottom: 1px solid $nav-tab-border;
+		margin-bottom: 30px;
+		justify-content: flex-start;
+		
+		// Nav tab
+		.nav-tab {
+			padding: 10px 2px;
+			margin-right: 30px;
+			font-size: 18px;
+			line-height: 1.33333333;
+			font-weight: 400;
+			
+			// Active link
+			&:focus {
+				outline: none;
+				box-shadow: none;
+			}
+			
+			// Active class
+			&-active {
+				border-bottom: 3px solid $nav-tab-border-active;
+				font-weight: 500;
+				
+				@media screen and (max-width: 480px) {
+					padding-left: 15px;
+					border-bottom-width: 0px;
+				}
+			}
+		}
+	}
+	
+	// Dropdown
+	.typolab-dropdown {
+		position: absolute;
+		background-color: #fff;
+		width: 400px;
+		@include box-border();
+		box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+		
+		h3 {
+			padding: 15px 25px;
+			margin: 0;
+			font-size: 16px;
+			font-weight: 500;
+		}
+		
+		ul {
+			margin: 0;
+			
+			li {
+				position: relative;
+				margin: 0;
+				border-top: 1px solid $border-color;
+				transition: all 100ms;
+				
+				&:hover {
+					background-color: $alt-bg-color;
+				}
+				
+				&.current {
+					background-color: $active-background-color;
+					pointer-events: none;
+					
+					&:before {
+						$size: 12px;
+						
+						position: absolute;
+						top: 50%;
+						right: 25px;
+						width: $size;
+						height: $size;
+						color: $active-border-color;
+						font-size: $size;
+						font-family: 'KaliumAdminIcons';
+						line-height: 1;
+						content: "\e939";
+						transform: translateY(-50%);
+					}
+				}
+				
+				a {
+					display: block;
+					padding: 15px 25px;
+					box-shadow: none;
+					text-decoration: none;
+				}
+				
+				.font-source-name {
+					
+					svg {
+						max-width: 20px;
+					}
+					
+					span {
+						font-size: 15px;
+						color: #555d66;
+					}
+				}
+			}
+		}
+	}
+	
+	// Notice
+	.typolab-notice {
+		padding: 15px;
+		background-color: #fff;
+		@include box-border();
+		margin-bottom: 30px;
+		
+		i {
+			color: $active-border-color;
+			margin-right: 5px;
+		}
+	}
+	
+	// Page title
+	.page-title {
+		margin-bottom: 30px;
+		font-size: 24px;
+		font-weight: normal;
+		line-height: 1.2;
+		
+		small {
+			display: block;
+			margin-top: 10px;
+			color: #555;
+			font-size: 16px;
+		}
+		
+		.separator {
+			display: inline-block;
+			height: 12px;
+			width: 1px;
+			margin: 0 20px;
+			background-color: #999;
+			line-height: 1;
+		}
+		
+		.change-source {
+			position: relative;
+			padding-right: 15px;
+			color: #555;
+			text-decoration: none;
+			box-shadow: none;
+			
+			&:after {
+				$size: 8px;
+				
+				position: absolute;
+				display: inline-block;
+				width: $size;
+				height: $size;
+				font-size: $size;
+				font-family: 'KaliumAdminIcons';
+				content: "\e917";
+				right: 0;
+				top: 50%;
+				margin-top: -$size/2;
+			}
+			
+			&.visible:after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	
+	// Font source select
+	.font-source-select {
+		top: 0;
+		left: 0;
+		visibility: hidden;
+		opacity: 0;
+		transform: scale(0.98);
+		transform-origin: top left;
+		transition: all 150ms ease-in-out;
+		z-index: 0;
+		
+		&.visible {
+			visibility: visible;
+			opacity: 1;
+			transform: scale(1);
+			z-index: 100;
+		}
+	}
+	
+	// TypoLab Table
+	.typolab-table {
+		width: 100%;
+		background-color: #fff;
+		margin-bottom: 20px;
+		@include box-border();
+		border-spacing: 0;
+		border-collapse: 0;
+		
+		// Responsive table
+		&-responsive {
+			width: 100%;
+			overflow-x: auto;
+		}
+		
+		// Row
+		tr {
+			
+			td, th {
+				text-align: left;
+				padding: 10px 15px;
+				border-left: 1px solid $border-color;
+				border-bottom: 1px solid $border-color;
+				
+				// Text align center
+				&.text-center {
+					text-align: center;
+				}
+				
+				&:first-child {
+					border-left: 0;
+				}
+				
+				i {
+					margin-right: 5px;
+				}
+				
+				&.no-padding {
+					padding: 0;
+				}
+			}
+			
+			th {
+				font-weight: 600;
+				color: #222222;
+				
+				p {
+					font-weight: normal;
+				}
+				
+				&.col-4 {
+					width: (4/12 * 100%);
+				}
+			}
+			
+			// Inputs
+			input[type="text"],
+			input[type="number"],
+			textarea,
+			select {
+				width: 100%;
+			}
+			
+			// Text centered
+			&.text-center {
+				
+				td, th {
+					text-align: center;
+				}
+			}
+			
+			// Hover Row
+			&.hover {
+				background: $hover-bg;
+				
+				.no-bg {
+					background: #fff;
+				}
+			}
+			
+			// Vertical Align Top
+			&.vtop {
+				
+				td, th {
+					vertical-align: top;
+				}
+			}
+			
+			// Description
+			.description {
+				
+				small {
+					display: block;
+					color: #666;
+					
+					strong {
+						color: #767676;
+					}
+				}
+			}
+		}
+		
+		// Body
+		tbody {
+			
+			tr:last-child {
+				
+				td, th {
+					border-bottom: 0;
+				}
+			}
+			
+			th, td {
+				padding: 15px;
+			}
+		}
+		
+		// Table footer
+		tfoot {
+			
+			.show-advanced-options-column {
+				padding: 0;
+			}
+			
+			.show-advanced-options {
+				display: block;
+				padding: 10px;
+				font-size: 11px;
+				text-align: center;
+				text-transform: uppercase;
+				text-decoration: none;
+			}
+		}
+		
+		// Select fields
+		select {
+			max-width: 100%;
+		}
+		
+		// Settings
+		&--settings {
+			margin-bottom: 40px;
+			
+			td, th {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			
+			th {
+				font-weight: normal;
+				
+				label {
+					font-size: 16px;
+					font-weight: 500;
+				}
+				
+				p {
+					margin-top: 5px;
+					margin-bottom: 0;
+					color: #555D66;
+					font-size: 15px;
+				}
+				
+				.info {
+					$size: 14px;
+					
+					width: $size;
+					height: $size;
+					margin-left: 3px;
+					color: #2271b1;
+					font-size: $size;
+				}
+			}
+			
+			td {
+				border-right: 0;
+				
+				.link {
+					display: inline-block;
+					margin-top: 10px;
+					font-size: 16px;
+					text-decoration: none;
+					
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			
+			.directory-permissions {
+				position: relative;
+				
+				input {
+					background-color: #fff;
+					box-shadow: none;
+					min-height: 36px;
+				}
+				
+				span {
+					position: absolute;
+					top: 4px;
+					right: 4px;
+					background-color: $success-color;
+					display: inline-block;
+					color: #fff;
+					border-radius: 4px;
+					padding: 5px 7px;
+					text-transform: uppercase;
+					font-size: 12px;
+					font-weight: bold;
+				}
+				
+				&.writable {
+					
+					input {
+						border-color: $success-color;
+					}
+					
+					span {
+						background-color: $success-color;
+					}
+				}
+				
+				&.not-writable {
+					
+					input {
+						border-color: $danger-color;
+					}
+					
+					span {
+						background-color: $danger-color;
+					}
+				}
+			}
+		}
+		
+		// Alt table
+		&--alt {
+			$font-size: 16px;
+			
+			tr {
+				
+				td, th {
+					padding: 15px 20px;
+					font-size: $font-size;
+				}
+				
+				th {
+					font-weight: 500;
+				}
+			}
+			
+			tfoot {
+				background-color: $alt-bg-color;
+				
+				td, th {
+					border-top: 1px solid $border-color;
+				}
+				
+				tr:last-child {
+					
+					td, th {
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+		
+		//
+		&--conditional-loading {
+			
+			@media screen and (max-width: 782px) {
+				min-width: 600px;
+			}
+		}
+		
+		// Custom selectors table
+		&--custom-selectors {
+			
+			@media screen and (max-width: 960px) {
+				width: 1200px;
+			}
+			
+			.column-sort {
+				width: 25px;
+				padding-right: 0px;
+				
+				a {
+					display: flex;
+					opacity: 0;
+					transition: opacity 200ms;
+					cursor: ns-resize;
+					text-decoration: none;
+				}
+			}
+			
+			.column-selectors {
+				padding-left: 10px;
+				
+				.select2-container {
+					min-width: 300px;
+					max-width: 500px;
+				}
+				
+				[multiple] {
+					height: 30px;
+				}
+			}
+			
+			.column-font-variant {
+				width: 15%;
+				min-width: 120px;
+			}
+			
+			.column-font-case {
+				width: 13%;
+				
+				.button {
+					min-width: 40px;
+					font-size: 14px;
+				}
+			}
+			
+			.column-font-size {
+				width: 12%;
+			}
+			
+			.column-line-height {
+				width: 12%;
+			}
+			
+			.column-letter-spacing {
+				width: 12%;
+			}
+			
+			.column-actions {
+				width: 20px;
+				padding-left: 0;
+				
+				a {
+					opacity: 0;
+					transition: opacity 200ms;
+				}
+				
+				i {
+					margin-right: 0;
+				}
+			}
+			
+			.no-selectors {
+				padding: 20px 15px;
+				
+				@media screen and (min-width: 782px) {
+					text-align: center;
+				}
+			}
+			
+			.select2-container {
+				$select2-border-color: #8c8f94;
+				$select2-font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+				
+				min-width: 100%;
+				
+				.select2-selection {
+					min-height: 20px;
+					padding-bottom: 3px;
+					border-color: $select2-border-color;
+				}
+				
+				.select2-search {
+					margin-bottom: 0;
+					
+					.select2-search__field {
+						margin-top: 7px;
+						margin-left: 8px;
+						font-family: $select2-font-family;
+						font-size: 14px;
+						line-height: 1;
+					}
+				}
+				
+				.select2-selection__choice {
+					position: relative;
+					border-radius: 3px;
+					margin-bottom: 0;
+					border-color: $border-color;
+					background-color: #fafafa;
+					font-size: 12px;
+					top: -1px;
+					
+					.select2-selection__choice__remove {
+						border-right-color: $border-color;
+						bottom: 0;
+						font-weight: normal;
+						line-height: 1;
+					}
+				}
+				
+				// At root
+				@at-root html .select2-container {
+					
+					.select2-dropdown {
+						border-color: $select2-border-color;
+					}
+					
+					.select2-results__option--highlighted.select2-results__option--selectable {
+						background-color: $active-border-color;
+					}
+				}
+			}
+			
+			.remove-custom-selector {
+				display: flex;
+				text-decoration: none;
+			}
+			
+			// Row hover
+			tr:hover {
+				
+				.column-sort,
+				.column-actions {
+					
+					a {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		
+		// Font size group
+		&--font-appearance-group {
+			
+			@media screen and (max-width: 960px) {
+				width: 800px;
+			}
+			
+			tr {
+				
+				td, th {
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+			}
+			
+			thead {
+				
+				.heading {
+					
+					th {
+						padding-top: 15px;
+						padding-bottom: 15px;
+					}
+					
+					h3 {
+						display: inline-block;
+						margin: 0;
+						font-size: 16px;
+						font-weight: 600;
+						line-height: 30px;
+					}
+					
+					.button-group {
+						float: right;
+					}
+				}
+				
+				.columns {
+					//background-color: #fafafa;
+					
+					th {
+						font-weight: 500;
+					}
+				}
+			}
+			
+			tbody {
+				
+				.button-group {
+					display: flex;
+					
+					.button {
+						flex-grow: 1;
+					}
+				}
+				
+			}
+			
+			.column-element {
+				font-weight: 500;
+			}
+		}
+		
+		// Equal column width
+		&.mutual-column-width {
+			table-layout: fixed;
+			
+			td, th {
+				width: 1%;
+			}
+		}
+		
+		// Uppercase
+		.uppercase {
+			text-transform: uppercase;
+		}
+		
+		// Transform
+		.capitalize {
+			text-transform: capitalize;
+		}
+		
+		// No top margin
+		.no-top-padding {
+			margin-top: 0;
+		}
+		
+		// No Wrap
+		.nowrap {
+			white-space: nowrap;
+		}
+		
+		// Grouped Input
+		.grouped-input {
+			$border-color: #dddddd;
+			$input-height: 28px;
+			
+			display: table;
+			width: 100%;
+			//background-color: $hover-bg;
+			//border: 1px solid $border-color;
+			
+			&.no-border {
+				border: 0;
+			}
+			
+			.grouped-input-col {
+				display: table-cell;
+				vertical-align: middle;
+				
+				&.unit {
+					width: 10%;
+					text-align: center;
+					border-left: 1px solid $border-color;
+				}
+			}
+			
+			input,
+			textarea {
+				border: 0;
+				margin: 0;
+				box-shadow: 0 0 0 transparent;
+				border-radius: 4px;
+				border: 1px solid #7e8993;
+				background-color: #fff;
+				color: #32373c;
+				
+				&:focus {
+					@include box-focused();
+					outline: 2px solid transparent;
+				}
+			}
+			
+			select {
+				margin: 0;
+				background-color: $hover-bg;
+			}
+			
+			input, select {
+				line-height: $input-height;
+				height: $input-height;
+			}
+			
+			// Select dropdown
+			&.red,
+			&.green {
+				
+				select {
+					background: #fff url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E') no-repeat right 5px top 55%;
+				}
+			}
+			
+			// Red
+			&.red {
+				$color: #CB4335;
+				
+				select {
+					background-color: $color;
+					color: #fff;
+					border-color: darken($color, 25%);
+				}
+			}
+			
+			// Green Colored
+			&.green {
+				$color: #63b92b;
+				
+				select {
+					background-color: $color;
+					color: #fff;
+					border-color: darken($color, 25%);
+				}
+			}
+		}
+		
+		// Toggle indicator
+		.toggle-indicator {
+			position: relative;
+			top: 2px;
+			float: right;
+			line-height: 1;
+			
+			&:before {
+				font-family: 'KaliumAdminIcons';
+				font-size: 8px;
+				content: '\e917';
+				text-decoration: none;
+				-webkit-font-smoothing: antialiased;
+			}
+		}
+		
+		// Toggle body
+		.typolab-toggle-body {
+			cursor: pointer;
+			
+			.delete {
+				display: block;
+				float: right;
+				margin-right: 15px;
+				color: #a00;
+				font-weight: normal;
+				text-decoration: none;
+				opacity: 0;
+				transition: all 200ms;
+			}
+		}
+		
+		// Advanced option (by default hidden)
+		.advanced-option {
+			display: none;
+			
+			&.is-visible {
+				display: table-row;
+			}
+		}
+		
+		div.advanced-option.is-visible {
+			display: block;
+		}
+		
+		// Show delete on hover
+		&:hover .typolab-toggle-body .delete {
+			opacity: 1;
+		}
+		
+		&.typolab-toggle--toggled {
+			
+			.toggle-indicator {
+				transform: rotateZ(180deg);
+			}
+			
+			tbody, tfoot {
+				display: none;
+			}
+		}
+		
+		// Horizontal Border Only
+		&.horizontal-borders {
+			
+			tr {
+				
+				td, th {
+					border-left: 0;
+				}
+			}
+		}
+	}
+	
+	// Responsive input
+	.responsive-input {
+		
+		.responsive-input-entry {
+			display: none;
+			
+			&.current {
+				display: block;
+			}
+		}
+	}
+	
+	// Settings container
+	#typolab-settings-form {
+		max-width: 1050px;
+		
+		p.submit {
+			margin-top: 0;
+		}
+	}
+	
+	// Font export import container
+	.font-export-import {
+		
+		tbody {
+			font-size: 15px;
+		}
+		
+		// Export
+		&--export {
+			
+			p {
+				margin: 0;
+				margin-bottom: 10px;
+				font-size: 16px;
+			}
+			
+			.font-export-checkboxes {
+				
+				ul {
+					margin: 0;
+				}
+			}
+			
+			.font-export-loading {
+			}
+			
+			.font-export-loading,
+			.font-export-data {
+				display: none;
+			}
+		}
+		
+		// Import
+		&--import {
+			
+			label {
+				display: block;
+				margin-bottom: 10px;
+			}
+			
+			.font-import-data {
+			}
+			
+			.font-import-loading {
+				display: none;
+				
+				i {
+					font-size: 14px;
+					@include spin();
+				}
+				
+				.progress {
+					color: #666;
+				}
+			}
+			
+			.font-import-finished {
+				display: none;
+				color: $success-color;
+				
+				i {
+					font-size: 14px;
+				}
+			}
+		}
+		
+		// Button
+		.button {
+			display: inline-flex;
+			align-items: center;
+			
+			// Button icon
+			.kalium-admin-icon {
+				$size: 14px;
+				
+				position: relative;
+				margin-right: 5px;
+				font-size: $size;
+			}
+		}
+	}
+	
+	// Font custom selectors form
+	.font-custom-selectors {
+		
+		.responsive-devices {
+			margin-top: -60px;
+			margin-bottom: 30px;
+			float: right;
+			
+			i {
+				margin-right: 0;
+			}
+		}
+		
+		th.column-font-case,
+		th.column-font-size,
+		th.column-line-height,
+		th.column-letter-spacing {
+			
+			&:after {
+				display: inline-block;
+				margin-left: 5px;
+				font-family: 'KaliumAdminIcons';
+				font-size: 14px;
+				line-height: 1;
+				vertical-align: text-bottom;
+			}
+		}
+		
+		// Tablet
+		&--tablet {
+			
+			th.column-font-case,
+			th.column-font-size,
+			th.column-line-height,
+			th.column-letter-spacing {
+				
+				&:after {
+					content: "\e925";
+				}
+			}
+		}
+		
+		// Mobile
+		&--mobile {
+			
+			th.column-font-case,
+			th.column-font-size,
+			th.column-line-height,
+			th.column-letter-spacing {
+				
+				&:after {
+					content: "\e926";
+				}
+			}
+		}
+	}
+	
+	// Add Font Select Source
+	.typolab-select-font-source {
+		
+		tbody {
+			
+			tr {
+				cursor: pointer;
+				
+				td, th {
+					height: 50px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					line-height: 1;
+				}
+				
+				&.hover {
+					background: lighten($hover-bg, 1%);
+				}
+			}
+		}
+		
+		.radio-input {
+			width: 10%;
+			text-align: center;
+			
+			input {
+				margin: 0;
+			}
+		}
+	}
+	
+	// Selected font source
+	.typolab-selected-font-source {
+		flex-grow: 1;
+		
+		.font-source-description {
+			display: none;
+			
+			h3 {
+				font-size: 22px;
+				margin-top: 0;
+			}
+			
+			p {
+			
+			}
+			
+			&.selected {
+				display: block;
+			}
+		}
+		
+		tbody {
+			
+			tr {
+				
+				td {
+					padding: 25px;
+					vertical-align: top;
+				}
+			}
+		}
+	}
+	
+	// Add font button
+	#typolab_add_font {
+		display: block;
+		width: 100%;
+		height: auto;
+		padding: 20px;
+		font-size: 24px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		line-height: 1;
+		
+		span {
+			position: relative;
+			display: inline-block;
+			margin-left: 10px;
+			font-size: 18px;
+			transition: transform 250ms ease-in-out;
+		}
+		
+		&:hover span {
+			transform: translateX(4px);
+		}
+		
+		&:focus span
+		&:active span, {
+			transform: translateX(4px);
+		}
+	}
+	
+	// Font select and preview
+	.font-select-and-preview {
+		margin-bottom: 40px;
+	}
+	
+	// Row Layout Flex
+	.row-layout-flex {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -15px;
+		margin-right: -15px;
+		
+		.col {
+			flex: 1 0 0%;
+			box-sizing: border-box;
+			width: 100%;
+			max-width: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+			
+			&-flex {
+				display: flex;
+				
+				&-column {
+					flex-direction: column;
+				}
+			}
+			
+			@for $i from 1 through 12 {
+				&-#{$i} {
+					flex: 0 0 auto;
+					width: ($i / 12 * 100%);
+				}
+			}
+			
+			// On mobile
+			@media screen and (max-width: 960px) {
+				width: 100%;
+			}
+		}
+	}
+	
+	#typolab-add-new {
+	}
+	
+	// Fonts list table
+	.typolab-fonts-list {
+		
+		// Source image
+		.font-source-image {
+			height: 22px;
+		}
+		
+		// List
+		.fonts {
+			
+			.column-font_family {
+				@media screen and (min-width: 960px) {
+					width: 22%;
+				}
+			}
+			
+			.column-font_source,
+			.column-font_status {
+				width: 20%;
+			}
+			
+			.column-font_preview,
+			.column-font_source,
+			.column-font_status {
+				vertical-align: middle;
+			}
+			
+			.font-status-badge {
+				display: inline-block;
+				padding: 6px;
+				border-radius: 4px;
+				color: #fff;
+				background-color: #63b92b;
+				font-size: 12px;
+				text-transform: uppercase;
+				font-weight: bold;
+				line-height: 1;
+			}
+			
+			.font-status-inactive {
+				background-color: #cb4335;
+			}
+			
+			.font-preview {
+				display: block;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.laborator-font-locked {
+				display: inline-block;
+				margin-left: 5px;
+			}
+		}
+		
+		// No fonts installed.
+		.no-fonts-installed {
+			$paragraph-font-size: 16px;
+			
+			@include box-border();
+			background-color: #fff;
+			padding: 30px;
+			margin-bottom: 50px;
+			
+			h3 {
+				margin: 0;
+				margin-bottom: 20px;
+				font-size: 24px;
+				font-weight: 400;
+			}
+			
+			p,
+			.button {
+				font-size: $paragraph-font-size;
+			}
+			
+			.button {
+				margin-top: 10px;
+				
+				i {
+					margin-right: 3px;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	
+	// Fonts list (font selector)
+	.fonts-list-select {
+		background-color: #fff;
+		padding: 0 25px;
+		@include box-border();
+		
+		@media screen and (max-width: 960px) {
+			margin-bottom: 20px;
+		}
+		
+		.tabs-list {
+			margin: 0 -25px;
+			display: table;
+			text-align: center;
+			
+			a {
+				display: table-cell;
+				padding: 5px 0;
+				width: 1%;
+				border-bottom: 1px solid $border-color;
+				font-size: 12px;
+				text-decoration: none;
+				color: #666;
+				
+				&:focus {
+					box-shadow: none;
+				}
+				
+				&:hover {
+					background-color: #fafafa;
+				}
+				
+				&.letter-unmatch {
+					pointer-events: none;
+					color: #eee;
+				}
+				
+				&.current {
+					border-bottom-color: transparent;
+					font-weight: bold;
+					color: #111;
+				}
+				
+				+ a {
+					border-left: 1px solid $border-color;
+				}
+			}
+			
+			&.hidden {
+				display: none !important;
+			}
+		}
+		
+		.title-container {
+			display: flex;
+			align-items: center;
+			padding: 13px 25px;
+			border-bottom: 1px solid $border-color;
+			margin: 0 -25px;
+			
+			h3 {
+				margin: 0;
+				font-weight: 500;
+			}
+		}
+		
+		.search-bar {
+			display: flex;
+			margin-left: auto;
+			
+			input {
+				width: 100%;
+				position: relative;
+				max-width: 220px;
+				padding-right: 30px;
+				background: #fff no-repeat 95% 50%;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='11.997' viewBox='0 0 12 11.997'%3E%3Cpath id='search-alternate' d='M12,11.1,8.671,7.774a4.727,4.727,0,1,0-.9.9L11.1,12a.645.645,0,0,0,.9,0A.637.637,0,0,0,12,11.1ZM1.49,4.928A3.437,3.437,0,1,1,4.926,8.365,3.437,3.437,0,0,1,1.49,4.928Z' transform='translate(-0.182 -0.185)' fill='%23222'/%3E%3C/svg%3E%0A");
+				
+				+ select {
+					margin-left: 10px;
+				}
+			}
+		}
+		
+		.font-list {
+			$current-color: #0073aa;
+			
+			position: relative;
+			display: block;
+			margin: 0 -25px;
+			min-height: 150px;
+			max-height: 450px;
+			overflow: auto;
+			
+			.font-selector-item {
+				position: relative;
+				padding: 14px 25px;
+				display: none;
+				border-bottom: 1px solid rgba($border-color, 0.7);
+				color: #555;
+				font-size: 16px;
+				text-decoration: none;
+				cursor: pointer;
+				transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+				
+				.checked {
+					display: block;
+					float: left;
+					width: 0;
+					transition: all 200ms;
+					overflow: hidden;
+					
+					i {
+						font-size: 14px;
+					}
+				}
+				
+				&:nth-child(even) {
+					background-color: #fdfdfd;
+				}
+				
+				&:hover {
+					color: #000;
+					background-color: #fafafa;
+				}
+				
+				&.active {
+					display: block;
+				}
+				
+				&.current {
+					background-color: $active-background-color;
+					color: $current-color;
+					font-weight: 600;
+					
+					.checked {
+						width: 25px;
+					}
+				}
+				
+				&.search-match {
+					display: block;
+				}
+				
+				&.search-unmatch {
+					display: none;
+				}
+				
+				&.category-match {
+					display: block;
+					
+					&.search-unmatch,
+					&.letter-unmatch {
+						display: none;
+					}
+				}
+				
+				&.category-unmatch {
+					display: none;
+				}
+				
+				&:focus {
+					box-shadow: none;
+				}
+			}
+			
+			> .font-selector-item:last-child {
+				border-bottom: 0;
+			}
+			
+			.loading-fonts,
+			.no-records {
+				display: block;
+				padding: 30px 0;
+				color: #666;
+				font-size: 16px;
+				text-align: center;
+			}
+			
+			.no-records {
+				display: none;
+				
+				&.active {
+					display: block;
+				}
+			}
+			
+			&.download-in-progress {
+				
+				> a {
+					pointer-events: none;
+					color: #c3c3c3;
+					transition: all 350ms ease-in-out;
+					
+					&.current {
+						pointer-events: auto;
+						color: $current-color;
+						
+						&:after {
+							content: '…';
+						}
+					}
+				}
+			}
+		}
+		
+		// Vertical Categories
+		&.verical-categories {
+			position: relative;
+			display: block;
+			padding: 0;
+			padding-top: 52px;
+			@include clearfix();
+			
+			.tabs-list,
+			.search-bar,
+			.font-list {
+				display: block;
+				margin: 0;
+			}
+			
+			.tabs-list {
+				background: #fafafa;
+				
+				a {
+					display: block;
+					width: 100%;
+					text-align: left;
+					padding-left: 10px;
+					padding-right: 10px;
+					border-left: 0;
+					border-right: 1px solid $border-color;
+					box-sizing: border-box;
+					
+					&.current {
+						border-right-color: transparent;
+						border-bottom-color: $border-color;
+						background-color: #fff;
+					}
+				}
+			}
+			
+			.tabs-list {
+				width: 20%;
+				float: left;
+			}
+			
+			.search-bar {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+				box-sizing: border-box;
+			}
+			
+			.font-list {
+				width: 80%;
+				float: right;
+			}
+		}
+	}
+	
+	// Font Face Variants
+	.font-face-variants {
+		
+		.typolab-table {
+			
+			.font-file-entry {
+				$text-color: #777;
+				color: $text-color;
+				
+				label {
+					display: block;
+					padding-bottom: 3px;
+					font-size: 12px;
+				}
+				
+				input {
+					display: inline-block;
+					width: 75%;
+				}
+				
+				button {
+					float: right;
+					width: 22%;
+				}
+				
+				// Message
+				&-message {
+					padding: 10px 15px;
+					border-top: 1px solid $border-color;
+					margin: 10px -15px 0 -15px;
+					color: $text-color;
+				}
+				
+				+ .font-file-entry {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+	
+	// Font Preview
+	.font-preview-container {
+		
+		.font-preview-row {
+			position: relative;
+			margin-bottom: 15px;
+			float: left;
+			width: 100%;
+			box-sizing: border-box;
+			
+			// Font Family Name Container
+			&#font-family-name {
+				
+				.font-preview-row-bg {
+					display: flex;
+					
+					.block-title {
+						display: flex;
+						align-items: center;
+						width: 30%;
+						border-right: 1px solid $border-color;
+						border-bottom: 0;
+						background: $hover-bg;
+					}
+					
+					.font-family-name {
+						flex-grow: 1;
+						padding-left: 25px;
+					}
+				}
+				
+			}
+			
+			.font-preview-row-bg {
+				background: #fff;
+				@include box-border();
+				
+				.block-title {
+					display: block;
+					padding: 20px 25px;
+					border-bottom: 1px solid $border-color;
+					margin: 0;
+					font-weight: 500;
+					line-height: 1;
+				}
+				
+				span.block-title {
+					line-height: 1;
+				}
+			}
+			
+			.loading-font-preview {
+				padding: 30px;
+				text-align: center;
+				color: #666;
+			}
+			
+			.font-family-name {
+				padding: 12px 15px;
+				margin: 0;
+				font-weight: 600;
+				font-size: 15px;
+			}
+			
+			.font-details-link {
+				margin: 0;
+				padding: 20px;
+				background: $hover-bg;
+				font-size: 14px;
+				
+				a {
+					text-decoration: none;
+				}
+				
+				.font-refresh-link {
+					$size: 16px;
+					
+					position: relative;
+					display: block;
+					box-shadow: none;
+					text-decoration: none;
+					float: right;
+					outline: none;
+					
+					&.is-loading {
+						
+						span {
+							@include spin();
+						}
+					}
+					
+					// Remove separator
+					+ .sep {
+						display: none;
+					}
+				}
+				
+				.sep {
+					position: relative;
+					display: inline-block;
+					width: 1px;
+					height: 10px;
+					line-height: 1;
+					margin: 0 10px;
+					
+					&:before {
+						content: '';
+						position: absolute;
+						display: block;
+						background: $border-color;
+						width: 100%;
+						top: 0;
+						bottom: 0;
+						left: 0;
+					}
+				}
+			}
+			
+			.variant-entry {
+				position: relative;
+				display: flex;
+				padding: 15px 25px;
+				border-bottom: 1px solid $border-color;
+				transition: background-color 100ms ease-in-out;
+				
+				&[for] {
+					padding-right: 0;
+				}
+				
+				&.is-checked {
+					background-color: $active-background-color;
+				}
+				
+				.variant-checkbox {
+					margin-top: 1px;
+					
+					+ .variant-preview {
+						padding-left: 10px;
+					}
+				}
+				
+				.variant-preview {
+					flex-grow: 1;
+				}
+				
+				.variant-preview-image {
+					display: block;
+					color: #b7b7b7;
+					
+					img {
+						width: auto;
+						max-width: 100%;
+						height: 18px;
+						opacity: 0;
+						transition: opacity 300ms;
+						
+						&.is-loaded {
+							opacity: 1;
+						}
+					}
+				}
+				
+				.variant-preview-text {
+					display: block;
+					font-size: 16px;
+					opacity: 0;
+					line-height: 1.2;
+					transition: opacity 100ms;
+					
+					&.is-loaded {
+						opacity: 1;
+						transition-delay: 100ms;
+					}
+				}
+				
+				.variant-title {
+					display: block;
+					padding-top: 5px;
+					color: #666;
+					font-size: 13px;
+				}
+			}
+		}
+	}
+	
+	// Conditional Font Loading
+	.font-conditional-loading {
+		width: 100%;
+		margin: 10px 0;
+		border-spacing: 0;
+		border-collapse: 0;
+		
+		td, th {
+			vertical-align: middle;
+			
+			&.statement,
+			&.criteria {
+				width: 40%;
+			}
+		}
+		
+		thead,
+		tbody {
+			
+			tr {
+				
+				td, th {
+					//padding: 5px 15px;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					border: 0;
+				}
+			}
+		}
+		
+		thead {
+			
+			th {
+				text-align: center;
+				font-size: 14px;
+				font-weight: 500;
+			}
+		}
+		
+		tbody {
+			
+			tr {
+				
+				td {
+					
+					select {
+						width: 100%;
+						font-size: 12px;
+						
+						&.is-loading {
+							font-style: italic;
+						}
+					}
+					
+					&.or-label {
+						position: relative;
+						text-align: center;
+						padding: 10px 0;
+						line-height: 1;
+						font-size: 12px;
+						
+						&:before {
+							content: '';
+							width: 100%;
+							left: 0;
+							top: 50%;
+							position: absolute;
+							display: block;
+							margin-top: -1px;
+							background: $border-color;
+							height: 1px;
+						}
+						
+						span {
+							position: relative;
+							display: inline-block;
+							background: #fff;
+							padding: 0 10px;
+							font-size: 12px;
+							margin-left: -30px;
+						}
+					}
+					
+					&.actions {
+						padding-left: 0;
+					}
+				}
+				
+				&.no-statements {
+					
+					td {
+						padding: 10px;
+						text-align: center;
+						font-size: 12px;
+					}
+				}
+			}
+			
+			> tr:first-child {
+				display: none;
+				
+				&.no-statements {
+					display: table-row;
+				}
+			}
+		}
+		
+		.remove-conditional-statement {
+			text-decoration: none;
+			
+			i {
+				margin: 0;
+			}
+		}
+	}
+	
+	// Other Font Options
+	.font-other-options {
+		background: #fff;
+		width: 50%;
+		@include box-border();
+		
+		.field-entry {
+			padding: 15px;
+			
+			label {
+				font-weight: bold;
+				display: block;
+				margin-bottom: 10px;
+			}
+			
+			select {
+				width: 100%;
+			}
+			
+			+ .field-entry {
+				border-top: 1px solid $border-color;
+			}
+		}
+	}
+	
+	// Advanced options link
+	#typolab-toggle-advanced-options {
+		display: block;
+		float: right;
+		padding: 5px;
+		font-size: 16px;
+		text-decoration: none;
+		
+		i {
+			margin-left: 3px;
+		}
+		
+		&:active,
+		&:focus {
+			box-shadow: none;
+		}
+		
+		&.visible {
+			
+			i {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	
+	// Advanced options container
+	#typolab-advanced-options {
+		display: none;
+		
+		.page-title {
+			margin-top: 40px;
+		}
+		
+		&.visible {
+			display: block;
+		}
+	}
+	
+	// Stylesheet URL input
+	input[name="stylesheet_url"] {
+		
+		&.is-loading {
+			opacity: 0.5;
+			transition: opacity 300ms;
+		}
+	}
+	
+	// Input group
+	.size-unit-input {
+		display: flex;
+		
+		.value-input {
+			min-width: 70px;
+			margin-right: 0;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		
+		.units {
+			position: relative;
+			display: flex;
+			border: 1px solid $input-border-color;
+			border-left: 0;
+			border-radius: 0 4px 4px 0;
+			align-items: center;
+			justify-content: center;
+			min-width: 40px;
+			
+			.units-select {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				margin: 0;
+				padding: 0;
+				appearance: none;
+				opacity: 0;
+			}
+			
+			.unit-text {
+				padding: 0px 8px;
+				font-size: 12px;
+			}
+			
+			&:hover {
+				background-color: #f0f0f0;
+			}
+		}
+	}
+	
+	// Font source name
+	.font-source-name {
+		display: flex;
+		align-items: center;
+		
+		svg {
+			max-width: 25px;
+			height: auto;
+		}
+		
+		span {
+			margin-left: 15px;
+			font-size: 18px;
+			line-height: 1;
+		}
+	}
+	
+	td.font_source .font-source-name {
+		
+		svg {
+			max-width: 20px;
+		}
+		
+		span {
+			margin-left: 10px;
+			font-size: 14px;
+		}
+	}
+	
+	// Font base selectors
+	.font-base-selectors {
+		$columns: 4;
+		$padding: 25px;
+		
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		margin-bottom: 40px;
+		
+		.font-base-selector-col {
+			flex: 0 0 auto;
+			width: (100% / $columns);
+			padding: 0 15px;
+			box-sizing: border-box;
+			
+			@media screen and (max-width: 960px) {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+		
+		.font-base-selector {
+			padding: $padding;
+			background-color: #fff;
+			transition: all 100ms;
+			user-select: none;
+			@include box-border();
+			
+			&.checked {
+				@include box-focused();
+			}
+		}
+		
+		.selector-title {
+			display: flex;
+			align-items: center;
+			
+			h3 {
+				flex-grow: 1;
+				padding-right: 10px;
+				margin: 0;
+				font-size: 20px;
+				font-weight: 500;
+			}
+			
+			input {
+				margin: 0;
+			}
+		}
+		
+		p {
+			font-size: 15px;
+			pointer-events: none;
+		}
+		
+		.font-base-selector-variants {
+			padding: $padding;
+			margin: 0 -$padding;
+			margin-top: $padding;
+			border-top: 1px solid $border-color;
+			border-radius: 4px;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			background-color: #fafafa;
+			
+			select {
+				width: 100%;
+			}
+		}
+	}
+	
+	// Save Font Changes
+	.save-changes-container {
+	}
+	
+	// Font appearance group
+	.font-appearance-group {
+		display: flex;
+		max-width: 900px;
+		margin-bottom: 20px;
+		flex-direction: column;
+		
+		th.column-font-case,
+		th.column-font-size,
+		th.column-line-height,
+		th.column-letter-spacing {
+			
+			&:after {
+				display: inline-block;
+				font-family: 'KaliumAdminIcons';
+				margin-left: 5px;
+				line-height: 1;
+				vertical-align: text-bottom;
+			}
+		}
+		
+		// Tablet
+		&--tablet {
+			
+			th.column-font-case,
+			th.column-font-size,
+			th.column-line-height,
+			th.column-letter-spacing {
+				
+				&:after {
+					content: "\e925";
+				}
+			}
+		}
+		
+		// Mobile
+		&--mobile {
+			
+			th.column-font-case,
+			th.column-font-size,
+			th.column-line-height,
+			th.column-letter-spacing {
+				
+				&:after {
+					content: "\e926";
+				}
+			}
+		}
+	}
+	
+	// Footer
+	.typolab-footer {
+		margin-top: 20px;
+		font-size: 13px;
+		color: #666;
+	}
+}
+
+//
+// Other
+//
+.laborator_page_typolab .about-wrap {
+	max-width: 100%;
+}

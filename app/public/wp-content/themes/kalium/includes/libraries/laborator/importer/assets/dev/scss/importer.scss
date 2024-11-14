@@ -1,0 +1,790 @@
+// Text overflow ellipsis
+@mixin text-overflow() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.kalium-demos {
+	margin-top: 35px;
+	
+	// Warning
+	&__content-warning {
+		background-color: #FFF7E5;
+		border: 1px solid #DDBE53;
+		padding: 15px;
+		border-radius: 3px;
+		margin-bottom: 20px;
+		margin-top: 30px;
+	}
+	
+	// Content pack entry
+	&__content-pack-entry {
+		position: relative;
+		overflow: hidden;
+		background-color: #f5f5f5;
+		border: 1px solid #CCD0D4;
+		border-radius: 3px;
+		box-shadow: 0px 1px 1px #0000000A;
+		transition: all 250ms;
+		height: 350px;
+		margin-bottom: 30px;
+		
+		@media screen and (max-width: 768px) {
+			height: 400px;
+		}
+		
+		// Thumbnail
+		&-image {
+			position: relative;
+			display: block;
+			margin-bottom: 10px;
+			height: 100%;
+			transition: all 250ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+			
+			&:active,
+			&:focus {
+				outline: 0;
+				box-shadow: none;
+			}
+			
+			img {
+				position: absolute;
+				top: 0px;
+				max-width: 100%;
+				width: 100%;
+				transition: all 450ms linear;
+			}
+			
+			&:hover {
+				
+				img {
+					transition-delay: 120ms;
+				}
+			}
+		}
+		
+		// Content pack details
+		& &-details {
+			padding: 8px 15px;
+			padding-bottom: 15px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: #fff;
+			border-top: 1px solid #CCD0D4;
+			transform: translateY(calc(100% - 45px));
+			transition: all 350ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+			
+			@media screen and (max-width: 768px) {
+				transform: translateY(0);
+			}
+			
+			h3 {
+				margin-top: 0;
+				font-size: 18px;
+			}
+			
+			// Button
+			.button {
+				display: block;
+				padding: 2px 15px;
+				height: auto;
+				text-align: center;
+				//opacity: 0;
+				transition: all 200ms ease-in-out;
+				transition-delay: 150ms;
+			}
+			
+			// Buttons container
+			&-buttons {
+				
+				.button {
+					float: left;
+					width: 48%;
+					
+					&-secondary {
+						float: right;
+						width: 48%;
+						text-align: center;
+					}
+				}
+			}
+		}
+		
+		// On hover
+		&:hover {
+			
+			.kalium-demos__content-pack-entry {
+				
+				&-image {
+					transform: translateY(-30px);
+				}
+				
+				&-details {
+					transform: translateY(0%);
+					
+					.button {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	
+	// Installed content pack entry
+	&__installed-content-pack-entry {
+		display: flex;
+		padding: 25px;
+		border: 1px solid #CCD0D4;
+		box-shadow: 0px 1px 1px #0000000A;
+		background-color: #fff;
+		box-sizing: border-box;
+		border-radius: 3px;
+		margin-bottom: 10px;
+		
+		&-thumbnail {
+			max-width: 140px;
+			flex: 0 0 140px;
+			
+			&-container {
+				height: 110px;
+				overflow: hidden;
+				border-radius: 3px;
+				padding: 2px;
+				border: 2px solid #FFF;
+				box-shadow: 0px 0px 0px 1px #9f9f9f;
+				
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		
+		&-details {
+			padding-left: 30px;
+			
+			h3 {
+				margin: 0;
+				font-weight: normal;
+				font-size: 24px;
+			}
+			
+			p {
+				margin-top: 5px;
+			}
+		}
+		
+		// Buttons
+		&-buttons {
+			
+			.button {
+				margin-right: 10px;
+				font-size: 15px;
+			}
+		}
+	}
+	
+	// Content pack view
+	&__content-pack-view {
+		padding: 10px;
+		
+		// Heading
+		&-heading {
+			display: flex;
+			margin-bottom: 30px;
+			
+			// Thumbnail
+			&-thumbnail {
+				width: 140px;
+				flex: 0 0 140px;
+				height: 110px;
+				border: 1px solid #9F9F9F;
+				border-radius: 3px;
+				overflow: hidden;
+				
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+			
+			// Description
+			&-description {
+				flex-grow: 1;
+				padding-left: 35px;
+			}
+			
+			// Title
+			&-title {
+				font-size: 22px;
+				margin: 0;
+				margin-bottom: 15px;
+			}
+			
+			// Paragraphs
+			p {
+				font-size: 18px;
+				margin: 0;
+				margin-bottom: 10px;
+			}
+		}
+		
+		// Import
+		&-import {
+			
+			// Body
+			&-body {
+				display: flex;
+				flex-wrap: wrap;
+				border: 1px solid #CCD0D4;
+				border-left: 0;
+				border-right: 0;
+				margin-left: -25px;
+				margin-right: -25px;
+				
+				h4 {
+					margin-top: 0;
+					margin-bottom: 5px;
+					font-size: 18px;
+				}
+				
+				p {
+					margin-top: 0px;
+					font-size: 16px;
+				}
+				
+				// Column
+				&-column {
+					flex: 0 0 50%;
+					max-width: 50%;
+					padding: 25px;
+					box-sizing: border-box;
+					
+					@media screen and (max-width: 768px) {
+						flex: 0 0 100%;
+						max-width: 100%;
+					}
+					
+					&:first-child {
+						border-right: 1px solid #CCD0D4;
+					}
+				}
+			}
+		}
+		
+		// Required plugins
+		&-required-plugins {
+			
+			li {
+				display: flex;
+				padding: 10px 0;
+				margin: 0;
+				border-bottom: 1px dotted #CCD0D4;
+				
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+			
+			// Title
+			&-title {
+				flex-grow: 1;
+				font-weight: 500;
+				font-size: 15px;
+				@include text-overflow();
+			}
+			
+			// Status
+			&-status {
+				text-transform: uppercase;
+				font-size: 12px;
+				font-weight: 600;
+				letter-spacing: -0.35px;
+				padding-left: 15px;
+				
+				// Install
+				.install,
+				.activate {
+					color: #0071A1;
+				}
+				
+				// Installing
+				.installing {
+					display: flex;
+					align-items: center;
+					color: #CA4A1F;
+					
+					&:before {
+						display: block;
+						font-family: 'KaliumAdminIcons';
+						content: "\e915";
+						margin-right: 7px;
+						font-size: 12px;
+						animation: spin 1s infinite linear;
+						
+						@keyframes spin {
+							from {
+								transform: rotate(0deg);
+							}
+							to {
+								transform: rotate(360deg);
+							}
+						}
+					}
+				}
+				
+				// Active
+				.active {
+					color: #72BF40;
+				}
+				
+				// Failed
+				.failed {
+					display: flex;
+					align-items: center;
+					color: #e03434;
+					
+					&:before {
+						display: block;
+						font-family: 'KaliumAdminIcons';
+						content: "\e91f";
+						margin-right: 5px;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		
+		// Uninstall contents
+		&-uninstall-contents {
+			border-right: 0;
+			max-width: 100%;
+			flex: 0 0 100%;
+			
+			&:first-child {
+				border-right: 0;
+			}
+		}
+		
+		// Imports content types
+		&-imports {
+			
+			// Entries
+			li {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				margin-bottom: 15px;
+			}
+			
+			// Import entry label
+			&-label {
+				flex-grow: 1;
+				font-size: 16px;
+				padding-left: 5px;
+				user-select: none;
+			}
+			
+			// Args fields
+			&-args-fields {
+				flex: 0 0 100%;
+				
+				// Field entries
+				.kalium-demos__content-pack-view-imports-args {
+					
+					// Field
+					&-field {
+						display: flex;
+						flex-wrap: wrap;
+						align-items: center;
+						margin-top: 15px;
+						
+						// Label
+						&-label {
+							flex-grow: 1;
+							font-size: 16px;
+							padding-left: 5px;
+							user-select: none;
+						}
+					}
+				}
+			}
+		}
+		
+		// Progress
+		&-progress {
+			color: #666666;
+			width: 50%;
+			visibility: hidden;
+			opacity: 0;
+			transition: opacity 150ms ease-in-out;
+			
+			&.visible {
+				visibility: visible;
+				opacity: 1;
+			}
+			
+			// Status
+			&-status {
+				display: flex;
+				padding-bottom: 10px;
+				
+				// Text
+				&-text {
+					flex-grow: 1;
+					@include text-overflow();
+					
+					&:empty {
+						
+						&:before {
+							display: inline-block;
+							content: '-';
+							text-indent: -99999px;
+						}
+					}
+				}
+				
+				// Percentage
+				&-percentage {
+					padding-left: 15px;
+				}
+			}
+			
+			// Progress bar
+			&-bar {
+				background-color: #EEEEEE;
+				border-radius: 2px;
+				overflow: hidden;
+				
+				// Fill
+				&-fill {
+					$progress-bar-color: #137CBA;
+					$progress-bar-stripe-color: lighten($progress-bar-color, 5%);
+					position: relative;
+					background-color: $progress-bar-color;
+					width: 0%;
+					height: 6px;
+					overflow: hidden;
+					
+					// Stripes
+					&-stripes {
+						position: absolute;
+						left: -46px;
+						right: 0;
+						top: 0;
+						bottom: 0;
+						animation-name: move-bg;
+						animation-duration: .6s;
+						animation-timing-function: linear;
+						animation-iteration-count: infinite;
+						background: repeating-linear-gradient(
+								-55deg,
+								$progress-bar-color 1px,
+								$progress-bar-stripe-color 2px,
+								$progress-bar-stripe-color 11px,
+								$progress-bar-color 12px,
+								$progress-bar-color 20px
+						);
+						
+						// Move bg animation
+						@keyframes move-bg {
+							
+							from {
+								transform: translateX(0);
+							}
+							
+							to {
+								transform: translateX(46px);
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		// Footer
+		&-footer {
+			display: flex;
+			padding-top: 20px;
+			flex-wrap: wrap;
+			align-items: center;
+			
+			// Buttons column
+			&-buttons {
+				
+				.button {
+					
+					&:focus {
+						box-shadow: none;
+					}
+				}
+			}
+			
+			// Status
+			&-status {
+				display: flex;
+				flex-grow: 1;
+				justify-content: flex-end;
+				padding-left: 30px;
+			}
+		}
+		
+		// Warnings
+		&-warnings {
+			list-style: disc;
+			padding-left: 16px;
+			
+			// Green
+			.green {
+				color: #72BF40;
+			}
+			
+			// Red
+			.red {
+				color: #e03434;
+			}
+			
+			// Buttons
+			&-buttons {
+				margin: 0 -15px;
+				margin-top: 15px;
+				padding: 15px;
+				padding-bottom: 0px;
+				border-top: 1px solid #CCD0D4;
+				
+				.button {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	
+	// Content pack finish view
+	&__content-pack-finish-view {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 10px;
+		min-height: 350px;
+		opacity: 0;
+		
+		// Heading
+		&-heading {
+			text-align: center;
+			
+			// Icon
+			&-icon {
+				$icon-width: 54px;
+				$icon-height: 54px;
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: $icon-width + 20px;
+				height: $icon-height + 20px;
+				margin: 15px auto;
+				
+				&.failed {
+					$color-error: #ff4444;
+					$stroke-width: 2px;
+					$size: $icon-width;
+					$checkmark-color: white;
+					
+					.checkmark {
+						width: $size;
+						height: $size;
+						border-radius: 50%;
+						display: block;
+						stroke-width: $stroke-width;
+						stroke: $checkmark-color;
+						stroke-miterlimit: 10;
+						margin: 10% auto;
+						
+						&.error {
+							box-shadow: inset 0px 0px 0px $color-error;
+							animation: fillerror .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+						}
+					}
+					
+					.checkmark_circle_error {
+						stroke-dasharray: 166;
+						stroke-dashoffset: 166;
+						stroke-width: $stroke-width;
+						stroke-miterlimit: 10;
+						stroke: $color-error;
+						animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+					}
+					
+					.checkmark_check {
+						transform-origin: 50% 50%;
+						stroke-dasharray: 48;
+						stroke-dashoffset: 48;
+						animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.9s forwards;
+					}
+					
+					@keyframes fillerror {
+						100% {
+							box-shadow: inset 0px 0px 0px $size/2 $color-error;
+						}
+					}
+				}
+				
+				&.success {
+					
+					// SVG
+					.checkmark {
+						width: $icon-width;
+						height: $icon-height;
+						border-radius: 50%;
+						display: block;
+						stroke-width: 2px;
+						stroke: white;
+						stroke-miterlimit: 10;
+						margin: 10% auto;
+						
+						&.success {
+							box-shadow: inset 0px 0px 0px #00C851;
+							animation: fillsuccess .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+						}
+					}
+					
+					.checkmark_circle_success {
+						stroke-dasharray: 166;
+						stroke-dashoffset: 166;
+						stroke-width: 2px;
+						stroke-miterlimit: 10;
+						stroke: #00C851;
+						animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+					}
+					
+					.checkmark_check {
+						transform-origin: 50% 50%;
+						stroke-dasharray: 48;
+						stroke-dashoffset: 48;
+						animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.9s forwards;
+					}
+				}
+			}
+			
+			// Title
+			&-title {
+				font-size: 30px;
+				margin-bottom: 10px;
+			}
+			
+			// Description
+			&-description {
+				font-size: 18px;
+			}
+			
+			// Link
+			&-link {
+				font-size: 18px;
+			}
+		}
+		
+		// Errors
+		&-errors {
+			background: #FFF7E5;
+			border: 1px solid #DDBE53;
+			border-radius: 3px;
+			padding: 15px;
+			margin-top: 30px;
+			
+			li {
+				border-bottom: 1px solid #ccc6b7;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+				
+				&:last-child {
+					border-bottom: 0;
+					padding-bottom: 0;
+					margin-bottom: 0;
+				}
+				
+				h4 {
+					margin: 0;
+				}
+				
+				.kalium-demos__content-pack-finish-view-error-description {
+					
+					.kalium-demos__popup-errors-pre {
+						margin: 5px 0;
+					}
+				}
+			}
+		}
+		
+		// Footer content
+		&-footer-content {
+			font-size: 16px;
+			margin-top: 20px;
+			line-height: 1.3;
+		}
+	}
+	
+	// Popup errors
+	&__popup-errors {
+		
+		// Error
+		.kalium-demos__popup-error {
+			margin-bottom: 15px;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		
+		// Buttons
+		&-buttons {
+			border-top: 1px solid #CCD0D4;
+			padding: 15px;
+			padding-bottom: 0;
+			margin-left: -15px;
+			margin-right: -15px;
+			
+			// Button
+			.button {
+				margin-right: 10px;
+				text-transform: capitalize;
+			}
+		}
+		
+		// Pre
+		&-pre {
+			background-color: #eee;
+			border: 1px solid #CCD0D4;
+			padding: 5px;
+			overflow: auto;
+			white-space: pre-wrap;
+			max-height: 350px;
+		}
+	}
+	
+	// Uninstall button
+	.button-uninstall {
+		$color: #EB2F06;
+		background-color: $color;
+		border-color: $color;
+		color: #fff;
+		
+		&:hover,
+		&:active,
+		&:focus {
+			color: #fff;
+			background-color: darken($color, 5%);
+			border-color: darken($color, 5%);
+			box-shadow: none;
+		}
+		
+		&:active {
+			background-color: darken($color, 2%);
+			border-color: darken($color, 2%);
+		}
+	}
+}
+
+
