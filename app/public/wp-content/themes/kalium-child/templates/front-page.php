@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <section class="hero-section-front">
     
             <video class="video" autoplay loop muted poster>
-                <source data-src="http://esf.local/wp-content/uploads/2024/08/esf_webloop_v4-1080p-1.mp4" type="video/mp4">
+                <source data-src="" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </section>
