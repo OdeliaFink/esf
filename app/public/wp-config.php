@@ -91,8 +91,8 @@ $table_prefix = 'wp_';
  */
 
 define( 'WP_ENVIRONMENT_TYPE', 'local' );
-define('WP_DEBUG', true); // Enable debugging mode
-define('WP_DEBUG_LOG', true); // Enable logging to debug.log
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
 define('WP_DEBUG_DISPLAY', false); // Disable display of errors and warnings
 @ini_set('display_errors', 0);
 

@@ -47,16 +47,11 @@ function add_release_status_class( $classes, $post_id ) {
 
 
 
-// Modify the permalink for portfolio items
 add_filter('post_type_link', 'custom_portfolio_permalink', 10, 2);
 function custom_portfolio_permalink($post_link, $post) {
     if ($post->post_type == 'portfolio') {
-        // Get the terms (categories) associated with this portfolio item
         $terms = wp_get_post_terms($post->ID, 'portfolio_category');
-
-        // Check if the post has terms
         if (!is_wp_error($terms) && !empty($terms)) {
-            // Loop through the terms and check for specific categories
             foreach ($terms as $term) {
                 if ($term->slug == 'films') {
                     return home_url('/films/' . $post->post_name);
@@ -70,14 +65,14 @@ function custom_portfolio_permalink($post_link, $post) {
 }
 
 // Add custom rewrite rules for films and distribution
-// add_action('init', 'custom_portfolio_rewrite_rules');
-// function custom_portfolio_rewrite_rules() {
-//     add_rewrite_rule('^films/([^/]+)/?$', 'index.php?post_type=portfolio&name=$matches[1]', 'top');
-//     add_rewrite_rule('^distribution/([^/]+)/?$', 'index.php?post_type=portfolio&name=$matches[1]', 'top');
-// }
+add_action('init', 'custom_portfolio_rewrite_rules');
+function custom_portfolio_rewrite_rules() {
+    add_rewrite_rule('^films/([^/]+)/?$', 'index.php?post_type=portfolio&name=$matches[1]', 'top');
+    add_rewrite_rule('^distribution/([^/]+)/?$', 'index.php?post_type=portfolio&name=$matches[1]', 'top');
+}
 
-// // Flush rewrite rules on theme activation
-// add_action('after_switch_theme', 'flush_rewrite_rules');
+// Flush rewrite rules on theme activation
+add_action('after_switch_theme', 'flush_rewrite_rules');
 
 function redirect_if_no_lang_param() {
     // Check if the language is in the URL query string
