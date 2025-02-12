@@ -10198,3 +10198,106 @@ Stack trace:
 [07-Oct-2024 20:48:31 UTC] Portfolio Query has posts: 3
 [07-Oct-2024 20:48:31 UTC] PHP Warning:  Constant WP_DEBUG already defined in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-config.php on line 97
 [07-Oct-2024 20:48:32 UTC] PHP Warning:  Constant WP_DEBUG already defined in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-config.php on line 97
+[18-Nov-2024 14:01:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Nov-2024 14:01:17 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Nov-2024 14:01:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Nov-2024 14:27:55 UTC] PHP Fatal error:  Cannot redeclare load_translation_file() (previously declared in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php:68) in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 151
+[18-Nov-2024 14:27:56 UTC] PHP Fatal error:  Cannot redeclare load_translation_file() (previously declared in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php:68) in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 151
+[18-Nov-2024 14:36:18 UTC] PHP Fatal error:  Cannot redeclare load_translation_file() (previously declared in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php:69) in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 166
+[18-Nov-2024 14:36:19 UTC] PHP Fatal error:  Cannot redeclare load_translation_file() (previously declared in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php:69) in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/functions.php on line 166
+[18-Nov-2024 14:48:58 UTC] Theme location: mobile-menu
+[18-Nov-2024 14:48:58 UTC] Theme location: 
+[19-Nov-2024 17:49:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[19-Nov-2024 17:49:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[19-Nov-2024 17:49:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[19-Nov-2024 17:58:42 UTC] PHP Warning:  Undefined variable $nav_id in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/menu-mobile.php on line 36
+[19-Nov-2024 17:58:42 UTC] PHP Warning:  Undefined variable $nav_id in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/menu-mobile.php on line 52
+[07-Jan-2025 15:01:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[07-Jan-2025 15:01:09 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[07-Jan-2025 15:01:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[07-Jan-2025 21:10:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[07-Jan-2025 21:10:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[07-Jan-2025 21:10:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[16-Jan-2025 20:50:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[16-Jan-2025 20:50:17 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[20-Jan-2025 18:45:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[20-Jan-2025 18:45:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[20-Jan-2025 19:05:54 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "kkk" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-loop-item-type-2.php:217
+Stack trace:
+#0 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/laborator_portfolio.php(710): include()
+#1 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-listing.php(147): kalium_portfolio_loop_items_show(Array)
+#2 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#3 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#4 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#5 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/archive-portfolio.php(22): get_template_part('tpls/portfolio-...')
+#6 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(812): require('/Users/odeliafi...')
+#7 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template.php(745): load_template('/Users/odeliafi...', false, Array)
+#8 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/general-template.php(206): locate_template(Array, true, false, Array)
+#9 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/portfolio.php(17): get_template_part('archive-portfol...')
+#10 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/template-loader.php(106): include('/Users/odeliafi...')
+#11 /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-blog-header.php(19): require_once('/Users/odeliafi...')
+#12 /Users/odeliafinkelstein/Local Sites/esf/app/public/index.php(17): require('/Users/odeliafi...')
+#13 {main}
+  thrown in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/tpls/portfolio-loop-item-type-2.php on line 217
+[27-Jan-2025 17:07:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[27-Jan-2025 17:07:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[27-Jan-2025 17:40:52 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[31-Jan-2025 14:02:17 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[31-Jan-2025 14:02:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[31-Jan-2025 14:02:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[31-Jan-2025 23:25:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[31-Jan-2025 23:25:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[31-Jan-2025 23:25:34 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[06-Feb-2025 20:24:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[06-Feb-2025 20:24:44 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[11-Feb-2025 19:21:52 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[11-Feb-2025 19:21:52 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[11-Feb-2025 19:21:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[11-Feb-2025 19:39:23 UTC] PHP Warning:  Undefined array key "third_par_pwyc" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 267
+[11-Feb-2025 19:53:57 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 264
+[11-Feb-2025 19:53:57 UTC] PHP Warning:  Undefined array key "third_par_pwyc" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 270
+[11-Feb-2025 19:54:42 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 264
+[11-Feb-2025 19:54:42 UTC] PHP Warning:  Undefined array key "third_par_pwyc" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 270
+[11-Feb-2025 19:54:47 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 264
+[11-Feb-2025 19:54:47 UTC] PHP Warning:  Undefined array key "third_par_pwyc" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 270
+[11-Feb-2025 19:54:52 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 264
+[11-Feb-2025 19:54:52 UTC] PHP Warning:  Undefined array key "third_par_pwyc" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 270
+[11-Feb-2025 19:55:01 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 264
+[11-Feb-2025 19:55:31 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 264
+[11-Feb-2025 20:15:33 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 264
+[11-Feb-2025 20:15:50 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 264
+[11-Feb-2025 20:16:11 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 264
+[11-Feb-2025 20:46:51 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 20:47:08 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 20:47:30 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 20:47:54 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 20:47:57 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:19:10 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:19:17 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:20:06 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:20:20 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:20:24 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:20:39 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:20:42 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:21:06 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:21:06 UTC] PHP Warning:  Undefined array key "third_par_pwyc" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 272
+[11-Feb-2025 21:22:03 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:22:03 UTC] PHP Warning:  Undefined array key "third_par_pwyc" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 272
+[11-Feb-2025 21:22:05 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:22:05 UTC] PHP Warning:  Undefined array key "third_par_pwyc" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 272
+[11-Feb-2025 21:22:08 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:22:08 UTC] PHP Warning:  Undefined array key "third_par_pwyc" in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 272
+[11-Feb-2025 21:22:16 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:22:20 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:23:03 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:23:10 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:23:13 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:24:14 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:24:14 UTC] PHP Warning:  Undefined variable $screening_guide_data in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 267
+[11-Feb-2025 21:24:14 UTC] PHP Warning:  Undefined variable $screening_guide_data in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 267
+[11-Feb-2025 21:24:18 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:24:18 UTC] PHP Warning:  Undefined variable $screening_guide_data in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 267
+[11-Feb-2025 21:24:18 UTC] PHP Warning:  Undefined variable $screening_guide_data in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 267
+[11-Feb-2025 21:29:10 UTC] PHP Warning:  Undefined variable $lang in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 266
+[11-Feb-2025 21:29:10 UTC] PHP Warning:  Undefined variable $screening_guide_data in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 267
+[11-Feb-2025 21:29:10 UTC] PHP Warning:  Undefined variable $screening_guide_data in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium-child/single-portfolio.php on line 267

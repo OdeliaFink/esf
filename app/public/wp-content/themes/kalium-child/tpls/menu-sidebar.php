@@ -40,10 +40,16 @@ $nav = kalium_nav_menu( $menu_id );
 			<?php echo $nav; ?>
 		</div>
 		<div style="margin-top: 2rem; display: flex; align-items: center;">
-		<a style="font-weight: 400; font-size: 2rem;" href="?lang=en">EN</a>
-		<span style="display: inline-block; width: 1px; height: 2rem; background-color: black; margin: 0 10px;"></span>
-		 <a style="font-weight: 400; font-size: 2rem;" href="?lang=fr">FR</a>
-		</div>
+    <?php 
+    $current_language = isset($_GET['lang']) ? $_GET['lang'] : (isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en');
+
+    if ($current_language === 'en') {
+        echo '<a style="font-weight: 400; font-size: 2rem;" href="?lang=fr">FR</a>';
+    } else {
+        echo '<a style="font-weight: 400; font-size: 2rem;" href="?lang=en">EN</a>';
+    }
+    ?>
+</div>
 		<?php endif; ?>
 		
 		<?php if ( $menu_sidebar_show_widgets ) : ?>

@@ -18181,3 +18181,23 @@ Stack trace:
 [16-Nov-2024 17:59:10 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/class-wpdb.php on line 1982
 [16-Nov-2024 17:59:19 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
 [16-Nov-2024 17:59:19 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Nov-2024 14:49:38 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3479
+[18-Nov-2024 14:49:38 UTC] Theme location: mobile-menu
+[18-Nov-2024 14:49:38 UTC] Theme location: 
+[18-Nov-2024 14:54:26 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3479
+[18-Nov-2024 17:41:45 UTC] Automatic updates starting...
+[18-Nov-2024 17:41:46 UTC]   Automatic plugin updates starting...
+[18-Nov-2024 17:41:46 UTC]   Automatic plugin updates complete.
+[18-Nov-2024 17:41:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Nov-2024 17:41:46 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[18-Nov-2024 17:41:46 UTC] Automatic updates complete.
+[18-Nov-2024 17:41:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[19-Nov-2024 12:11:39 UTC] Automatic updates starting...
+[19-Nov-2024 12:11:39 UTC]   Automatic plugin updates starting...
+[19-Nov-2024 12:11:39 UTC]   Automatic plugin updates complete.
+[19-Nov-2024 12:11:39 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[19-Nov-2024 12:23:36 UTC] PHP Warning:  wp_update_themes(): An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/functions.php on line 6114
+[19-Nov-2024 12:23:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[19-Nov-2024 12:23:36 UTC] Automatic updates complete.
+[19-Nov-2024 12:23:38 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-content/themes/kalium/includes/classes/core/kalium-theme-upgrader.php on line 151
+[19-Nov-2024 17:08:59 UTC] PHP Deprecated:  preg_split(): Passing null to parameter #2 ($subject) of type string is deprecated in /Users/odeliafinkelstein/Local Sites/esf/app/public/wp-includes/formatting.php on line 3479

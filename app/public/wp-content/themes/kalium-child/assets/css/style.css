@@ -24,7 +24,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 40vh;
+  min-height: 30vh;
 }
 
 /*LENIS*/
@@ -143,11 +143,12 @@ transform: scale(.93);
 }
 
 .container-tagline * {
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 500;
   line-height: 1.6;
   color: black;
 }
+
 .lenis.lenis-smooth {
     scroll-behavior: auto;
   }
@@ -167,13 +168,7 @@ transform: scale(.93);
   margin: 0 auto;
 }
 
-.reveal {
-  /* font-kerning: none;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 1rem;  */
-  /* line-height: 1.5px;*/
-}
+
 
 .tagline-section p {
   white-space: normal;
@@ -210,6 +205,16 @@ transform: scale(.93);
   align-items: center;
   width: 100%; /* Allow enough width for smooth scrolling */
   animation: scroll 20s linear infinite;
+}
+
+/* Disable animation when there are 5 or fewer laurels */
+.laurel-carousel-wrapper[data-laurel-count="5"] .laurel-carousel,
+.laurel-carousel-wrapper[data-laurel-count="4"] .laurel-carousel,
+.laurel-carousel-wrapper[data-laurel-count="3"] .laurel-carousel,
+.laurel-carousel-wrapper[data-laurel-count="2"] .laurel-carousel,
+.laurel-carousel-wrapper[data-laurel-count="1"] .laurel-carousel {
+    animation: none; /* Stops animation */
+    justify-content: center; /* Centers laurels */
 }
 
 .laurel-slide {
@@ -290,9 +295,9 @@ header {
 }
 
 
-.menu-item .menu-item-type-post_type .menu-item-object-page a {
+/* .menu-item .menu-item-type-post_type .menu-item-object-page a {
   font-weight: bold !important;
-}
+} */
 
 .main-container {
   width: 100%;
@@ -315,7 +320,7 @@ header {
 .info-box {
   position: relative;
   width: 100%;
-  height: 300px; /* Set height of the boxes */
+  height: 350px; /* Set height of the boxes */
   overflow: hidden;
   border-radius: 8px; /* Optional: rounded corners */
   background-color: #f0f0f0; /* Optional: rounded corners */
@@ -346,12 +351,13 @@ header {
 }
 
 .content-overlay {
+ 
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.422); /* Slight white overlay */
+  background-color: rgba(227, 130, 130, 0.422); /* Slight white overlay */
   transition: transform 0.3s;
 }
 
@@ -630,6 +636,8 @@ header {
       padding-top: 3px;
   }
 }
+
+
 
 
 #search-input {
@@ -1750,6 +1758,12 @@ input[type="text"]::placeholder {
     width: 55%;
   }
 }
+
+@media screen and (min-width: 2439px) {
+  .content-overlay h3 {
+    margin-top: 20%;
+  }
+}
 @media screen and (max-width: 430px) {
   .container,
   .content-area {
@@ -1809,3 +1823,4 @@ input[type="text"]::placeholder {
     width: 320px !important;
   }
 }
+

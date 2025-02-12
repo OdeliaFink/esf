@@ -9,6 +9,7 @@ if (!defined('ABSPATH')) {
     exit; // Direct access not allowed.
 }
 
+
 $item_type = kalium_get_field('item_type');
 
 $language = isset($_GET['lang']) ? $_GET['lang'] : (isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en');
@@ -106,6 +107,7 @@ $translations = load_translation_file();
                     </p>
                 </div>
             </div>
+            
 
             <div class="synopsis-container">
                 <?php
@@ -119,23 +121,35 @@ $translations = load_translation_file();
             </div>
 
 
-            <?php if (have_rows('awards')): ?>
-    <div class="laurel-carousel-wrapper">
+            <?php 
+$laurel_count = 0;
+$laurel_images = [];
+
+// Collect laurels
+if (have_rows('awards')): 
+    while (have_rows('awards')): the_row();
+        $award_image = get_sub_field('awards_image');
+        if ($award_image) {
+            $laurel_images[] = $award_image;
+        }
+    endwhile;
+    $laurel_count = count($laurel_images);
+endif;
+?>
+
+<?php if ($laurel_count > 0): ?>
+    <!-- Add a data attribute to control animation -->
+    <div class="laurel-carousel-wrapper" data-laurel-count="<?php echo $laurel_count; ?>">
         <div class="laurel-carousel">
-            <?php while (have_rows('awards')): the_row(); ?>
-                <?php
-                // Get the sub field (award image) inside the repeater
-                $award_image = get_sub_field('awards_image');
-                if ($award_image): ?>
-                    <div class="laurel-slide">
-                        <img src="<?php echo esc_url($award_image['url']); ?>"
-                            alt="<?php echo esc_attr($award_image['alt']); ?>">
-                    </div>
-                <?php endif; ?>
-            <?php endwhile; ?>
+            <?php foreach ($laurel_images as $image): ?>
+                <div class="laurel-slide">
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 <?php endif; ?>
+
 
 
 
@@ -241,6 +255,47 @@ $translations = load_translation_file();
 
                 <?php endif; ?>
             </div>
+
+ 
+            <?php
+// Get the current post ID
+$current_post_id = get_the_ID();
+
+// Check if this is "Big Fight in Little Chinatown" (Post ID: 29)
+if ($current_post_id == 29) :
+    // Get the current language (default to English)
+    $lang = isset($_GET['lang']) && $_GET['lang'] === 'fr' ? 'fr' : 'en';
+
+    // Get the correct ACF file field
+    $screening_guide_data = ($lang === 'fr') ? get_field('screening_guide_fr') : get_field('screening_guide');
+
+    // Extract the file URL correctly (if ACF returns an array)
+    $screening_guide = is_array($screening_guide_data) ? $screening_guide_data['url'] : $screening_guide_data;
+?>
+
+    <div class="custom-film-section" style="max-width: 80%; margin-left: auto; margin-right: auto; border: 1px solid black; padding: 1rem; border-radius: 3px;">
+        <p style="font-family: 'Roboto'; font-weight: 200; color: black;"><?php echo esc_html($translations['first_par_pwyc']); ?></p>
+        <p style="font-family: 'Roboto'; font-weight: 200; color: black;"><?php echo esc_html($translations['second_par_pwyc']); ?></p>
+        <p style="font-family: 'Roboto'; font-weight: 200; color: black;"><?php echo esc_html($translations['third_par_pwyc']); ?></p>
+    </div>
+
+    <div style="margin-top: 2rem; display: flex; max-width: 80%; margin-left: auto; margin-right: auto; gap: 3rem;">
+        <?php if (!empty($screening_guide)) : ?>
+            <button class="accordion-header film-button" onclick="window.location.href='<?php echo esc_url($screening_guide); ?>'">
+                <?php echo esc_html($translations['diy_guide']); ?>
+            </button>
+        <?php endif; ?>
+
+         <a class="accordion-header film-button" href="https://vimeo.com/1040846230">
+                <?php echo esc_html($translations['vimeo']); ?>
+            </a>
+    </div>
+
+<?php endif; ?>
+
+
+
+
 
             <div class="movie-stills-slider">
     <?php if (have_rows('movie_stills')): ?>
@@ -417,17 +472,24 @@ $translations = load_translation_file();
 </div>
 
 
-            <?php if (!empty($presskit = get_field('presskit'))) { ?>
-                <div class="presskit-wrapper">
-                    <div class="download-presskit">
-                        <button class="presskit-button" style="">
-                            <a class="presskit-content" href="<?php echo esc_url($presskit); ?>" download>
-                                <?php echo $translations['download_presskit']; ?>
-                            </a>
-                        </button>
-                    </div>
-                </div>
-            <?php } ?>
+<?php 
+$presskit = get_field('presskit'); // English presskit
+$presskit_fr = get_field('presskit_fr'); // French presskit
+
+// Determine which presskit to show based on language
+$selected_presskit = ($language === 'fr' && !empty($presskit_fr)) ? $presskit_fr : $presskit;
+
+if (!empty($selected_presskit)) { ?>
+    <div class="presskit-wrapper">
+        <div class="download-presskit">
+            <button class="presskit-button">
+                <a class="presskit-content" href="<?php echo esc_url($selected_presskit); ?>" download>
+                    <?php echo $translations['download_presskit']; ?>
+                </a>
+            </button>
+        </div>
+    </div>
+<?php } ?>
 
 
             <?php if (have_rows('email')): ?>

@@ -109,9 +109,27 @@ function redirect_if_no_lang_param() {
 }
 add_action('template_redirect', 'redirect_if_no_lang_param');
 
+add_filter('wp_nav_menu_objects', 'translate_kalium_menu_titles', 10, 2);
+
+function translate_kalium_menu_titles($items, $args) {
+    // Load translations
+    $translations = load_translation_file(); // This function should correctly load your translations JSON file
+
+    foreach ($items as &$item) {
+        // Normalize the title key to lowercase for case-insensitive matching (optional)
+        $title_key = strtolower($item->title);
+
+        // Check if a translation exists for the title key
+        if (isset($translations[$title_key])) {
+            $item->title = $translations[$title_key]; // Replace with translation
+        }
+    }
+
+    return $items;
+}
 
 
-function load_translation_file() {
+function load_translation_file($language = 'en') {
     // Determine language: prioritize query string, then cookie, default to 'en'
     $language = isset($_GET['lang']) ? $_GET['lang'] : (isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'en');
 

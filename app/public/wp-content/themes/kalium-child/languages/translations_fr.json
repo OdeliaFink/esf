@@ -19,6 +19,10 @@
   "active" : "ACTIVE",
   "tagline" : "EyeSteelFilm est une société de cinéma et de médias interactifs qui se consacre à l'utilisation de l'expression cinématographique comme catalyseur de changement social et politique. Il a été créé pour développer un cinéma qui donne du pouvoir aux personnes ignorées par les grands médias, les gens et les idées du monde entier.",
   "search_placeholder": "RECHERCHE",
-  "items" : "Aucun filme trouvé."
+  "items" : "Aucun filme trouvé.",
+  "first_par_pwyc" : "Nous avons développé cette trousse faites-le vous-mêmes dans le cadre de nos efforts pour rendre le film le plus accessible possible au public, afin de prolonger son impact au sein de communautés lointaines et élargies. Vous trouverez dans cette trousse un Guide D’activation comprenant des ressources et idées afin de planifier, promouvoir et organiser votre projection, un Guide d’éducation fournissant le contexte historique et des occasions d’apprentissage approfondi en lien avec des scènes du film, et un Guide de discussion conçu pour divers publics.",
+  "second_par_pwyc" : "Nous offrons le trousse faites-le et le film sur la base d’une contribution volontaire pour les projections communautaires non commerciales. En principe, le prix d’une licence pour une projection unique se tient entre 250 $ CAD et 500 $ CAD. Nous souhaitons rendre le film accessible aux organisations de toutes tailles, c’est pourquoi nous n’imposons donc pas de frais minimum. Merci de contribuer en fonction des capacités de financement de votre organisation. Pour les versions sous-titrées (français, chinois) ou d'autres formats, veuillez nous contacter.",
+  "diy_guide" : "Guide de dépistage DIY",
+  "vimeo" : "Vimeo sur demande / PWYC OTT"
   
 }

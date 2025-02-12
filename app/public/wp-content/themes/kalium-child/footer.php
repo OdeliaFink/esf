@@ -17,6 +17,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 do_action( 'kalium_wrapper_end' );
 ?>
+<?php
+$translations = load_translation_file();
+?>
 
 <!-- Subscription Section -->
 <!-- <div class="subscription-container">

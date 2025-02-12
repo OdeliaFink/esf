@@ -1,7 +1,7 @@
 {
-  "films": "Films",
-  "distribution": "Distribution",
-  "about": "About",
+  "films": "FILMS",
+  "distribution": "DISTRIBUTION",
+  "about": "ABOUT",
   "learn_more": "Learn more",
   "stay_tuned": "STAY TUNED",
   "stay_tuned_desc": "Sign up to receive the latest announcements, tips, networking invitations, and more.",
@@ -19,9 +19,13 @@
   "past" : "PAST",
   "active" : "ACTIVE",
   "tagline" : "EyeSteelFilm is a film and interactive media company dedicated to using cinematic expression as a catalyst for social and political change. It was created to develop cinema that empowers people who are ignored by mainstream media, people and ideas around the world.",
-  
-    "search_placeholder": "SEARCH", 
-    "items" : "No items found."
+  "search_placeholder": "SEARCH", 
+  "items" : "No items found.",
+  "first_par_pwyc" : "We have developed this Do-It-Yourself Screening Kit as part of our efforts to make the film as accessible as possible to audiences so that it can continue to have impact within communities far and wide.",
+  "second_par_pwyc" : "This kit includes an Activation Guide with resources and ideas for planning, promoting and organizing your screening, an Education Guide that provides historical background, present-day context and deeper learning opportunities around the film themes, and lastly, a Discussion Guide tailored towards different audiences.",
+  "third_par_pwyc" : "We want to offer this kit with the film on a PWYC basis for the organizing non-commercial community screenings. Generally, a single screening license would be $ 250-500 CAD. With that in mind, we want the film to be accessible to organizations of all scales and therefore there is no minimum fee requirement. Please pay what you can based on your organization's funding capacities. For subtitled versions (french, chinese) or other formats please get in touch.",
+  "diy_guide" : "DIY Screening Guide",
+  "vimeo" : "Vimeo on demand / PWYC OTT"
 
 
 }

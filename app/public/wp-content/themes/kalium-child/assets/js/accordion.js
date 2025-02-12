@@ -1,46 +1,58 @@
 jQuery(document).ready(function($) {
   $('.accordion-header').on('click', function() {
-      $(this).toggleClass('active').next('.accordion-content').slideToggle();
-      $(this).find('.accordion-icon').toggleClass('rotated');
-  });
+    $(this).toggleClass('active').next('.accordion-content').slideToggle();
+    $(this).find('.accordion-icon').toggleClass('rotated');
+});
 
-  gsap.registerPlugin(ScrollTrigger);
-  let revealAnimations = [];
+gsap.registerPlugin(ScrollTrigger);
+let revealAnimations = [];
 
 const lenis = new Lenis({
-  lerp: 0.07
+lerp: 0.07
 });
 
 lenis.on('scroll', ScrollTrigger.update)
 gsap.ticker.add((time)=>{
-  lenis.raf(time * 1000)
+lenis.raf(time * 1000)
 })
 
 // Reveal
 document.querySelectorAll('.reveal').forEach(text => {
-  // Split text
-  let splitText = new SplitType(text, {
-    type: 'words'
-  })
-  console.log("SLUT");
+// Split text
+let splitText = new SplitType(text, {
+  type: 'words'
+})
+console.log("SLUT");
 
-  // Animation
-  const section = text.closest('section');
-  gsap.from(splitText.words, {
-    opacity: 0.1,
-    ease: 'none',
-    stagger: 1,
-    duration: 5,
-    scrollTrigger: {
-      trigger: section,
-      start: 'top-=180 top', 
-      // start: 'top-=280 top', 
-      end: () => `+=${window.innerHeight / 1.5}px`,
-      scrub: true,
-      markers: false,
-      pin: true,
+// Animation
+const section = text.closest('section');
+gsap.from(splitText.words, {
+  opacity: 0.1,
+  ease: 'none',
+  stagger: 1,
+  duration: 5,
+  scrollTrigger: {
+    trigger: section,
+    start: 'top-=180 top', 
+    // start: 'top-=280 top', 
+    end: () => `+=${window.innerHeight / 2}px`,
+    scrub: true,
+    markers: false,
+    pin: true,
+  }
+})
+
+  gsap.to(text, {
+  fontSize: () => {
+    if (window.innerWidth > 2440) {
+      return '5vw'; // Extra-large screens
+    } else if (window.innerWidth > 1440) {
+      return '4vw'; // Standard large screens
     }
-  })
+    return '.2vw'; // Default for smaller screens
+  },
+  duration: 0,
+});
 })
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -163,6 +175,7 @@ jQuery(document).ready(function($) {
 //       });
 //     });
 // }
+
 
 
 
